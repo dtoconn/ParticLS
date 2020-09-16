@@ -1,2 +1,2 @@
-# ParticLS.github.io
+# ParticLS
 Documentation for the simulation toolkit ParticLS
