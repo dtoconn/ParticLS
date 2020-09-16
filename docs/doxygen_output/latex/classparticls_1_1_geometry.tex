@@ -1,0 +1,734 @@
+\hypertarget{classparticls_1_1_geometry}{}\doxysection{particls\+::Geometry$<$ dim $>$ Class Template Reference}
+\label{classparticls_1_1_geometry}\index{particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}}
+
+
+{\ttfamily \#include $<$Geometry.\+hpp$>$}
+
+
+
+Inheritance diagram for particls\+::Geometry$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{classparticls_1_1_geometry__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_geometry_aa4fd21a4743d1e04a3834ac63bd3b70e}{Geometry}} ()
+\item 
+virtual \mbox{\hyperlink{classparticls_1_1_geometry_adab81b2d1281c5a6afa81ebf1245d0cd}{$\sim$\+Geometry}} ()=default
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_geometry_a4ec0bb5ebbfd45460b26127d9456023f}{Signed\+Distance}} (Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&position, Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&ref\+\_\+pt) const =0
+\item 
+virtual Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_geometry_a21d6c20edb4ef1aab9b6ca2eec4e7eb1}{Signed\+Distance\+Grad}} (Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&position, Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&ref\+\_\+pt) const
+\item 
+virtual Eigen\+::\+Matrix$<$ double, dim, dim $>$ \mbox{\hyperlink{classparticls_1_1_geometry_a430f478ea9ba1e9c21fca74e79931dbb}{Signed\+Distance\+Hess}} (Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&position, Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&ref\+\_\+pt) const
+\item 
+virtual Eigen\+::\+Matrix$<$ double, dim, dim $>$ \mbox{\hyperlink{classparticls_1_1_geometry_a31208ac174e93c9e88f8604e675a0e17}{Signed\+Distance\+Hess\+By\+FD}} (Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&position, Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&ref\+\_\+pt) const
+\item 
+Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_geometry_a65bf0541fcc2a3e0aaf549381bdcbf29}{Signed\+Distance\+Grad\+By\+FD}} (Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&position, Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&ref\+\_\+pt) const
+\item 
+virtual Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_geometry_ae5a6e81ee65d5f0ad2c342ff63bb111b}{Proximal\+Operator}} (Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&x, Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&ref\+\_\+pt, double const \&lambda) const =0
+\item 
+double \mbox{\hyperlink{classparticls_1_1_geometry_ac427f57c34aef2538aa4c36e53f2e220}{Proximal\+Transformation}} (Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&x, Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&ref\+\_\+pt, double \&lambda) const
+\begin{DoxyCompactList}\small\item\em Compute the proximal operator cost function at the optimal point, x. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_geometry_a3752217c2da88761153c19a28e1ecdc9}{Proximal\+Transformation}} (Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&x, Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&ref\+\_\+pt, double \&lambda, Eigen\+::\+Ref$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ prox) const
+\begin{DoxyCompactList}\small\item\em Compute the proximal operator cost function at the optimal point, x. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_geometry_a72e91313ab02b9f795b9272d26312721}{Curvature}} (Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&position, Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&ref\+\_\+pt) const
+\begin{DoxyCompactList}\small\item\em Return the curvature of the signed distance function at a point. \end{DoxyCompactList}\item 
+virtual Eigen\+::\+Matrix$<$ double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$ dim $>$\+::moment, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$ dim $>$\+::moment $>$ \mbox{\hyperlink{classparticls_1_1_geometry_a35147032c4a967cc71d82e006f78e403}{Moment\+Of\+Inertia}} ()=0
+\begin{DoxyCompactList}\small\item\em The body moment of initia matrix. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Angular\+Velocity \mbox{\hyperlink{classparticls_1_1_geometry_a2e12a4e2e3b733adbdc05796598dc82d}{Apply\+M\+OI}} (Eigen\+::\+Ref$<$ const typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Angular\+Velocity $>$ const \&x)
+\item 
+virtual \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Angular\+Velocity \mbox{\hyperlink{classparticls_1_1_geometry_aa873bff8fdd35c2ab968c3a2adf7dfc9}{Apply\+Inverse\+M\+OI}} (Eigen\+::\+Ref$<$ const typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Angular\+Velocity $>$ const \&x)
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_geometry_af5e06af2734085d1acda7926d4ea8944}{Mass}} ()=0
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_geometry_a4f38eaff1a219f41698f6dbef1525495}{Volume}} ()=0
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_geometry_a27fe28ba995dc81e4d6dcd3a6162091b}{Thickness}} ()=0
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_geometry_a99110ee074b3090c6b2d6df6cdca51ef}{Moment\+Arm}} ()=0
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_geometry_a56f0f42d4045cb15696ccaf5590dd910}{Radius}} () const =0
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_geometry_a131058bc06253f0e36dc20b29fb20f00}{Bounding\+Radius}} () const =0
+\item 
+virtual Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_geometry_ab830faad1b64657840d5eb543a051f90}{Bounding\+Center}} () const
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_geometry_a7523e50b6e5028067259b538daa84372}{Compute\+Surface\+Area}} ()=0
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_geometry_aa28bce3e7b0d6a6552ad996c3cbdb983}{Compute\+Cross\+Section\+Area}} (typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Orientation const \&orientation, Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&direction)=0
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_geometry_a7974532b017a2b662659db57db623c03}{Density}} (Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&position, Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&ref\+\_\+pt) const =0
+\begin{DoxyCompactList}\small\item\em The density. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_geometry_a23e59421a15e4307a1cc68bb7903aa5d}{Density}} () const =0
+\item 
+virtual bool \mbox{\hyperlink{classparticls_1_1_geometry_aa5e84878c3b8af818dd8e3ab510bb749}{Is\+Convex}} () const
+\item 
+virtual Eigen\+::\+Matrix$<$ double, 2, dim $>$ \mbox{\hyperlink{classparticls_1_1_geometry_af4db2e472e9b5d6e286aafbd6fc00702}{Bounds}} (Eigen\+::\+Ref$<$ const typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Position $>$ const \&position, typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Orientation const \&orientation) const
+\item 
+virtual Eigen\+::\+Matrix$<$ double, 2, dim $>$ \mbox{\hyperlink{classparticls_1_1_geometry_ac69bbd465018c723451c09d6c313ea8e}{Bounds}} () const =0
+\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_geometry_a230e8356221a5fd1f1bd7c5a9adde601}{Append\+V\+TK}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{V\+T\+K\+Data}}$<$ dim $>$$>$ const \&V\+T\+K\+Data\+Object, typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Position const \&position, typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Orientation const \&orientation) const
+\begin{DoxyCompactList}\small\item\em Append the geometry/data to a vtk object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Eigen\+::\+Matrix$<$ double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$ dim $>$\+::moment, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$ dim $>$\+::moment $>$ \mbox{\hyperlink{classparticls_1_1_geometry_ae138e73c20c9a03c0ed5614655abaac7}{moi}}
+\begin{DoxyCompactList}\small\item\em The moment of inertia. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_geometry_ac121f92885747479e785792845a9e12a}{mass}}
+\begin{DoxyCompactList}\small\item\em The mass. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_geometry_add05000c0e618e8bfac1b7ec9facce43}{volume}}
+\begin{DoxyCompactList}\small\item\em The volume. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_geometry_a4d54ac4b46adaaf85ca3285bed0d4663}{thickness}} = 1
+\item 
+double \mbox{\hyperlink{classparticls_1_1_geometry_ac38270357addfffb224e6e850648dc83}{moment\+\_\+arm}}
+\begin{DoxyCompactList}\small\item\em The moment arm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classparticls_1_1_geometry_a7344e93ca422515e8ab44ea234f9c530}{serialize}} (Archive \&ar)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classparticls_1_1_geometry_a3c40b6ca5221cfd9ccc793d2f30e23f4}{fd\+Abs}} = 1e-\/6
+\begin{DoxyCompactList}\small\item\em Default finite difference absolute stepsize. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_geometry_ae384be41c865659259d60d686a8707a5}{fd\+Rel}} = 1e-\/6
+\begin{DoxyCompactList}\small\item\em Default finite difference relative stepsize. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classparticls_1_1_geometry_ab2f44cbb59a08132f4c843e5225bba0e}{cereal\+::access}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+class particls\+::\+Geometry$<$ dim $>$}
+
+The center of mass for a reference geometry is always zero. 
+
+Definition at line 20 of file Geometry.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_geometry_aa4fd21a4743d1e04a3834ac63bd3b70e}\label{classparticls_1_1_geometry_aa4fd21a4743d1e04a3834ac63bd3b70e}} 
+\index{particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}!Geometry@{Geometry}}
+\index{Geometry@{Geometry}!particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Geometry()}{Geometry()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_geometry}{particls\+::\+Geometry}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_geometry}{Geometry}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classparticls_1_1_geometry_adab81b2d1281c5a6afa81ebf1245d0cd}\label{classparticls_1_1_geometry_adab81b2d1281c5a6afa81ebf1245d0cd}} 
+\index{particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}!````~Geometry@{$\sim$Geometry}}
+\index{````~Geometry@{$\sim$Geometry}!particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Geometry()}{~Geometry()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual \mbox{\hyperlink{classparticls_1_1_geometry}{particls\+::\+Geometry}}$<$ dim $>$\+::$\sim$\mbox{\hyperlink{classparticls_1_1_geometry}{Geometry}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_geometry_a230e8356221a5fd1f1bd7c5a9adde601}\label{classparticls_1_1_geometry_a230e8356221a5fd1f1bd7c5a9adde601}} 
+\index{particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}!AppendVTK@{AppendVTK}}
+\index{AppendVTK@{AppendVTK}!particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{AppendVTK()}{AppendVTK()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_geometry}{particls\+::\+Geometry}}$<$ dim $>$\+::Append\+V\+TK (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{V\+T\+K\+Data}}$<$ dim $>$$>$ const \&}]{V\+T\+K\+Data\+Object,  }\item[{typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Position const \&}]{position,  }\item[{typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Orientation const \&}]{orientation }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Append the geometry/data to a vtk object. 
+
+By default, do nothing. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em append\+Filter} & The V\+TK filter \\
+\hline
+\mbox{\texttt{ in}}  & {\em position} & The position of the center of mass \\
+\hline
+\mbox{\texttt{ in}}  & {\em orientation} & The angle of the object \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a86033ab1333fd3832b977318c70ab0d6}{particls\+::\+Convex\+Polyhedra$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_hypersphere_a045fae2eb1d7d26d40ef0dd0c4003ced}{particls\+::\+Hypersphere$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_flat_boundary_aa2c80db78bcedce51f9ce764412bc8c1}{particls\+::\+Flat\+Boundary$<$ dim $>$}}, and \mbox{\hyperlink{classparticls_1_1_rounded_box_aba1ce8d49f6fef509c9573ddeca70e42}{particls\+::\+Rounded\+Box$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_geometry_aa873bff8fdd35c2ab968c3a2adf7dfc9}\label{classparticls_1_1_geometry_aa873bff8fdd35c2ab968c3a2adf7dfc9}} 
+\index{particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}!ApplyInverseMOI@{ApplyInverseMOI}}
+\index{ApplyInverseMOI@{ApplyInverseMOI}!particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ApplyInverseMOI()}{ApplyInverseMOI()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$dim$>$\+::Angular\+Velocity \mbox{\hyperlink{classparticls_1_1_geometry}{particls\+::\+Geometry}}$<$ dim $>$\+::Apply\+Inverse\+M\+OI (\begin{DoxyParamCaption}\item[{Eigen\+::\+Ref$<$ const typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Angular\+Velocity $>$ const \&}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Apply the inverse of the moment of inertia (in body frame) to a vector. This defaults to performing and L\+D\+Lt factorization of the Moment\+Of\+Inertia matrix and using that in a linear solve, but can be overridden when more efficient techniques are available. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & A one or three dimensional vector $x$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector containing $M^{-1}x$, where $M^{-1}$ is the inverse of the moment of inertia matrix. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classparticls_1_1_hypersphere_a8bbc643a6c324fbb1a93d6ead88da96f}{particls\+::\+Hypersphere$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_geometry_a2e12a4e2e3b733adbdc05796598dc82d}\label{classparticls_1_1_geometry_a2e12a4e2e3b733adbdc05796598dc82d}} 
+\index{particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}!ApplyMOI@{ApplyMOI}}
+\index{ApplyMOI@{ApplyMOI}!particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ApplyMOI()}{ApplyMOI()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$dim$>$\+::Angular\+Velocity \mbox{\hyperlink{classparticls_1_1_geometry}{particls\+::\+Geometry}}$<$ dim $>$\+::Apply\+M\+OI (\begin{DoxyParamCaption}\item[{Eigen\+::\+Ref$<$ const typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Angular\+Velocity $>$ const \&}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Apply the moment of inertia (in body frame) to a vector. This defaults to constructing the Moment\+Of\+Inertia matrix and performing a matrix multiplication, but can be overridden when more efficient techniques are available, such as when the moment of inertia is diagonal. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & A one or three dimensional vector $x$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector containing $Mx$, where $M$ is the moment of inertia matrix. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classparticls_1_1_hypersphere_afb12b9dda5c06b6aa9dbb95fe93acd46}{particls\+::\+Hypersphere$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_geometry_ab830faad1b64657840d5eb543a051f90}\label{classparticls_1_1_geometry_ab830faad1b64657840d5eb543a051f90}} 
+\index{particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}!BoundingCenter@{BoundingCenter}}
+\index{BoundingCenter@{BoundingCenter}!particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{BoundingCenter()}{BoundingCenter()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual Eigen\+::\+Matrix$<$double, dim, 1$>$ \mbox{\hyperlink{classparticls_1_1_geometry}{particls\+::\+Geometry}}$<$ dim $>$\+::Bounding\+Center (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The bounding sphere center of the particle in particle coordinates 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a035cc5ce8065c1e6810ef1c6afb233f2}{particls\+::\+Convex\+Polyhedra$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_geometry_a131058bc06253f0e36dc20b29fb20f00}\label{classparticls_1_1_geometry_a131058bc06253f0e36dc20b29fb20f00}} 
+\index{particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}!BoundingRadius@{BoundingRadius}}
+\index{BoundingRadius@{BoundingRadius}!particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{BoundingRadius()}{BoundingRadius()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_geometry}{particls\+::\+Geometry}}$<$ dim $>$\+::Bounding\+Radius (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Returns the particles bounding sphere or circle radius \begin{DoxyReturn}{Returns}
+The boundaing radius 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a12b91743d8fe1426056aa4be1139eccb}{particls\+::\+Convex\+Polyhedra$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_flat_boundary_a40b1f7ca80041e9fa105943103f56da8}{particls\+::\+Flat\+Boundary$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_hypersphere_acce103077f9482e80e8bbf21c7624840}{particls\+::\+Hypersphere$<$ dim $>$}}, and \mbox{\hyperlink{classparticls_1_1_rounded_box_aca309083ed9a6c711158c1d5dc5c5e3e}{particls\+::\+Rounded\+Box$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_geometry_ac69bbd465018c723451c09d6c313ea8e}\label{classparticls_1_1_geometry_ac69bbd465018c723451c09d6c313ea8e}} 
+\index{particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}!Bounds@{Bounds}}
+\index{Bounds@{Bounds}!particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Bounds()}{Bounds()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual Eigen\+::\+Matrix$<$double, 2, dim$>$ \mbox{\hyperlink{classparticls_1_1_geometry}{particls\+::\+Geometry}}$<$ dim $>$\+::Bounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Return a bounding box for this geometry in reference coordinates. 
+
+Implemented in \mbox{\hyperlink{classparticls_1_1_hypersphere_adf47ca8244c832d5b30b38f1f81aa481}{particls\+::\+Hypersphere$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_flat_boundary_ae2af531e2a0c54103b1dba176afc5e22}{particls\+::\+Flat\+Boundary$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_acefb384006df6c854de08aa029dc5e36}{particls\+::\+Convex\+Polyhedra$<$ dim $>$}}, and \mbox{\hyperlink{classparticls_1_1_rounded_box_a5f3e2ef9d36306e77dbaf716237b1b00}{particls\+::\+Rounded\+Box$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_geometry_af4db2e472e9b5d6e286aafbd6fc00702}\label{classparticls_1_1_geometry_af4db2e472e9b5d6e286aafbd6fc00702}} 
+\index{particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}!Bounds@{Bounds}}
+\index{Bounds@{Bounds}!particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Bounds()}{Bounds()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual Eigen\+::\+Matrix$<$double, 2, dim$>$ \mbox{\hyperlink{classparticls_1_1_geometry}{particls\+::\+Geometry}}$<$ dim $>$\+::Bounds (\begin{DoxyParamCaption}\item[{Eigen\+::\+Ref$<$ const typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Position $>$ const \&}]{position,  }\item[{typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Orientation const \&}]{orientation }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Return a bounding box for this geometry in global coordinates defined by the position and orientation arguments. The first row of the output is a lower bound for each coordinate direction and the second row is an upper bound for each coordinate direction. The position and orientation passed to this function are typically taken from a specific particle and define the translation and rotation of the geometry\textquotesingle{}s reference coordinates. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & Vector defining the translation \\
+\hline
+\mbox{\texttt{ in}}  & {\em orientation} & 1x1 matrix (in 2d) or quaternion (in 3d) defining the rotation. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classparticls_1_1_hypersphere_a72098a0d74d438bf3a1f574fee61a92b}{particls\+::\+Hypersphere$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_geometry_aa28bce3e7b0d6a6552ad996c3cbdb983}\label{classparticls_1_1_geometry_aa28bce3e7b0d6a6552ad996c3cbdb983}} 
+\index{particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}!ComputeCrossSectionArea@{ComputeCrossSectionArea}}
+\index{ComputeCrossSectionArea@{ComputeCrossSectionArea}!particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeCrossSectionArea()}{ComputeCrossSectionArea()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_geometry}{particls\+::\+Geometry}}$<$ dim $>$\+::Compute\+Cross\+Section\+Area (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Orientation const \&}]{orientation,  }\item[{Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Calculate the cross-\/sectional area of a particle given a direction vector 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em orientation} & 1x1 matrix (in 2d) or quaternion (in 3d) defining the particle\textquotesingle{}s orientation \\
+\hline
+\mbox{\texttt{ in}}  & {\em direction} & The direction vector \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a76c38137b7b7ee67b5a7b5199c383125}{particls\+::\+Convex\+Polyhedra$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_hypersphere_ae857b4166f72845203fe9ec91ae9aecb}{particls\+::\+Hypersphere$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_flat_boundary_ab3428d835721c26f64f7945d5952420a}{particls\+::\+Flat\+Boundary$<$ dim $>$}}, and \mbox{\hyperlink{classparticls_1_1_rounded_box_aea18363808294e38dfc859f3624243da}{particls\+::\+Rounded\+Box$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_geometry_a7523e50b6e5028067259b538daa84372}\label{classparticls_1_1_geometry_a7523e50b6e5028067259b538daa84372}} 
+\index{particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}!ComputeSurfaceArea@{ComputeSurfaceArea}}
+\index{ComputeSurfaceArea@{ComputeSurfaceArea}!particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeSurfaceArea()}{ComputeSurfaceArea()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_geometry}{particls\+::\+Geometry}}$<$ dim $>$\+::Compute\+Surface\+Area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Calculate the horizontal surface area of the geometry 
+
+Implemented in \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_ac52d57503b733fc5c53917a7bd703771}{particls\+::\+Convex\+Polyhedra$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_hypersphere_a45e331578b016b40848ca2a5667ecddb}{particls\+::\+Hypersphere$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_flat_boundary_a73af50ef4a202439498ad3b47a5baa01}{particls\+::\+Flat\+Boundary$<$ dim $>$}}, and \mbox{\hyperlink{classparticls_1_1_rounded_box_a7903b6a70b930d91fd74552ae42ff16a}{particls\+::\+Rounded\+Box$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_geometry_a72e91313ab02b9f795b9272d26312721}\label{classparticls_1_1_geometry_a72e91313ab02b9f795b9272d26312721}} 
+\index{particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}!Curvature@{Curvature}}
+\index{Curvature@{Curvature}!particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Curvature()}{Curvature()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_geometry}{particls\+::\+Geometry}}$<$ dim $>$\+::Curvature (\begin{DoxyParamCaption}\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{position,  }\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{ref\+\_\+pt }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Return the curvature of the signed distance function at a point. 
+
+The curvature is defined as \[ \kappa = \nabla \cdot ( \frac{\nabla \phi}{\|\nabla \phi\|_2} ) \] for signed distance function $\phi(x)$ 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & A position on the boundary of the geometry \\
+\hline
+\mbox{\texttt{ in}}  & {\em ref\+\_\+pt} & Reference point for determining which side of the boundary the position is \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The local curvature of the boundary 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classparticls_1_1_hypersphere_a5e93799e56e8901a276b3f24bcc3d2a0}{particls\+::\+Hypersphere$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_geometry_a23e59421a15e4307a1cc68bb7903aa5d}\label{classparticls_1_1_geometry_a23e59421a15e4307a1cc68bb7903aa5d}} 
+\index{particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}!Density@{Density}}
+\index{Density@{Density}!particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Density()}{Density()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_geometry}{particls\+::\+Geometry}}$<$ dim $>$\+::Density (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The density of the geometry 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a37c4d41a4289d66ee2418ba95f63a5f5}{particls\+::\+Convex\+Polyhedra$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_flat_boundary_a5d7d21506bde894eb8acd0cf8c654c44}{particls\+::\+Flat\+Boundary$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_rounded_box_af962ca9afc797f9969938884648d7ed6}{particls\+::\+Rounded\+Box$<$ dim $>$}}, and \mbox{\hyperlink{classparticls_1_1_hypersphere_add2435d2baa994e058284c5bd0ec15c6}{particls\+::\+Hypersphere$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_geometry_a7974532b017a2b662659db57db623c03}\label{classparticls_1_1_geometry_a7974532b017a2b662659db57db623c03}} 
+\index{particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}!Density@{Density}}
+\index{Density@{Density}!particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Density()}{Density()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_geometry}{particls\+::\+Geometry}}$<$ dim $>$\+::Density (\begin{DoxyParamCaption}\item[{Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&}]{position,  }\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{ref\+\_\+pt }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+The density. 
+
+If the point is outside of the domain, return 0 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & We want the density at this point \\
+\hline
+\mbox{\texttt{ in}}  & {\em ref\+\_\+pt} & Reference point for determining which side of the boundary the position is \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The density 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a13091679f12b07c44b47a0c9af3c90f7}{particls\+::\+Convex\+Polyhedra$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_flat_boundary_aa4c24406151840336442295263a7c43a}{particls\+::\+Flat\+Boundary$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_hypersphere_a955d172a8052c927403c1159acf43536}{particls\+::\+Hypersphere$<$ dim $>$}}, and \mbox{\hyperlink{classparticls_1_1_rounded_box_a025535770b7bf0717aa1ad06a382c6d5}{particls\+::\+Rounded\+Box$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_geometry_aa5e84878c3b8af818dd8e3ab510bb749}\label{classparticls_1_1_geometry_aa5e84878c3b8af818dd8e3ab510bb749}} 
+\index{particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}!IsConvex@{IsConvex}}
+\index{IsConvex@{IsConvex}!particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{IsConvex()}{IsConvex()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual bool \mbox{\hyperlink{classparticls_1_1_geometry}{particls\+::\+Geometry}}$<$ dim $>$\+::Is\+Convex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Is the geometry contex? (defaults true) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_geometry_af5e06af2734085d1acda7926d4ea8944}\label{classparticls_1_1_geometry_af5e06af2734085d1acda7926d4ea8944}} 
+\index{particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}!Mass@{Mass}}
+\index{Mass@{Mass}!particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Mass()}{Mass()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_geometry}{particls\+::\+Geometry}}$<$ dim $>$\+::Mass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The mass of the particle 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classparticls_1_1_hypersphere_a15e22702b870f0fc05b308c0d0b76bc1}{particls\+::\+Hypersphere$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a5e99417ee57b9099d41e186127995be8}{particls\+::\+Convex\+Polyhedra$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_flat_boundary_a5aecf2aee717776fe0236a9f0055b2b6}{particls\+::\+Flat\+Boundary$<$ dim $>$}}, and \mbox{\hyperlink{classparticls_1_1_rounded_box_a40dc578d8f9af6dbcd2cd8973b226a1a}{particls\+::\+Rounded\+Box$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_geometry_a99110ee074b3090c6b2d6df6cdca51ef}\label{classparticls_1_1_geometry_a99110ee074b3090c6b2d6df6cdca51ef}} 
+\index{particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}!MomentArm@{MomentArm}}
+\index{MomentArm@{MomentArm}!particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{MomentArm()}{MomentArm()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_geometry}{particls\+::\+Geometry}}$<$ dim $>$\+::Moment\+Arm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The moment arm of the particle 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a6bfb7ac97199c5b27cc78984336fadcc}{particls\+::\+Convex\+Polyhedra$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_hypersphere_a8cef55f86bbef9e705c7d97943c97dcf}{particls\+::\+Hypersphere$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_flat_boundary_abca7320d0e890401636d92e5fe08f8ca}{particls\+::\+Flat\+Boundary$<$ dim $>$}}, and \mbox{\hyperlink{classparticls_1_1_rounded_box_a35cfb687cca811cb682cfadbb115be80}{particls\+::\+Rounded\+Box$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_geometry_a35147032c4a967cc71d82e006f78e403}\label{classparticls_1_1_geometry_a35147032c4a967cc71d82e006f78e403}} 
+\index{particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}!MomentOfInertia@{MomentOfInertia}}
+\index{MomentOfInertia@{MomentOfInertia}!particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{MomentOfInertia()}{MomentOfInertia()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual Eigen\+::\+Matrix$<$double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$dim$>$\+::moment, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$dim$>$\+::moment$>$ \mbox{\hyperlink{classparticls_1_1_geometry}{particls\+::\+Geometry}}$<$ dim $>$\+::Moment\+Of\+Inertia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+The body moment of initia matrix. 
+
+\begin{DoxyReturn}{Returns}
+The moment of initia matrix 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classparticls_1_1_hypersphere_a8724951792bfd80453aff694bae9a8b3}{particls\+::\+Hypersphere$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a784c22b16575b158efca20b82e359302}{particls\+::\+Convex\+Polyhedra$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_flat_boundary_a8c8b280bb448d5fc013dae7c1b345584}{particls\+::\+Flat\+Boundary$<$ dim $>$}}, and \mbox{\hyperlink{classparticls_1_1_rounded_box_aa897ed929c66f8fde335745b87f54396}{particls\+::\+Rounded\+Box$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_geometry_ae5a6e81ee65d5f0ad2c342ff63bb111b}\label{classparticls_1_1_geometry_ae5a6e81ee65d5f0ad2c342ff63bb111b}} 
+\index{particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}!ProximalOperator@{ProximalOperator}}
+\index{ProximalOperator@{ProximalOperator}!particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ProximalOperator()}{ProximalOperator()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual Eigen\+::\+Matrix$<$double,dim,1$>$ \mbox{\hyperlink{classparticls_1_1_geometry}{particls\+::\+Geometry}}$<$ dim $>$\+::Proximal\+Operator (\begin{DoxyParamCaption}\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{x,  }\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{ref\+\_\+pt,  }\item[{double const \&}]{lambda }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Applies the proximal operator for the level set defined in this geometry. @seealso \mbox{\hyperlink{classparticls_1_1_rigid_body_a4450bda4a3826d2dd69dbd872f1153f4}{Rigid\+Body\+::\+Proximal\+Operator}} 
+
+Implemented in \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_acedea2a70cf70e6ac4971123ffaa29cf}{particls\+::\+Convex\+Polyhedra$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_geometry_ac427f57c34aef2538aa4c36e53f2e220}\label{classparticls_1_1_geometry_ac427f57c34aef2538aa4c36e53f2e220}} 
+\index{particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}!ProximalTransformation@{ProximalTransformation}}
+\index{ProximalTransformation@{ProximalTransformation}!particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ProximalTransformation()}{ProximalTransformation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_geometry}{particls\+::\+Geometry}}$<$ dim $>$\+::Proximal\+Transformation (\begin{DoxyParamCaption}\item[{Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&}]{x,  }\item[{Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&}]{ref\+\_\+pt,  }\item[{double \&}]{lambda }\end{DoxyParamCaption}) const}
+
+
+
+Compute the proximal operator cost function at the optimal point, x. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & We compute the proximal operator at this point \\
+\hline
+\mbox{\texttt{ in}}  & {\em ref\+\_\+pt} & Reference point for determining which side of the boundary the position is \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of the proximal operator cost function 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_geometry_a3752217c2da88761153c19a28e1ecdc9}\label{classparticls_1_1_geometry_a3752217c2da88761153c19a28e1ecdc9}} 
+\index{particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}!ProximalTransformation@{ProximalTransformation}}
+\index{ProximalTransformation@{ProximalTransformation}!particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ProximalTransformation()}{ProximalTransformation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_geometry}{particls\+::\+Geometry}}$<$ dim $>$\+::Proximal\+Transformation (\begin{DoxyParamCaption}\item[{Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&}]{x,  }\item[{Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&}]{ref\+\_\+pt,  }\item[{double \&}]{lambda,  }\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$}]{prox }\end{DoxyParamCaption}) const}
+
+
+
+Compute the proximal operator cost function at the optimal point, x. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & We compute the proximal operator at this point \\
+\hline
+\mbox{\texttt{ in}}  & {\em ref\+\_\+pt} & Reference point for determining which side of the boundary the position is \\
+\hline
+\mbox{\texttt{ out}}  & {\em prox} & The proximal point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of the proximal operator cost function 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_geometry_a56f0f42d4045cb15696ccaf5590dd910}\label{classparticls_1_1_geometry_a56f0f42d4045cb15696ccaf5590dd910}} 
+\index{particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}!Radius@{Radius}}
+\index{Radius@{Radius}!particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Radius()}{Radius()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_geometry}{particls\+::\+Geometry}}$<$ dim $>$\+::Radius (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Returns the particles effective radius e.\+g. radius of a circle or sphere. \begin{DoxyReturn}{Returns}
+The effective radius 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a2bf696a622b47bc41b662ce436062066}{particls\+::\+Convex\+Polyhedra$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_rounded_box_ab626abefd72f3c4285f0eecd4bd9655b}{particls\+::\+Rounded\+Box$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_flat_boundary_a557560c6dd60c71962694d187c0fbae1}{particls\+::\+Flat\+Boundary$<$ dim $>$}}, and \mbox{\hyperlink{classparticls_1_1_hypersphere_af8f20512f46e5673fd306efc9f132988}{particls\+::\+Hypersphere$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_geometry_a7344e93ca422515e8ab44ea234f9c530}\label{classparticls_1_1_geometry_a7344e93ca422515e8ab44ea234f9c530}} 
+\index{particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}!serialize@{serialize}}
+\index{serialize@{serialize}!particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+template$<$class Archive $>$ \\
+void \mbox{\hyperlink{classparticls_1_1_geometry}{particls\+::\+Geometry}}$<$ dim $>$\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 249 of file Geometry.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_geometry_a4ec0bb5ebbfd45460b26127d9456023f}\label{classparticls_1_1_geometry_a4ec0bb5ebbfd45460b26127d9456023f}} 
+\index{particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}!SignedDistance@{SignedDistance}}
+\index{SignedDistance@{SignedDistance}!particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{SignedDistance()}{SignedDistance()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_geometry}{particls\+::\+Geometry}}$<$ dim $>$\+::Signed\+Distance (\begin{DoxyParamCaption}\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{position,  }\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{ref\+\_\+pt }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & The position in space \\
+\hline
+\mbox{\texttt{ in}}  & {\em ref\+\_\+pt} & Reference point for determining which side of the boundary the position is \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The disance from the boundary (positive-\/outside, negative-\/inside, zero-\/on boundary) 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_ad69c37071833748cfd6025fa4e00d230}{particls\+::\+Convex\+Polyhedra$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_hypersphere_a45b249cc20c0173bc9b91555c2434a73}{particls\+::\+Hypersphere$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_flat_boundary_ad57e5d98ab460ebb48bd2b62233df134}{particls\+::\+Flat\+Boundary$<$ dim $>$}}, and \mbox{\hyperlink{classparticls_1_1_rounded_box_a304ae294351eb5dcda7e417cd4ce3f65}{particls\+::\+Rounded\+Box$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_geometry_a21d6c20edb4ef1aab9b6ca2eec4e7eb1}\label{classparticls_1_1_geometry_a21d6c20edb4ef1aab9b6ca2eec4e7eb1}} 
+\index{particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}!SignedDistanceGrad@{SignedDistanceGrad}}
+\index{SignedDistanceGrad@{SignedDistanceGrad}!particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{SignedDistanceGrad()}{SignedDistanceGrad()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual Eigen\+::\+Matrix$<$double, dim, 1$>$ \mbox{\hyperlink{classparticls_1_1_geometry}{particls\+::\+Geometry}}$<$ dim $>$\+::Signed\+Distance\+Grad (\begin{DoxyParamCaption}\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{position,  }\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{ref\+\_\+pt }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & The position in space \\
+\hline
+\mbox{\texttt{ in}}  & {\em ref\+\_\+pt} & Reference point for determining which side of the boundary the position is \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The gradient of the signed distance function 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_ab58a070925dd606a1ef0901bda475d2a}{particls\+::\+Convex\+Polyhedra$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_hypersphere_a3032f9d11a562a1d5537f25ed5cd0646}{particls\+::\+Hypersphere$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_flat_boundary_ac9bb06b8386b21714e08d28e4f65fabb}{particls\+::\+Flat\+Boundary$<$ dim $>$}}, and \mbox{\hyperlink{classparticls_1_1_rounded_box_a360b0b38ba1cbedf0494bfb3081fc51a}{particls\+::\+Rounded\+Box$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_geometry_a65bf0541fcc2a3e0aaf549381bdcbf29}\label{classparticls_1_1_geometry_a65bf0541fcc2a3e0aaf549381bdcbf29}} 
+\index{particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}!SignedDistanceGradByFD@{SignedDistanceGradByFD}}
+\index{SignedDistanceGradByFD@{SignedDistanceGradByFD}!particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{SignedDistanceGradByFD()}{SignedDistanceGradByFD()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, dim, 1$>$ \mbox{\hyperlink{classparticls_1_1_geometry}{particls\+::\+Geometry}}$<$ dim $>$\+::Signed\+Distance\+Grad\+By\+FD (\begin{DoxyParamCaption}\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{position,  }\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{ref\+\_\+pt }\end{DoxyParamCaption}) const}
+
+Finite difference estimation of the gradient. This function is public to test gradient implementations. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & The position in space \\
+\hline
+\mbox{\texttt{ in}}  & {\em ref\+\_\+pt} & Reference point for determining which side of the boundary the position is \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The gradient of the signed distance function estimated with finite difference 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_geometry_a430f478ea9ba1e9c21fca74e79931dbb}\label{classparticls_1_1_geometry_a430f478ea9ba1e9c21fca74e79931dbb}} 
+\index{particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}!SignedDistanceHess@{SignedDistanceHess}}
+\index{SignedDistanceHess@{SignedDistanceHess}!particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{SignedDistanceHess()}{SignedDistanceHess()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual Eigen\+::\+Matrix$<$double, dim, dim$>$ \mbox{\hyperlink{classparticls_1_1_geometry}{particls\+::\+Geometry}}$<$ dim $>$\+::Signed\+Distance\+Hess (\begin{DoxyParamCaption}\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{position,  }\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{ref\+\_\+pt }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & The position in space \\
+\hline
+\mbox{\texttt{ in}}  & {\em ref\+\_\+pt} & Reference point for determining which side of the boundary the position is \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Hessian of the signed distance function 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classparticls_1_1_hypersphere_afd78d9fa4d0985e509b68465e1bf413a}{particls\+::\+Hypersphere$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_flat_boundary_af69e43b8d7807a1c539fef9a3db7fadc}{particls\+::\+Flat\+Boundary$<$ dim $>$}}, and \mbox{\hyperlink{classparticls_1_1_rounded_box_a83c80cb1d462d2b5e01c9c37ab4ba490}{particls\+::\+Rounded\+Box$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_geometry_a31208ac174e93c9e88f8604e675a0e17}\label{classparticls_1_1_geometry_a31208ac174e93c9e88f8604e675a0e17}} 
+\index{particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}!SignedDistanceHessByFD@{SignedDistanceHessByFD}}
+\index{SignedDistanceHessByFD@{SignedDistanceHessByFD}!particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{SignedDistanceHessByFD()}{SignedDistanceHessByFD()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual Eigen\+::\+Matrix$<$double, dim, dim$>$ \mbox{\hyperlink{classparticls_1_1_geometry}{particls\+::\+Geometry}}$<$ dim $>$\+::Signed\+Distance\+Hess\+By\+FD (\begin{DoxyParamCaption}\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{position,  }\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{ref\+\_\+pt }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & The position in space \\
+\hline
+\mbox{\texttt{ in}}  & {\em ref\+\_\+pt} & Reference point for determining which side of the boundary the position is \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Hessian of the signed distance function estimated with finite difference 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_geometry_a27fe28ba995dc81e4d6dcd3a6162091b}\label{classparticls_1_1_geometry_a27fe28ba995dc81e4d6dcd3a6162091b}} 
+\index{particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}!Thickness@{Thickness}}
+\index{Thickness@{Thickness}!particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Thickness()}{Thickness()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_geometry}{particls\+::\+Geometry}}$<$ dim $>$\+::Thickness (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The particle thickness (only valid for 2D simulations) 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a28264e1af6fa465a9deafec9dafe4c4f}{particls\+::\+Convex\+Polyhedra$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_flat_boundary_a0b4fdd3065ae7aab3f34a04a7401d02f}{particls\+::\+Flat\+Boundary$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_rounded_box_afa17287e66ba5ff80a08ef3de464a40b}{particls\+::\+Rounded\+Box$<$ dim $>$}}, and \mbox{\hyperlink{classparticls_1_1_hypersphere_abba8c5e2672f34677cebfcd0a0b6b7b9}{particls\+::\+Hypersphere$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_geometry_a4f38eaff1a219f41698f6dbef1525495}\label{classparticls_1_1_geometry_a4f38eaff1a219f41698f6dbef1525495}} 
+\index{particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}!Volume@{Volume}}
+\index{Volume@{Volume}!particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Volume()}{Volume()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_geometry}{particls\+::\+Geometry}}$<$ dim $>$\+::Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The volume of the particle 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classparticls_1_1_hypersphere_abfefcd4c900bf05e5cddcff9b4301f4f}{particls\+::\+Hypersphere$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a69699fd3ccfbfd57306368b0024d8614}{particls\+::\+Convex\+Polyhedra$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_flat_boundary_ac3e145f94f43d96d50d5276137f870f6}{particls\+::\+Flat\+Boundary$<$ dim $>$}}, and \mbox{\hyperlink{classparticls_1_1_rounded_box_ad5fa0670c696b8ed443b59cd624d5881}{particls\+::\+Rounded\+Box$<$ dim $>$}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_geometry_ab2f44cbb59a08132f4c843e5225bba0e}\label{classparticls_1_1_geometry_ab2f44cbb59a08132f4c843e5225bba0e}} 
+\index{particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}!cereal::access@{cereal::access}}
+\index{cereal::access@{cereal::access}!particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{cereal::access}{cereal::access}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+friend class cereal\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 246 of file Geometry.\+hpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticls_1_1_geometry_a3c40b6ca5221cfd9ccc793d2f30e23f4}\label{classparticls_1_1_geometry_a3c40b6ca5221cfd9ccc793d2f30e23f4}} 
+\index{particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}!fdAbs@{fdAbs}}
+\index{fdAbs@{fdAbs}!particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{fdAbs}{fdAbs}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_geometry}{particls\+::\+Geometry}}$<$ dim $>$\+::fd\+Abs = 1e-\/6\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Default finite difference absolute stepsize. 
+
+
+
+Definition at line 241 of file Geometry.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_geometry_ae384be41c865659259d60d686a8707a5}\label{classparticls_1_1_geometry_ae384be41c865659259d60d686a8707a5}} 
+\index{particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}!fdRel@{fdRel}}
+\index{fdRel@{fdRel}!particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{fdRel}{fdRel}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_geometry}{particls\+::\+Geometry}}$<$ dim $>$\+::fd\+Rel = 1e-\/6\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Default finite difference relative stepsize. 
+
+
+
+Definition at line 244 of file Geometry.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_geometry_ac121f92885747479e785792845a9e12a}\label{classparticls_1_1_geometry_ac121f92885747479e785792845a9e12a}} 
+\index{particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}!mass@{mass}}
+\index{mass@{mass}!particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{mass}{mass}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_geometry}{particls\+::\+Geometry}}$<$ dim $>$\+::mass\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The mass. 
+
+
+
+Definition at line 224 of file Geometry.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_geometry_ae138e73c20c9a03c0ed5614655abaac7}\label{classparticls_1_1_geometry_ae138e73c20c9a03c0ed5614655abaac7}} 
+\index{particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}!moi@{moi}}
+\index{moi@{moi}!particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{moi}{moi}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$dim$>$\+::moment, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$dim$>$\+::moment$>$ \mbox{\hyperlink{classparticls_1_1_geometry}{particls\+::\+Geometry}}$<$ dim $>$\+::moi\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The moment of inertia. 
+
+
+
+Definition at line 221 of file Geometry.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_geometry_ac38270357addfffb224e6e850648dc83}\label{classparticls_1_1_geometry_ac38270357addfffb224e6e850648dc83}} 
+\index{particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}!moment\_arm@{moment\_arm}}
+\index{moment\_arm@{moment\_arm}!particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{moment\_arm}{moment\_arm}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_geometry}{particls\+::\+Geometry}}$<$ dim $>$\+::moment\+\_\+arm\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The moment arm. 
+
+
+
+Definition at line 236 of file Geometry.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_geometry_a4d54ac4b46adaaf85ca3285bed0d4663}\label{classparticls_1_1_geometry_a4d54ac4b46adaaf85ca3285bed0d4663}} 
+\index{particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}!thickness@{thickness}}
+\index{thickness@{thickness}!particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{thickness}{thickness}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_geometry}{particls\+::\+Geometry}}$<$ dim $>$\+::thickness = 1\hspace{0.3cm}{\ttfamily [protected]}}
+
+The particle thickness (only useful for 2D simulations). Default value of 1 ensures a per unit thickness calculation. 
+
+Definition at line 233 of file Geometry.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_geometry_add05000c0e618e8bfac1b7ec9facce43}\label{classparticls_1_1_geometry_add05000c0e618e8bfac1b7ec9facce43}} 
+\index{particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}!volume@{volume}}
+\index{volume@{volume}!particls::Geometry$<$ dim $>$@{particls::Geometry$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{volume}{volume}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_geometry}{particls\+::\+Geometry}}$<$ dim $>$\+::volume\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The volume. 
+
+
+
+Definition at line 227 of file Geometry.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_geometry_8hpp}{Geometry.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,392 @@
+\hypertarget{classparticls_1_1_rigid_body}{}\doxysection{particls\+::Rigid\+Body Class Reference}
+\label{classparticls_1_1_rigid_body}\index{particls::RigidBody@{particls::RigidBody}}
+
+
+Forward declaration of rigid body.  
+
+
+
+
+{\ttfamily \#include $<$Contact\+Summary.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_rigid_body_a2fd5e167ae9755e58f2ea360559ba763}{Rigid\+Body}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_geometry}{Geometry}}$<$ dim $>$ $>$ const \&geometry, typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Position const \&position, typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Velocity const \&translational\+Vel=\mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Velocity\+::\+Zero(), typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_rigid_body_ac3c169cf02b0f63b67e1b494282dae9e}{Orientation}} const \&angle=\mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Zero\+Orientation(), typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_rigid_body_aaf774ee04c11155b8587e3f363444e34}{Angular\+Velocity}} const \&angular\+Vel=\mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Angular\+Velocity\+::\+Zero(), unsigned int const additional\+Dim=0, bool const ignore\+\_\+forces=false)
+\item 
+\mbox{\hyperlink{classparticls_1_1_rigid_body_afd26526711bb1d127af020c56eeba9ac}{Rigid\+Body}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_geometry}{Geometry}}$<$ dim $>$ $>$ const \&geometry, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_elastic_state}{Elastic\+State}} $>$ const \&material, typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Position const \&position, typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Velocity const \&translational\+Vel=\mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Velocity\+::\+Zero(), typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_rigid_body_ac3c169cf02b0f63b67e1b494282dae9e}{Orientation}} const \&angle=\mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Zero\+Orientation(), typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_rigid_body_aaf774ee04c11155b8587e3f363444e34}{Angular\+Velocity}} const \&angular\+Vel=\mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Angular\+Velocity\+::\+Zero(), unsigned int const additional\+Dim=0, bool const ignore\+\_\+forces=false)
+\item 
+virtual \mbox{\hyperlink{classparticls_1_1_rigid_body_add42f1ce2bc792e45133640a48195c3c}{$\sim$\+Rigid\+Body}} ()=default
+\item 
+virtual Eigen\+::\+Map$<$ const typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Orientation $>$ \mbox{\hyperlink{classparticls_1_1_rigid_body_ac3c169cf02b0f63b67e1b494282dae9e}{Orientation}} () const
+\item 
+virtual Eigen\+::\+Map$<$ typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Orientation $>$ \mbox{\hyperlink{classparticls_1_1_rigid_body_a526c33592b1019bcbea14a9d7cfc525a}{Orientation}} ()
+\item 
+Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_rigid_body_a5826e23dfb753bb82747954edb6778c0}{Apply\+Orientation}} (Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&x) const
+\begin{DoxyCompactList}\small\item\em Rotate a vector $x$ by the orientation of the rigid body. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_rigid_body_ac23e89e233fa619c57d44ba146c22051}{Apply\+Inverse\+Orientation}} (Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&x) const
+\begin{DoxyCompactList}\small\item\em Rotate a vector $x$ by the inverse orientation of the rigid body. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_rigid_body_aefab2498c3bff2142de172713ea4cac4}{Apply\+Mask}} (int const \&value)
+\begin{DoxyCompactList}\small\item\em Add a color mask to body. \end{DoxyCompactList}\item 
+virtual Eigen\+::\+Map$<$ const typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Angular\+Velocity $>$ \mbox{\hyperlink{classparticls_1_1_rigid_body_aaf774ee04c11155b8587e3f363444e34}{Angular\+Velocity}} () const
+\item 
+virtual Eigen\+::\+Map$<$ typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Angular\+Velocity $>$ \mbox{\hyperlink{classparticls_1_1_rigid_body_ad1ba843a8b48f6e6fb23cfc99840522e}{Angular\+Velocity}} ()
+\item 
+virtual Eigen\+::\+Map$<$ const Eigen\+::\+Vector\+Xd $>$ \mbox{\hyperlink{classparticls_1_1_rigid_body_a345475b188c3d97e2504ccd5274eea45}{Other\+States}} () const override
+\item 
+virtual Eigen\+::\+Map$<$ Eigen\+::\+Vector\+Xd $>$ \mbox{\hyperlink{classparticls_1_1_rigid_body_a453c62368d48a59179c2cd0539e1c93e}{Other\+States}} () override
+\item 
+virtual Eigen\+::\+Matrix$<$ double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$ dim $>$\+::moment, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$ dim $>$\+::moment $>$ \mbox{\hyperlink{classparticls_1_1_rigid_body_ad3fa40bcaa1ab80d6e01118554007e45}{Moment\+Of\+Inertia}} () const
+\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_rigid_body_a1c225c674761b6cab2890c6b2b82eb64}{Compute\+Contact}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&other\+Particle, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structparticls_1_1_contact_summary}{Contact\+Summary}}$<$ dim $>$ $>$ $>$ \&summary) const override
+\begin{DoxyCompactList}\small\item\em Compute information about the contact between two particles. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Position \mbox{\hyperlink{classparticls_1_1_rigid_body_a2ca0db46202494a986e3bd7400dab4dc}{Project\+To\+Boundary}} (typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Position const \&x, Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&ref\+\_\+pt) const
+\begin{DoxyCompactList}\small\item\em Project onto boundary. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_rigid_body_a4ee7d9d4bfbf23418efa43bb763c9dbd}{Signed\+Distance}} (Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&position, Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&ref\+\_\+pt) const
+\item 
+virtual Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_rigid_body_a84ff68656af1a204b81b791a7215d02f}{Signed\+Distance\+Grad}} (Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&position, Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&ref\+\_\+pt) const
+\item 
+virtual Eigen\+::\+Matrix$<$ double, dim, dim $>$ \mbox{\hyperlink{classparticls_1_1_rigid_body_a83f9374bdfe2a183d59a71cda6362fc8}{Signed\+Distance\+Hess}} (Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&position, Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&ref\+\_\+pt) const
+\item 
+virtual Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_rigid_body_a4450bda4a3826d2dd69dbd872f1153f4}{Proximal\+Operator}} (Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$$>$ const \&x, Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$$>$ const \&ref\+\_\+pt, double lambda) const
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_rigid_body_ae0242ff789cbfbd37e845231f09d9e02}{Mass}} () const override
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_rigid_body_ad9b7d49d33df85e83096caa9a90131e8}{Volume}} () const override
+\item 
+virtual Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_rigid_body_a25894defe45f44b69a8e148c9afcbc32}{Center\+Of\+Mass}} () const override
+\item 
+virtual Eigen\+::\+Matrix$<$ double, 2, dim $>$ \mbox{\hyperlink{classparticls_1_1_rigid_body_abef77eed58eaec5ed370b985023bb821}{Bounds}} () const override
+\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_geometry}{Geometry}}$<$ dim $>$ $>$ \mbox{\hyperlink{classparticls_1_1_rigid_body_ae25a7d0c21c279e13e153c42c1669173}{Get\+Geometry}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Forward declaration of rigid body. 
+
+Defines rigid bodies with translation and rotation.
+
+Defines rigid body particles and adds orientation and angular velocity states to the \mbox{\hyperlink{classparticls_1_1_particle}{Particle}} class. The idea is that the particle class could be used for more general meshless methods (like peridynamics) that do not require rotations, whereas the \mbox{\hyperlink{classparticls_1_1_rigid_body}{Rigid\+Body}} class is more specific to the discrete element method. 
+
+Definition at line 12 of file Contact\+Summary.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_rigid_body_a2fd5e167ae9755e58f2ea360559ba763}\label{classparticls_1_1_rigid_body_a2fd5e167ae9755e58f2ea360559ba763}} 
+\index{particls::RigidBody@{particls::RigidBody}!RigidBody@{RigidBody}}
+\index{RigidBody@{RigidBody}!particls::RigidBody@{particls::RigidBody}}
+\doxysubsubsection{\texorpdfstring{RigidBody()}{RigidBody()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily particls\+::\+Rigid\+Body\+::\+Rigid\+Body (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_geometry}{Geometry}}$<$ dim $>$ $>$ const \&}]{geometry,  }\item[{typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Position const \&}]{position,  }\item[{typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Velocity const \&}]{translational\+Vel = {\ttfamily \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$~dim~$>$\+:\+:Velocity\+:\+:Zero()},  }\item[{typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_rigid_body_ac3c169cf02b0f63b67e1b494282dae9e}{Orientation}} const \&}]{angle = {\ttfamily \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$~dim~$>$\+:\+:ZeroOrientation()},  }\item[{typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_rigid_body_aaf774ee04c11155b8587e3f363444e34}{Angular\+Velocity}} const \&}]{angular\+Vel = {\ttfamily \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$~dim~$>$\+:\+:AngularVelocity\+:\+:Zero()},  }\item[{unsigned int const}]{additional\+Dim = {\ttfamily 0},  }\item[{bool const}]{ignore\+\_\+forces = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em geometry} & The \mbox{\hyperlink{classparticls_1_1_geometry}{particls\+::\+Geometry}} that defines the object\textquotesingle{}s shape \\
+\hline
+\mbox{\texttt{ in}}  & {\em position} & The current position \\
+\hline
+\mbox{\texttt{ in}}  & {\em translational\+Vel} & The current translational velocity \\
+\hline
+\mbox{\texttt{ in}}  & {\em angle} & The current orientation in space \\
+\hline
+\mbox{\texttt{ in}}  & {\em angular\+Vel} & The current angular velocity \\
+\hline
+\mbox{\texttt{ in}}  & {\em ignore\+\_\+forces} & True\+: no outside forces can act on this particle, False (default)\+: outside forces are allowed to act on this particle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_rigid_body_afd26526711bb1d127af020c56eeba9ac}\label{classparticls_1_1_rigid_body_afd26526711bb1d127af020c56eeba9ac}} 
+\index{particls::RigidBody@{particls::RigidBody}!RigidBody@{RigidBody}}
+\index{RigidBody@{RigidBody}!particls::RigidBody@{particls::RigidBody}}
+\doxysubsubsection{\texorpdfstring{RigidBody()}{RigidBody()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily particls\+::\+Rigid\+Body\+::\+Rigid\+Body (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_geometry}{Geometry}}$<$ dim $>$ $>$ const \&}]{geometry,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_elastic_state}{Elastic\+State}} $>$ const \&}]{material,  }\item[{typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Position const \&}]{position,  }\item[{typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Velocity const \&}]{translational\+Vel = {\ttfamily \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$~dim~$>$\+:\+:Velocity\+:\+:Zero()},  }\item[{typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_rigid_body_ac3c169cf02b0f63b67e1b494282dae9e}{Orientation}} const \&}]{angle = {\ttfamily \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$~dim~$>$\+:\+:ZeroOrientation()},  }\item[{typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_rigid_body_aaf774ee04c11155b8587e3f363444e34}{Angular\+Velocity}} const \&}]{angular\+Vel = {\ttfamily \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$~dim~$>$\+:\+:AngularVelocity\+:\+:Zero()},  }\item[{unsigned int const}]{additional\+Dim = {\ttfamily 0},  }\item[{bool const}]{ignore\+\_\+forces = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em geometry} & The \mbox{\hyperlink{classparticls_1_1_geometry}{particls\+::\+Geometry}} that defines the object\textquotesingle{}s shape \\
+\hline
+\mbox{\texttt{ in}}  & {\em material} & Material properties of the particle \\
+\hline
+\mbox{\texttt{ in}}  & {\em position} & The current position \\
+\hline
+\mbox{\texttt{ in}}  & {\em translational\+Vel} & The current translational velocity \\
+\hline
+\mbox{\texttt{ in}}  & {\em angle} & The current orientation in space \\
+\hline
+\mbox{\texttt{ in}}  & {\em angular\+Vel} & The current angular velocity \\
+\hline
+\mbox{\texttt{ in}}  & {\em ignore\+\_\+forces} & True\+: no outside forces can act on this particle, False (default)\+: outside forces are allowed to act on this particle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_rigid_body_add42f1ce2bc792e45133640a48195c3c}\label{classparticls_1_1_rigid_body_add42f1ce2bc792e45133640a48195c3c}} 
+\index{particls::RigidBody@{particls::RigidBody}!````~RigidBody@{$\sim$RigidBody}}
+\index{````~RigidBody@{$\sim$RigidBody}!particls::RigidBody@{particls::RigidBody}}
+\doxysubsubsection{\texorpdfstring{$\sim$RigidBody()}{~RigidBody()}}
+{\footnotesize\ttfamily virtual particls\+::\+Rigid\+Body\+::$\sim$\+Rigid\+Body (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_rigid_body_ad1ba843a8b48f6e6fb23cfc99840522e}\label{classparticls_1_1_rigid_body_ad1ba843a8b48f6e6fb23cfc99840522e}} 
+\index{particls::RigidBody@{particls::RigidBody}!AngularVelocity@{AngularVelocity}}
+\index{AngularVelocity@{AngularVelocity}!particls::RigidBody@{particls::RigidBody}}
+\doxysubsubsection{\texorpdfstring{AngularVelocity()}{AngularVelocity()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual Eigen\+::\+Map$<$typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$dim$>$\+::Angular\+Velocity$>$ particls\+::\+Rigid\+Body\+::\+Angular\+Velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Extract the particle\textquotesingle{}s angular velocity from the state vector (non-\/const version) \begin{DoxyReturn}{Returns}
+The particle\textquotesingle{}s angular velocity (a 1 dimensional vector in 2D and a 3 dimensional vector in 3D) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_rigid_body_aaf774ee04c11155b8587e3f363444e34}\label{classparticls_1_1_rigid_body_aaf774ee04c11155b8587e3f363444e34}} 
+\index{particls::RigidBody@{particls::RigidBody}!AngularVelocity@{AngularVelocity}}
+\index{AngularVelocity@{AngularVelocity}!particls::RigidBody@{particls::RigidBody}}
+\doxysubsubsection{\texorpdfstring{AngularVelocity()}{AngularVelocity()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual Eigen\+::\+Map$<$const typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$dim$>$\+::Angular\+Velocity$>$ particls\+::\+Rigid\+Body\+::\+Angular\+Velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Extract the particle\textquotesingle{}s angular velocity from the state vector \begin{DoxyReturn}{Returns}
+The particle\textquotesingle{}s angular velocity (a 1 dimensional vector in 2D and a 3 dimensional vector in 3D) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_rigid_body_ac23e89e233fa619c57d44ba146c22051}\label{classparticls_1_1_rigid_body_ac23e89e233fa619c57d44ba146c22051}} 
+\index{particls::RigidBody@{particls::RigidBody}!ApplyInverseOrientation@{ApplyInverseOrientation}}
+\index{ApplyInverseOrientation@{ApplyInverseOrientation}!particls::RigidBody@{particls::RigidBody}}
+\doxysubsubsection{\texorpdfstring{ApplyInverseOrientation()}{ApplyInverseOrientation()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix$<$double, dim, 1$>$ particls\+::\+Rigid\+Body\+::\+Apply\+Inverse\+Orientation (\begin{DoxyParamCaption}\item[{Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&}]{x }\end{DoxyParamCaption}) const}
+
+
+
+Rotate a vector $x$ by the inverse orientation of the rigid body. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & We are rotation this vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The rotated vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_rigid_body_aefab2498c3bff2142de172713ea4cac4}\label{classparticls_1_1_rigid_body_aefab2498c3bff2142de172713ea4cac4}} 
+\index{particls::RigidBody@{particls::RigidBody}!ApplyMask@{ApplyMask}}
+\index{ApplyMask@{ApplyMask}!particls::RigidBody@{particls::RigidBody}}
+\doxysubsubsection{\texorpdfstring{ApplyMask()}{ApplyMask()}}
+{\footnotesize\ttfamily void particls\+::\+Rigid\+Body\+::\+Apply\+Mask (\begin{DoxyParamCaption}\item[{int const \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Add a color mask to body. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em value} & An int $>$ 0 used to differentiate groups of particles. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_rigid_body_a5826e23dfb753bb82747954edb6778c0}\label{classparticls_1_1_rigid_body_a5826e23dfb753bb82747954edb6778c0}} 
+\index{particls::RigidBody@{particls::RigidBody}!ApplyOrientation@{ApplyOrientation}}
+\index{ApplyOrientation@{ApplyOrientation}!particls::RigidBody@{particls::RigidBody}}
+\doxysubsubsection{\texorpdfstring{ApplyOrientation()}{ApplyOrientation()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix$<$double, dim, 1$>$ particls\+::\+Rigid\+Body\+::\+Apply\+Orientation (\begin{DoxyParamCaption}\item[{Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&}]{x }\end{DoxyParamCaption}) const}
+
+
+
+Rotate a vector $x$ by the orientation of the rigid body. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & We are rotation this vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The rotated vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_rigid_body_abef77eed58eaec5ed370b985023bb821}\label{classparticls_1_1_rigid_body_abef77eed58eaec5ed370b985023bb821}} 
+\index{particls::RigidBody@{particls::RigidBody}!Bounds@{Bounds}}
+\index{Bounds@{Bounds}!particls::RigidBody@{particls::RigidBody}}
+\doxysubsubsection{\texorpdfstring{Bounds()}{Bounds()}}
+{\footnotesize\ttfamily virtual Eigen\+::\+Matrix$<$double, 2,dim$>$ particls\+::\+Rigid\+Body\+::\+Bounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Return a bounding box for this geometry. The first row of the output is a lower bound for each coordinate direction and the second row is an upper bound for each coordinate direction. \mbox{\Hypertarget{classparticls_1_1_rigid_body_a25894defe45f44b69a8e148c9afcbc32}\label{classparticls_1_1_rigid_body_a25894defe45f44b69a8e148c9afcbc32}} 
+\index{particls::RigidBody@{particls::RigidBody}!CenterOfMass@{CenterOfMass}}
+\index{CenterOfMass@{CenterOfMass}!particls::RigidBody@{particls::RigidBody}}
+\doxysubsubsection{\texorpdfstring{CenterOfMass()}{CenterOfMass()}}
+{\footnotesize\ttfamily virtual Eigen\+::\+Matrix$<$double, dim,1$>$ particls\+::\+Rigid\+Body\+::\+Center\+Of\+Mass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The center of mass of the particle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_rigid_body_a1c225c674761b6cab2890c6b2b82eb64}\label{classparticls_1_1_rigid_body_a1c225c674761b6cab2890c6b2b82eb64}} 
+\index{particls::RigidBody@{particls::RigidBody}!ComputeContact@{ComputeContact}}
+\index{ComputeContact@{ComputeContact}!particls::RigidBody@{particls::RigidBody}}
+\doxysubsubsection{\texorpdfstring{ComputeContact()}{ComputeContact()}}
+{\footnotesize\ttfamily virtual void particls\+::\+Rigid\+Body\+::\+Compute\+Contact (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{other\+Particle,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structparticls_1_1_contact_summary}{Contact\+Summary}}$<$ dim $>$ $>$ $>$ \&}]{summary }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compute information about the contact between two particles. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em other\+Particle} & The other particle that may be in contact (or overlaping) with this particle \\
+\hline
+\mbox{\texttt{ out}}  & {\em summary} & A \mbox{\hyperlink{structparticls_1_1_contact_summary}{Contact\+Summary}} structure containing information about the contact \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_rigid_body_ae25a7d0c21c279e13e153c42c1669173}\label{classparticls_1_1_rigid_body_ae25a7d0c21c279e13e153c42c1669173}} 
+\index{particls::RigidBody@{particls::RigidBody}!GetGeometry@{GetGeometry}}
+\index{GetGeometry@{GetGeometry}!particls::RigidBody@{particls::RigidBody}}
+\doxysubsubsection{\texorpdfstring{GetGeometry()}{GetGeometry()}}
+{\footnotesize\ttfamily virtual std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_geometry}{Geometry}}$<$dim$>$ $>$ particls\+::\+Rigid\+Body\+::\+Get\+Geometry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Returns the reference geometry used to define this rigid body. 
+
+Definition at line 210 of file Rigid\+Body.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_rigid_body_ae0242ff789cbfbd37e845231f09d9e02}\label{classparticls_1_1_rigid_body_ae0242ff789cbfbd37e845231f09d9e02}} 
+\index{particls::RigidBody@{particls::RigidBody}!Mass@{Mass}}
+\index{Mass@{Mass}!particls::RigidBody@{particls::RigidBody}}
+\doxysubsubsection{\texorpdfstring{Mass()}{Mass()}}
+{\footnotesize\ttfamily virtual double particls\+::\+Rigid\+Body\+::\+Mass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The mass of the particle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_rigid_body_ad3fa40bcaa1ab80d6e01118554007e45}\label{classparticls_1_1_rigid_body_ad3fa40bcaa1ab80d6e01118554007e45}} 
+\index{particls::RigidBody@{particls::RigidBody}!MomentOfInertia@{MomentOfInertia}}
+\index{MomentOfInertia@{MomentOfInertia}!particls::RigidBody@{particls::RigidBody}}
+\doxysubsubsection{\texorpdfstring{MomentOfInertia()}{MomentOfInertia()}}
+{\footnotesize\ttfamily virtual Eigen\+::\+Matrix$<$double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$dim$>$\+::moment, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$dim$>$\+::moment$>$ particls\+::\+Rigid\+Body\+::\+Moment\+Of\+Inertia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The moment of inertia of the particle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_rigid_body_a526c33592b1019bcbea14a9d7cfc525a}\label{classparticls_1_1_rigid_body_a526c33592b1019bcbea14a9d7cfc525a}} 
+\index{particls::RigidBody@{particls::RigidBody}!Orientation@{Orientation}}
+\index{Orientation@{Orientation}!particls::RigidBody@{particls::RigidBody}}
+\doxysubsubsection{\texorpdfstring{Orientation()}{Orientation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual Eigen\+::\+Map$<$typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$dim$>$\+::Orientation$>$ particls\+::\+Rigid\+Body\+::\+Orientation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Extract the particle\textquotesingle{}s angle of rotation (in 2D) or the quaternion (in 3D) from the state vector (non-\/const version) \begin{DoxyReturn}{Returns}
+The particle\textquotesingle{}s angle of rotation (in 2D) or the quaternion (in 3D) (a 1 dimensional vector in 2D and a 4 dimensional vector in 3D) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_rigid_body_ac3c169cf02b0f63b67e1b494282dae9e}\label{classparticls_1_1_rigid_body_ac3c169cf02b0f63b67e1b494282dae9e}} 
+\index{particls::RigidBody@{particls::RigidBody}!Orientation@{Orientation}}
+\index{Orientation@{Orientation}!particls::RigidBody@{particls::RigidBody}}
+\doxysubsubsection{\texorpdfstring{Orientation()}{Orientation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual Eigen\+::\+Map$<$const typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$dim$>$\+::Orientation$>$ particls\+::\+Rigid\+Body\+::\+Orientation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Extract the particle\textquotesingle{}s angle of rotation (in 2D) or the quaternion (in 3D) from the state vector \begin{DoxyReturn}{Returns}
+The particle\textquotesingle{}s angle of rotation (in 2D) or the quaternion (in 3D) (a 1 dimensional vector in 2D and a 4 dimensional vector in 3D) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_rigid_body_a345475b188c3d97e2504ccd5274eea45}\label{classparticls_1_1_rigid_body_a345475b188c3d97e2504ccd5274eea45}} 
+\index{particls::RigidBody@{particls::RigidBody}!OtherStates@{OtherStates}}
+\index{OtherStates@{OtherStates}!particls::RigidBody@{particls::RigidBody}}
+\doxysubsubsection{\texorpdfstring{OtherStates()}{OtherStates()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual Eigen\+::\+Map$<$const Eigen\+::\+Vector\+Xd$>$ particls\+::\+Rigid\+Body\+::\+Other\+States (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Extract the particle\textquotesingle{}s other parameters from the state vector \begin{DoxyReturn}{Returns}
+The particle\textquotesingle{}s other parameters 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_rigid_body_a453c62368d48a59179c2cd0539e1c93e}\label{classparticls_1_1_rigid_body_a453c62368d48a59179c2cd0539e1c93e}} 
+\index{particls::RigidBody@{particls::RigidBody}!OtherStates@{OtherStates}}
+\index{OtherStates@{OtherStates}!particls::RigidBody@{particls::RigidBody}}
+\doxysubsubsection{\texorpdfstring{OtherStates()}{OtherStates()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual Eigen\+::\+Map$<$Eigen\+::\+Vector\+Xd$>$ particls\+::\+Rigid\+Body\+::\+Other\+States (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Extract the particle\textquotesingle{}s other parameters from the state vector (non-\/const version) \begin{DoxyReturn}{Returns}
+The particle\textquotesingle{}s other parameters 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_rigid_body_a2ca0db46202494a986e3bd7400dab4dc}\label{classparticls_1_1_rigid_body_a2ca0db46202494a986e3bd7400dab4dc}} 
+\index{particls::RigidBody@{particls::RigidBody}!ProjectToBoundary@{ProjectToBoundary}}
+\index{ProjectToBoundary@{ProjectToBoundary}!particls::RigidBody@{particls::RigidBody}}
+\doxysubsubsection{\texorpdfstring{ProjectToBoundary()}{ProjectToBoundary()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$dim$>$\+::Position particls\+::\+Rigid\+Body\+::\+Project\+To\+Boundary (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Position const \&}]{x,  }\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{ref\+\_\+pt }\end{DoxyParamCaption}) const}
+
+
+
+Project onto boundary. 
+
+Find the closest point to $x$ on the boundary of the particle 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & The position in space \\
+\hline
+\mbox{\texttt{ in}}  & {\em ref\+\_\+pt} & Reference point for one-\/sided signed distance functions \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_rigid_body_a4450bda4a3826d2dd69dbd872f1153f4}\label{classparticls_1_1_rigid_body_a4450bda4a3826d2dd69dbd872f1153f4}} 
+\index{particls::RigidBody@{particls::RigidBody}!ProximalOperator@{ProximalOperator}}
+\index{ProximalOperator@{ProximalOperator}!particls::RigidBody@{particls::RigidBody}}
+\doxysubsubsection{\texorpdfstring{ProximalOperator()}{ProximalOperator()}}
+{\footnotesize\ttfamily virtual Eigen\+::\+Matrix$<$double, dim, 1$>$ particls\+::\+Rigid\+Body\+::\+Proximal\+Operator (\begin{DoxyParamCaption}\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$$>$ const \&}]{x,  }\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$$>$ const \&}]{ref\+\_\+pt,  }\item[{double}]{lambda }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+For a function $f(x)$, the proximal operator with weight $\lambda$ at a point $x$ is defined as \[ \text{prox}_{\lambda f} = \argmin_y\left(f(y) + \frac{1}{2\lambda}|x-y|^2_2 \right). \] This operator arises in many optimization algorithms and is key component of Partic\+LS\textquotesingle{}s optimization-\/based contact detection routines. This function applies the proximal operator for the level set function of the particle. It is used in Rigid\+Body\+::\+Convex\+Compute\+Contact and calls the \mbox{\hyperlink{classparticls_1_1_geometry_ae5a6e81ee65d5f0ad2c342ff63bb111b}{Geometry\+::\+Proximal\+Operator}}. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & The point $x$ where we want to evaluate the proximal operator. \\
+\hline
+\mbox{\texttt{ in}}  & {\em ref\+\_\+pt} & The reference point used for one-\/side S\+DF\textquotesingle{}s line the flatboundary \\
+\hline
+\mbox{\texttt{ in}}  & {\em lambda} & A double containing the weight $\lambda$. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The proximal operator for the level set function applied to the point $x$. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_rigid_body_a4ee7d9d4bfbf23418efa43bb763c9dbd}\label{classparticls_1_1_rigid_body_a4ee7d9d4bfbf23418efa43bb763c9dbd}} 
+\index{particls::RigidBody@{particls::RigidBody}!SignedDistance@{SignedDistance}}
+\index{SignedDistance@{SignedDistance}!particls::RigidBody@{particls::RigidBody}}
+\doxysubsubsection{\texorpdfstring{SignedDistance()}{SignedDistance()}}
+{\footnotesize\ttfamily virtual double particls\+::\+Rigid\+Body\+::\+Signed\+Distance (\begin{DoxyParamCaption}\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{position,  }\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{ref\+\_\+pt }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & The position in space \\
+\hline
+\mbox{\texttt{ in}}  & {\em ref\+\_\+pt} & Reference point for one-\/sided signed distance functions \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The disance from the boundary (positive-\/outside, negative-\/inside, zero-\/on boundary) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_rigid_body_a84ff68656af1a204b81b791a7215d02f}\label{classparticls_1_1_rigid_body_a84ff68656af1a204b81b791a7215d02f}} 
+\index{particls::RigidBody@{particls::RigidBody}!SignedDistanceGrad@{SignedDistanceGrad}}
+\index{SignedDistanceGrad@{SignedDistanceGrad}!particls::RigidBody@{particls::RigidBody}}
+\doxysubsubsection{\texorpdfstring{SignedDistanceGrad()}{SignedDistanceGrad()}}
+{\footnotesize\ttfamily virtual Eigen\+::\+Matrix$<$double, dim, 1$>$ particls\+::\+Rigid\+Body\+::\+Signed\+Distance\+Grad (\begin{DoxyParamCaption}\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{position,  }\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{ref\+\_\+pt }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & The position in space \\
+\hline
+\mbox{\texttt{ in}}  & {\em ref\+\_\+pt} & Reference point for one-\/sided signed distance functions \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The gradient of the signed distance function 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_rigid_body_a83f9374bdfe2a183d59a71cda6362fc8}\label{classparticls_1_1_rigid_body_a83f9374bdfe2a183d59a71cda6362fc8}} 
+\index{particls::RigidBody@{particls::RigidBody}!SignedDistanceHess@{SignedDistanceHess}}
+\index{SignedDistanceHess@{SignedDistanceHess}!particls::RigidBody@{particls::RigidBody}}
+\doxysubsubsection{\texorpdfstring{SignedDistanceHess()}{SignedDistanceHess()}}
+{\footnotesize\ttfamily virtual Eigen\+::\+Matrix$<$double, dim, dim$>$ particls\+::\+Rigid\+Body\+::\+Signed\+Distance\+Hess (\begin{DoxyParamCaption}\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{position,  }\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{ref\+\_\+pt }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & The position in space \\
+\hline
+\mbox{\texttt{ in}}  & {\em ref\+\_\+pt} & Reference point for one-\/sided signed distance functions \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Hessian of the signed distance function 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_rigid_body_ad9b7d49d33df85e83096caa9a90131e8}\label{classparticls_1_1_rigid_body_ad9b7d49d33df85e83096caa9a90131e8}} 
+\index{particls::RigidBody@{particls::RigidBody}!Volume@{Volume}}
+\index{Volume@{Volume}!particls::RigidBody@{particls::RigidBody}}
+\doxysubsubsection{\texorpdfstring{Volume()}{Volume()}}
+{\footnotesize\ttfamily virtual double particls\+::\+Rigid\+Body\+::\+Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The volume of the particle 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_contact_summary_8hpp}{Contact\+Summary.\+hpp}}\item 
+\mbox{\hyperlink{_rigid_body_8hpp}{Rigid\+Body.\+hpp}}\end{DoxyCompactItemize}

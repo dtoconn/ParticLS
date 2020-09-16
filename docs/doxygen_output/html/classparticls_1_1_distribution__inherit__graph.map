@@ -1,0 +1,6 @@
+<map id="particls::Distribution" name="particls::Distribution">
+<area shape="rect" id="node1" title="Base class for distributions." alt="" coords="143,5,282,32"/>
+<area shape="rect" id="node2" href="$classparticls_1_1_scalar_distribution.html" title="Base class for distributions that return real&#45;valued scalar random numbers." alt="" coords="125,80,300,107"/>
+<area shape="rect" id="node3" href="$classparticls_1_1_log_normal_distribution.html" title=" " alt="" coords="5,155,207,181"/>
+<area shape="rect" id="node4" href="$classparticls_1_1_normal_distribution.html" title="Generates samples that follow a normal distribution." alt="" coords="231,155,411,181"/>
+</map>

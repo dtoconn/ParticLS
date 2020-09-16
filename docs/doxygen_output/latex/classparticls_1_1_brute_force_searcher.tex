@@ -1,0 +1,159 @@
+\hypertarget{classparticls_1_1_brute_force_searcher}{}\doxysection{particls\+::Brute\+Force\+Searcher$<$ dim $>$ Class Template Reference}
+\label{classparticls_1_1_brute_force_searcher}\index{particls::BruteForceSearcher$<$ dim $>$@{particls::BruteForceSearcher$<$ dim $>$}}
+
+
+{\ttfamily \#include $<$Brute\+Force\+Searcher.\+hpp$>$}
+
+
+
+Inheritance diagram for particls\+::Brute\+Force\+Searcher$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{classparticls_1_1_brute_force_searcher__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for particls\+::Brute\+Force\+Searcher$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{classparticls_1_1_brute_force_searcher__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_brute_force_searcher_a883fa60e9656a291f0dba7dacba700b0}{Brute\+Force\+Searcher}} (Y\+A\+M\+L\+::\+Node const \&options)
+\item 
+virtual \mbox{\hyperlink{classparticls_1_1_brute_force_searcher_a2440ff574d01f071b910ef4e1d756f83}{$\sim$\+Brute\+Force\+Searcher}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_brute_force_searcher_af637ab18c8cc4559a7e16274ce940fd2}{Compute}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&particles) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_brute_force_searcher_ad0024bfcb7a931fe8da7ba31b8f1486f}{Brute\+Force\+Searcher}} ()=default
+\begin{DoxyCompactList}\small\item\em Private default constructor for serialize. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classparticls_1_1_brute_force_searcher_a482a96edcc5acd971525f82c25643cf5}{serialize}} (Archive \&ar)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classparticls_1_1_brute_force_searcher_aa2c02adfb9fcdaa132c62a5713a67bbc}{threshold}}
+\begin{DoxyCompactList}\small\item\em Radius for the searcher to look for particles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classparticls_1_1_brute_force_searcher_ab2f44cbb59a08132f4c843e5225bba0e}{cereal\+::access}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+class particls\+::\+Brute\+Force\+Searcher$<$ dim $>$}
+
+
+
+Definition at line 10 of file Brute\+Force\+Searcher.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_brute_force_searcher_a883fa60e9656a291f0dba7dacba700b0}\label{classparticls_1_1_brute_force_searcher_a883fa60e9656a291f0dba7dacba700b0}} 
+\index{particls::BruteForceSearcher$<$ dim $>$@{particls::BruteForceSearcher$<$ dim $>$}!BruteForceSearcher@{BruteForceSearcher}}
+\index{BruteForceSearcher@{BruteForceSearcher}!particls::BruteForceSearcher$<$ dim $>$@{particls::BruteForceSearcher$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{BruteForceSearcher()}{BruteForceSearcher()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_brute_force_searcher}{particls\+::\+Brute\+Force\+Searcher}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_brute_force_searcher}{Brute\+Force\+Searcher}} (\begin{DoxyParamCaption}\item[{Y\+A\+M\+L\+::\+Node const \&}]{options }\end{DoxyParamCaption})}
+
+options Options for the search algorithm \mbox{\Hypertarget{classparticls_1_1_brute_force_searcher_a2440ff574d01f071b910ef4e1d756f83}\label{classparticls_1_1_brute_force_searcher_a2440ff574d01f071b910ef4e1d756f83}} 
+\index{particls::BruteForceSearcher$<$ dim $>$@{particls::BruteForceSearcher$<$ dim $>$}!````~BruteForceSearcher@{$\sim$BruteForceSearcher}}
+\index{````~BruteForceSearcher@{$\sim$BruteForceSearcher}!particls::BruteForceSearcher$<$ dim $>$@{particls::BruteForceSearcher$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$BruteForceSearcher()}{~BruteForceSearcher()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual \mbox{\hyperlink{classparticls_1_1_brute_force_searcher}{particls\+::\+Brute\+Force\+Searcher}}$<$ dim $>$\+::$\sim$\mbox{\hyperlink{classparticls_1_1_brute_force_searcher}{Brute\+Force\+Searcher}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classparticls_1_1_brute_force_searcher_ad0024bfcb7a931fe8da7ba31b8f1486f}\label{classparticls_1_1_brute_force_searcher_ad0024bfcb7a931fe8da7ba31b8f1486f}} 
+\index{particls::BruteForceSearcher$<$ dim $>$@{particls::BruteForceSearcher$<$ dim $>$}!BruteForceSearcher@{BruteForceSearcher}}
+\index{BruteForceSearcher@{BruteForceSearcher}!particls::BruteForceSearcher$<$ dim $>$@{particls::BruteForceSearcher$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{BruteForceSearcher()}{BruteForceSearcher()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_brute_force_searcher}{particls\+::\+Brute\+Force\+Searcher}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_brute_force_searcher}{Brute\+Force\+Searcher}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [default]}}
+
+
+
+Private default constructor for serialize. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_brute_force_searcher_af637ab18c8cc4559a7e16274ce940fd2}\label{classparticls_1_1_brute_force_searcher_af637ab18c8cc4559a7e16274ce940fd2}} 
+\index{particls::BruteForceSearcher$<$ dim $>$@{particls::BruteForceSearcher$<$ dim $>$}!Compute@{Compute}}
+\index{Compute@{Compute}!particls::BruteForceSearcher$<$ dim $>$@{particls::BruteForceSearcher$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Compute()}{Compute()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_brute_force_searcher}{particls\+::\+Brute\+Force\+Searcher}}$<$ dim $>$\+::Compute (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&}]{particles }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em particles} & The particles whose nearest neighbors we need to find \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_searcher_ae65bbfe253b9f6bcba4bbb3b4d1adf50}{particls\+::\+Searcher$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_brute_force_searcher_a482a96edcc5acd971525f82c25643cf5}\label{classparticls_1_1_brute_force_searcher_a482a96edcc5acd971525f82c25643cf5}} 
+\index{particls::BruteForceSearcher$<$ dim $>$@{particls::BruteForceSearcher$<$ dim $>$}!serialize@{serialize}}
+\index{serialize@{serialize}!particls::BruteForceSearcher$<$ dim $>$@{particls::BruteForceSearcher$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+template$<$class Archive $>$ \\
+void \mbox{\hyperlink{classparticls_1_1_brute_force_searcher}{particls\+::\+Brute\+Force\+Searcher}}$<$ dim $>$\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 36 of file Brute\+Force\+Searcher.\+hpp.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_brute_force_searcher_ab2f44cbb59a08132f4c843e5225bba0e}\label{classparticls_1_1_brute_force_searcher_ab2f44cbb59a08132f4c843e5225bba0e}} 
+\index{particls::BruteForceSearcher$<$ dim $>$@{particls::BruteForceSearcher$<$ dim $>$}!cereal::access@{cereal::access}}
+\index{cereal::access@{cereal::access}!particls::BruteForceSearcher$<$ dim $>$@{particls::BruteForceSearcher$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{cereal::access}{cereal::access}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+friend class cereal\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 30 of file Brute\+Force\+Searcher.\+hpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticls_1_1_brute_force_searcher_aa2c02adfb9fcdaa132c62a5713a67bbc}\label{classparticls_1_1_brute_force_searcher_aa2c02adfb9fcdaa132c62a5713a67bbc}} 
+\index{particls::BruteForceSearcher$<$ dim $>$@{particls::BruteForceSearcher$<$ dim $>$}!threshold@{threshold}}
+\index{threshold@{threshold}!particls::BruteForceSearcher$<$ dim $>$@{particls::BruteForceSearcher$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{threshold}{threshold}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_brute_force_searcher}{particls\+::\+Brute\+Force\+Searcher}}$<$ dim $>$\+::threshold\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Radius for the searcher to look for particles. 
+
+
+
+Definition at line 28 of file Brute\+Force\+Searcher.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_brute_force_searcher_8hpp}{Brute\+Force\+Searcher.\+hpp}}\end{DoxyCompactItemize}

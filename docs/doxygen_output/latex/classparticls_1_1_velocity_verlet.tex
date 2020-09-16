@@ -1,0 +1,335 @@
+\hypertarget{classparticls_1_1_velocity_verlet}{}\doxysection{particls\+::Velocity\+Verlet$<$ dim $>$ Class Template Reference}
+\label{classparticls_1_1_velocity_verlet}\index{particls::VelocityVerlet$<$ dim $>$@{particls::VelocityVerlet$<$ dim $>$}}
+
+
+{\ttfamily \#include $<$Velocity\+Verlet.\+hpp$>$}
+
+
+
+Inheritance diagram for particls\+::Velocity\+Verlet$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{classparticls_1_1_velocity_verlet__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for particls\+::Velocity\+Verlet$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{classparticls_1_1_velocity_verlet__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_velocity_verlet_af672af28b4e2d489fa815fc918f83161}{Velocity\+Verlet}} (Y\+A\+M\+L\+::\+Node const \&options)
+\item 
+virtual \mbox{\hyperlink{classparticls_1_1_velocity_verlet_a756fb68f49b4e358a01e3dca04c99f05}{$\sim$\+Velocity\+Verlet}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_velocity_verlet_af1bd20150b3da2dadf4a4c09f1c04f84}{Evolve\+In\+Time}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_collection}{Collection}}$<$ dim $>$ $>$ const \&collection, double const begin, double const end) const override
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_velocity_verlet_af4fc80af12f015f641ff90daca16c3d8}{Timestep\+Size}} () const override
+\begin{DoxyCompactList}\small\item\em Get the timestep size. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classparticls_1_1_velocity_verlet_ade25a0fbfb24d09f6570661e43b0ed24}{Initialize}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_collection}{Collection}}$<$ dim $>$ $>$ const \&collection, std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \&rhs) const
+\begin{DoxyCompactList}\small\item\em Initialize the timestepper. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_velocity_verlet_af4b14c2bdb23d8b8c1019119d4deeddb}{First\+Update\+State}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_collection}{Collection}}$<$ dim $>$ $>$ const \&collection, std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ const \&rhs) const
+\begin{DoxyCompactList}\small\item\em Update the state for each object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_velocity_verlet_a318a6c6ebdac4e8bc2c3c211aee5c9fd}{Update\+State\+Object}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_state_object}{State\+Object}} $>$ const \&obj, Eigen\+::\+Vector\+Xd const \&rhs) const
+\begin{DoxyCompactList}\small\item\em Update a (non-\/rigid body) state object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_velocity_verlet_a0ca42f62dea061631a28732679e1001f}{Second\+Update\+State}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_collection}{Collection}}$<$ dim $>$ $>$ const \&collection, std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ const \&rhs) const
+\begin{DoxyCompactList}\small\item\em Update the state for each object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_velocity_verlet_ab74ec103c77452bd4fe32e425ffb9765}{First\+Update\+Rigid\+Body}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_rigid_body}{Rigid\+Body}}$<$ dim $>$ $>$ const \&body, Eigen\+::\+Vector\+Xd const \&rhs) const
+\begin{DoxyCompactList}\small\item\em Update the state of a rigid body. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_velocity_verlet_a9245e236fb3eb1d6c948aee850e0a759}{Second\+Update\+Rigid\+Body}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_rigid_body}{Rigid\+Body}}$<$ dim $>$ $>$ const \&body, Eigen\+::\+Vector\+Xd const \&rhs) const
+\begin{DoxyCompactList}\small\item\em Update the state of a rigid body. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_velocity_verlet_aee74bf74fb1e66385623971f4ac6b1c7}{Update\+Orientation}} (typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Angular\+Velocity const \&omega, Eigen\+::\+Map$<$ typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Orientation $>$ theta) const
+\begin{DoxyCompactList}\small\item\em Update the orientation of the particle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classparticls_1_1_velocity_verlet_abf4ec7e020058c1a51d656d85245fd42}{Velocity\+Verlet}} ()
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classparticls_1_1_velocity_verlet_afd2eaf9964dd9e1abacd7e7ead597eaa}{serialize}} (Archive \&ar)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classparticls_1_1_velocity_verlet_ab8c3dcd4e4a1ccfbd6b4da8ed87e9889}{dt}}
+\begin{DoxyCompactList}\small\item\em The timestep size. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_velocity_verlet_a637495ee435eed21b782ff23e8fb8253}{dto2}}
+\begin{DoxyCompactList}\small\item\em The timestep size divided by 2. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classparticls_1_1_velocity_verlet_ab2f44cbb59a08132f4c843e5225bba0e}{cereal\+::access}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+class particls\+::\+Velocity\+Verlet$<$ dim $>$}
+
+
+
+Definition at line 12 of file Velocity\+Verlet.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_velocity_verlet_af672af28b4e2d489fa815fc918f83161}\label{classparticls_1_1_velocity_verlet_af672af28b4e2d489fa815fc918f83161}} 
+\index{particls::VelocityVerlet$<$ dim $>$@{particls::VelocityVerlet$<$ dim $>$}!VelocityVerlet@{VelocityVerlet}}
+\index{VelocityVerlet@{VelocityVerlet}!particls::VelocityVerlet$<$ dim $>$@{particls::VelocityVerlet$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{VelocityVerlet()}{VelocityVerlet()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_velocity_verlet}{particls\+::\+Velocity\+Verlet}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_velocity_verlet}{Velocity\+Verlet}} (\begin{DoxyParamCaption}\item[{Y\+A\+M\+L\+::\+Node const \&}]{options }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em options} & Options for the timestepper \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_velocity_verlet_a756fb68f49b4e358a01e3dca04c99f05}\label{classparticls_1_1_velocity_verlet_a756fb68f49b4e358a01e3dca04c99f05}} 
+\index{particls::VelocityVerlet$<$ dim $>$@{particls::VelocityVerlet$<$ dim $>$}!````~VelocityVerlet@{$\sim$VelocityVerlet}}
+\index{````~VelocityVerlet@{$\sim$VelocityVerlet}!particls::VelocityVerlet$<$ dim $>$@{particls::VelocityVerlet$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$VelocityVerlet()}{~VelocityVerlet()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual \mbox{\hyperlink{classparticls_1_1_velocity_verlet}{particls\+::\+Velocity\+Verlet}}$<$ dim $>$\+::$\sim$\mbox{\hyperlink{classparticls_1_1_velocity_verlet}{Velocity\+Verlet}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classparticls_1_1_velocity_verlet_abf4ec7e020058c1a51d656d85245fd42}\label{classparticls_1_1_velocity_verlet_abf4ec7e020058c1a51d656d85245fd42}} 
+\index{particls::VelocityVerlet$<$ dim $>$@{particls::VelocityVerlet$<$ dim $>$}!VelocityVerlet@{VelocityVerlet}}
+\index{VelocityVerlet@{VelocityVerlet}!particls::VelocityVerlet$<$ dim $>$@{particls::VelocityVerlet$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{VelocityVerlet()}{VelocityVerlet()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_velocity_verlet}{particls\+::\+Velocity\+Verlet}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_velocity_verlet}{Velocity\+Verlet}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 89 of file Velocity\+Verlet.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_velocity_verlet_af1bd20150b3da2dadf4a4c09f1c04f84}\label{classparticls_1_1_velocity_verlet_af1bd20150b3da2dadf4a4c09f1c04f84}} 
+\index{particls::VelocityVerlet$<$ dim $>$@{particls::VelocityVerlet$<$ dim $>$}!EvolveInTime@{EvolveInTime}}
+\index{EvolveInTime@{EvolveInTime}!particls::VelocityVerlet$<$ dim $>$@{particls::VelocityVerlet$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{EvolveInTime()}{EvolveInTime()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_velocity_verlet}{particls\+::\+Velocity\+Verlet}}$<$ dim $>$\+::Evolve\+In\+Time (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_collection}{Collection}}$<$ dim $>$ $>$ const \&}]{collection,  }\item[{double const}]{begin,  }\item[{double const}]{end }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em collection} & The collection that is to be evolved from its current state to its end state \\
+\hline
+\mbox{\texttt{ in}}  & {\em start} & The start time \\
+\hline
+\mbox{\texttt{ in}}  & {\em end} & The end time \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_time_integrator_a87eae08ba9d618381e9e95b0fb2a9d3a}{particls\+::\+Time\+Integrator$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_velocity_verlet_ab74ec103c77452bd4fe32e425ffb9765}\label{classparticls_1_1_velocity_verlet_ab74ec103c77452bd4fe32e425ffb9765}} 
+\index{particls::VelocityVerlet$<$ dim $>$@{particls::VelocityVerlet$<$ dim $>$}!FirstUpdateRigidBody@{FirstUpdateRigidBody}}
+\index{FirstUpdateRigidBody@{FirstUpdateRigidBody}!particls::VelocityVerlet$<$ dim $>$@{particls::VelocityVerlet$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{FirstUpdateRigidBody()}{FirstUpdateRigidBody()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_velocity_verlet}{particls\+::\+Velocity\+Verlet}}$<$ dim $>$\+::First\+Update\+Rigid\+Body (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_rigid_body}{Rigid\+Body}}$<$ dim $>$ $>$ const \&}]{body,  }\item[{Eigen\+::\+Vector\+Xd const \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Update the state of a rigid body. 
+
+First half steps for velocity/angular velocity and full step for position/angle/quaternion. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em body} & The rigid body we are trying to compute \\
+\hline
+\mbox{\texttt{ in}}  & {\em rhs} & The right hand side for this body \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_velocity_verlet_af4b14c2bdb23d8b8c1019119d4deeddb}\label{classparticls_1_1_velocity_verlet_af4b14c2bdb23d8b8c1019119d4deeddb}} 
+\index{particls::VelocityVerlet$<$ dim $>$@{particls::VelocityVerlet$<$ dim $>$}!FirstUpdateState@{FirstUpdateState}}
+\index{FirstUpdateState@{FirstUpdateState}!particls::VelocityVerlet$<$ dim $>$@{particls::VelocityVerlet$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{FirstUpdateState()}{FirstUpdateState()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_velocity_verlet}{particls\+::\+Velocity\+Verlet}}$<$ dim $>$\+::First\+Update\+State (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_collection}{Collection}}$<$ dim $>$ $>$ const \&}]{collection,  }\item[{std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ const \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Update the state for each object. 
+
+First half steps for velocity/angular velocity and full step for position/angle/quaternion. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em collection} & The collection that is to be evolved from its current state to its end state \\
+\hline
+\mbox{\texttt{ in}}  & {\em rhs} & The right hand side for each object in the collection at the current time \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_velocity_verlet_ade25a0fbfb24d09f6570661e43b0ed24}\label{classparticls_1_1_velocity_verlet_ade25a0fbfb24d09f6570661e43b0ed24}} 
+\index{particls::VelocityVerlet$<$ dim $>$@{particls::VelocityVerlet$<$ dim $>$}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!particls::VelocityVerlet$<$ dim $>$@{particls::VelocityVerlet$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_velocity_verlet}{particls\+::\+Velocity\+Verlet}}$<$ dim $>$\+::Initialize (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_collection}{Collection}}$<$ dim $>$ $>$ const \&}]{collection,  }\item[{std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Initialize the timestepper. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em collection} & The collection that is to be evolved from its current state to its end state \\
+\hline
+\mbox{\texttt{ out}}  & {\em rhs} & The right hand side for each object in the collection (resized, not computed) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_velocity_verlet_a9245e236fb3eb1d6c948aee850e0a759}\label{classparticls_1_1_velocity_verlet_a9245e236fb3eb1d6c948aee850e0a759}} 
+\index{particls::VelocityVerlet$<$ dim $>$@{particls::VelocityVerlet$<$ dim $>$}!SecondUpdateRigidBody@{SecondUpdateRigidBody}}
+\index{SecondUpdateRigidBody@{SecondUpdateRigidBody}!particls::VelocityVerlet$<$ dim $>$@{particls::VelocityVerlet$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{SecondUpdateRigidBody()}{SecondUpdateRigidBody()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_velocity_verlet}{particls\+::\+Velocity\+Verlet}}$<$ dim $>$\+::Second\+Update\+Rigid\+Body (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_rigid_body}{Rigid\+Body}}$<$ dim $>$ $>$ const \&}]{body,  }\item[{Eigen\+::\+Vector\+Xd const \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Update the state of a rigid body. 
+
+Second half steps for velocity/angular velocity. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em body} & The rigid body we are trying to compute \\
+\hline
+\mbox{\texttt{ in}}  & {\em rhs} & The right hand side for this body \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_velocity_verlet_a0ca42f62dea061631a28732679e1001f}\label{classparticls_1_1_velocity_verlet_a0ca42f62dea061631a28732679e1001f}} 
+\index{particls::VelocityVerlet$<$ dim $>$@{particls::VelocityVerlet$<$ dim $>$}!SecondUpdateState@{SecondUpdateState}}
+\index{SecondUpdateState@{SecondUpdateState}!particls::VelocityVerlet$<$ dim $>$@{particls::VelocityVerlet$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{SecondUpdateState()}{SecondUpdateState()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_velocity_verlet}{particls\+::\+Velocity\+Verlet}}$<$ dim $>$\+::Second\+Update\+State (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_collection}{Collection}}$<$ dim $>$ $>$ const \&}]{collection,  }\item[{std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ const \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Update the state for each object. 
+
+Second half steps for velocity/angular velocity. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em collection} & The collection that is to be evolved from its current state to its end state \\
+\hline
+\mbox{\texttt{ in}}  & {\em rhs} & The right hand side for each object in the collection at the current time \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_velocity_verlet_afd2eaf9964dd9e1abacd7e7ead597eaa}\label{classparticls_1_1_velocity_verlet_afd2eaf9964dd9e1abacd7e7ead597eaa}} 
+\index{particls::VelocityVerlet$<$ dim $>$@{particls::VelocityVerlet$<$ dim $>$}!serialize@{serialize}}
+\index{serialize@{serialize}!particls::VelocityVerlet$<$ dim $>$@{particls::VelocityVerlet$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+template$<$class Archive $>$ \\
+void \mbox{\hyperlink{classparticls_1_1_velocity_verlet}{particls\+::\+Velocity\+Verlet}}$<$ dim $>$\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 92 of file Velocity\+Verlet.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_velocity_verlet_af4fc80af12f015f641ff90daca16c3d8}\label{classparticls_1_1_velocity_verlet_af4fc80af12f015f641ff90daca16c3d8}} 
+\index{particls::VelocityVerlet$<$ dim $>$@{particls::VelocityVerlet$<$ dim $>$}!TimestepSize@{TimestepSize}}
+\index{TimestepSize@{TimestepSize}!particls::VelocityVerlet$<$ dim $>$@{particls::VelocityVerlet$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{TimestepSize()}{TimestepSize()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_velocity_verlet}{particls\+::\+Velocity\+Verlet}}$<$ dim $>$\+::Timestep\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the timestep size. 
+
+Note\+: we need to explcitly make a setter method for the timestep size (cannot return by reference) because we precompute the imestep size divided by 2. 
+
+Implements \mbox{\hyperlink{classparticls_1_1_time_integrator_ad529b13b291f1f97d663fe920a3fb4e5}{particls\+::\+Time\+Integrator$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_velocity_verlet_aee74bf74fb1e66385623971f4ac6b1c7}\label{classparticls_1_1_velocity_verlet_aee74bf74fb1e66385623971f4ac6b1c7}} 
+\index{particls::VelocityVerlet$<$ dim $>$@{particls::VelocityVerlet$<$ dim $>$}!UpdateOrientation@{UpdateOrientation}}
+\index{UpdateOrientation@{UpdateOrientation}!particls::VelocityVerlet$<$ dim $>$@{particls::VelocityVerlet$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{UpdateOrientation()}{UpdateOrientation()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_velocity_verlet}{particls\+::\+Velocity\+Verlet}}$<$ dim $>$\+::Update\+Orientation (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Angular\+Velocity const \&}]{omega,  }\item[{Eigen\+::\+Map$<$ typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Orientation $>$}]{theta }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Update the orientation of the particle. 
+
+\mbox{\Hypertarget{classparticls_1_1_velocity_verlet_a318a6c6ebdac4e8bc2c3c211aee5c9fd}\label{classparticls_1_1_velocity_verlet_a318a6c6ebdac4e8bc2c3c211aee5c9fd}} 
+\index{particls::VelocityVerlet$<$ dim $>$@{particls::VelocityVerlet$<$ dim $>$}!UpdateStateObject@{UpdateStateObject}}
+\index{UpdateStateObject@{UpdateStateObject}!particls::VelocityVerlet$<$ dim $>$@{particls::VelocityVerlet$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{UpdateStateObject()}{UpdateStateObject()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_velocity_verlet}{particls\+::\+Velocity\+Verlet}}$<$ dim $>$\+::Update\+State\+Object (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_state_object}{State\+Object}} $>$ const \&}]{obj,  }\item[{Eigen\+::\+Vector\+Xd const \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Update a (non-\/rigid body) state object. 
+
+Half time step for a non-\/rigid body object 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em obj} & The object that we are updating \\
+\hline
+\mbox{\texttt{ in}}  & {\em rhs} & The right hand side for the state object \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_velocity_verlet_ab2f44cbb59a08132f4c843e5225bba0e}\label{classparticls_1_1_velocity_verlet_ab2f44cbb59a08132f4c843e5225bba0e}} 
+\index{particls::VelocityVerlet$<$ dim $>$@{particls::VelocityVerlet$<$ dim $>$}!cereal::access@{cereal::access}}
+\index{cereal::access@{cereal::access}!particls::VelocityVerlet$<$ dim $>$@{particls::VelocityVerlet$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{cereal::access}{cereal::access}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+friend class cereal\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 87 of file Velocity\+Verlet.\+hpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticls_1_1_velocity_verlet_ab8c3dcd4e4a1ccfbd6b4da8ed87e9889}\label{classparticls_1_1_velocity_verlet_ab8c3dcd4e4a1ccfbd6b4da8ed87e9889}} 
+\index{particls::VelocityVerlet$<$ dim $>$@{particls::VelocityVerlet$<$ dim $>$}!dt@{dt}}
+\index{dt@{dt}!particls::VelocityVerlet$<$ dim $>$@{particls::VelocityVerlet$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{dt}{dt}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_velocity_verlet}{particls\+::\+Velocity\+Verlet}}$<$ dim $>$\+::dt\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The timestep size. 
+
+
+
+Definition at line 97 of file Velocity\+Verlet.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_velocity_verlet_a637495ee435eed21b782ff23e8fb8253}\label{classparticls_1_1_velocity_verlet_a637495ee435eed21b782ff23e8fb8253}} 
+\index{particls::VelocityVerlet$<$ dim $>$@{particls::VelocityVerlet$<$ dim $>$}!dto2@{dto2}}
+\index{dto2@{dto2}!particls::VelocityVerlet$<$ dim $>$@{particls::VelocityVerlet$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{dto2}{dto2}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_velocity_verlet}{particls\+::\+Velocity\+Verlet}}$<$ dim $>$\+::dto2\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The timestep size divided by 2. 
+
+
+
+Definition at line 100 of file Velocity\+Verlet.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_velocity_verlet_8hpp}{Velocity\+Verlet.\+hpp}}\end{DoxyCompactItemize}

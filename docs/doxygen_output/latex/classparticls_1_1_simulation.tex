@@ -1,0 +1,762 @@
+\hypertarget{classparticls_1_1_simulation}{}\doxysection{particls\+::Simulation$<$ dim $>$ Class Template Reference}
+\label{classparticls_1_1_simulation}\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+
+
+{\ttfamily \#include $<$Simulation.\+hpp$>$}
+
+
+
+Inheritance diagram for particls\+::Simulation$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{classparticls_1_1_simulation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for particls\+::Simulation$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{classparticls_1_1_simulation__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_simulation_affc9608b9407e48f0417e636b774ad39}{Simulation}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_collection}{Collection}}$<$ dim $>$ $>$ const \&\mbox{\hyperlink{classparticls_1_1_simulation_ae5b46de0f47d63ded73a797191af487e}{collection}}, Y\+A\+M\+L\+::\+Node const \&options)
+\item 
+\mbox{\hyperlink{classparticls_1_1_simulation_a3fa8adda57d4dd7db8c474321260b4d0}{Simulation}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_observer}{Observer}} $>$ const \&observer, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_collection}{Collection}}$<$ dim $>$ $>$ const \&\mbox{\hyperlink{classparticls_1_1_simulation_ae5b46de0f47d63ded73a797191af487e}{collection}}, Y\+A\+M\+L\+::\+Node const \&options)
+\item 
+\mbox{\hyperlink{classparticls_1_1_simulation_a1f92189ba89a0ded43e8ccf25b45d689}{Simulation}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_observer}{Observer}} $>$ $>$ const \&\mbox{\hyperlink{classparticls_1_1_simulation_afed1a65a8511eff28597a56c49bd5901}{observers}}, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_collection}{Collection}}$<$ dim $>$ $>$ const \&\mbox{\hyperlink{classparticls_1_1_simulation_ae5b46de0f47d63ded73a797191af487e}{collection}}, Y\+A\+M\+L\+::\+Node const \&options)
+\item 
+virtual \mbox{\hyperlink{classparticls_1_1_simulation_a11695ff11de8e2822b0beeb1d202f418}{$\sim$\+Simulation}} ()=default
+\item 
+void \mbox{\hyperlink{classparticls_1_1_simulation_ad0d099a74272cc3b2921d0f0d57c466d}{Run}} ()
+\item 
+void \mbox{\hyperlink{classparticls_1_1_simulation_a694d893e28837fdc0cb5245a3c295563}{Run}} (std\+::vector$<$ Eigen\+::\+Matrix\+Xd $>$ \&observations)
+\item 
+void \mbox{\hyperlink{classparticls_1_1_simulation_a0d3545eaa16e1e93e05f0aa19b8c09d1}{Set\+Collection}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_collection}{Collection}}$<$ dim $>$ $>$ const \&\mbox{\hyperlink{classparticls_1_1_simulation_ae5b46de0f47d63ded73a797191af487e}{collection}})
+\begin{DoxyCompactList}\small\item\em Set the collection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_simulation_a8db9f03ae947776935fec3b395e2a211}{Save}} (std\+::string const \&name) const
+\begin{DoxyCompactList}\small\item\em Save the simulation state to a file. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_simulation_a232367d86d7917deeb15e2fe89265120}{Final\+Time}} () const
+\begin{DoxyCompactList}\small\item\em Get the final time. \end{DoxyCompactList}\item 
+double \& \mbox{\hyperlink{classparticls_1_1_simulation_abf40708a14b4cdf1636b525b60fcfdbd}{Final\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Set the final time. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_simulation_accd72438ebd1440b617f92ee3516c838}{Current\+Time}} () const
+\begin{DoxyCompactList}\small\item\em Get the current time. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_simulation_a9f9e3abc4cf58307be4597e3be597de4}{Search\+Interval}} () const
+\begin{DoxyCompactList}\small\item\em Get the search interval. \end{DoxyCompactList}\item 
+double \& \mbox{\hyperlink{classparticls_1_1_simulation_a0f16007c6bfc4658caabafaaef37074f}{Search\+Interval}} ()
+\begin{DoxyCompactList}\small\item\em Set the search interval. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_simulation_a00056c678d3c92c7215b39c6dc4c6168}{Output\+Interval}} () const
+\begin{DoxyCompactList}\small\item\em Get the output interval. \end{DoxyCompactList}\item 
+double \& \mbox{\hyperlink{classparticls_1_1_simulation_a73f209d5f6fb4907980d22daed5a4fb6}{Output\+Interval}} ()
+\begin{DoxyCompactList}\small\item\em Set the output interval. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classparticls_1_1_simulation_af94a3f4ca1a1132c4fd96e9c40a033c0}{Output\+Filename}} () const
+\begin{DoxyCompactList}\small\item\em Get the output filename. \end{DoxyCompactList}\item 
+std\+::string \& \mbox{\hyperlink{classparticls_1_1_simulation_aa68a20e0224fb8cc2da5147756a1dd94}{Output\+Filename}} ()
+\begin{DoxyCompactList}\small\item\em Set the output filename. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_time_integrator}{Time\+Integrator}}$<$ dim $>$ $>$ \mbox{\hyperlink{classparticls_1_1_simulation_afd814a6f5f1ee7dcd4e897a40f37edf4}{Get\+Time\+Integrator}} () const
+\begin{DoxyCompactList}\small\item\em Get the time integrator. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_collection}{Collection}}$<$ dim $>$ $>$ \mbox{\hyperlink{classparticls_1_1_simulation_a75fa010204076c43adbe49c8bdcad0c7}{Get\+Collection}} () const
+\begin{DoxyCompactList}\small\item\em Get the collection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_simulation}{Simulation}}$<$ dim $>$ $>$ \mbox{\hyperlink{classparticls_1_1_simulation_a167d67ef098055d95f51f639313472d5}{Load}} (std\+::string const \&name)
+\begin{DoxyCompactList}\small\item\em Load a simulation from file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_simulation_ad20039409cb1aacaead14269eb11bcef}{Output}} ()
+\begin{DoxyCompactList}\small\item\em Output current snapshot to a vtk file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classparticls_1_1_simulation_a556a620d319e4d1aacc1b851050330ea}{current\+Time}}
+\begin{DoxyCompactList}\small\item\em The current time. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classparticls_1_1_simulation_a84e63314a8cf6c3e656337727140ffb5}{verbosity}} = 0
+\begin{DoxyCompactList}\small\item\em Controls the amount of information in the simulation status output to terminal. Higher numbers correspond to more information. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classparticls_1_1_simulation_a0fb85c9540f34d50ef31c6007947f7c6}{output\+Filename}}
+\begin{DoxyCompactList}\small\item\em The file name for saving visualization data. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_collection}{Collection}}$<$ dim $>$ $>$ \mbox{\hyperlink{classparticls_1_1_simulation_ae5b46de0f47d63ded73a797191af487e}{collection}}
+\begin{DoxyCompactList}\small\item\em The collection of particles in the simulation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classparticls_1_1_simulation_a6a72bfac619c4bdb6eaf682735eea412}{Pause\+Criteria}} \{ \newline
+\mbox{\hyperlink{classparticls_1_1_simulation_a6a72bfac619c4bdb6eaf682735eea412a91de03417f371cf4539fbe25f12017b6}{Search}}, 
+\mbox{\hyperlink{classparticls_1_1_simulation_a6a72bfac619c4bdb6eaf682735eea412ab40dfd06a212ab7a61fadf641b7b2c34}{Save\+To\+File}}, 
+\mbox{\hyperlink{classparticls_1_1_simulation_a6a72bfac619c4bdb6eaf682735eea412a4599e40dd86d93ce8ef40e757df8adfd}{Observe}}, 
+\mbox{\hyperlink{classparticls_1_1_simulation_a6a72bfac619c4bdb6eaf682735eea412a848d3ddd8ef4462c9e6ee06ee15b9a8e}{Search\+And\+Save}}, 
+\newline
+\mbox{\hyperlink{classparticls_1_1_simulation_a6a72bfac619c4bdb6eaf682735eea412ac44a3ceae8857313e1f88c51112fb5c5}{Search\+And\+Observe}}, 
+\mbox{\hyperlink{classparticls_1_1_simulation_a6a72bfac619c4bdb6eaf682735eea412a4e5c59d2c7dd1cd673974c9456170293}{Observe\+And\+Save}}, 
+\mbox{\hyperlink{classparticls_1_1_simulation_a6a72bfac619c4bdb6eaf682735eea412ab94ac479c7ee148e6f33d86ed4170ee2}{Search\+Observe\+Save}}, 
+\mbox{\hyperlink{classparticls_1_1_simulation_a6a72bfac619c4bdb6eaf682735eea412ac0274ac52b7d730b61335d27dab628ce}{Complete}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_simulation_ae1d3ae09740e6b42d158e77faf126d34}{Simulation}} ()=default
+\begin{DoxyCompactList}\small\item\em Private default constructor for the serialization. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classparticls_1_1_simulation_a8c363f2707e91f1aafd2eb1337be91db}{serialize}} (Archive \&ar)
+\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_simulation_adccf2bb67d25d5630592abf00b5a7f01}{Pre\+Step}} ()
+\begin{DoxyCompactList}\small\item\em Set up a time step. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classparticls_1_1_simulation_a6a72bfac619c4bdb6eaf682735eea412}{Pause\+Criteria}} \mbox{\hyperlink{classparticls_1_1_simulation_a79fb455a4028c5dcdd9e596c6059ec73}{Step}} ()
+\begin{DoxyCompactList}\small\item\em Take a step in time. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_simulation_ace40d214e48bf6398e03db565fab1c2f}{Post\+Step}} ()
+\begin{DoxyCompactList}\small\item\em Set up a time step. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_simulation_adf6abff40abf19c75ed72ab083afde59}{Update\+Neighbors}} ()
+\begin{DoxyCompactList}\small\item\em Update the nearest neighbors. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_simulation_a151085f8520f64c1899cea7a88dbd03f}{Observe\+Qo\+Is}} (unsigned int const current\+Obs, std\+::vector$<$ Eigen\+::\+Matrix\+Xd $>$ \&observations)
+\begin{DoxyCompactList}\small\item\em Evaluate the observers. \end{DoxyCompactList}\item 
+std\+::vector$<$ typename \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{V\+T\+K\+Data}}$<$ dim $>$\+::Save\+Data $>$ \mbox{\hyperlink{classparticls_1_1_simulation_aec1c4c3e5c1f1a37ab040252a453e098}{String\+To\+Enum}} (std\+::vector$<$ std\+::string $>$ const \&\mbox{\hyperlink{classparticls_1_1_simulation_a2e365ed2513587ff7bca13afbf7643f0}{coloring\+\_\+options}})
+\begin{DoxyCompactList}\small\item\em Convert strings from Y\+A\+M\+L\+::\+Node to \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{V\+T\+K\+Data}} enum. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_observer}{Observer}} $>$ $>$ \mbox{\hyperlink{classparticls_1_1_simulation_afed1a65a8511eff28597a56c49bd5901}{observers}}
+\item 
+std\+::vector$<$ typename \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{V\+T\+K\+Data}}$<$ dim $>$\+::Save\+Data $>$ \mbox{\hyperlink{classparticls_1_1_simulation_a2e365ed2513587ff7bca13afbf7643f0}{coloring\+\_\+options}} = \{\mbox{\hyperlink{classparticls_1_1_v_t_k_data}{V\+T\+K\+Data}}$<$dim$>$\+::Save\+Data\+::\+Velocity, \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{V\+T\+K\+Data}}$<$dim$>$\+::Save\+Data\+::\+Contact\+Force, \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{V\+T\+K\+Data}}$<$dim$>$\+::Save\+Data\+::\+Beam\}
+\item 
+unsigned int \mbox{\hyperlink{classparticls_1_1_simulation_a410c95664816967410d70b483f88b472}{count}} = 0
+\begin{DoxyCompactList}\small\item\em The number of times Output has been called. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_simulation_a14a5c3b0016a045541f50446846215ff}{final\+Time}}
+\begin{DoxyCompactList}\small\item\em End time of the simulation. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_simulation_a451a5809a0c2f4e25bd4e9dc0e18e7c8}{last\+Output}} = 0
+\begin{DoxyCompactList}\small\item\em The time that we last wrote the state to file. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_simulation_a8ce47e3e45b01c94328be59902a9aeee}{last\+Search}} = 0
+\begin{DoxyCompactList}\small\item\em The time that we last updated the nearest neighbors. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_simulation_a30140392be605147eb8b08ea515c63a4}{last\+Observe}} = 0
+\begin{DoxyCompactList}\small\item\em The time that we called the observers. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_simulation_a674066170ecc5fbea2ce291719aaa36a}{output\+Interval}}
+\begin{DoxyCompactList}\small\item\em The interval that we write to file. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_simulation_a3292a6c32f2da53196d1dd814a0a2bbe}{search\+Interval}}
+\begin{DoxyCompactList}\small\item\em The interval that we updated the nearest neighbors. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_simulation_a7654e307736820442611a9e198cbcea8}{observation\+Interval}}
+\begin{DoxyCompactList}\small\item\em The interval that we evaluate the observers. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_time_integrator}{Time\+Integrator}}$<$ dim $>$ $>$ \mbox{\hyperlink{classparticls_1_1_simulation_a20a95fae0dd9426a6bb85c1f1abb4a2e}{integrator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classparticls_1_1_simulation_ab2f44cbb59a08132f4c843e5225bba0e}{cereal\+::access}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+class particls\+::\+Simulation$<$ dim $>$}
+
+
+
+Definition at line 16 of file Simulation.\+hpp.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classparticls_1_1_simulation_a6a72bfac619c4bdb6eaf682735eea412}\label{classparticls_1_1_simulation_a6a72bfac619c4bdb6eaf682735eea412}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!PauseCriteria@{PauseCriteria}}
+\index{PauseCriteria@{PauseCriteria}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{PauseCriteria}{PauseCriteria}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+enum \mbox{\hyperlink{classparticls_1_1_simulation_a6a72bfac619c4bdb6eaf682735eea412}{particls\+::\+Simulation\+::\+Pause\+Criteria}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Search@{Search}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!Search@{Search}}}\mbox{\Hypertarget{classparticls_1_1_simulation_a6a72bfac619c4bdb6eaf682735eea412a91de03417f371cf4539fbe25f12017b6}\label{classparticls_1_1_simulation_a6a72bfac619c4bdb6eaf682735eea412a91de03417f371cf4539fbe25f12017b6}} 
+Search&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SaveToFile@{SaveToFile}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!SaveToFile@{SaveToFile}}}\mbox{\Hypertarget{classparticls_1_1_simulation_a6a72bfac619c4bdb6eaf682735eea412ab40dfd06a212ab7a61fadf641b7b2c34}\label{classparticls_1_1_simulation_a6a72bfac619c4bdb6eaf682735eea412ab40dfd06a212ab7a61fadf641b7b2c34}} 
+Save\+To\+File&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Observe@{Observe}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!Observe@{Observe}}}\mbox{\Hypertarget{classparticls_1_1_simulation_a6a72bfac619c4bdb6eaf682735eea412a4599e40dd86d93ce8ef40e757df8adfd}\label{classparticls_1_1_simulation_a6a72bfac619c4bdb6eaf682735eea412a4599e40dd86d93ce8ef40e757df8adfd}} 
+Observe&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SearchAndSave@{SearchAndSave}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!SearchAndSave@{SearchAndSave}}}\mbox{\Hypertarget{classparticls_1_1_simulation_a6a72bfac619c4bdb6eaf682735eea412a848d3ddd8ef4462c9e6ee06ee15b9a8e}\label{classparticls_1_1_simulation_a6a72bfac619c4bdb6eaf682735eea412a848d3ddd8ef4462c9e6ee06ee15b9a8e}} 
+Search\+And\+Save&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SearchAndObserve@{SearchAndObserve}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!SearchAndObserve@{SearchAndObserve}}}\mbox{\Hypertarget{classparticls_1_1_simulation_a6a72bfac619c4bdb6eaf682735eea412ac44a3ceae8857313e1f88c51112fb5c5}\label{classparticls_1_1_simulation_a6a72bfac619c4bdb6eaf682735eea412ac44a3ceae8857313e1f88c51112fb5c5}} 
+Search\+And\+Observe&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ObserveAndSave@{ObserveAndSave}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!ObserveAndSave@{ObserveAndSave}}}\mbox{\Hypertarget{classparticls_1_1_simulation_a6a72bfac619c4bdb6eaf682735eea412a4e5c59d2c7dd1cd673974c9456170293}\label{classparticls_1_1_simulation_a6a72bfac619c4bdb6eaf682735eea412a4e5c59d2c7dd1cd673974c9456170293}} 
+Observe\+And\+Save&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SearchObserveSave@{SearchObserveSave}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!SearchObserveSave@{SearchObserveSave}}}\mbox{\Hypertarget{classparticls_1_1_simulation_a6a72bfac619c4bdb6eaf682735eea412ab94ac479c7ee148e6f33d86ed4170ee2}\label{classparticls_1_1_simulation_a6a72bfac619c4bdb6eaf682735eea412ab94ac479c7ee148e6f33d86ed4170ee2}} 
+Search\+Observe\+Save&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Complete@{Complete}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!Complete@{Complete}}}\mbox{\Hypertarget{classparticls_1_1_simulation_a6a72bfac619c4bdb6eaf682735eea412ac0274ac52b7d730b61335d27dab628ce}\label{classparticls_1_1_simulation_a6a72bfac619c4bdb6eaf682735eea412ac0274ac52b7d730b61335d27dab628ce}} 
+Complete&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 111 of file Simulation.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_simulation_affc9608b9407e48f0417e636b774ad39}\label{classparticls_1_1_simulation_affc9608b9407e48f0417e636b774ad39}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!Simulation@{Simulation}}
+\index{Simulation@{Simulation}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Simulation()}{Simulation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_simulation}{Simulation}} (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_collection}{Collection}}$<$ dim $>$ $>$ const \&}]{collection,  }\item[{Y\+A\+M\+L\+::\+Node const \&}]{options }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classparticls_1_1_simulation_a3fa8adda57d4dd7db8c474321260b4d0}\label{classparticls_1_1_simulation_a3fa8adda57d4dd7db8c474321260b4d0}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!Simulation@{Simulation}}
+\index{Simulation@{Simulation}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Simulation()}{Simulation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_simulation}{Simulation}} (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_observer}{Observer}} $>$ const \&}]{observer,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_collection}{Collection}}$<$ dim $>$ $>$ const \&}]{collection,  }\item[{Y\+A\+M\+L\+::\+Node const \&}]{options }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classparticls_1_1_simulation_a1f92189ba89a0ded43e8ccf25b45d689}\label{classparticls_1_1_simulation_a1f92189ba89a0ded43e8ccf25b45d689}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!Simulation@{Simulation}}
+\index{Simulation@{Simulation}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Simulation()}{Simulation()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_simulation}{Simulation}} (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_observer}{Observer}} $>$ $>$ const \&}]{observers,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_collection}{Collection}}$<$ dim $>$ $>$ const \&}]{collection,  }\item[{Y\+A\+M\+L\+::\+Node const \&}]{options }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classparticls_1_1_simulation_a11695ff11de8e2822b0beeb1d202f418}\label{classparticls_1_1_simulation_a11695ff11de8e2822b0beeb1d202f418}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!````~Simulation@{$\sim$Simulation}}
+\index{````~Simulation@{$\sim$Simulation}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Simulation()}{~Simulation()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::$\sim$\mbox{\hyperlink{classparticls_1_1_simulation}{Simulation}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classparticls_1_1_simulation_ae1d3ae09740e6b42d158e77faf126d34}\label{classparticls_1_1_simulation_ae1d3ae09740e6b42d158e77faf126d34}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!Simulation@{Simulation}}
+\index{Simulation@{Simulation}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Simulation()}{Simulation()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_simulation}{Simulation}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [default]}}
+
+
+
+Private default constructor for the serialization. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_simulation_accd72438ebd1440b617f92ee3516c838}\label{classparticls_1_1_simulation_accd72438ebd1440b617f92ee3516c838}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!CurrentTime@{CurrentTime}}
+\index{CurrentTime@{CurrentTime}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{CurrentTime()}{CurrentTime()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::Current\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the current time. 
+
+\mbox{\Hypertarget{classparticls_1_1_simulation_abf40708a14b4cdf1636b525b60fcfdbd}\label{classparticls_1_1_simulation_abf40708a14b4cdf1636b525b60fcfdbd}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!FinalTime@{FinalTime}}
+\index{FinalTime@{FinalTime}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{FinalTime()}{FinalTime()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double\& \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::Final\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Set the final time. 
+
+\mbox{\Hypertarget{classparticls_1_1_simulation_a232367d86d7917deeb15e2fe89265120}\label{classparticls_1_1_simulation_a232367d86d7917deeb15e2fe89265120}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!FinalTime@{FinalTime}}
+\index{FinalTime@{FinalTime}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{FinalTime()}{FinalTime()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::Final\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the final time. 
+
+\mbox{\Hypertarget{classparticls_1_1_simulation_a75fa010204076c43adbe49c8bdcad0c7}\label{classparticls_1_1_simulation_a75fa010204076c43adbe49c8bdcad0c7}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!GetCollection@{GetCollection}}
+\index{GetCollection@{GetCollection}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{GetCollection()}{GetCollection()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_collection}{Collection}}$<$dim$>$ $>$ \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::Get\+Collection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the collection. 
+
+\mbox{\Hypertarget{classparticls_1_1_simulation_afd814a6f5f1ee7dcd4e897a40f37edf4}\label{classparticls_1_1_simulation_afd814a6f5f1ee7dcd4e897a40f37edf4}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!GetTimeIntegrator@{GetTimeIntegrator}}
+\index{GetTimeIntegrator@{GetTimeIntegrator}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{GetTimeIntegrator()}{GetTimeIntegrator()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_time_integrator}{Time\+Integrator}}$<$dim$>$ $>$ \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::Get\+Time\+Integrator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the time integrator. 
+
+\mbox{\Hypertarget{classparticls_1_1_simulation_a167d67ef098055d95f51f639313472d5}\label{classparticls_1_1_simulation_a167d67ef098055d95f51f639313472d5}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!Load@{Load}}
+\index{Load@{Load}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+static std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_simulation}{Simulation}}$<$dim$>$ $>$ \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::Load (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Load a simulation from file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & The name of the file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_simulation_a151085f8520f64c1899cea7a88dbd03f}\label{classparticls_1_1_simulation_a151085f8520f64c1899cea7a88dbd03f}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!ObserveQoIs@{ObserveQoIs}}
+\index{ObserveQoIs@{ObserveQoIs}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ObserveQoIs()}{ObserveQoIs()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::Observe\+Qo\+Is (\begin{DoxyParamCaption}\item[{unsigned int const}]{current\+Obs,  }\item[{std\+::vector$<$ Eigen\+::\+Matrix\+Xd $>$ \&}]{observations }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Evaluate the observers. 
+
+\mbox{\Hypertarget{classparticls_1_1_simulation_ad20039409cb1aacaead14269eb11bcef}\label{classparticls_1_1_simulation_ad20039409cb1aacaead14269eb11bcef}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!Output@{Output}}
+\index{Output@{Output}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Output()}{Output()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Output current snapshot to a vtk file. 
+
+\mbox{\Hypertarget{classparticls_1_1_simulation_aa68a20e0224fb8cc2da5147756a1dd94}\label{classparticls_1_1_simulation_aa68a20e0224fb8cc2da5147756a1dd94}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!OutputFilename@{OutputFilename}}
+\index{OutputFilename@{OutputFilename}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{OutputFilename()}{OutputFilename()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::string\& \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::Output\+Filename (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Set the output filename. 
+
+\mbox{\Hypertarget{classparticls_1_1_simulation_af94a3f4ca1a1132c4fd96e9c40a033c0}\label{classparticls_1_1_simulation_af94a3f4ca1a1132c4fd96e9c40a033c0}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!OutputFilename@{OutputFilename}}
+\index{OutputFilename@{OutputFilename}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{OutputFilename()}{OutputFilename()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::string \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::Output\+Filename (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the output filename. 
+
+\mbox{\Hypertarget{classparticls_1_1_simulation_a73f209d5f6fb4907980d22daed5a4fb6}\label{classparticls_1_1_simulation_a73f209d5f6fb4907980d22daed5a4fb6}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!OutputInterval@{OutputInterval}}
+\index{OutputInterval@{OutputInterval}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{OutputInterval()}{OutputInterval()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double\& \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::Output\+Interval (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Set the output interval. 
+
+\mbox{\Hypertarget{classparticls_1_1_simulation_a00056c678d3c92c7215b39c6dc4c6168}\label{classparticls_1_1_simulation_a00056c678d3c92c7215b39c6dc4c6168}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!OutputInterval@{OutputInterval}}
+\index{OutputInterval@{OutputInterval}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{OutputInterval()}{OutputInterval()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::Output\+Interval (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the output interval. 
+
+\mbox{\Hypertarget{classparticls_1_1_simulation_ace40d214e48bf6398e03db565fab1c2f}\label{classparticls_1_1_simulation_ace40d214e48bf6398e03db565fab1c2f}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!PostStep@{PostStep}}
+\index{PostStep@{PostStep}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{PostStep()}{PostStep()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::Post\+Step (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Set up a time step. 
+
+Does nothing by default. \mbox{\Hypertarget{classparticls_1_1_simulation_adccf2bb67d25d5630592abf00b5a7f01}\label{classparticls_1_1_simulation_adccf2bb67d25d5630592abf00b5a7f01}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!PreStep@{PreStep}}
+\index{PreStep@{PreStep}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{PreStep()}{PreStep()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::Pre\+Step (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Set up a time step. 
+
+Does nothing by default. \mbox{\Hypertarget{classparticls_1_1_simulation_ad0d099a74272cc3b2921d0f0d57c466d}\label{classparticls_1_1_simulation_ad0d099a74272cc3b2921d0f0d57c466d}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!Run@{Run}}
+\index{Run@{Run}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::Run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classparticls_1_1_simulation_a694d893e28837fdc0cb5245a3c295563}\label{classparticls_1_1_simulation_a694d893e28837fdc0cb5245a3c295563}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!Run@{Run}}
+\index{Run@{Run}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::Run (\begin{DoxyParamCaption}\item[{std\+::vector$<$ Eigen\+::\+Matrix\+Xd $>$ \&}]{observations }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classparticls_1_1_simulation_a8db9f03ae947776935fec3b395e2a211}\label{classparticls_1_1_simulation_a8db9f03ae947776935fec3b395e2a211}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!Save@{Save}}
+\index{Save@{Save}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Save()}{Save()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::Save (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{name }\end{DoxyParamCaption}) const}
+
+
+
+Save the simulation state to a file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & The name of the file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_simulation_a0f16007c6bfc4658caabafaaef37074f}\label{classparticls_1_1_simulation_a0f16007c6bfc4658caabafaaef37074f}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!SearchInterval@{SearchInterval}}
+\index{SearchInterval@{SearchInterval}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{SearchInterval()}{SearchInterval()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double\& \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::Search\+Interval (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Set the search interval. 
+
+\mbox{\Hypertarget{classparticls_1_1_simulation_a9f9e3abc4cf58307be4597e3be597de4}\label{classparticls_1_1_simulation_a9f9e3abc4cf58307be4597e3be597de4}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!SearchInterval@{SearchInterval}}
+\index{SearchInterval@{SearchInterval}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{SearchInterval()}{SearchInterval()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::Search\+Interval (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the search interval. 
+
+\mbox{\Hypertarget{classparticls_1_1_simulation_a8c363f2707e91f1aafd2eb1337be91db}\label{classparticls_1_1_simulation_a8c363f2707e91f1aafd2eb1337be91db}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!serialize@{serialize}}
+\index{serialize@{serialize}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+template$<$class Archive $>$ \\
+void \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 107 of file Simulation.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_simulation_a0d3545eaa16e1e93e05f0aa19b8c09d1}\label{classparticls_1_1_simulation_a0d3545eaa16e1e93e05f0aa19b8c09d1}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!SetCollection@{SetCollection}}
+\index{SetCollection@{SetCollection}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{SetCollection()}{SetCollection()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::Set\+Collection (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_collection}{Collection}}$<$ dim $>$ $>$ const \&}]{collection }\end{DoxyParamCaption})}
+
+
+
+Set the collection. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em collection} & The collection that gets evolved during the simulation \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_simulation_a79fb455a4028c5dcdd9e596c6059ec73}\label{classparticls_1_1_simulation_a79fb455a4028c5dcdd9e596c6059ec73}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!Step@{Step}}
+\index{Step@{Step}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Step()}{Step()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual \mbox{\hyperlink{classparticls_1_1_simulation_a6a72bfac619c4bdb6eaf682735eea412}{Pause\+Criteria}} \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::Step (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Take a step in time. 
+
+\mbox{\Hypertarget{classparticls_1_1_simulation_aec1c4c3e5c1f1a37ab040252a453e098}\label{classparticls_1_1_simulation_aec1c4c3e5c1f1a37ab040252a453e098}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!StringToEnum@{StringToEnum}}
+\index{StringToEnum@{StringToEnum}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{StringToEnum()}{StringToEnum()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$typename \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{V\+T\+K\+Data}}$<$dim$>$\+::Save\+Data$>$ \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::String\+To\+Enum (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$ const \&}]{coloring\+\_\+options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Convert strings from Y\+A\+M\+L\+::\+Node to \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{V\+T\+K\+Data}} enum. 
+
+\mbox{\Hypertarget{classparticls_1_1_simulation_adf6abff40abf19c75ed72ab083afde59}\label{classparticls_1_1_simulation_adf6abff40abf19c75ed72ab083afde59}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!UpdateNeighbors@{UpdateNeighbors}}
+\index{UpdateNeighbors@{UpdateNeighbors}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{UpdateNeighbors()}{UpdateNeighbors()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::Update\+Neighbors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Update the nearest neighbors. 
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_simulation_ab2f44cbb59a08132f4c843e5225bba0e}\label{classparticls_1_1_simulation_ab2f44cbb59a08132f4c843e5225bba0e}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!cereal::access@{cereal::access}}
+\index{cereal::access@{cereal::access}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{cereal::access}{cereal::access}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+friend class cereal\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 101 of file Simulation.\+hpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticls_1_1_simulation_ae5b46de0f47d63ded73a797191af487e}\label{classparticls_1_1_simulation_ae5b46de0f47d63ded73a797191af487e}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!collection@{collection}}
+\index{collection@{collection}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{collection}{collection}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_collection}{Collection}}$<$dim$>$ $>$ \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::collection\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The collection of particles in the simulation. 
+
+
+
+Definition at line 97 of file Simulation.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_simulation_a2e365ed2513587ff7bca13afbf7643f0}\label{classparticls_1_1_simulation_a2e365ed2513587ff7bca13afbf7643f0}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!coloring\_options@{coloring\_options}}
+\index{coloring\_options@{coloring\_options}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{coloring\_options}{coloring\_options}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$typename \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{V\+T\+K\+Data}}$<$dim$>$\+::Save\+Data$>$ \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::coloring\+\_\+options = \{\mbox{\hyperlink{classparticls_1_1_v_t_k_data}{V\+T\+K\+Data}}$<$dim$>$\+::Save\+Data\+::\+Velocity, \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{V\+T\+K\+Data}}$<$dim$>$\+::Save\+Data\+::\+Contact\+Force, \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{V\+T\+K\+Data}}$<$dim$>$\+::Save\+Data\+::\+Beam\}\hspace{0.3cm}{\ttfamily [private]}}
+
+Vector of coloring options passed as strings to options\mbox{[}\char`\"{}\+V\+T\+K\+Options\char`\"{}\mbox{]}. Available options are\+: \char`\"{}\+Velocity\char`\"{}, \char`\"{}\+Angular\+Velocity\char`\"{}, \char`\"{}\+Density\char`\"{}, \char`\"{}\+Temperature\char`\"{}, \char`\"{}\+Force\+Density\char`\"{}, \char`\"{}\+Contact\+Force\char`\"{}, \char`\"{}\+Mask\char`\"{}, \char`\"{}\+Beam\char`\"{} 
+
+Definition at line 154 of file Simulation.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_simulation_a410c95664816967410d70b483f88b472}\label{classparticls_1_1_simulation_a410c95664816967410d70b483f88b472}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!count@{count}}
+\index{count@{count}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{count}{count}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+unsigned int \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::count = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The number of times Output has been called. 
+
+Used to generate the correct output file names 
+
+Definition at line 160 of file Simulation.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_simulation_a556a620d319e4d1aacc1b851050330ea}\label{classparticls_1_1_simulation_a556a620d319e4d1aacc1b851050330ea}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!currentTime@{currentTime}}
+\index{currentTime@{currentTime}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{currentTime}{currentTime}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::current\+Time\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The current time. 
+
+
+
+Definition at line 88 of file Simulation.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_simulation_a14a5c3b0016a045541f50446846215ff}\label{classparticls_1_1_simulation_a14a5c3b0016a045541f50446846215ff}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!finalTime@{finalTime}}
+\index{finalTime@{finalTime}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{finalTime}{finalTime}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::final\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+End time of the simulation. 
+
+
+
+Definition at line 163 of file Simulation.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_simulation_a20a95fae0dd9426a6bb85c1f1abb4a2e}\label{classparticls_1_1_simulation_a20a95fae0dd9426a6bb85c1f1abb4a2e}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!integrator@{integrator}}
+\index{integrator@{integrator}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{integrator}{integrator}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_time_integrator}{Time\+Integrator}}$<$dim$>$ $>$ \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::integrator\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 183 of file Simulation.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_simulation_a30140392be605147eb8b08ea515c63a4}\label{classparticls_1_1_simulation_a30140392be605147eb8b08ea515c63a4}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!lastObserve@{lastObserve}}
+\index{lastObserve@{lastObserve}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{lastObserve}{lastObserve}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::last\+Observe = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The time that we called the observers. 
+
+
+
+Definition at line 172 of file Simulation.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_simulation_a451a5809a0c2f4e25bd4e9dc0e18e7c8}\label{classparticls_1_1_simulation_a451a5809a0c2f4e25bd4e9dc0e18e7c8}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!lastOutput@{lastOutput}}
+\index{lastOutput@{lastOutput}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{lastOutput}{lastOutput}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::last\+Output = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The time that we last wrote the state to file. 
+
+
+
+Definition at line 166 of file Simulation.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_simulation_a8ce47e3e45b01c94328be59902a9aeee}\label{classparticls_1_1_simulation_a8ce47e3e45b01c94328be59902a9aeee}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!lastSearch@{lastSearch}}
+\index{lastSearch@{lastSearch}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{lastSearch}{lastSearch}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::last\+Search = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The time that we last updated the nearest neighbors. 
+
+
+
+Definition at line 169 of file Simulation.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_simulation_a7654e307736820442611a9e198cbcea8}\label{classparticls_1_1_simulation_a7654e307736820442611a9e198cbcea8}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!observationInterval@{observationInterval}}
+\index{observationInterval@{observationInterval}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{observationInterval}{observationInterval}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::observation\+Interval\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The interval that we evaluate the observers. 
+
+
+
+Definition at line 181 of file Simulation.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_simulation_afed1a65a8511eff28597a56c49bd5901}\label{classparticls_1_1_simulation_afed1a65a8511eff28597a56c49bd5901}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!observers@{observers}}
+\index{observers@{observers}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{observers}{observers}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_observer}{Observer}}$>$ $>$ \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::observers\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 146 of file Simulation.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_simulation_a0fb85c9540f34d50ef31c6007947f7c6}\label{classparticls_1_1_simulation_a0fb85c9540f34d50ef31c6007947f7c6}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!outputFilename@{outputFilename}}
+\index{outputFilename@{outputFilename}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{outputFilename}{outputFilename}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::string \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::output\+Filename\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The file name for saving visualization data. 
+
+
+
+Definition at line 94 of file Simulation.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_simulation_a674066170ecc5fbea2ce291719aaa36a}\label{classparticls_1_1_simulation_a674066170ecc5fbea2ce291719aaa36a}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!outputInterval@{outputInterval}}
+\index{outputInterval@{outputInterval}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{outputInterval}{outputInterval}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::output\+Interval\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The interval that we write to file. 
+
+
+
+Definition at line 175 of file Simulation.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_simulation_a3292a6c32f2da53196d1dd814a0a2bbe}\label{classparticls_1_1_simulation_a3292a6c32f2da53196d1dd814a0a2bbe}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!searchInterval@{searchInterval}}
+\index{searchInterval@{searchInterval}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{searchInterval}{searchInterval}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::search\+Interval\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The interval that we updated the nearest neighbors. 
+
+
+
+Definition at line 178 of file Simulation.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_simulation_a84e63314a8cf6c3e656337727140ffb5}\label{classparticls_1_1_simulation_a84e63314a8cf6c3e656337727140ffb5}} 
+\index{particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}!verbosity@{verbosity}}
+\index{verbosity@{verbosity}!particls::Simulation$<$ dim $>$@{particls::Simulation$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{verbosity}{verbosity}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+unsigned int \mbox{\hyperlink{classparticls_1_1_simulation}{particls\+::\+Simulation}}$<$ dim $>$\+::verbosity = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Controls the amount of information in the simulation status output to terminal. Higher numbers correspond to more information. 
+
+
+
+Definition at line 91 of file Simulation.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_simulation_8hpp}{Simulation.\+hpp}}\end{DoxyCompactItemize}

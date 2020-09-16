@@ -1,0 +1,182 @@
+\hypertarget{classparticls_1_1_rigid_body_tracker}{}\doxysection{particls\+::Rigid\+Body\+Tracker$<$ dim $>$ Class Template Reference}
+\label{classparticls_1_1_rigid_body_tracker}\index{particls::RigidBodyTracker$<$ dim $>$@{particls::RigidBodyTracker$<$ dim $>$}}
+
+
+{\ttfamily \#include $<$Rigid\+Body\+Tracker.\+hpp$>$}
+
+
+
+Inheritance diagram for particls\+::Rigid\+Body\+Tracker$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{classparticls_1_1_rigid_body_tracker__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for particls\+::Rigid\+Body\+Tracker$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{classparticls_1_1_rigid_body_tracker__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classparticls_1_1_rigid_body_tracker_a39b8aaf7e3f9b338244811bae3a6852e}{Quantity}} \{ \mbox{\hyperlink{classparticls_1_1_rigid_body_tracker_a39b8aaf7e3f9b338244811bae3a6852ea535e27913b96c5f1d28ca3cda94d3d40}{Position}}, 
+\mbox{\hyperlink{classparticls_1_1_rigid_body_tracker_a39b8aaf7e3f9b338244811bae3a6852eab3d81c57dae0bc9439a2e19d7673ba7d}{Velocity}}, 
+\mbox{\hyperlink{classparticls_1_1_rigid_body_tracker_a39b8aaf7e3f9b338244811bae3a6852eaadba7a81f425486f79e852af3b3efa97}{Orientation}}, 
+\mbox{\hyperlink{classparticls_1_1_rigid_body_tracker_a39b8aaf7e3f9b338244811bae3a6852ea0c09f6171067e91df4bef0bfae4fc7c5}{Angular\+Velocity}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_rigid_body_tracker_af6ab449351f1cc89ccb54e0a318d756c}{Rigid\+Body\+Tracker}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_rigid_body}{Rigid\+Body}}$<$ dim $>$ $>$ const \&\mbox{\hyperlink{classparticls_1_1_rigid_body_tracker_a81414ff35502dcb80076981676518725}{body}}, \mbox{\hyperlink{classparticls_1_1_rigid_body_tracker_a39b8aaf7e3f9b338244811bae3a6852e}{Quantity}} const \&\mbox{\hyperlink{classparticls_1_1_rigid_body_tracker_aabce79333da7e7eb850bcee44a54b8bc}{qoi}}=Quantity\+::\+Position)
+\item 
+virtual \mbox{\hyperlink{classparticls_1_1_rigid_body_tracker_a2eced12ec7640be4e6f36b37a224cc85}{$\sim$\+Rigid\+Body\+Tracker}} ()=default
+\item 
+virtual Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classparticls_1_1_rigid_body_tracker_af8efc8bc663d628dde4b4100670a9058}{Quantity\+Of\+Interest}} (double const time) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classparticls_1_1_rigid_body_tracker_a3f3368ebec80b51663b36be40edeac44}{Get\+Orientation}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_rigid_body}{Rigid\+Body}}$<$ dim $>$ $>$ \mbox{\hyperlink{classparticls_1_1_rigid_body_tracker_a81414ff35502dcb80076981676518725}{body}}
+\item 
+const \mbox{\hyperlink{classparticls_1_1_rigid_body_tracker_a39b8aaf7e3f9b338244811bae3a6852e}{Quantity}} \mbox{\hyperlink{classparticls_1_1_rigid_body_tracker_aabce79333da7e7eb850bcee44a54b8bc}{qoi}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+class particls\+::\+Rigid\+Body\+Tracker$<$ dim $>$}
+
+
+
+Definition at line 10 of file Rigid\+Body\+Tracker.\+hpp.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classparticls_1_1_rigid_body_tracker_a39b8aaf7e3f9b338244811bae3a6852e}\label{classparticls_1_1_rigid_body_tracker_a39b8aaf7e3f9b338244811bae3a6852e}} 
+\index{particls::RigidBodyTracker$<$ dim $>$@{particls::RigidBodyTracker$<$ dim $>$}!Quantity@{Quantity}}
+\index{Quantity@{Quantity}!particls::RigidBodyTracker$<$ dim $>$@{particls::RigidBodyTracker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Quantity}{Quantity}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+enum \mbox{\hyperlink{classparticls_1_1_rigid_body_tracker_a39b8aaf7e3f9b338244811bae3a6852e}{particls\+::\+Rigid\+Body\+Tracker\+::\+Quantity}}}
+
+Enum for specifying which rigid body quantity of interest we want to track. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Position@{Position}!particls::RigidBodyTracker$<$ dim $>$@{particls::RigidBodyTracker$<$ dim $>$}}\index{particls::RigidBodyTracker$<$ dim $>$@{particls::RigidBodyTracker$<$ dim $>$}!Position@{Position}}}\mbox{\Hypertarget{classparticls_1_1_rigid_body_tracker_a39b8aaf7e3f9b338244811bae3a6852ea535e27913b96c5f1d28ca3cda94d3d40}\label{classparticls_1_1_rigid_body_tracker_a39b8aaf7e3f9b338244811bae3a6852ea535e27913b96c5f1d28ca3cda94d3d40}} 
+Position&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Velocity@{Velocity}!particls::RigidBodyTracker$<$ dim $>$@{particls::RigidBodyTracker$<$ dim $>$}}\index{particls::RigidBodyTracker$<$ dim $>$@{particls::RigidBodyTracker$<$ dim $>$}!Velocity@{Velocity}}}\mbox{\Hypertarget{classparticls_1_1_rigid_body_tracker_a39b8aaf7e3f9b338244811bae3a6852eab3d81c57dae0bc9439a2e19d7673ba7d}\label{classparticls_1_1_rigid_body_tracker_a39b8aaf7e3f9b338244811bae3a6852eab3d81c57dae0bc9439a2e19d7673ba7d}} 
+Velocity&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Orientation@{Orientation}!particls::RigidBodyTracker$<$ dim $>$@{particls::RigidBodyTracker$<$ dim $>$}}\index{particls::RigidBodyTracker$<$ dim $>$@{particls::RigidBodyTracker$<$ dim $>$}!Orientation@{Orientation}}}\mbox{\Hypertarget{classparticls_1_1_rigid_body_tracker_a39b8aaf7e3f9b338244811bae3a6852eaadba7a81f425486f79e852af3b3efa97}\label{classparticls_1_1_rigid_body_tracker_a39b8aaf7e3f9b338244811bae3a6852eaadba7a81f425486f79e852af3b3efa97}} 
+Orientation&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AngularVelocity@{AngularVelocity}!particls::RigidBodyTracker$<$ dim $>$@{particls::RigidBodyTracker$<$ dim $>$}}\index{particls::RigidBodyTracker$<$ dim $>$@{particls::RigidBodyTracker$<$ dim $>$}!AngularVelocity@{AngularVelocity}}}\mbox{\Hypertarget{classparticls_1_1_rigid_body_tracker_a39b8aaf7e3f9b338244811bae3a6852ea0c09f6171067e91df4bef0bfae4fc7c5}\label{classparticls_1_1_rigid_body_tracker_a39b8aaf7e3f9b338244811bae3a6852ea0c09f6171067e91df4bef0bfae4fc7c5}} 
+Angular\+Velocity&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 16 of file Rigid\+Body\+Tracker.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_rigid_body_tracker_af6ab449351f1cc89ccb54e0a318d756c}\label{classparticls_1_1_rigid_body_tracker_af6ab449351f1cc89ccb54e0a318d756c}} 
+\index{particls::RigidBodyTracker$<$ dim $>$@{particls::RigidBodyTracker$<$ dim $>$}!RigidBodyTracker@{RigidBodyTracker}}
+\index{RigidBodyTracker@{RigidBodyTracker}!particls::RigidBodyTracker$<$ dim $>$@{particls::RigidBodyTracker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{RigidBodyTracker()}{RigidBodyTracker()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_rigid_body_tracker}{particls\+::\+Rigid\+Body\+Tracker}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_rigid_body_tracker}{Rigid\+Body\+Tracker}} (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_rigid_body}{Rigid\+Body}}$<$ dim $>$ $>$ const \&}]{body,  }\item[{\mbox{\hyperlink{classparticls_1_1_rigid_body_tracker_a39b8aaf7e3f9b338244811bae3a6852e}{Quantity}} const \&}]{qoi = {\ttfamily Quantity\+:\+:Position} }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{classparticls_1_1_observer}{Observer}} that tracks a rigid body\textquotesingle{}s state throughout a simulation. The default state is the rigid body\textquotesingle{}s \textquotesingle{}Position\textquotesingle{}, but it can also return the rigid body\textquotesingle{}s \textquotesingle{}Velocity\textquotesingle{}, \textquotesingle{}Orientation\textquotesingle{}, or \textquotesingle{}Angular\+Velocity\textquotesingle{}. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em body} & Rigid body that is tracked. \\
+\hline
+\mbox{\texttt{ in}}  & {\em qoi} & Quantity of interest we want to evaluate. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_rigid_body_tracker_a2eced12ec7640be4e6f36b37a224cc85}\label{classparticls_1_1_rigid_body_tracker_a2eced12ec7640be4e6f36b37a224cc85}} 
+\index{particls::RigidBodyTracker$<$ dim $>$@{particls::RigidBodyTracker$<$ dim $>$}!````~RigidBodyTracker@{$\sim$RigidBodyTracker}}
+\index{````~RigidBodyTracker@{$\sim$RigidBodyTracker}!particls::RigidBodyTracker$<$ dim $>$@{particls::RigidBodyTracker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$RigidBodyTracker()}{~RigidBodyTracker()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual \mbox{\hyperlink{classparticls_1_1_rigid_body_tracker}{particls\+::\+Rigid\+Body\+Tracker}}$<$ dim $>$\+::$\sim$\mbox{\hyperlink{classparticls_1_1_rigid_body_tracker}{Rigid\+Body\+Tracker}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_rigid_body_tracker_a3f3368ebec80b51663b36be40edeac44}\label{classparticls_1_1_rigid_body_tracker_a3f3368ebec80b51663b36be40edeac44}} 
+\index{particls::RigidBodyTracker$<$ dim $>$@{particls::RigidBodyTracker$<$ dim $>$}!GetOrientation@{GetOrientation}}
+\index{GetOrientation@{GetOrientation}!particls::RigidBodyTracker$<$ dim $>$@{particls::RigidBodyTracker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{GetOrientation()}{GetOrientation()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classparticls_1_1_rigid_body_tracker}{particls\+::\+Rigid\+Body\+Tracker}}$<$ dim $>$\+::Get\+Orientation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Returns the particle\textquotesingle{}s orientation depending on its dimension. \mbox{\Hypertarget{classparticls_1_1_rigid_body_tracker_af8efc8bc663d628dde4b4100670a9058}\label{classparticls_1_1_rigid_body_tracker_af8efc8bc663d628dde4b4100670a9058}} 
+\index{particls::RigidBodyTracker$<$ dim $>$@{particls::RigidBodyTracker$<$ dim $>$}!QuantityOfInterest@{QuantityOfInterest}}
+\index{QuantityOfInterest@{QuantityOfInterest}!particls::RigidBodyTracker$<$ dim $>$@{particls::RigidBodyTracker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{QuantityOfInterest()}{QuantityOfInterest()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classparticls_1_1_rigid_body_tracker}{particls\+::\+Rigid\+Body\+Tracker}}$<$ dim $>$\+::Quantity\+Of\+Interest (\begin{DoxyParamCaption}\item[{double const}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & Time at which the quantity of interest is evaluated. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The rigid body\textquotesingle{}s quantity of interest at a specific time. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_observer_a5d8df2033058cad52ea402fb9e834c63}{particls\+::\+Observer}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticls_1_1_rigid_body_tracker_a81414ff35502dcb80076981676518725}\label{classparticls_1_1_rigid_body_tracker_a81414ff35502dcb80076981676518725}} 
+\index{particls::RigidBodyTracker$<$ dim $>$@{particls::RigidBodyTracker$<$ dim $>$}!body@{body}}
+\index{body@{body}!particls::RigidBodyTracker$<$ dim $>$@{particls::RigidBodyTracker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{body}{body}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_rigid_body}{Rigid\+Body}}$<$dim$>$ $>$ \mbox{\hyperlink{classparticls_1_1_rigid_body_tracker}{particls\+::\+Rigid\+Body\+Tracker}}$<$ dim $>$\+::body\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 45 of file Rigid\+Body\+Tracker.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_rigid_body_tracker_aabce79333da7e7eb850bcee44a54b8bc}\label{classparticls_1_1_rigid_body_tracker_aabce79333da7e7eb850bcee44a54b8bc}} 
+\index{particls::RigidBodyTracker$<$ dim $>$@{particls::RigidBodyTracker$<$ dim $>$}!qoi@{qoi}}
+\index{qoi@{qoi}!particls::RigidBodyTracker$<$ dim $>$@{particls::RigidBodyTracker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{qoi}{qoi}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+const \mbox{\hyperlink{classparticls_1_1_rigid_body_tracker_a39b8aaf7e3f9b338244811bae3a6852e}{Quantity}} \mbox{\hyperlink{classparticls_1_1_rigid_body_tracker}{particls\+::\+Rigid\+Body\+Tracker}}$<$ dim $>$\+::qoi\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 47 of file Rigid\+Body\+Tracker.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_rigid_body_tracker_8hpp}{Rigid\+Body\+Tracker.\+hpp}}\end{DoxyCompactItemize}

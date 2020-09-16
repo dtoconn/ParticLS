@@ -1,0 +1,107 @@
+\hypertarget{structparticls_1_1_cohesive_beam_1_1_deformation}{}\doxysection{particls\+::Cohesive\+Beam$<$ dim $>$\+::Deformation Struct Reference}
+\label{structparticls_1_1_cohesive_beam_1_1_deformation}\index{particls::CohesiveBeam$<$ dim $>$::Deformation@{particls::CohesiveBeam$<$ dim $>$::Deformation}}
+
+
+This object describes the amount of deformation (compression, tension, bending, torsion) on the beam.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structparticls_1_1_cohesive_beam_1_1_deformation_a7ff18467e593300fb1805b1e5331705c}{Deformation}} (double const \mbox{\hyperlink{structparticls_1_1_cohesive_beam_1_1_deformation_a1b3db46159a7b43e64cb48bac36af7cb}{dl}}, typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Orientation const \&home\+\_\+orientation, typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Orientation const \&neigh\+\_\+orientation)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const double \mbox{\hyperlink{structparticls_1_1_cohesive_beam_1_1_deformation_a1b3db46159a7b43e64cb48bac36af7cb}{dl}}
+\begin{DoxyCompactList}\small\item\em Change in beam length\+: the beam as been stretched (positive) or compressed (negative) \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{structparticls_1_1_cohesive_beam_1_1_deformation_a97eef5f5fc29ab7df1a68eaf515180b7}{home\+\_\+angles}} = Eigen\+::\+Vector3d\+::\+Zero()
+\begin{DoxyCompactList}\small\item\em The Euler angles that describe the orietation of the home particle relative to the bond. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{structparticls_1_1_cohesive_beam_1_1_deformation_aff939f0f5191452f51a4ee7f721a5674}{neigh\+\_\+angles}} = Eigen\+::\+Vector3d\+::\+Zero()
+\begin{DoxyCompactList}\small\item\em The Euler angles that describe the orietation of the neighbor particle relative to the bond. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+struct particls\+::\+Cohesive\+Beam$<$ dim $>$\+::\+Deformation}
+
+This object describes the amount of deformation (compression, tension, bending, torsion) on the beam. 
+
+We use this to decide when the beam breaks.
+
+Holds\+: The amount that the beam has been stretched/compressed ( $\Delta l$), the amount that the beam as been bent (in 3D, return the maximum bending normal to the beam), and the torsion (3D only) 
+
+Definition at line 77 of file Cohesive\+Beam.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structparticls_1_1_cohesive_beam_1_1_deformation_a7ff18467e593300fb1805b1e5331705c}\label{structparticls_1_1_cohesive_beam_1_1_deformation_a7ff18467e593300fb1805b1e5331705c}} 
+\index{particls::CohesiveBeam$<$ dim $>$::Deformation@{particls::CohesiveBeam$<$ dim $>$::Deformation}!Deformation@{Deformation}}
+\index{Deformation@{Deformation}!particls::CohesiveBeam$<$ dim $>$::Deformation@{particls::CohesiveBeam$<$ dim $>$::Deformation}}
+\doxysubsubsection{\texorpdfstring{Deformation()}{Deformation()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::Deformation\+::\+Deformation (\begin{DoxyParamCaption}\item[{double const}]{dl,  }\item[{typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Orientation const \&}]{home\+\_\+orientation,  }\item[{typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Orientation const \&}]{neigh\+\_\+orientation }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em dl} & Change in beam length\+: the beam as been stretched (positive) or compressed (negative) \\
+\hline
+\mbox{\texttt{ in}}  & {\em home\+\_\+orientation} & The orientation of the home paricle relative to the bond \\
+\hline
+\mbox{\texttt{ in}}  & {\em neigh\+\_\+orientation} & The orientation of the neighbor particle relative to the bonds \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structparticls_1_1_cohesive_beam_1_1_deformation_a1b3db46159a7b43e64cb48bac36af7cb}\label{structparticls_1_1_cohesive_beam_1_1_deformation_a1b3db46159a7b43e64cb48bac36af7cb}} 
+\index{particls::CohesiveBeam$<$ dim $>$::Deformation@{particls::CohesiveBeam$<$ dim $>$::Deformation}!dl@{dl}}
+\index{dl@{dl}!particls::CohesiveBeam$<$ dim $>$::Deformation@{particls::CohesiveBeam$<$ dim $>$::Deformation}}
+\doxysubsubsection{\texorpdfstring{dl}{dl}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+const double \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::Deformation\+::dl}
+
+
+
+Change in beam length\+: the beam as been stretched (positive) or compressed (negative) 
+
+
+
+Definition at line 86 of file Cohesive\+Beam.\+hpp.
+
+\mbox{\Hypertarget{structparticls_1_1_cohesive_beam_1_1_deformation_a97eef5f5fc29ab7df1a68eaf515180b7}\label{structparticls_1_1_cohesive_beam_1_1_deformation_a97eef5f5fc29ab7df1a68eaf515180b7}} 
+\index{particls::CohesiveBeam$<$ dim $>$::Deformation@{particls::CohesiveBeam$<$ dim $>$::Deformation}!home\_angles@{home\_angles}}
+\index{home\_angles@{home\_angles}!particls::CohesiveBeam$<$ dim $>$::Deformation@{particls::CohesiveBeam$<$ dim $>$::Deformation}}
+\doxysubsubsection{\texorpdfstring{home\_angles}{home\_angles}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Vector3d \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::Deformation\+::home\+\_\+angles = Eigen\+::\+Vector3d\+::\+Zero()}
+
+
+
+The Euler angles that describe the orietation of the home particle relative to the bond. 
+
+
+
+Definition at line 89 of file Cohesive\+Beam.\+hpp.
+
+\mbox{\Hypertarget{structparticls_1_1_cohesive_beam_1_1_deformation_aff939f0f5191452f51a4ee7f721a5674}\label{structparticls_1_1_cohesive_beam_1_1_deformation_aff939f0f5191452f51a4ee7f721a5674}} 
+\index{particls::CohesiveBeam$<$ dim $>$::Deformation@{particls::CohesiveBeam$<$ dim $>$::Deformation}!neigh\_angles@{neigh\_angles}}
+\index{neigh\_angles@{neigh\_angles}!particls::CohesiveBeam$<$ dim $>$::Deformation@{particls::CohesiveBeam$<$ dim $>$::Deformation}}
+\doxysubsubsection{\texorpdfstring{neigh\_angles}{neigh\_angles}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Vector3d \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::Deformation\+::neigh\+\_\+angles = Eigen\+::\+Vector3d\+::\+Zero()}
+
+
+
+The Euler angles that describe the orietation of the neighbor particle relative to the bond. 
+
+
+
+Definition at line 92 of file Cohesive\+Beam.\+hpp.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_cohesive_beam_8hpp}{Cohesive\+Beam.\+hpp}}\end{DoxyCompactItemize}

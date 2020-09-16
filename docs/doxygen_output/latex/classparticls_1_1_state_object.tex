@@ -1,0 +1,432 @@
+\hypertarget{classparticls_1_1_state_object}{}\doxysection{particls\+::State\+Object Class Reference}
+\label{classparticls_1_1_state_object}\index{particls::StateObject@{particls::StateObject}}
+
+
+Defines the current state of an object and how it evolves in time.  
+
+
+
+
+{\ttfamily \#include $<$State\+Object.\+hpp$>$}
+
+
+
+Inheritance diagram for particls\+::State\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classparticls_1_1_state_object__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_state_object_aec8a4f1b0f8edfb1e5cee914ae30b1c2}{State\+Object}} (unsigned int const dim=0)
+\item 
+\mbox{\hyperlink{classparticls_1_1_state_object_ad62d000d0e3ff58f350efcf65432f575}{State\+Object}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_state_object}{State\+Object}} $>$ $>$ \&substates\+\_\+in, unsigned int const dim=0)
+\item 
+\mbox{\hyperlink{classparticls_1_1_state_object_a9fa6ba031aec21064f02b3c80caef475}{State\+Object}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_state_object}{State\+Object}} $>$ \&substate, unsigned int const dim=0)
+\item 
+virtual \mbox{\hyperlink{classparticls_1_1_state_object_aaf331bce21b4a17f528ec7db660a5437}{$\sim$\+State\+Object}} ()=default
+\begin{DoxyCompactList}\small\item\em Use default destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_state_object_a57e7c41ae96306660a04a70132c67fa9}{Set\+State}} (Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ const \&new\+State)
+\item 
+Eigen\+::\+Vector\+Xd const  \& \mbox{\hyperlink{classparticls_1_1_state_object_a5af5dfb30b59ddf1f6ef5967384a42a5}{Get\+State}} () const
+\item 
+Eigen\+::\+Vector\+Xd \& \mbox{\hyperlink{classparticls_1_1_state_object_ac84a48973d9d6e2378071d9d59a69e2c}{Get\+State}} ()
+\item 
+std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \mbox{\hyperlink{classparticls_1_1_state_object_a55dde97b5039021ed71fddc1a9bdcf5e}{Get\+Substates}} () const
+\item 
+unsigned int \mbox{\hyperlink{classparticls_1_1_state_object_ae24206c3edd70aa45418d4d2a0e95bda}{State\+Size}} () const
+\item 
+unsigned int \mbox{\hyperlink{classparticls_1_1_state_object_a07d34b37763f7f767ab972aff9565704}{Size}} () const
+\item 
+void \mbox{\hyperlink{classparticls_1_1_state_object_a86696403a03147ce9cee4d57028e7edf}{Fill\+R\+HS}} (double const time, Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$ rhs)
+\item 
+void \mbox{\hyperlink{classparticls_1_1_state_object_a77991b8be850208a2ea108b330a12a93}{Fill\+Gradient}} (double const time, Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ const \&sensitivity, Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$ gradient)
+\item 
+double \mbox{\hyperlink{classparticls_1_1_state_object_af589c1301241790ac3dc436ae6e80638}{operator()}} (unsigned int const i) const
+\begin{DoxyCompactList}\small\item\em Get the $i^{th}$ element. \end{DoxyCompactList}\item 
+double \& \mbox{\hyperlink{classparticls_1_1_state_object_a4ad25e616212335583a6ab55fca49195}{operator()}} (unsigned int const i)
+\begin{DoxyCompactList}\small\item\em Get the $i^{th}$ element. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_state_object_a9e39d6f903be79db16fdb5f250b7a6b3}{at}} (unsigned int const i) const
+\begin{DoxyCompactList}\small\item\em Get the $i^{th}$ element. \end{DoxyCompactList}\item 
+double \& \mbox{\hyperlink{classparticls_1_1_state_object_af5e8052eec4120c5c4723b4bece3681e}{at}} (unsigned int const i)
+\begin{DoxyCompactList}\small\item\em Get the $i^{th}$ element. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classparticls_1_1_state_object}{State\+Object}} \& \mbox{\hyperlink{classparticls_1_1_state_object_abba45787489cb003dd685bc25f7bc854}{operator+=}} (Eigen\+::\+Vector\+Xd const \&vec)
+\begin{DoxyCompactList}\small\item\em Add a vector to the state vector. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classparticls_1_1_state_object_aefd621f0d05db34f22a1c350ae436d2e}{Num\+Substates}} () const
+\begin{DoxyCompactList}\small\item\em Get the number of substates. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_state_object}{State\+Object}} $>$ const  \& \mbox{\hyperlink{classparticls_1_1_state_object_ac550e5443a3f9fba88ebfc7db4b976c4}{Substate}} (unsigned int const i) const
+\begin{DoxyCompactList}\small\item\em Get a weak pointer to the substate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_state_object_a6ad9738629390c509f53a4d41cf67fde}{Fill\+R\+H\+S\+Impl}} (double const time, Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$ rhs)
+\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_state_object_aba8043c9cf528982faead224139dffca}{Fill\+Gradient\+Impl}} (double const time, Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ const \&sensitivity, Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$ gradient)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classparticls_1_1_state_object_ae7e06772f063004e61265aef97bdd41b}{state}}
+\begin{DoxyCompactList}\small\item\em The current state of the object. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_state_object}{State\+Object}} $>$ $>$ \mbox{\hyperlink{classparticls_1_1_state_object_ac1ada4e5998d6116e5d606b034bb7518}{substates}}
+\begin{DoxyCompactList}\small\item\em This object depends on these substates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classparticls_1_1_state_object_aa977da312fcc8e8f199962e02d3bfa6e}{serialize}} (Archive \&ar)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classparticls_1_1_state_object_ab2f44cbb59a08132f4c843e5225bba0e}{cereal\+::access}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines the current state of an object and how it evolves in time. 
+
+Definition at line 22 of file State\+Object.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_state_object_aec8a4f1b0f8edfb1e5cee914ae30b1c2}\label{classparticls_1_1_state_object_aec8a4f1b0f8edfb1e5cee914ae30b1c2}} 
+\index{particls::StateObject@{particls::StateObject}!StateObject@{StateObject}}
+\index{StateObject@{StateObject}!particls::StateObject@{particls::StateObject}}
+\doxysubsubsection{\texorpdfstring{StateObject()}{StateObject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily particls\+::\+State\+Object\+::\+State\+Object (\begin{DoxyParamCaption}\item[{unsigned int const}]{dim = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em dim} & The dimension of the object (defaults to $0$) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_state_object_ad62d000d0e3ff58f350efcf65432f575}\label{classparticls_1_1_state_object_ad62d000d0e3ff58f350efcf65432f575}} 
+\index{particls::StateObject@{particls::StateObject}!StateObject@{StateObject}}
+\index{StateObject@{StateObject}!particls::StateObject@{particls::StateObject}}
+\doxysubsubsection{\texorpdfstring{StateObject()}{StateObject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily particls\+::\+State\+Object\+::\+State\+Object (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_state_object}{State\+Object}} $>$ $>$ \&}]{substates\+\_\+in,  }\item[{unsigned int const}]{dim = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em substates} & The substates of the object \\
+\hline
+\mbox{\texttt{ in}}  & {\em dim} & The dimension of the object (defaults to $0$) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_state_object_a9fa6ba031aec21064f02b3c80caef475}\label{classparticls_1_1_state_object_a9fa6ba031aec21064f02b3c80caef475}} 
+\index{particls::StateObject@{particls::StateObject}!StateObject@{StateObject}}
+\index{StateObject@{StateObject}!particls::StateObject@{particls::StateObject}}
+\doxysubsubsection{\texorpdfstring{StateObject()}{StateObject()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily particls\+::\+State\+Object\+::\+State\+Object (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_state_object}{State\+Object}} $>$ \&}]{substate,  }\item[{unsigned int const}]{dim = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em substates} & The substate of the object \\
+\hline
+\mbox{\texttt{ in}}  & {\em dim} & The dimension of the object (defaults to $0$) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_state_object_aaf331bce21b4a17f528ec7db660a5437}\label{classparticls_1_1_state_object_aaf331bce21b4a17f528ec7db660a5437}} 
+\index{particls::StateObject@{particls::StateObject}!````~StateObject@{$\sim$StateObject}}
+\index{````~StateObject@{$\sim$StateObject}!particls::StateObject@{particls::StateObject}}
+\doxysubsubsection{\texorpdfstring{$\sim$StateObject()}{~StateObject()}}
+{\footnotesize\ttfamily virtual particls\+::\+State\+Object\+::$\sim$\+State\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Use default destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_state_object_af5e8052eec4120c5c4723b4bece3681e}\label{classparticls_1_1_state_object_af5e8052eec4120c5c4723b4bece3681e}} 
+\index{particls::StateObject@{particls::StateObject}!at@{at}}
+\index{at@{at}!particls::StateObject@{particls::StateObject}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double\& particls\+::\+State\+Object\+::at (\begin{DoxyParamCaption}\item[{unsigned int const}]{i }\end{DoxyParamCaption})}
+
+
+
+Get the $i^{th}$ element. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i} & The index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the $i^{th}$ element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_state_object_a9e39d6f903be79db16fdb5f250b7a6b3}\label{classparticls_1_1_state_object_a9e39d6f903be79db16fdb5f250b7a6b3}} 
+\index{particls::StateObject@{particls::StateObject}!at@{at}}
+\index{at@{at}!particls::StateObject@{particls::StateObject}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double particls\+::\+State\+Object\+::at (\begin{DoxyParamCaption}\item[{unsigned int const}]{i }\end{DoxyParamCaption}) const}
+
+
+
+Get the $i^{th}$ element. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i} & The index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the $i^{th}$ element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_state_object_a77991b8be850208a2ea108b330a12a93}\label{classparticls_1_1_state_object_a77991b8be850208a2ea108b330a12a93}} 
+\index{particls::StateObject@{particls::StateObject}!FillGradient@{FillGradient}}
+\index{FillGradient@{FillGradient}!particls::StateObject@{particls::StateObject}}
+\doxysubsubsection{\texorpdfstring{FillGradient()}{FillGradient()}}
+{\footnotesize\ttfamily void particls\+::\+State\+Object\+::\+Fill\+Gradient (\begin{DoxyParamCaption}\item[{double const}]{time,  }\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ const \&}]{sensitivity,  }\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$}]{gradient }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & The time when we want the gradient \\
+\hline
+\mbox{\texttt{ in}}  & {\em sensitivity} & The sensitivity vector \\
+\hline
+\mbox{\texttt{ out}}  & {\em gradient} & The gradient of the right hand side \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_state_object_aba8043c9cf528982faead224139dffca}\label{classparticls_1_1_state_object_aba8043c9cf528982faead224139dffca}} 
+\index{particls::StateObject@{particls::StateObject}!FillGradientImpl@{FillGradientImpl}}
+\index{FillGradientImpl@{FillGradientImpl}!particls::StateObject@{particls::StateObject}}
+\doxysubsubsection{\texorpdfstring{FillGradientImpl()}{FillGradientImpl()}}
+{\footnotesize\ttfamily virtual void particls\+::\+State\+Object\+::\+Fill\+Gradient\+Impl (\begin{DoxyParamCaption}\item[{double const}]{time,  }\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ const \&}]{sensitivity,  }\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$}]{gradient }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & The time when we want the gradient \\
+\hline
+\mbox{\texttt{ in}}  & {\em sensitivity} & The sensitivity vector \\
+\hline
+\mbox{\texttt{ out}}  & {\em gradient} & The gradient of the right hand side \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_state_object_a86696403a03147ce9cee4d57028e7edf}\label{classparticls_1_1_state_object_a86696403a03147ce9cee4d57028e7edf}} 
+\index{particls::StateObject@{particls::StateObject}!FillRHS@{FillRHS}}
+\index{FillRHS@{FillRHS}!particls::StateObject@{particls::StateObject}}
+\doxysubsubsection{\texorpdfstring{FillRHS()}{FillRHS()}}
+{\footnotesize\ttfamily void particls\+::\+State\+Object\+::\+Fill\+R\+HS (\begin{DoxyParamCaption}\item[{double const}]{time,  }\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$}]{rhs }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & The time when we want the right hand side \\
+\hline
+\mbox{\texttt{ out}}  & {\em rhs} & The right hand side of the evolution equation \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_state_object_a6ad9738629390c509f53a4d41cf67fde}\label{classparticls_1_1_state_object_a6ad9738629390c509f53a4d41cf67fde}} 
+\index{particls::StateObject@{particls::StateObject}!FillRHSImpl@{FillRHSImpl}}
+\index{FillRHSImpl@{FillRHSImpl}!particls::StateObject@{particls::StateObject}}
+\doxysubsubsection{\texorpdfstring{FillRHSImpl()}{FillRHSImpl()}}
+{\footnotesize\ttfamily virtual void particls\+::\+State\+Object\+::\+Fill\+R\+H\+S\+Impl (\begin{DoxyParamCaption}\item[{double const}]{time,  }\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & The time when we want the right hand side \\
+\hline
+\mbox{\texttt{ out}}  & {\em rhs} & The right hand side of the evolution equation \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classparticls_1_1_ridging_contact_a62762890ca739a1f18cd6ef97fdd35b4}{particls\+::\+Ridging\+Contact$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_elastic_contact_a1976d9ed04b67deee7d28895c682ce5e}{particls\+::\+Elastic\+Contact$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_visco_elastic_contact_adcad6643d8284853cce374a6a27cf8d8}{particls\+::\+Visco\+Elastic\+Contact$<$ dim $>$}}, and \mbox{\hyperlink{classparticls_1_1_hertzian_contact_aa5c3e16d9ab8b2f79b35b63911e3e714}{particls\+::\+Hertzian\+Contact$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_state_object_ac84a48973d9d6e2378071d9d59a69e2c}\label{classparticls_1_1_state_object_ac84a48973d9d6e2378071d9d59a69e2c}} 
+\index{particls::StateObject@{particls::StateObject}!GetState@{GetState}}
+\index{GetState@{GetState}!particls::StateObject@{particls::StateObject}}
+\doxysubsubsection{\texorpdfstring{GetState()}{GetState()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd\& particls\+::\+State\+Object\+::\+Get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Non constant version \begin{DoxyReturn}{Returns}
+The current state of the object-\/gets Particle\+::state 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_state_object_a5af5dfb30b59ddf1f6ef5967384a42a5}\label{classparticls_1_1_state_object_a5af5dfb30b59ddf1f6ef5967384a42a5}} 
+\index{particls::StateObject@{particls::StateObject}!GetState@{GetState}}
+\index{GetState@{GetState}!particls::StateObject@{particls::StateObject}}
+\doxysubsubsection{\texorpdfstring{GetState()}{GetState()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd const\& particls\+::\+State\+Object\+::\+Get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The current state of the object-\/gets Particle\+::state 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_state_object_a55dde97b5039021ed71fddc1a9bdcf5e}\label{classparticls_1_1_state_object_a55dde97b5039021ed71fddc1a9bdcf5e}} 
+\index{particls::StateObject@{particls::StateObject}!GetSubstates@{GetSubstates}}
+\index{GetSubstates@{GetSubstates}!particls::StateObject@{particls::StateObject}}
+\doxysubsubsection{\texorpdfstring{GetSubstates()}{GetSubstates()}}
+{\footnotesize\ttfamily std\+::vector$<$Eigen\+::\+Vector\+Xd$>$ particls\+::\+State\+Object\+::\+Get\+Substates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The current state of the substate object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_state_object_aefd621f0d05db34f22a1c350ae436d2e}\label{classparticls_1_1_state_object_aefd621f0d05db34f22a1c350ae436d2e}} 
+\index{particls::StateObject@{particls::StateObject}!NumSubstates@{NumSubstates}}
+\index{NumSubstates@{NumSubstates}!particls::StateObject@{particls::StateObject}}
+\doxysubsubsection{\texorpdfstring{NumSubstates()}{NumSubstates()}}
+{\footnotesize\ttfamily unsigned int particls\+::\+State\+Object\+::\+Num\+Substates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the number of substates. 
+
+\mbox{\Hypertarget{classparticls_1_1_state_object_a4ad25e616212335583a6ab55fca49195}\label{classparticls_1_1_state_object_a4ad25e616212335583a6ab55fca49195}} 
+\index{particls::StateObject@{particls::StateObject}!operator()@{operator()}}
+\index{operator()@{operator()}!particls::StateObject@{particls::StateObject}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double\& particls\+::\+State\+Object\+::operator() (\begin{DoxyParamCaption}\item[{unsigned int const}]{i }\end{DoxyParamCaption})}
+
+
+
+Get the $i^{th}$ element. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i} & The index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the $i^{th}$ element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_state_object_af589c1301241790ac3dc436ae6e80638}\label{classparticls_1_1_state_object_af589c1301241790ac3dc436ae6e80638}} 
+\index{particls::StateObject@{particls::StateObject}!operator()@{operator()}}
+\index{operator()@{operator()}!particls::StateObject@{particls::StateObject}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double particls\+::\+State\+Object\+::operator() (\begin{DoxyParamCaption}\item[{unsigned int const}]{i }\end{DoxyParamCaption}) const}
+
+
+
+Get the $i^{th}$ element. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i} & The index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the $i^{th}$ element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_state_object_abba45787489cb003dd685bc25f7bc854}\label{classparticls_1_1_state_object_abba45787489cb003dd685bc25f7bc854}} 
+\index{particls::StateObject@{particls::StateObject}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!particls::StateObject@{particls::StateObject}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classparticls_1_1_state_object}{State\+Object}}\& particls\+::\+State\+Object\+::operator+= (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector\+Xd const \&}]{vec }\end{DoxyParamCaption})}
+
+
+
+Add a vector to the state vector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em vec} & The vector to add to this state \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The updated state 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_state_object_aa977da312fcc8e8f199962e02d3bfa6e}\label{classparticls_1_1_state_object_aa977da312fcc8e8f199962e02d3bfa6e}} 
+\index{particls::StateObject@{particls::StateObject}!serialize@{serialize}}
+\index{serialize@{serialize}!particls::StateObject@{particls::StateObject}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+void particls\+::\+State\+Object\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 156 of file State\+Object.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_state_object_a57e7c41ae96306660a04a70132c67fa9}\label{classparticls_1_1_state_object_a57e7c41ae96306660a04a70132c67fa9}} 
+\index{particls::StateObject@{particls::StateObject}!SetState@{SetState}}
+\index{SetState@{SetState}!particls::StateObject@{particls::StateObject}}
+\doxysubsubsection{\texorpdfstring{SetState()}{SetState()}}
+{\footnotesize\ttfamily void particls\+::\+State\+Object\+::\+Set\+State (\begin{DoxyParamCaption}\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ const \&}]{new\+State }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em new\+State} & The new state of the object-\/set Particle\+::state to this \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_state_object_a07d34b37763f7f767ab972aff9565704}\label{classparticls_1_1_state_object_a07d34b37763f7f767ab972aff9565704}} 
+\index{particls::StateObject@{particls::StateObject}!Size@{Size}}
+\index{Size@{Size}!particls::StateObject@{particls::StateObject}}
+\doxysubsubsection{\texorpdfstring{Size()}{Size()}}
+{\footnotesize\ttfamily unsigned int particls\+::\+State\+Object\+::\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The dimension of the object-\/the size of Particle\+::state plus the dimension of its substates 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_state_object_ae24206c3edd70aa45418d4d2a0e95bda}\label{classparticls_1_1_state_object_ae24206c3edd70aa45418d4d2a0e95bda}} 
+\index{particls::StateObject@{particls::StateObject}!StateSize@{StateSize}}
+\index{StateSize@{StateSize}!particls::StateObject@{particls::StateObject}}
+\doxysubsubsection{\texorpdfstring{StateSize()}{StateSize()}}
+{\footnotesize\ttfamily unsigned int particls\+::\+State\+Object\+::\+State\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The dimension of the object-\/the size of Particle\+::state 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_state_object_ac550e5443a3f9fba88ebfc7db4b976c4}\label{classparticls_1_1_state_object_ac550e5443a3f9fba88ebfc7db4b976c4}} 
+\index{particls::StateObject@{particls::StateObject}!Substate@{Substate}}
+\index{Substate@{Substate}!particls::StateObject@{particls::StateObject}}
+\doxysubsubsection{\texorpdfstring{Substate()}{Substate()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_state_object}{State\+Object}}$>$ const\& particls\+::\+State\+Object\+::\+Substate (\begin{DoxyParamCaption}\item[{unsigned int const}]{i }\end{DoxyParamCaption}) const}
+
+
+
+Get a weak pointer to the substate. 
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_state_object_ab2f44cbb59a08132f4c843e5225bba0e}\label{classparticls_1_1_state_object_ab2f44cbb59a08132f4c843e5225bba0e}} 
+\index{particls::StateObject@{particls::StateObject}!cereal::access@{cereal::access}}
+\index{cereal::access@{cereal::access}!particls::StateObject@{particls::StateObject}}
+\doxysubsubsection{\texorpdfstring{cereal::access}{cereal::access}}
+{\footnotesize\ttfamily friend class cereal\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 153 of file State\+Object.\+hpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticls_1_1_state_object_ae7e06772f063004e61265aef97bdd41b}\label{classparticls_1_1_state_object_ae7e06772f063004e61265aef97bdd41b}} 
+\index{particls::StateObject@{particls::StateObject}!state@{state}}
+\index{state@{state}!particls::StateObject@{particls::StateObject}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd particls\+::\+State\+Object\+::state\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The current state of the object. 
+
+
+
+Definition at line 146 of file State\+Object.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_state_object_ac1ada4e5998d6116e5d606b034bb7518}\label{classparticls_1_1_state_object_ac1ada4e5998d6116e5d606b034bb7518}} 
+\index{particls::StateObject@{particls::StateObject}!substates@{substates}}
+\index{substates@{substates}!particls::StateObject@{particls::StateObject}}
+\doxysubsubsection{\texorpdfstring{substates}{substates}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_state_object}{State\+Object}}$>$ $>$ particls\+::\+State\+Object\+::substates\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+This object depends on these substates. 
+
+
+
+Definition at line 149 of file State\+Object.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_state_object_8hpp}{State\+Object.\+hpp}}\end{DoxyCompactItemize}

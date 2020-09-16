@@ -1,0 +1,451 @@
+\hypertarget{classparticls_1_1_interpolated_vector_field}{}\doxysection{particls\+::Interpolated\+Vector\+Field$<$ dim $>$ Class Template Reference}
+\label{classparticls_1_1_interpolated_vector_field}\index{particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}}
+
+
+{\ttfamily \#include $<$Interpolated\+Vector\+Field.\+hpp$>$}
+
+
+
+Inheritance diagram for particls\+::Interpolated\+Vector\+Field$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classparticls_1_1_interpolated_vector_field__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for particls\+::Interpolated\+Vector\+Field$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classparticls_1_1_interpolated_vector_field__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_interpolated_vector_field_a20c945677680f5c8c25d0241dba3489f}{Interpolated\+Vector\+Field}} (Eigen\+::\+Matrix\+Xd const \&\mbox{\hyperlink{classparticls_1_1_interpolated_vector_field_a6b27df862dfa7d413c68c76a8dbf89df}{field\+\_\+data}}, std\+::vector$<$ int $>$ const \&\mbox{\hyperlink{classparticls_1_1_interpolated_vector_field_ae514214566e98e76c0b2dd80b6510c44}{field\+\_\+dims}}, int const \&\mbox{\hyperlink{classparticls_1_1_interpolated_vector_field_a42609a3de9373f7a49b9ad12982b318d}{interp\+\_\+dim}}, std\+::vector$<$ double $>$ const \&\mbox{\hyperlink{classparticls_1_1_interpolated_vector_field_a5dbe79520f58557e3b3309463f3c3fc2}{data\+\_\+times}}=std\+::vector$<$ double $>$(\{0.\+0\}), bool const \&\mbox{\hyperlink{classparticls_1_1_interpolated_vector_field_a9f5ad4e0253725017870765065cc4667}{interp\+\_\+time}}=false)
+\item 
+\mbox{\hyperlink{classparticls_1_1_interpolated_vector_field_a9821ccec4c2eda0a1ad829ef82ee0457}{Interpolated\+Vector\+Field}} (std\+::string const \&file\+\_\+name, std\+::vector$<$ int $>$ const \&file\+\_\+indices, std\+::vector$<$ int $>$ const \&\mbox{\hyperlink{classparticls_1_1_interpolated_vector_field_ae514214566e98e76c0b2dd80b6510c44}{field\+\_\+dims}}, int const \&\mbox{\hyperlink{classparticls_1_1_interpolated_vector_field_a42609a3de9373f7a49b9ad12982b318d}{interp\+\_\+dim}}, std\+::vector$<$ double $>$ const \&\mbox{\hyperlink{classparticls_1_1_interpolated_vector_field_a5dbe79520f58557e3b3309463f3c3fc2}{data\+\_\+times}}=std\+::vector$<$ double $>$(\{0.\+0\}), bool const \&\mbox{\hyperlink{classparticls_1_1_interpolated_vector_field_a9f5ad4e0253725017870765065cc4667}{interp\+\_\+time}}=false)
+\item 
+\mbox{\hyperlink{classparticls_1_1_interpolated_vector_field_a71b84a356f1be3c93d0dd3b00945903c}{Interpolated\+Vector\+Field}} (Y\+A\+M\+L\+::\+Node const \&node)
+\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field_a00b5701fd4c8968969b317f97978dfe9}{Compute\+Vector}} (double const \&time, Eigen\+::\+Ref$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$$>$ const \&position) override
+\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field_a92e9ec9920dd48bc5a136862bc3ec7a1}{Get\+Interpolated\+Field}} ()
+\begin{DoxyCompactList}\small\item\em Return field\+\_\+data matrix. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field_ac72ba89fe52a013a46bf5b00777a0d7a}{Find\+Nearest\+Points}} (Eigen\+::\+Ref$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$$>$ const \&position, std\+::vector$<$ int $>$ \&inds, std\+::vector$<$ double $>$ \&dists)
+\item 
+virtual \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field_ac648d310e2455c28d04f8fed885ebd29}{$\sim$\+Interpolated\+Vector\+Field}} ()=default
+\begin{DoxyCompactList}\small\item\em Use the default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_interpolated_vector_field_ac3a6ac2198398e8c3edf1f005e946663}{Interpolated\+Vector\+Field}} ()=default
+\item 
+const Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field_ace3e055d1af9af644bcacac769e4f3d7}{Parse\+Field\+File}} (std\+::string const \&file\+\_\+name, std\+::vector$<$ int $>$ const \&file\+\_\+indices)
+\item 
+Eigen\+::\+Matrix$<$ double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$ dim $>$\+::velocity, 1 $>$ \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field_a95767fc6fb1fa3e7fee0821f5f7d6b79}{Linear\+Interpolation}} (double const \&time, Eigen\+::\+Ref$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$$>$ const \&position)
+\item 
+Eigen\+::\+Matrix$<$ double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$ dim $>$\+::velocity, 1 $>$ \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field_af71814ddad0151dbd13ddab208d19403}{Nearest\+Neighbor\+Interpolation}} (double const \&time, Eigen\+::\+Ref$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$$>$ const \&position)
+\item 
+Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field_a129623751e75a21658f16a81a67b2fcf}{Rotate\+Point}} (Eigen\+::\+Ref$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$$>$ const \&position, Eigen\+::\+Matrix$<$ double, dim, dim $>$ const \&rot)
+\item 
+std\+::tuple$<$ Eigen\+::\+Matrix$<$ double, Eigen\+::\+Dynamic, dim $>$, Eigen\+::\+Matrix$<$ double, dim, 1 $>$, Eigen\+::\+Matrix$<$ double, dim, dim $>$ $>$ \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field_a3e2c9aeb6062bfd342ff91b8a8d403a6}{Rotate\+Grid\+To\+Cartesian}} ()
+\item 
+std\+::tuple$<$ int, double $>$ \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field_a35408c171137ea1cc642cc1635f854fa}{Time\+Parameters}} (double const \&time)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field_ab457bd994ad73308996c3a25341d9510}{serialize}} (Archive \&ar)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field_a42609a3de9373f7a49b9ad12982b318d}{interp\+\_\+dim}}
+\begin{DoxyCompactList}\small\item\em Dimension of the interpolation function. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field_a5dbe79520f58557e3b3309463f3c3fc2}{data\+\_\+times}}
+\begin{DoxyCompactList}\small\item\em Times corresponding to the different columns in field\+\_\+data. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field_a9f5ad4e0253725017870765065cc4667}{interp\+\_\+time}}
+\begin{DoxyCompactList}\small\item\em Boolean determining if we want to linearly interpolate in time. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field_a6b27df862dfa7d413c68c76a8dbf89df}{field\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em Matrix containing coordinates and vector components \mbox{[}x, y, (z), v\+\_\+x\+\_\+t0, v\+\_\+y\+\_\+t0, (v\+\_\+z\+\_\+t0),...v\+\_\+x\+\_\+tN, v\+\_\+y\+\_\+tN, (v\+\_\+z\+\_\+tN)\mbox{]}. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field_ae514214566e98e76c0b2dd80b6510c44}{field\+\_\+dims}}
+\begin{DoxyCompactList}\small\item\em Number of elements in each dimension of field coordinates \mbox{[}x, y, (z)\mbox{]}. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ double, Eigen\+::\+Dynamic, dim $>$ \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field_a9910ada86fa6868228a77b00e2a3eb01}{coords\+\_\+cart}}
+\begin{DoxyCompactList}\small\item\em Matrix containing field\+\_\+data rotated to Cartesian. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field_a274b6028cdcf3ee165a92655b9a00763}{grid\+\_\+sizes}}
+\begin{DoxyCompactList}\small\item\em Cell dimensions in Cartesian grid -\/ N\+OT in original data grid. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ double, dim, dim $>$ \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field_aed45926def2f4ea027c2ebd78d30a568}{rotation\+\_\+mat}}
+\begin{DoxyCompactList}\small\item\em Rotation matrix needed for rotating from data reference frame to Cartesian coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field_ab2f44cbb59a08132f4c843e5225bba0e}{cereal\+::access}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+class particls\+::\+Interpolated\+Vector\+Field$<$ dim $>$}
+
+
+
+Definition at line 16 of file Interpolated\+Vector\+Field.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_interpolated_vector_field_a20c945677680f5c8c25d0241dba3489f}\label{classparticls_1_1_interpolated_vector_field_a20c945677680f5c8c25d0241dba3489f}} 
+\index{particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}!InterpolatedVectorField@{InterpolatedVectorField}}
+\index{InterpolatedVectorField@{InterpolatedVectorField}!particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{InterpolatedVectorField()}{InterpolatedVectorField()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_interpolated_vector_field}{particls\+::\+Interpolated\+Vector\+Field}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_interpolated_vector_field}{Interpolated\+Vector\+Field}} (\begin{DoxyParamCaption}\item[{Eigen\+::\+Matrix\+Xd const \&}]{field\+\_\+data,  }\item[{std\+::vector$<$ int $>$ const \&}]{field\+\_\+dims,  }\item[{int const \&}]{interp\+\_\+dim,  }\item[{std\+::vector$<$ double $>$ const \&}]{data\+\_\+times = {\ttfamily std\+:\+:vector$<$~double~$>$(\{0.0\})},  }\item[{bool const \&}]{interp\+\_\+time = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Constructor that takes matrix of the coordinates and vector components 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em field\+\_\+data} & Matrix where each row contains the position coordinates and the vector components at that location \\
+\hline
+\mbox{\texttt{ in}}  & {\em field\+\_\+dims} & Number of elements in each dimension of field data \\
+\hline
+\mbox{\texttt{ in}}  & {\em interp\+\_\+dim} & Dimension of the interpolation, e.\+g. \textquotesingle{}0\textquotesingle{} is nearest neighbor, \textquotesingle{}1\textquotesingle{} is linear \\
+\hline
+\mbox{\texttt{ in}}  & {\em data\+\_\+times} & Times that dictate when the different columns in field\+\_\+data should be used \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_interpolated_vector_field_a9821ccec4c2eda0a1ad829ef82ee0457}\label{classparticls_1_1_interpolated_vector_field_a9821ccec4c2eda0a1ad829ef82ee0457}} 
+\index{particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}!InterpolatedVectorField@{InterpolatedVectorField}}
+\index{InterpolatedVectorField@{InterpolatedVectorField}!particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{InterpolatedVectorField()}{InterpolatedVectorField()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_interpolated_vector_field}{particls\+::\+Interpolated\+Vector\+Field}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_interpolated_vector_field}{Interpolated\+Vector\+Field}} (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{file\+\_\+name,  }\item[{std\+::vector$<$ int $>$ const \&}]{file\+\_\+indices,  }\item[{std\+::vector$<$ int $>$ const \&}]{field\+\_\+dims,  }\item[{int const \&}]{interp\+\_\+dim,  }\item[{std\+::vector$<$ double $>$ const \&}]{data\+\_\+times = {\ttfamily std\+:\+:vector$<$~double~$>$(\{0.0\})},  }\item[{bool const \&}]{interp\+\_\+time = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Constructor that takes a .txt file name and parses data from the file 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em file\+\_\+name} & Full path to a comma-\/delimited text file containing the data \\
+\hline
+\mbox{\texttt{ in}}  & {\em file\+\_\+indices} & Vector specifying which columns in the file correspond to the \mbox{[}x, y, (z), v\+\_\+x, v\+\_\+y, (v\+\_\+z)\mbox{]} datasets, in that order \\
+\hline
+\mbox{\texttt{ in}}  & {\em field\+\_\+dims} & Number of elements in each dimension of field data \\
+\hline
+\mbox{\texttt{ in}}  & {\em interp\+\_\+dim} & Dimension of the interpolation, e.\+g. \textquotesingle{}0\textquotesingle{} is nearest neighbor, \textquotesingle{}1\textquotesingle{} is linear \\
+\hline
+\mbox{\texttt{ in}}  & {\em data\+\_\+times} & Times that dictate when the different columns in field\+\_\+data should be used \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_interpolated_vector_field_a71b84a356f1be3c93d0dd3b00945903c}\label{classparticls_1_1_interpolated_vector_field_a71b84a356f1be3c93d0dd3b00945903c}} 
+\index{particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}!InterpolatedVectorField@{InterpolatedVectorField}}
+\index{InterpolatedVectorField@{InterpolatedVectorField}!particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{InterpolatedVectorField()}{InterpolatedVectorField()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_interpolated_vector_field}{particls\+::\+Interpolated\+Vector\+Field}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_interpolated_vector_field}{Interpolated\+Vector\+Field}} (\begin{DoxyParamCaption}\item[{Y\+A\+M\+L\+::\+Node const \&}]{node }\end{DoxyParamCaption})}
+
+Constructor that takes a Y\+A\+ML node 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em node} & that contains the following\+: node\mbox{[}\char`\"{}\+File\+Name\char`\"{}\mbox{]} Full path to a comma-\/delimited text file containing the data node\mbox{[}\char`\"{}\+Indices\char`\"{}\mbox{]} Vector specifying which columns in the file correspond to the \mbox{[}x, y, (z), v\+\_\+x, v\+\_\+y, (v\+\_\+z)\mbox{]} datasets node\mbox{[}\char`\"{}\+Interpolation\+Dimension\char`\"{}\mbox{]} Dimension of the interpolation, e.\+g. \textquotesingle{}0\textquotesingle{} is nearest neighbor, \textquotesingle{}1\textquotesingle{} is linear node\mbox{[}\char`\"{}\+Interpolation\+Times\char`\"{}\mbox{]} Times that dictate when the different columns in field\+\_\+data should be used node\mbox{[}\char`\"{}\+Field\+Dimensions\char`\"{}\mbox{]} Number of elements in each dimension of field data \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_interpolated_vector_field_ac648d310e2455c28d04f8fed885ebd29}\label{classparticls_1_1_interpolated_vector_field_ac648d310e2455c28d04f8fed885ebd29}} 
+\index{particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}!````~InterpolatedVectorField@{$\sim$InterpolatedVectorField}}
+\index{````~InterpolatedVectorField@{$\sim$InterpolatedVectorField}!particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$InterpolatedVectorField()}{~InterpolatedVectorField()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field}{particls\+::\+Interpolated\+Vector\+Field}}$<$ dim $>$\+::$\sim$\mbox{\hyperlink{classparticls_1_1_interpolated_vector_field}{Interpolated\+Vector\+Field}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Use the default destructor. 
+
+\mbox{\Hypertarget{classparticls_1_1_interpolated_vector_field_ac3a6ac2198398e8c3edf1f005e946663}\label{classparticls_1_1_interpolated_vector_field_ac3a6ac2198398e8c3edf1f005e946663}} 
+\index{particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}!InterpolatedVectorField@{InterpolatedVectorField}}
+\index{InterpolatedVectorField@{InterpolatedVectorField}!particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{InterpolatedVectorField()}{InterpolatedVectorField()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_interpolated_vector_field}{particls\+::\+Interpolated\+Vector\+Field}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_interpolated_vector_field}{Interpolated\+Vector\+Field}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_interpolated_vector_field_a00b5701fd4c8968969b317f97978dfe9}\label{classparticls_1_1_interpolated_vector_field_a00b5701fd4c8968969b317f97978dfe9}} 
+\index{particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}!ComputeVector@{ComputeVector}}
+\index{ComputeVector@{ComputeVector}!particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeVector()}{ComputeVector()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field}{particls\+::\+Interpolated\+Vector\+Field}}$<$ dim $>$\+::Compute\+Vector (\begin{DoxyParamCaption}\item[{double const \&}]{time,  }\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$$>$ const \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Compute the interpolated vector at the given position 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & Time at which we want the interpolated vector \\
+\hline
+\mbox{\texttt{ in}}  & {\em position} & Position where we want the interpolated vector \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_generic_vector_field_a20063f7381cef049f9dded081c6089b7}{particls\+::\+Generic\+Vector\+Field$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_interpolated_vector_field_ac72ba89fe52a013a46bf5b00777a0d7a}\label{classparticls_1_1_interpolated_vector_field_ac72ba89fe52a013a46bf5b00777a0d7a}} 
+\index{particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}!FindNearestPoints@{FindNearestPoints}}
+\index{FindNearestPoints@{FindNearestPoints}!particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{FindNearestPoints()}{FindNearestPoints()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field}{particls\+::\+Interpolated\+Vector\+Field}}$<$ dim $>$\+::Find\+Nearest\+Points (\begin{DoxyParamCaption}\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$$>$ const \&}]{position,  }\item[{std\+::vector$<$ int $>$ \&}]{inds,  }\item[{std\+::vector$<$ double $>$ \&}]{dists }\end{DoxyParamCaption})}
+
+Function for finding the rows in field\+\_\+data that surround the given position N\+O\+TE\+: This assumes that the grid is regularly spaced. 2D diagram\+: P3 P2 y $^\wedge$ {\itshape -\/-\/-\/-\/-\/-\/---} $\vert$ $\vert$ $\vert$ -\/-\/$>$ x $\vert$ $\ast$ $\vert$ $\vert$ p $\vert$ -\/-\/-\/-\/-\/-\/---$\ast$ P0 P1 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & Position where we want the interpolated value \\
+\hline
+\mbox{\texttt{ out}}  & {\em inds} & Indices for the nearest points \\
+\hline
+\mbox{\texttt{ out}}  & {\em dists} & Distances to each of the nearest points \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_interpolated_vector_field_a92e9ec9920dd48bc5a136862bc3ec7a1}\label{classparticls_1_1_interpolated_vector_field_a92e9ec9920dd48bc5a136862bc3ec7a1}} 
+\index{particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}!GetInterpolatedField@{GetInterpolatedField}}
+\index{GetInterpolatedField@{GetInterpolatedField}!particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{GetInterpolatedField()}{GetInterpolatedField()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field}{particls\+::\+Interpolated\+Vector\+Field}}$<$ dim $>$\+::Get\+Interpolated\+Field (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Return field\+\_\+data matrix. 
+
+\mbox{\Hypertarget{classparticls_1_1_interpolated_vector_field_a95767fc6fb1fa3e7fee0821f5f7d6b79}\label{classparticls_1_1_interpolated_vector_field_a95767fc6fb1fa3e7fee0821f5f7d6b79}} 
+\index{particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}!LinearInterpolation@{LinearInterpolation}}
+\index{LinearInterpolation@{LinearInterpolation}!particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{LinearInterpolation()}{LinearInterpolation()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$dim$>$\+::velocity, 1$>$ \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field}{particls\+::\+Interpolated\+Vector\+Field}}$<$ dim $>$\+::Linear\+Interpolation (\begin{DoxyParamCaption}\item[{double const \&}]{time,  }\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$$>$ const \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Linearly interpolate the vector at the given position -\/ bilinear interpolation in 2D, trilinear interpolation in 3D. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & Time at which we want the interpolated vector \\
+\hline
+\mbox{\texttt{ in}}  & {\em position} & Position where we want the linearly interpolated value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_interpolated_vector_field_af71814ddad0151dbd13ddab208d19403}\label{classparticls_1_1_interpolated_vector_field_af71814ddad0151dbd13ddab208d19403}} 
+\index{particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}!NearestNeighborInterpolation@{NearestNeighborInterpolation}}
+\index{NearestNeighborInterpolation@{NearestNeighborInterpolation}!particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{NearestNeighborInterpolation()}{NearestNeighborInterpolation()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$dim$>$\+::velocity, 1$>$ \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field}{particls\+::\+Interpolated\+Vector\+Field}}$<$ dim $>$\+::Nearest\+Neighbor\+Interpolation (\begin{DoxyParamCaption}\item[{double const \&}]{time,  }\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$$>$ const \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Return the value of the vector nearest to the given position 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & Time at which we want the interpolated vector \\
+\hline
+\mbox{\texttt{ in}}  & {\em position} & Position where we want the nearest vector \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_interpolated_vector_field_ace3e055d1af9af644bcacac769e4f3d7}\label{classparticls_1_1_interpolated_vector_field_ace3e055d1af9af644bcacac769e4f3d7}} 
+\index{particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}!ParseFieldFile@{ParseFieldFile}}
+\index{ParseFieldFile@{ParseFieldFile}!particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ParseFieldFile()}{ParseFieldFile()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+const Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field}{particls\+::\+Interpolated\+Vector\+Field}}$<$ dim $>$\+::Parse\+Field\+File (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{file\+\_\+name,  }\item[{std\+::vector$<$ int $>$ const \&}]{file\+\_\+indices }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Parse a text file with vector field data. It is assumed that the data is ordered such that it iterates through y coordinates, then x coordinates, and then through z coordinates is in 3D. This is because the wind reanalysis data is ordered like that in 2D -\/ y, then x. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em file\+\_\+name} & Full path to a comma-\/delimited text file containing the data \\
+\hline
+\mbox{\texttt{ in}}  & {\em file\+\_\+indices} & Vector specifying which columns in the file correspond to the \mbox{[}x, y, (z), v\+\_\+x, v\+\_\+y, (v\+\_\+z)\mbox{]} datasets \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_interpolated_vector_field_a3e2c9aeb6062bfd342ff91b8a8d403a6}\label{classparticls_1_1_interpolated_vector_field_a3e2c9aeb6062bfd342ff91b8a8d403a6}} 
+\index{particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}!RotateGridToCartesian@{RotateGridToCartesian}}
+\index{RotateGridToCartesian@{RotateGridToCartesian}!particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{RotateGridToCartesian()}{RotateGridToCartesian()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::tuple$<$Eigen\+::\+Matrix$<$double, Eigen\+::\+Dynamic, dim$>$, Eigen\+::\+Matrix$<$double,dim,1$>$, Eigen\+::\+Matrix$<$double,dim,dim$>$ $>$ \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field}{particls\+::\+Interpolated\+Vector\+Field}}$<$ dim $>$\+::Rotate\+Grid\+To\+Cartesian (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Calculate Cartesian grid cell size and rotation matrix used to rotate field\+\_\+data to Cartesian coordinates. N\+O\+TE\+: The 3D function assumes the z-\/axis is already aligned with the Cartesian z coordinate. Therefore it only rotates the data around the z axis. \mbox{\Hypertarget{classparticls_1_1_interpolated_vector_field_a129623751e75a21658f16a81a67b2fcf}\label{classparticls_1_1_interpolated_vector_field_a129623751e75a21658f16a81a67b2fcf}} 
+\index{particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}!RotatePoint@{RotatePoint}}
+\index{RotatePoint@{RotatePoint}!particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{RotatePoint()}{RotatePoint()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double,dim,1$>$ \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field}{particls\+::\+Interpolated\+Vector\+Field}}$<$ dim $>$\+::Rotate\+Point (\begin{DoxyParamCaption}\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$$>$ const \&}]{position,  }\item[{Eigen\+::\+Matrix$<$ double, dim, dim $>$ const \&}]{rot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Rotate a position given a rotation matrix 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & Position that we want rotated \\
+\hline
+\mbox{\texttt{ in}}  & {\em rot} & Rotation matrix for rotating point a specific amount \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_interpolated_vector_field_ab457bd994ad73308996c3a25341d9510}\label{classparticls_1_1_interpolated_vector_field_ab457bd994ad73308996c3a25341d9510}} 
+\index{particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}!serialize@{serialize}}
+\index{serialize@{serialize}!particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+template$<$class Archive $>$ \\
+void \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field}{particls\+::\+Interpolated\+Vector\+Field}}$<$ dim $>$\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 160 of file Interpolated\+Vector\+Field.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_interpolated_vector_field_a35408c171137ea1cc642cc1635f854fa}\label{classparticls_1_1_interpolated_vector_field_a35408c171137ea1cc642cc1635f854fa}} 
+\index{particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}!TimeParameters@{TimeParameters}}
+\index{TimeParameters@{TimeParameters}!particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{TimeParameters()}{TimeParameters()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::tuple$<$int, double$>$ \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field}{particls\+::\+Interpolated\+Vector\+Field}}$<$ dim $>$\+::Time\+Parameters (\begin{DoxyParamCaption}\item[{double const \&}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Find the correct index in data\+\_\+times that corresponds to the current time, and calculate the factor reflecting where time falls between time\+\_\+idx and time\+\_\+idx+1 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & Timestep in the simulation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A tuple containing the correct index (time\+\_\+idx) in data\+\_\+times, and the interpolation factor (time\+\_\+factor) 
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_interpolated_vector_field_ab2f44cbb59a08132f4c843e5225bba0e}\label{classparticls_1_1_interpolated_vector_field_ab2f44cbb59a08132f4c843e5225bba0e}} 
+\index{particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}!cereal::access@{cereal::access}}
+\index{cereal::access@{cereal::access}!particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{cereal::access}{cereal::access}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+friend class cereal\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 157 of file Interpolated\+Vector\+Field.\+hpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticls_1_1_interpolated_vector_field_a9910ada86fa6868228a77b00e2a3eb01}\label{classparticls_1_1_interpolated_vector_field_a9910ada86fa6868228a77b00e2a3eb01}} 
+\index{particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}!coords\_cart@{coords\_cart}}
+\index{coords\_cart@{coords\_cart}!particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{coords\_cart}{coords\_cart}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, Eigen\+::\+Dynamic, dim$>$ \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field}{particls\+::\+Interpolated\+Vector\+Field}}$<$ dim $>$\+::coords\+\_\+cart\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Matrix containing field\+\_\+data rotated to Cartesian. 
+
+
+
+Definition at line 149 of file Interpolated\+Vector\+Field.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_interpolated_vector_field_a5dbe79520f58557e3b3309463f3c3fc2}\label{classparticls_1_1_interpolated_vector_field_a5dbe79520f58557e3b3309463f3c3fc2}} 
+\index{particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}!data\_times@{data\_times}}
+\index{data\_times@{data\_times}!particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{data\_times}{data\_times}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$double$>$ \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field}{particls\+::\+Interpolated\+Vector\+Field}}$<$ dim $>$\+::data\+\_\+times\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Times corresponding to the different columns in field\+\_\+data. 
+
+
+
+Definition at line 137 of file Interpolated\+Vector\+Field.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_interpolated_vector_field_a6b27df862dfa7d413c68c76a8dbf89df}\label{classparticls_1_1_interpolated_vector_field_a6b27df862dfa7d413c68c76a8dbf89df}} 
+\index{particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}!field\_data@{field\_data}}
+\index{field\_data@{field\_data}!particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{field\_data}{field\_data}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field}{particls\+::\+Interpolated\+Vector\+Field}}$<$ dim $>$\+::field\+\_\+data\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Matrix containing coordinates and vector components \mbox{[}x, y, (z), v\+\_\+x\+\_\+t0, v\+\_\+y\+\_\+t0, (v\+\_\+z\+\_\+t0),...v\+\_\+x\+\_\+tN, v\+\_\+y\+\_\+tN, (v\+\_\+z\+\_\+tN)\mbox{]}. 
+
+
+
+Definition at line 143 of file Interpolated\+Vector\+Field.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_interpolated_vector_field_ae514214566e98e76c0b2dd80b6510c44}\label{classparticls_1_1_interpolated_vector_field_ae514214566e98e76c0b2dd80b6510c44}} 
+\index{particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}!field\_dims@{field\_dims}}
+\index{field\_dims@{field\_dims}!particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{field\_dims}{field\_dims}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$int$>$ \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field}{particls\+::\+Interpolated\+Vector\+Field}}$<$ dim $>$\+::field\+\_\+dims\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Number of elements in each dimension of field coordinates \mbox{[}x, y, (z)\mbox{]}. 
+
+
+
+Definition at line 146 of file Interpolated\+Vector\+Field.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_interpolated_vector_field_a274b6028cdcf3ee165a92655b9a00763}\label{classparticls_1_1_interpolated_vector_field_a274b6028cdcf3ee165a92655b9a00763}} 
+\index{particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}!grid\_sizes@{grid\_sizes}}
+\index{grid\_sizes@{grid\_sizes}!particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{grid\_sizes}{grid\_sizes}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double,dim,1$>$ \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field}{particls\+::\+Interpolated\+Vector\+Field}}$<$ dim $>$\+::grid\+\_\+sizes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Cell dimensions in Cartesian grid -\/ N\+OT in original data grid. 
+
+
+
+Definition at line 152 of file Interpolated\+Vector\+Field.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_interpolated_vector_field_a42609a3de9373f7a49b9ad12982b318d}\label{classparticls_1_1_interpolated_vector_field_a42609a3de9373f7a49b9ad12982b318d}} 
+\index{particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}!interp\_dim@{interp\_dim}}
+\index{interp\_dim@{interp\_dim}!particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{interp\_dim}{interp\_dim}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+int \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field}{particls\+::\+Interpolated\+Vector\+Field}}$<$ dim $>$\+::interp\+\_\+dim\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dimension of the interpolation function. 
+
+
+
+Definition at line 134 of file Interpolated\+Vector\+Field.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_interpolated_vector_field_a9f5ad4e0253725017870765065cc4667}\label{classparticls_1_1_interpolated_vector_field_a9f5ad4e0253725017870765065cc4667}} 
+\index{particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}!interp\_time@{interp\_time}}
+\index{interp\_time@{interp\_time}!particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{interp\_time}{interp\_time}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+bool \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field}{particls\+::\+Interpolated\+Vector\+Field}}$<$ dim $>$\+::interp\+\_\+time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Boolean determining if we want to linearly interpolate in time. 
+
+
+
+Definition at line 140 of file Interpolated\+Vector\+Field.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_interpolated_vector_field_aed45926def2f4ea027c2ebd78d30a568}\label{classparticls_1_1_interpolated_vector_field_aed45926def2f4ea027c2ebd78d30a568}} 
+\index{particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}!rotation\_mat@{rotation\_mat}}
+\index{rotation\_mat@{rotation\_mat}!particls::InterpolatedVectorField$<$ dim $>$@{particls::InterpolatedVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{rotation\_mat}{rotation\_mat}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, dim, dim$>$ \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field}{particls\+::\+Interpolated\+Vector\+Field}}$<$ dim $>$\+::rotation\+\_\+mat\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Rotation matrix needed for rotating from data reference frame to Cartesian coordinates. 
+
+
+
+Definition at line 155 of file Interpolated\+Vector\+Field.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_interpolated_vector_field_8hpp}{Interpolated\+Vector\+Field.\+hpp}}\end{DoxyCompactItemize}

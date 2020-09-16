@@ -1,0 +1,7 @@
+<map id="particls::Geometry&lt; dim &gt;" name="particls::Geometry&lt; dim &gt;">
+<area shape="rect" id="node1" title=" " alt="" coords="5,104,135,145"/>
+<area shape="rect" id="node2" href="$classparticls_1_1_convex_polyhedra.html" title=" " alt="" coords="183,5,357,47"/>
+<area shape="rect" id="node3" href="$classparticls_1_1_flat_boundary.html" title="Returns a line in 2d and a plane in 3d." alt="" coords="195,71,345,112"/>
+<area shape="rect" id="node4" href="$classparticls_1_1_hypersphere.html" title=" " alt="" coords="197,136,343,177"/>
+<area shape="rect" id="node5" href="$classparticls_1_1_rounded_box.html" title="A 2d or 3d box with rounded corners." alt="" coords="197,201,343,243"/>
+</map>

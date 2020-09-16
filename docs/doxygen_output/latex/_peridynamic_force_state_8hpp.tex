@@ -1,0 +1,63 @@
+\hypertarget{_peridynamic_force_state_8hpp}{}\doxysection{Peridynamic\+Force\+State.\+hpp File Reference}
+\label{_peridynamic_force_state_8hpp}\index{PeridynamicForceState.hpp@{PeridynamicForceState.hpp}}
+{\ttfamily \#include $<$Eigen/\+Core$>$}\newline
+{\ttfamily \#include $<$yaml-\/cpp/yaml.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Partic\+L\+S/\+Utilities/\+Register\+Class\+Name.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Partic\+L\+S/\+States/\+Particle.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Partic\+L\+S/\+Forces/\+Generic\+Force\+Parameter.\+hpp\char`\"{}}\newline
+Include dependency graph for Peridynamic\+Force\+State.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_peridynamic_force_state_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{_peridynamic_force_state_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classparticls_1_1_peridynamic_force_state}{particls\+::\+Peridynamic\+Force\+State$<$ dim $>$}}
+\begin{DoxyCompactList}\small\item\em A force state for a peridynamic model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceparticls}{particls}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_peridynamic_force_state_8hpp_a5075f80694bbf4a43292f4992e2ee8ee}{P\+A\+R\+T\+I\+C\+L\+S\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+E\+R\+I\+D\+Y\+N\+A\+M\+I\+C\+\_\+\+F\+O\+R\+C\+E\+\_\+\+S\+T\+A\+TE}}(N\+A\+ME,  D\+IM)~static auto reg \#\#N\+A\+ME \#\#D\+IM = \mbox{\hyperlink{classparticls_1_1_peridynamic_force_state}{particls\+::\+Peridynamic\+Force\+State}}$<$D\+IM$>$\+::Get\+Peridynamic\+Force\+State\+Map()-\/$>$insert(std\+::make\+\_\+pair(\#N\+A\+ME, \mbox{\hyperlink{structparticls_1_1shared__factory}{particls\+::shared\+\_\+factory}}$<$N\+A\+ME$<$D\+IM$>$ $>$()));
+\item 
+\#define \mbox{\hyperlink{_peridynamic_force_state_8hpp_a77978e168a8df422a87f0eb445c7840a}{P\+A\+R\+T\+I\+C\+L\+S\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+F\+I\+X\+E\+D\+\_\+\+D\+I\+M\+E\+N\+S\+I\+O\+N\+\_\+\+P\+E\+R\+I\+D\+Y\+N\+A\+M\+I\+C\+\_\+\+F\+O\+R\+C\+E\+\_\+\+S\+T\+A\+TE}}(N\+A\+ME,  D\+IM)~static auto reg \#\#N\+A\+ME \#\#D\+IM = \mbox{\hyperlink{classparticls_1_1_peridynamic_force_state}{particls\+::\+Peridynamic\+Force\+State}}$<$D\+IM$>$\+::Get\+Peridynamic\+Force\+State\+Map()-\/$>$insert(std\+::make\+\_\+pair(\#N\+A\+ME \#D\+IM, \mbox{\hyperlink{structparticls_1_1shared__factory}{particls\+::shared\+\_\+factory}}$<$N\+A\+ME$>$()));
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_peridynamic_force_state_8hpp_a77978e168a8df422a87f0eb445c7840a}\label{_peridynamic_force_state_8hpp_a77978e168a8df422a87f0eb445c7840a}} 
+\index{PeridynamicForceState.hpp@{PeridynamicForceState.hpp}!PARTICLS\_REGISTER\_FIXED\_DIMENSION\_PERIDYNAMIC\_FORCE\_STATE@{PARTICLS\_REGISTER\_FIXED\_DIMENSION\_PERIDYNAMIC\_FORCE\_STATE}}
+\index{PARTICLS\_REGISTER\_FIXED\_DIMENSION\_PERIDYNAMIC\_FORCE\_STATE@{PARTICLS\_REGISTER\_FIXED\_DIMENSION\_PERIDYNAMIC\_FORCE\_STATE}!PeridynamicForceState.hpp@{PeridynamicForceState.hpp}}
+\doxysubsubsection{\texorpdfstring{PARTICLS\_REGISTER\_FIXED\_DIMENSION\_PERIDYNAMIC\_FORCE\_STATE}{PARTICLS\_REGISTER\_FIXED\_DIMENSION\_PERIDYNAMIC\_FORCE\_STATE}}
+{\footnotesize\ttfamily \#define P\+A\+R\+T\+I\+C\+L\+S\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+F\+I\+X\+E\+D\+\_\+\+D\+I\+M\+E\+N\+S\+I\+O\+N\+\_\+\+P\+E\+R\+I\+D\+Y\+N\+A\+M\+I\+C\+\_\+\+F\+O\+R\+C\+E\+\_\+\+S\+T\+A\+TE(\begin{DoxyParamCaption}\item[{}]{N\+A\+ME,  }\item[{}]{D\+IM }\end{DoxyParamCaption})~static auto reg \#\#N\+A\+ME \#\#D\+IM = \mbox{\hyperlink{classparticls_1_1_peridynamic_force_state}{particls\+::\+Peridynamic\+Force\+State}}$<$D\+IM$>$\+::Get\+Peridynamic\+Force\+State\+Map()-\/$>$insert(std\+::make\+\_\+pair(\#N\+A\+ME \#D\+IM, \mbox{\hyperlink{structparticls_1_1shared__factory}{particls\+::shared\+\_\+factory}}$<$N\+A\+ME$>$()));}
+
+
+
+Definition at line 104 of file Peridynamic\+Force\+State.\+hpp.
+
+\mbox{\Hypertarget{_peridynamic_force_state_8hpp_a5075f80694bbf4a43292f4992e2ee8ee}\label{_peridynamic_force_state_8hpp_a5075f80694bbf4a43292f4992e2ee8ee}} 
+\index{PeridynamicForceState.hpp@{PeridynamicForceState.hpp}!PARTICLS\_REGISTER\_PERIDYNAMIC\_FORCE\_STATE@{PARTICLS\_REGISTER\_PERIDYNAMIC\_FORCE\_STATE}}
+\index{PARTICLS\_REGISTER\_PERIDYNAMIC\_FORCE\_STATE@{PARTICLS\_REGISTER\_PERIDYNAMIC\_FORCE\_STATE}!PeridynamicForceState.hpp@{PeridynamicForceState.hpp}}
+\doxysubsubsection{\texorpdfstring{PARTICLS\_REGISTER\_PERIDYNAMIC\_FORCE\_STATE}{PARTICLS\_REGISTER\_PERIDYNAMIC\_FORCE\_STATE}}
+{\footnotesize\ttfamily \#define P\+A\+R\+T\+I\+C\+L\+S\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+E\+R\+I\+D\+Y\+N\+A\+M\+I\+C\+\_\+\+F\+O\+R\+C\+E\+\_\+\+S\+T\+A\+TE(\begin{DoxyParamCaption}\item[{}]{N\+A\+ME,  }\item[{}]{D\+IM }\end{DoxyParamCaption})~static auto reg \#\#N\+A\+ME \#\#D\+IM = \mbox{\hyperlink{classparticls_1_1_peridynamic_force_state}{particls\+::\+Peridynamic\+Force\+State}}$<$D\+IM$>$\+::Get\+Peridynamic\+Force\+State\+Map()-\/$>$insert(std\+::make\+\_\+pair(\#N\+A\+ME, \mbox{\hyperlink{structparticls_1_1shared__factory}{particls\+::shared\+\_\+factory}}$<$N\+A\+ME$<$D\+IM$>$ $>$()));}
+
+
+
+Definition at line 103 of file Peridynamic\+Force\+State.\+hpp.
+

@@ -1,0 +1,846 @@
+\hypertarget{classparticls_1_1_collection}{}\doxysection{particls\+::Collection$<$ dim $>$ Class Template Reference}
+\label{classparticls_1_1_collection}\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+
+
+Provides a place for storing and manipulating groups of general state objects and particles.  
+
+
+
+
+{\ttfamily \#include $<$Collection.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_collection_a35e0ad123d2a2734e20ad5a41178a8fb}{Collection}} (Y\+A\+M\+L\+::\+Node const \&options=Y\+A\+M\+L\+::\+Node())
+\begin{DoxyCompactList}\small\item\em Construct an empty \mbox{\hyperlink{classparticls_1_1_collection}{Collection}} from a Y\+A\+ML node. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classparticls_1_1_collection_a594ec3a715541a7c5891f6e443230900}{Get\+State}} () const
+\item 
+void \mbox{\hyperlink{classparticls_1_1_collection_a2df88a3acc7b5ad2e13eee3e710498bb}{Set\+State}} (Eigen\+::\+Vector\+Xd const \&new\+\_\+state)
+\item 
+void \mbox{\hyperlink{classparticls_1_1_collection_a5722a6a069077e3785893ff6f9c2c0b4}{Add\+Object}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_state_object}{State\+Object}} $>$ const \&new\+\_\+object)
+\item 
+bool \mbox{\hyperlink{classparticls_1_1_collection_a63ef21ca4f555c58ef40206bab0297d5}{Remove\+Object}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_state_object}{State\+Object}} $>$ const \&object)
+\item 
+void \mbox{\hyperlink{classparticls_1_1_collection_af4acd3474752daa6946513aaa6b1217f}{Add\+Fixed\+Particle}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$$>$ const \&new\+\_\+particle)
+\item 
+void \mbox{\hyperlink{classparticls_1_1_collection_a18d660d983423411f159787e77260270}{Add\+Boundary\+Particle}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_state_object}{State\+Object}} $>$ const \&new\+\_\+object)
+\item 
+void \mbox{\hyperlink{classparticls_1_1_collection_a7acd884cbb2d43b3865c205f0e1ad327}{Set\+Default\+Contact}} (Y\+A\+M\+L\+::\+Node const \&new\+\_\+options)
+\item 
+void \mbox{\hyperlink{classparticls_1_1_collection_a9cd7524466404dc0cba8af9b03445549}{Add\+Body\+Force}} (std\+::string const \&force\+\_\+name, Y\+A\+M\+L\+::\+Node const \&options)
+\item 
+void \mbox{\hyperlink{classparticls_1_1_collection_a251fad09b4baa9c720fd400c56f0d602}{Add\+Body\+Force}} (std\+::string const \&force\+\_\+name, Y\+A\+M\+L\+::\+Node const \&options, int const group)
+\item 
+bool \mbox{\hyperlink{classparticls_1_1_collection_ae346c9782213322e348da3cd5e1590f0}{Remove\+Body\+Force}} (std\+::string const \&force\+\_\+name)
+\item 
+unsigned int \mbox{\hyperlink{classparticls_1_1_collection_a74cb3eaa2e48f1e947a10abd0357add2}{Num\+Body\+Forces}} () const
+\item 
+unsigned int \mbox{\hyperlink{classparticls_1_1_collection_a44894387a4fcfb0455dd6f6a3c8904ce}{Num\+States}} () const
+\item 
+unsigned int \mbox{\hyperlink{classparticls_1_1_collection_a91d7950633f1da38657295be7776488a}{Num\+Objects}} () const
+\item 
+unsigned int \mbox{\hyperlink{classparticls_1_1_collection_a0c5ee496bf13262e7dd37b32b2946237}{Num\+Particles}} () const
+\item 
+void \mbox{\hyperlink{classparticls_1_1_collection_af510ca39d36e2135097217ab927c951e}{Update\+Neighbors}} ()
+\item 
+void \mbox{\hyperlink{classparticls_1_1_collection_a1defb04e9bc0e4ac9f317e57b7a7f87e}{Update\+Neighbors}} (Y\+A\+M\+L\+::\+Node const \&special\+\_\+contact\+\_\+options)
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_state_object}{State\+Object}} $>$ $>$\+::const\+\_\+iterator \mbox{\hyperlink{classparticls_1_1_collection_ae80df70016a3af030678782b6ff90560}{Begin\+Objects}} () const
+\begin{DoxyCompactList}\small\item\em An iterator to the first object in the collection. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_state_object}{State\+Object}} $>$ $>$\+::iterator \mbox{\hyperlink{classparticls_1_1_collection_a8b24cbda14dbf54826bc03bf8b71bb07}{Begin\+Objects}} ()
+\begin{DoxyCompactList}\small\item\em An iterator to the first object in the collection. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_state_object}{State\+Object}} $>$ $>$\+::const\+\_\+iterator \mbox{\hyperlink{classparticls_1_1_collection_ac150b4f35aecc6781d97177a068e8246}{End\+Objects}} () const
+\begin{DoxyCompactList}\small\item\em An iterator to the last object in the collection. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_state_object}{State\+Object}} $>$ $>$\+::iterator \mbox{\hyperlink{classparticls_1_1_collection_a82db8d9c5935ff30c952e564a168a00d}{End\+Objects}} ()
+\begin{DoxyCompactList}\small\item\em An iterator to the last object in the collection. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ \& \mbox{\hyperlink{classparticls_1_1_collection_a2f2b09fb4ff0201b5b1ac9c8fdf1af00}{Particles}} () const
+\begin{DoxyCompactList}\small\item\em Get the vector of particles. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$\+::const\+\_\+iterator \mbox{\hyperlink{classparticls_1_1_collection_a464a68e3a7119c8fdc49d7aeebe96c02}{Begin\+Particles}} () const
+\begin{DoxyCompactList}\small\item\em An iterator to the first particle in the collection. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$\+::iterator \mbox{\hyperlink{classparticls_1_1_collection_ad09559718ccf49312d30bddf6010ccac}{Begin\+Particles}} ()
+\begin{DoxyCompactList}\small\item\em An iterator to the first particle in the collection. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$\+::const\+\_\+iterator \mbox{\hyperlink{classparticls_1_1_collection_a69fb546753c47f23c7b67c9961f2c3b1}{End\+Particles}} () const
+\begin{DoxyCompactList}\small\item\em An iterator to the last object in the collection. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$\+::iterator \mbox{\hyperlink{classparticls_1_1_collection_abb4ee17a0940742026eddcc4740c635b}{End\+Particles}} ()
+\begin{DoxyCompactList}\small\item\em An iterator to the last object in the collection. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ \mbox{\hyperlink{classparticls_1_1_collection_aa9515f56035ae6e59d8dc92025b9df92}{Get\+Particle}} (unsigned int const ind) const
+\begin{DoxyCompactList}\small\item\em An iterator to the object in the collection at the given index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_collection_a55815f64ea5257557e2a5766f57804e7}{Write\+V\+TK}} (std\+::string const \&filename, std\+::vector$<$ typename \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{V\+T\+K\+Data}}$<$ dim $>$\+::Save\+Data $>$ const \&user\+List=\{\}) const
+\item 
+Y\+A\+M\+L\+::\+Node \mbox{\hyperlink{classparticls_1_1_collection_a0c41f77e0671283fd1af086fe9ac8eaf}{Contact\+Force\+Options}} () const
+\begin{DoxyCompactList}\small\item\em Get the contact force options. \end{DoxyCompactList}\item 
+Y\+A\+M\+L\+::\+Node \& \mbox{\hyperlink{classparticls_1_1_collection_afde6963ddbdb234dd28ef65f48de264b}{Contact\+Force\+Options}} ()
+\begin{DoxyCompactList}\small\item\em Set the contact force options. \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ std\+::string, Y\+A\+M\+L\+::\+Node $>$ \mbox{\hyperlink{classparticls_1_1_collection_a0b95217753e39e8d4627fc36dc42b127}{Body\+Force\+Options}} () const
+\begin{DoxyCompactList}\small\item\em Get the contact force options. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_searcher}{Searcher}}$<$ dim $>$ $>$ \mbox{\hyperlink{classparticls_1_1_collection_ab6b1bfc07ba32fa2951b3c790ce7a7d6}{Get\+Searcher}} () const
+\begin{DoxyCompactList}\small\item\em Get the searcher. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_searcher}{Searcher}}$<$ dim $>$ $>$ \& \mbox{\hyperlink{classparticls_1_1_collection_a9d9e5b5decf379664742906892fffd97}{Get\+Searcher}} ()
+\begin{DoxyCompactList}\small\item\em Set the searcher. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ double, 2, dim $>$ \mbox{\hyperlink{classparticls_1_1_collection_a06a387c04fec5c671629ba307f785e92}{Bounding\+Box}} () const
+\begin{DoxyCompactList}\small\item\em Get a bounding box for the collection. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ double, dim, dim $>$ \mbox{\hyperlink{classparticls_1_1_collection_a8df8094a96e60f9331c392d152109a1b}{Homogenized\+Cauchy\+Stress}} (double const time) const
+\begin{DoxyCompactList}\small\item\em Computes the homogoneized Cauchy stress tensor. \end{DoxyCompactList}\item 
+Eigen\+::\+Tensor$<$ double, 4 $>$ \mbox{\hyperlink{classparticls_1_1_collection_a265a2b63766d7208d5c52471fd28b39b}{Tangent\+Operator}} (double const time) const
+\item 
+double \mbox{\hyperlink{classparticls_1_1_collection_a9324fc936e626c3cbddae7074613a48f}{Kinetic\+Energy}} () const
+\item 
+void \mbox{\hyperlink{classparticls_1_1_collection_a4d4dd8bac43c6116913106350ac8bb58}{Compute\+R\+HS}} (double const time, std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \&rhs) const
+\begin{DoxyCompactList}\small\item\em Compute the right hand side for each time-\/dependent object in the collection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_collection_ab31741c30d48a26101f43792b7b34191}{Compute\+Forces}} (double const time) const
+\begin{DoxyCompactList}\small\item\em Compute the inter-\/particle forces in the collection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_collection_abe4efb3f4b16501af83a69ceeacec2c7}{Construct\+Bonds}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_state_object}{State\+Object}} $>$ $>$ \mbox{\hyperlink{classparticls_1_1_collection_aef07daf1d0402fbe85809a78feb765f0}{objects}}
+\begin{DoxyCompactList}\small\item\em This list of objects holds all of the time-\/dependent objects in the collection. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ \mbox{\hyperlink{classparticls_1_1_collection_ab984f7e3aac79cfdcfeb8418963daac9}{particles}}
+\begin{DoxyCompactList}\small\item\em This list of particles holds all of the particles (time dependent and static) in the collection. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classparticls_1_1_collection_a7a76c283a1616583e8fcd7c6f3e1d67e}{num\+\_\+states}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_searcher}{Searcher}}$<$ dim $>$ $>$ \mbox{\hyperlink{classparticls_1_1_collection_a17452c820b17e2368e02799a6c98d484}{searcher}}
+\item 
+Y\+A\+M\+L\+::\+Node \mbox{\hyperlink{classparticls_1_1_collection_a97fe5f1e704ab82f7c2832d619838ae8}{contact\+\_\+options}}
+\item 
+Y\+A\+M\+L\+::\+Node \mbox{\hyperlink{classparticls_1_1_collection_a021ac5bd9f9be1c75bccf1ced4e4227c}{cohesive\+\_\+options}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, Y\+A\+M\+L\+::\+Node $>$ \mbox{\hyperlink{classparticls_1_1_collection_a7367c27fe15aced77c12deb4c8fb779e}{body\+\_\+options}}
+\begin{DoxyCompactList}\small\item\em The body forces that are to be added on all of the particles. \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ int, std\+::unordered\+\_\+map$<$ std\+::string, Y\+A\+M\+L\+::\+Node $>$ $>$ \mbox{\hyperlink{classparticls_1_1_collection_ab6c288131be10e5e560e9cc9c01be399}{group\+\_\+body\+\_\+options}}
+\begin{DoxyCompactList}\small\item\em A map from group number to the body forces that are acting on that group. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classparticls_1_1_collection_a1e25e82076581eb27a56a52ed282739f}{Check\+Body\+Force}} (std\+::string const \&force\+\_\+name, std\+::unordered\+\_\+map$<$ std\+::string, Y\+A\+M\+L\+::\+Node $>$ const \&options) const
+\begin{DoxyCompactList}\small\item\em Check to make sure we can add a new body force. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_collection_af37ff28d1d09e28b1afffa105e4a19a8}{Add\+Body\+Force}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&particle, std\+::unordered\+\_\+map$<$ std\+::string, Y\+A\+M\+L\+::\+Node $>$ const \&body\+\_\+forces) const
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classparticls_1_1_collection_a2e80662c285d71648340cce3cfb2af70}{save}} (Archive \&ar) const
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classparticls_1_1_collection_ac8def44da83ea569454bac1c40127c1e}{load}} (Archive \&ar)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classparticls_1_1_collection_af738df03c851e2a536df358860680930}{should\+Write\+C\+SV}} = false
+\item 
+double \mbox{\hyperlink{classparticls_1_1_collection_a923ac542b62f1dc3e152cdd8dc147d3a}{failure\+\_\+stress}} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classparticls_1_1_collection_ab2f44cbb59a08132f4c843e5225bba0e}{cereal\+::access}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+class particls\+::\+Collection$<$ dim $>$}
+
+Provides a place for storing and manipulating groups of general state objects and particles. 
+
+The two primary attributes of this class are the {\ttfamily objects} variable and the {\ttfamily particles} variable. The {\ttfamily objects} variables is a list of State\+Objects that will be evolved in time. The {\ttfamily particles} variable is a list of particles that are used to compute pairwise particle-\/particle forces. Note that particles may or may not exist in both the {\ttfamily objects} and {\ttfamily particles} lists, but only particles in the {\ttfamily objects} list will be integrated in time. Thus,\char`\"{}fixed\char`\"{} particles can be achieve by adding them to the {\ttfamily particles} list, but no the {\ttfamily objects} list.
+
+The other member variables and functions are primarily designed for manipulating the {\ttfamily objects} and {\ttfamily particles} lists.
+
+@seealso \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}, \mbox{\hyperlink{classparticls_1_1_state_object}{State\+Object}}, \mbox{\hyperlink{classparticls_1_1_searcher}{Searcher}} 
+
+Definition at line 59 of file Collection.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_collection_a35e0ad123d2a2734e20ad5a41178a8fb}\label{classparticls_1_1_collection_a35e0ad123d2a2734e20ad5a41178a8fb}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!Collection@{Collection}}
+\index{Collection@{Collection}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Collection()}{Collection()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_collection}{Collection}} (\begin{DoxyParamCaption}\item[{Y\+A\+M\+L\+::\+Node const \&}]{options = {\ttfamily YAML\+:\+:Node()} }\end{DoxyParamCaption})}
+
+
+
+Construct an empty \mbox{\hyperlink{classparticls_1_1_collection}{Collection}} from a Y\+A\+ML node. 
+
+This constructor creates an empty (i.\+e., no objects) \mbox{\hyperlink{classparticls_1_1_collection}{Collection}} using the information stored in the Y\+A\+M\+L\+::\+Node. Specifically, this constructor will look at the following sub-\/nodes\+:
+\begin{DoxyItemize}
+\item {\ttfamily options\mbox{[}\char`\"{}\+Search\char`\"{}\mbox{]}}
+\item {\ttfamily options\mbox{[}\char`\"{}\+Contact\+Law\char`\"{}\mbox{]}}
+\item {\ttfamily options\mbox{[}\char`\"{}\+Body\+Forces\char`\"{}\mbox{]}}
+\end{DoxyItemize}
+
+The contents of the {\ttfamily options\mbox{[}\char`\"{}\+Search\char`\"{}\mbox{]}} block will be used in \mbox{\hyperlink{classparticls_1_1_searcher_a6c56abd1afa9d8b132cf0c22ded95323}{Searcher\+::\+Create}} to construct a search algorithm. The contents of {\ttfamily options\mbox{[}\char`\"{}\+Contact\+Law\char`\"{}\mbox{]}} will be passed to \mbox{\hyperlink{classparticls_1_1_contact_force_ad4b7a3005dd55c0faf7944562fe54272}{Contact\+Force\+::\+Create}} to construct a default contact law. This will be used when new particle pairs are found and a new contact force is created between them. The {\ttfamily options\mbox{[}\char`\"{}\+Body\+Forces\char`\"{}\mbox{]}} block is parsed to construct body force functions that are added to each particle when it is added to the collection. Each sub node in {\ttfamily options\mbox{[}\char`\"{}\+Body\+Forces\char`\"{}\mbox{]}} is extracted and passed to \mbox{\hyperlink{classparticls_1_1_body_force_a2176c7787d0dad7523f90a8feeca91fd}{Body\+Force\+::\+Create}} to construct a body force for new particles. For example, {\ttfamily options\mbox{[}\char`\"{}\+Body\+Forces\char`\"{}\mbox{]}\mbox{[}\char`\"{}\+Gravity\char`\"{}\mbox{]}} could define a \mbox{\hyperlink{classparticls_1_1_gravitational_force}{Gravitational\+Force}} and {\ttfamily options\mbox{[}\char`\"{}\+Body\+Forces\char`\"{}\mbox{]}\mbox{[}\char`\"{}\+Wind\+Drag\char`\"{}\mbox{]}} could define a drag force function. Both of these force functions would be added to a particle when {\ttfamily Add\+Object} is called with a particle object.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em options} & A Y\+A\+ML node containing information for constructing the searcher and particle forces. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_collection_af37ff28d1d09e28b1afffa105e4a19a8}\label{classparticls_1_1_collection_af37ff28d1d09e28b1afffa105e4a19a8}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!AddBodyForce@{AddBodyForce}}
+\index{AddBodyForce@{AddBodyForce}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{AddBodyForce()}{AddBodyForce()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::Add\+Body\+Force (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{particle,  }\item[{std\+::unordered\+\_\+map$<$ std\+::string, Y\+A\+M\+L\+::\+Node $>$ const \&}]{body\+\_\+forces }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classparticls_1_1_collection_a9cd7524466404dc0cba8af9b03445549}\label{classparticls_1_1_collection_a9cd7524466404dc0cba8af9b03445549}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!AddBodyForce@{AddBodyForce}}
+\index{AddBodyForce@{AddBodyForce}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{AddBodyForce()}{AddBodyForce()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::Add\+Body\+Force (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{force\+\_\+name,  }\item[{Y\+A\+M\+L\+::\+Node const \&}]{options }\end{DoxyParamCaption})}
+
+Adds a new body force, such as wind drag or gravity to the list of default body forces that are created when a new particle is added to the collection. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em force\+Name} & The name of this new force \\
+\hline
+\mbox{\texttt{ in}}  & {\em options} & A Y\+A\+M\+L\+::\+Node that can be passed directly to \mbox{\hyperlink{classparticls_1_1_body_force_a2176c7787d0dad7523f90a8feeca91fd}{Body\+Force\+::\+Create}} to construct a new body force. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_collection_a251fad09b4baa9c720fd400c56f0d602}\label{classparticls_1_1_collection_a251fad09b4baa9c720fd400c56f0d602}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!AddBodyForce@{AddBodyForce}}
+\index{AddBodyForce@{AddBodyForce}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{AddBodyForce()}{AddBodyForce()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::Add\+Body\+Force (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{force\+\_\+name,  }\item[{Y\+A\+M\+L\+::\+Node const \&}]{options,  }\item[{int const}]{group }\end{DoxyParamCaption})}
+
+Adds a new body force, such as wind drag or gravity to the list of default body forces that are created when a new particle is added to the collection. However, this only adds the body force to a specified group of particles 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em force\+Name} & The name of this new force \\
+\hline
+\mbox{\texttt{ in}}  & {\em options} & A Y\+A\+M\+L\+::\+Node that can be passed directly to \mbox{\hyperlink{classparticls_1_1_body_force_a2176c7787d0dad7523f90a8feeca91fd}{Body\+Force\+::\+Create}} to construct a new body force. \\
+\hline
+\mbox{\texttt{ in}}  & {\em group} & The group number of the particles where this body force will be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_collection_a18d660d983423411f159787e77260270}\label{classparticls_1_1_collection_a18d660d983423411f159787e77260270}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!AddBoundaryParticle@{AddBoundaryParticle}}
+\index{AddBoundaryParticle@{AddBoundaryParticle}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{AddBoundaryParticle()}{AddBoundaryParticle()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::Add\+Boundary\+Particle (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_state_object}{State\+Object}} $>$ const \&}]{new\+\_\+object }\end{DoxyParamCaption})}
+
+Add a new particle to the collection that ignores forces on the particle 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em new\+\_\+object} & A new particle to add to the collection \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_collection_af4acd3474752daa6946513aaa6b1217f}\label{classparticls_1_1_collection_af4acd3474752daa6946513aaa6b1217f}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!AddFixedParticle@{AddFixedParticle}}
+\index{AddFixedParticle@{AddFixedParticle}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{AddFixedParticle()}{AddFixedParticle()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::Add\+Fixed\+Particle (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$$>$ const \&}]{new\+\_\+particle }\end{DoxyParamCaption})}
+
+Add a new particle to the collection that is not integrated in time. It will be added to the {\ttfamily particles} list but not the {\ttfamily objects} list. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em new\+Particle} & A shared\+\_\+ptr to the new particle. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_collection_a5722a6a069077e3785893ff6f9c2c0b4}\label{classparticls_1_1_collection_a5722a6a069077e3785893ff6f9c2c0b4}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!AddObject@{AddObject}}
+\index{AddObject@{AddObject}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{AddObject()}{AddObject()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::Add\+Object (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_state_object}{State\+Object}} $>$ const \&}]{new\+\_\+object }\end{DoxyParamCaption})}
+
+Adds a new object to the {\ttfamily objects} list. Adding an object with this function will ensure that the object is integrated in time during the simulation. Note, no checks are performed to detect if the object already exists in the {\ttfamily objects} list. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em new\+Object} & A shared\+\_\+ptr to the new object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_collection_a8b24cbda14dbf54826bc03bf8b71bb07}\label{classparticls_1_1_collection_a8b24cbda14dbf54826bc03bf8b71bb07}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!BeginObjects@{BeginObjects}}
+\index{BeginObjects@{BeginObjects}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{BeginObjects()}{BeginObjects()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_state_object}{State\+Object}}$>$ $>$\+::iterator \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::Begin\+Objects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+An iterator to the first object in the collection. 
+
+\mbox{\Hypertarget{classparticls_1_1_collection_ae80df70016a3af030678782b6ff90560}\label{classparticls_1_1_collection_ae80df70016a3af030678782b6ff90560}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!BeginObjects@{BeginObjects}}
+\index{BeginObjects@{BeginObjects}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{BeginObjects()}{BeginObjects()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_state_object}{State\+Object}}$>$ $>$\+::const\+\_\+iterator \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::Begin\+Objects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+An iterator to the first object in the collection. 
+
+\mbox{\Hypertarget{classparticls_1_1_collection_ad09559718ccf49312d30bddf6010ccac}\label{classparticls_1_1_collection_ad09559718ccf49312d30bddf6010ccac}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!BeginParticles@{BeginParticles}}
+\index{BeginParticles@{BeginParticles}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{BeginParticles()}{BeginParticles()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$dim$>$ $>$ $>$\+::iterator \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::Begin\+Particles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+An iterator to the first particle in the collection. 
+
+\mbox{\Hypertarget{classparticls_1_1_collection_a464a68e3a7119c8fdc49d7aeebe96c02}\label{classparticls_1_1_collection_a464a68e3a7119c8fdc49d7aeebe96c02}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!BeginParticles@{BeginParticles}}
+\index{BeginParticles@{BeginParticles}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{BeginParticles()}{BeginParticles()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$dim$>$ $>$ $>$\+::const\+\_\+iterator \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::Begin\+Particles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+An iterator to the first particle in the collection. 
+
+\mbox{\Hypertarget{classparticls_1_1_collection_a0b95217753e39e8d4627fc36dc42b127}\label{classparticls_1_1_collection_a0b95217753e39e8d4627fc36dc42b127}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!BodyForceOptions@{BodyForceOptions}}
+\index{BodyForceOptions@{BodyForceOptions}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{BodyForceOptions()}{BodyForceOptions()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::unordered\+\_\+map$<$std\+::string, Y\+A\+M\+L\+::\+Node$>$ \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::Body\+Force\+Options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the contact force options. 
+
+\mbox{\Hypertarget{classparticls_1_1_collection_a06a387c04fec5c671629ba307f785e92}\label{classparticls_1_1_collection_a06a387c04fec5c671629ba307f785e92}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!BoundingBox@{BoundingBox}}
+\index{BoundingBox@{BoundingBox}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{BoundingBox()}{BoundingBox()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, 2, dim$>$ \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::Bounding\+Box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get a bounding box for the collection. 
+
+\mbox{\Hypertarget{classparticls_1_1_collection_a1e25e82076581eb27a56a52ed282739f}\label{classparticls_1_1_collection_a1e25e82076581eb27a56a52ed282739f}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!CheckBodyForce@{CheckBodyForce}}
+\index{CheckBodyForce@{CheckBodyForce}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{CheckBodyForce()}{CheckBodyForce()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::Check\+Body\+Force (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{force\+\_\+name,  }\item[{std\+::unordered\+\_\+map$<$ std\+::string, Y\+A\+M\+L\+::\+Node $>$ const \&}]{options }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Check to make sure we can add a new body force. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em force\+\_\+name} & The name of force we are adding \\
+\hline
+\mbox{\texttt{ in}}  & {\em options} & The existing forces (potentially acting on a group) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_collection_ab31741c30d48a26101f43792b7b34191}\label{classparticls_1_1_collection_ab31741c30d48a26101f43792b7b34191}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!ComputeForces@{ComputeForces}}
+\index{ComputeForces@{ComputeForces}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeForces()}{ComputeForces()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::Compute\+Forces (\begin{DoxyParamCaption}\item[{double const}]{time }\end{DoxyParamCaption}) const}
+
+
+
+Compute the inter-\/particle forces in the collection. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & The time at which we are computing the right hand side \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_collection_a4d4dd8bac43c6116913106350ac8bb58}\label{classparticls_1_1_collection_a4d4dd8bac43c6116913106350ac8bb58}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!ComputeRHS@{ComputeRHS}}
+\index{ComputeRHS@{ComputeRHS}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeRHS()}{ComputeRHS()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::Compute\+R\+HS (\begin{DoxyParamCaption}\item[{double const}]{time,  }\item[{std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \&}]{rhs }\end{DoxyParamCaption}) const}
+
+
+
+Compute the right hand side for each time-\/dependent object in the collection. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & The time at which we are computing the right hand side \\
+\hline
+\mbox{\texttt{ out}}  & {\em rhs} & The right hand side of each time-\/dependent object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_collection_abe4efb3f4b16501af83a69ceeacec2c7}\label{classparticls_1_1_collection_abe4efb3f4b16501af83a69ceeacec2c7}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!ConstructBonds@{ConstructBonds}}
+\index{ConstructBonds@{ConstructBonds}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ConstructBonds()}{ConstructBonds()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::Construct\+Bonds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Construct the cohesive beams using the Y\+A\+ML node parameters passed to the collection constructor \mbox{\Hypertarget{classparticls_1_1_collection_afde6963ddbdb234dd28ef65f48de264b}\label{classparticls_1_1_collection_afde6963ddbdb234dd28ef65f48de264b}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!ContactForceOptions@{ContactForceOptions}}
+\index{ContactForceOptions@{ContactForceOptions}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ContactForceOptions()}{ContactForceOptions()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Y\+A\+M\+L\+::\+Node\& \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::Contact\+Force\+Options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Set the contact force options. 
+
+\mbox{\Hypertarget{classparticls_1_1_collection_a0c41f77e0671283fd1af086fe9ac8eaf}\label{classparticls_1_1_collection_a0c41f77e0671283fd1af086fe9ac8eaf}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!ContactForceOptions@{ContactForceOptions}}
+\index{ContactForceOptions@{ContactForceOptions}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ContactForceOptions()}{ContactForceOptions()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Y\+A\+M\+L\+::\+Node \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::Contact\+Force\+Options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the contact force options. 
+
+\mbox{\Hypertarget{classparticls_1_1_collection_a82db8d9c5935ff30c952e564a168a00d}\label{classparticls_1_1_collection_a82db8d9c5935ff30c952e564a168a00d}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!EndObjects@{EndObjects}}
+\index{EndObjects@{EndObjects}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{EndObjects()}{EndObjects()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_state_object}{State\+Object}}$>$ $>$\+::iterator \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::End\+Objects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+An iterator to the last object in the collection. 
+
+\mbox{\Hypertarget{classparticls_1_1_collection_ac150b4f35aecc6781d97177a068e8246}\label{classparticls_1_1_collection_ac150b4f35aecc6781d97177a068e8246}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!EndObjects@{EndObjects}}
+\index{EndObjects@{EndObjects}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{EndObjects()}{EndObjects()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_state_object}{State\+Object}}$>$ $>$\+::const\+\_\+iterator \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::End\+Objects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+An iterator to the last object in the collection. 
+
+\mbox{\Hypertarget{classparticls_1_1_collection_abb4ee17a0940742026eddcc4740c635b}\label{classparticls_1_1_collection_abb4ee17a0940742026eddcc4740c635b}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!EndParticles@{EndParticles}}
+\index{EndParticles@{EndParticles}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{EndParticles()}{EndParticles()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$dim$>$ $>$ $>$\+::iterator \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::End\+Particles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+An iterator to the last object in the collection. 
+
+\mbox{\Hypertarget{classparticls_1_1_collection_a69fb546753c47f23c7b67c9961f2c3b1}\label{classparticls_1_1_collection_a69fb546753c47f23c7b67c9961f2c3b1}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!EndParticles@{EndParticles}}
+\index{EndParticles@{EndParticles}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{EndParticles()}{EndParticles()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$dim$>$ $>$ $>$\+::const\+\_\+iterator \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::End\+Particles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+An iterator to the last object in the collection. 
+
+\mbox{\Hypertarget{classparticls_1_1_collection_aa9515f56035ae6e59d8dc92025b9df92}\label{classparticls_1_1_collection_aa9515f56035ae6e59d8dc92025b9df92}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!GetParticle@{GetParticle}}
+\index{GetParticle@{GetParticle}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{GetParticle()}{GetParticle()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$dim$>$ $>$ \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::Get\+Particle (\begin{DoxyParamCaption}\item[{unsigned int const}]{ind }\end{DoxyParamCaption}) const}
+
+
+
+An iterator to the object in the collection at the given index. 
+
+\mbox{\Hypertarget{classparticls_1_1_collection_a9d9e5b5decf379664742906892fffd97}\label{classparticls_1_1_collection_a9d9e5b5decf379664742906892fffd97}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!GetSearcher@{GetSearcher}}
+\index{GetSearcher@{GetSearcher}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{GetSearcher()}{GetSearcher()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_searcher}{Searcher}}$<$dim$>$ $>$\& \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::Get\+Searcher (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Set the searcher. 
+
+\mbox{\Hypertarget{classparticls_1_1_collection_ab6b1bfc07ba32fa2951b3c790ce7a7d6}\label{classparticls_1_1_collection_ab6b1bfc07ba32fa2951b3c790ce7a7d6}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!GetSearcher@{GetSearcher}}
+\index{GetSearcher@{GetSearcher}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{GetSearcher()}{GetSearcher()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_searcher}{Searcher}}$<$dim$>$ $>$ \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::Get\+Searcher (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the searcher. 
+
+\mbox{\Hypertarget{classparticls_1_1_collection_a594ec3a715541a7c5891f6e443230900}\label{classparticls_1_1_collection_a594ec3a715541a7c5891f6e443230900}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!GetState@{GetState}}
+\index{GetState@{GetState}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{GetState()}{GetState()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::Get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Assembles all state variables from all objects and returns a single vector containing everything. This is useful in some time integration schemes, like those based on Sundials. The size of the returned vector is given by the \mbox{\hyperlink{classparticls_1_1_collection_a44894387a4fcfb0455dd6f6a3c8904ce}{Collection\+::\+Num\+States()}} function. \begin{DoxyReturn}{Returns}
+A vector of size \mbox{\hyperlink{classparticls_1_1_collection_a44894387a4fcfb0455dd6f6a3c8904ce}{Num\+States()}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_collection_a8df8094a96e60f9331c392d152109a1b}\label{classparticls_1_1_collection_a8df8094a96e60f9331c392d152109a1b}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!HomogenizedCauchyStress@{HomogenizedCauchyStress}}
+\index{HomogenizedCauchyStress@{HomogenizedCauchyStress}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{HomogenizedCauchyStress()}{HomogenizedCauchyStress()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, dim, dim$>$ \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::Homogenized\+Cauchy\+Stress (\begin{DoxyParamCaption}\item[{double const}]{time }\end{DoxyParamCaption}) const}
+
+
+
+Computes the homogoneized Cauchy stress tensor. 
+
+Calculates the average stress state inside a volume---currently the bounding box of the collection. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & The current time \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Homogenized Cauchy stres tensor 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_collection_a9324fc936e626c3cbddae7074613a48f}\label{classparticls_1_1_collection_a9324fc936e626c3cbddae7074613a48f}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!KineticEnergy@{KineticEnergy}}
+\index{KineticEnergy@{KineticEnergy}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{KineticEnergy()}{KineticEnergy()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::Kinetic\+Energy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Computes the kinetic energy of all rigid bodies in the collection \mbox{\Hypertarget{classparticls_1_1_collection_ac8def44da83ea569454bac1c40127c1e}\label{classparticls_1_1_collection_ac8def44da83ea569454bac1c40127c1e}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!load@{load}}
+\index{load@{load}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+template$<$class Archive $>$ \\
+void \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::load (\begin{DoxyParamCaption}\item[{Archive \&}]{ar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 376 of file Collection.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_collection_a74cb3eaa2e48f1e947a10abd0357add2}\label{classparticls_1_1_collection_a74cb3eaa2e48f1e947a10abd0357add2}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!NumBodyForces@{NumBodyForces}}
+\index{NumBodyForces@{NumBodyForces}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{NumBodyForces()}{NumBodyForces()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+unsigned int \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::Num\+Body\+Forces (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the number of body forces that are added to each particle when added with the \char`\"{}\+Add\+Object\char`\"{} function. \begin{DoxyReturn}{Returns}
+An unsigned integer with the size of the body\+\_\+options map. 
+\end{DoxyReturn}
+
+
+Definition at line 177 of file Collection.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_collection_a91d7950633f1da38657295be7776488a}\label{classparticls_1_1_collection_a91d7950633f1da38657295be7776488a}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!NumObjects@{NumObjects}}
+\index{NumObjects@{NumObjects}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{NumObjects()}{NumObjects()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+unsigned int \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::Num\+Objects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the total number of objects that are integrated in time. Includes everything but fixed particles. 
+
+Definition at line 186 of file Collection.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_collection_a0c5ee496bf13262e7dd37b32b2946237}\label{classparticls_1_1_collection_a0c5ee496bf13262e7dd37b32b2946237}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!NumParticles@{NumParticles}}
+\index{NumParticles@{NumParticles}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{NumParticles()}{NumParticles()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+unsigned int \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::Num\+Particles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the total number of particles (fixed and moving) that exist in this collection. 
+
+Definition at line 191 of file Collection.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_collection_a44894387a4fcfb0455dd6f6a3c8904ce}\label{classparticls_1_1_collection_a44894387a4fcfb0455dd6f6a3c8904ce}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!NumStates@{NumStates}}
+\index{NumStates@{NumStates}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{NumStates()}{NumStates()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+unsigned int \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::Num\+States (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the total number of states across all objects in this collection. 
+
+Definition at line 181 of file Collection.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_collection_a2f2b09fb4ff0201b5b1ac9c8fdf1af00}\label{classparticls_1_1_collection_a2f2b09fb4ff0201b5b1ac9c8fdf1af00}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!Particles@{Particles}}
+\index{Particles@{Particles}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Particles()}{Particles()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+const std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$dim$>$ $>$ $>$\& \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::Particles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the vector of particles. 
+
+\mbox{\Hypertarget{classparticls_1_1_collection_ae346c9782213322e348da3cd5e1590f0}\label{classparticls_1_1_collection_ae346c9782213322e348da3cd5e1590f0}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!RemoveBodyForce@{RemoveBodyForce}}
+\index{RemoveBodyForce@{RemoveBodyForce}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{RemoveBodyForce()}{RemoveBodyForce()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+bool \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::Remove\+Body\+Force (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{force\+\_\+name }\end{DoxyParamCaption})}
+
+Remove a default body force from the collection. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em force\+Name} & The name of the body force. If the force was defined in the Y\+A\+M\+L\+::\+Node passed as {\ttfamily options\mbox{[}\char`\"{}\+Body\+Forces\char`\"{}\mbox{]}} to the constructor, then the name used here will correspond to the key of a sub block of {\ttfamily options\mbox{[}\char`\"{}\+Body\+Forces\char`\"{}\mbox{]}}. For example, if {\ttfamily options\mbox{[}\char`\"{}\+Body\+Forces\char`\"{}\mbox{]}\mbox{[}\char`\"{}\+Gravity\char`\"{}\mbox{]}} defined a gravitational force that you want to remove, \char`\"{}\+Gravity\char`\"{} would be passed to this function. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating if the force was found and removed (true) or not found (false) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_collection_a63ef21ca4f555c58ef40206bab0297d5}\label{classparticls_1_1_collection_a63ef21ca4f555c58ef40206bab0297d5}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!RemoveObject@{RemoveObject}}
+\index{RemoveObject@{RemoveObject}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{RemoveObject()}{RemoveObject()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+bool \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::Remove\+Object (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_state_object}{State\+Object}} $>$ const \&}]{object }\end{DoxyParamCaption})}
+
+Remove an object from the list. If the object is a particle, it is also removed from the list of particles. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em new\+Object} & A shared\+\_\+ptr to the object we want to remove \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating whether the object was found and removed (true) or if the object was not found in the list (false). For a particle object, this function will return true if the object was in either the objects list of the particles list. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_collection_a2e80662c285d71648340cce3cfb2af70}\label{classparticls_1_1_collection_a2e80662c285d71648340cce3cfb2af70}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!save@{save}}
+\index{save@{save}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+template$<$class Archive $>$ \\
+void \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::save (\begin{DoxyParamCaption}\item[{Archive \&}]{ar }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 357 of file Collection.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_collection_a7acd884cbb2d43b3865c205f0e1ad327}\label{classparticls_1_1_collection_a7acd884cbb2d43b3865c205f0e1ad327}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!SetDefaultContact@{SetDefaultContact}}
+\index{SetDefaultContact@{SetDefaultContact}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{SetDefaultContact()}{SetDefaultContact()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::Set\+Default\+Contact (\begin{DoxyParamCaption}\item[{Y\+A\+M\+L\+::\+Node const \&}]{new\+\_\+options }\end{DoxyParamCaption})}
+
+Sets the default contact force function to use when a new pair is formed. The given Y\+A\+M\+L\+::\+Node is passed directly to \mbox{\hyperlink{classparticls_1_1_contact_force_ad4b7a3005dd55c0faf7944562fe54272}{Contact\+Force\+::\+Create}} in order to construct a contact force when a new pair is created. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em new\+Options} & A Y\+A\+M\+L\+::\+Node that can be passed directly to \mbox{\hyperlink{classparticls_1_1_contact_force_ad4b7a3005dd55c0faf7944562fe54272}{Contact\+Force\+::\+Create}} to construct a new interparticle force function. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_collection_a2df88a3acc7b5ad2e13eee3e710498bb}\label{classparticls_1_1_collection_a2df88a3acc7b5ad2e13eee3e710498bb}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!SetState@{SetState}}
+\index{SetState@{SetState}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{SetState()}{SetState()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::Set\+State (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector\+Xd const \&}]{new\+\_\+state }\end{DoxyParamCaption})}
+
+Given a vector of all the states, parse out the components and set the state of each \mbox{\hyperlink{classparticls_1_1_state_object}{State\+Object}} in the {\ttfamily objects} list. Also useful for some time integration schemes. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em new\+State} & A vector of size \mbox{\hyperlink{classparticls_1_1_collection_a44894387a4fcfb0455dd6f6a3c8904ce}{Num\+States()}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_collection_a265a2b63766d7208d5c52471fd28b39b}\label{classparticls_1_1_collection_a265a2b63766d7208d5c52471fd28b39b}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!TangentOperator@{TangentOperator}}
+\index{TangentOperator@{TangentOperator}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{TangentOperator()}{TangentOperator()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Tensor$<$double, 4$>$ \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::Tangent\+Operator (\begin{DoxyParamCaption}\item[{double const}]{time }\end{DoxyParamCaption}) const}
+
+Computes the tangent operator if the collection is using an Elastic contact model, following the implementation in Guo and Zhao 2014. This currently uses the bounding box of the collection as the volume. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & The current time \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tangent operator -\/ a fourth order tensor 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_collection_af510ca39d36e2135097217ab927c951e}\label{classparticls_1_1_collection_af510ca39d36e2135097217ab927c951e}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!UpdateNeighbors@{UpdateNeighbors}}
+\index{UpdateNeighbors@{UpdateNeighbors}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{UpdateNeighbors()}{UpdateNeighbors()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::Update\+Neighbors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Runs a search to find a list of neighboring particles and then updates the force functions acting on each particle. This is typically called every search step in the simulation. This function uses the default contact model stored in the contact\+\_\+options member variable. \mbox{\Hypertarget{classparticls_1_1_collection_a1defb04e9bc0e4ac9f317e57b7a7f87e}\label{classparticls_1_1_collection_a1defb04e9bc0e4ac9f317e57b7a7f87e}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!UpdateNeighbors@{UpdateNeighbors}}
+\index{UpdateNeighbors@{UpdateNeighbors}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{UpdateNeighbors()}{UpdateNeighbors()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::Update\+Neighbors (\begin{DoxyParamCaption}\item[{Y\+A\+M\+L\+::\+Node const \&}]{special\+\_\+contact\+\_\+options }\end{DoxyParamCaption})}
+
+Same as the \mbox{\hyperlink{classparticls_1_1_collection_af510ca39d36e2135097217ab927c951e}{Update\+Neighbors()}} functions without any arguments, but uses uses a contact model defined in the options Y\+A\+M\+L\+::\+Node for any new pairs created after the search. This is useful during initialization, where we might want to initialize all connections with cohesive beams, but will want to default to a different contact model (e.\+g., Visco\+Elastic) later in the simulation. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em options} & A Y\+A\+M\+L\+::\+Node for contact options that can be passed directly to \mbox{\hyperlink{classparticls_1_1_contact_force_ad4b7a3005dd55c0faf7944562fe54272}{Contact\+Force\+::\+Create}} to construct a new pairwise force function. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_collection_a55815f64ea5257557e2a5766f57804e7}\label{classparticls_1_1_collection_a55815f64ea5257557e2a5766f57804e7}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!WriteVTK@{WriteVTK}}
+\index{WriteVTK@{WriteVTK}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{WriteVTK()}{WriteVTK()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::Write\+V\+TK (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{filename,  }\item[{std\+::vector$<$ typename \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{V\+T\+K\+Data}}$<$ dim $>$\+::Save\+Data $>$ const \&}]{user\+List = {\ttfamily \{\}} }\end{DoxyParamCaption}) const}
+
+Write the current state of the collection to file 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em filename} & The name of the file to store the current state of the collection \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_collection_ab2f44cbb59a08132f4c843e5225bba0e}\label{classparticls_1_1_collection_ab2f44cbb59a08132f4c843e5225bba0e}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!cereal::access@{cereal::access}}
+\index{cereal::access@{cereal::access}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{cereal::access}{cereal::access}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+friend class cereal\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 354 of file Collection.\+hpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticls_1_1_collection_a7367c27fe15aced77c12deb4c8fb779e}\label{classparticls_1_1_collection_a7367c27fe15aced77c12deb4c8fb779e}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!body\_options@{body\_options}}
+\index{body\_options@{body\_options}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{body\_options}{body\_options}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::unordered\+\_\+map$<$std\+::string, Y\+A\+M\+L\+::\+Node$>$ \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::body\+\_\+options\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The body forces that are to be added on all of the particles. 
+
+
+
+Definition at line 335 of file Collection.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_collection_a021ac5bd9f9be1c75bccf1ced4e4227c}\label{classparticls_1_1_collection_a021ac5bd9f9be1c75bccf1ced4e4227c}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!cohesive\_options@{cohesive\_options}}
+\index{cohesive\_options@{cohesive\_options}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{cohesive\_options}{cohesive\_options}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Y\+A\+M\+L\+::\+Node \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::cohesive\+\_\+options\hspace{0.3cm}{\ttfamily [protected]}}
+
+The cohesive model parameters for cohesive contact 
+
+Definition at line 332 of file Collection.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_collection_a97fe5f1e704ab82f7c2832d619838ae8}\label{classparticls_1_1_collection_a97fe5f1e704ab82f7c2832d619838ae8}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!contact\_options@{contact\_options}}
+\index{contact\_options@{contact\_options}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{contact\_options}{contact\_options}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Y\+A\+M\+L\+::\+Node \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::contact\+\_\+options\hspace{0.3cm}{\ttfamily [protected]}}
+
+The contact parameters for discete element contact 
+
+Definition at line 327 of file Collection.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_collection_a923ac542b62f1dc3e152cdd8dc147d3a}\label{classparticls_1_1_collection_a923ac542b62f1dc3e152cdd8dc147d3a}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!failure\_stress@{failure\_stress}}
+\index{failure\_stress@{failure\_stress}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{failure\_stress}{failure\_stress}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::failure\+\_\+stress = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 352 of file Collection.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_collection_ab6c288131be10e5e560e9cc9c01be399}\label{classparticls_1_1_collection_ab6c288131be10e5e560e9cc9c01be399}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!group\_body\_options@{group\_body\_options}}
+\index{group\_body\_options@{group\_body\_options}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{group\_body\_options}{group\_body\_options}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::unordered\+\_\+map$<$int, std\+::unordered\+\_\+map$<$std\+::string, Y\+A\+M\+L\+::\+Node$>$ $>$ \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::group\+\_\+body\+\_\+options\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+A map from group number to the body forces that are acting on that group. 
+
+
+
+Definition at line 338 of file Collection.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_collection_a7a76c283a1616583e8fcd7c6f3e1d67e}\label{classparticls_1_1_collection_a7a76c283a1616583e8fcd7c6f3e1d67e}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!num\_states@{num\_states}}
+\index{num\_states@{num\_states}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{num\_states}{num\_states}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+unsigned int \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::num\+\_\+states\hspace{0.3cm}{\ttfamily [protected]}}
+
+The total number of state variables managed by this collection, i.\+e., the the sum of obj-\/$>$Size() for every objects in the objects list. This variable is updated in the Add\+Object and Remove\+Object functions. 
+
+Definition at line 317 of file Collection.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_collection_aef07daf1d0402fbe85809a78feb765f0}\label{classparticls_1_1_collection_aef07daf1d0402fbe85809a78feb765f0}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!objects@{objects}}
+\index{objects@{objects}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{objects}{objects}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_state_object}{State\+Object}}$>$ $>$ \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::objects\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+This list of objects holds all of the time-\/dependent objects in the collection. 
+
+
+
+Definition at line 308 of file Collection.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_collection_ab984f7e3aac79cfdcfeb8418963daac9}\label{classparticls_1_1_collection_ab984f7e3aac79cfdcfeb8418963daac9}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!particles@{particles}}
+\index{particles@{particles}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{particles}{particles}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$dim$>$ $>$ $>$ \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::particles\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+This list of particles holds all of the particles (time dependent and static) in the collection. 
+
+
+
+Definition at line 311 of file Collection.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_collection_a17452c820b17e2368e02799a6c98d484}\label{classparticls_1_1_collection_a17452c820b17e2368e02799a6c98d484}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!searcher@{searcher}}
+\index{searcher@{searcher}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{searcher}{searcher}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_searcher}{Searcher}}$<$dim$>$ $>$ \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::searcher\hspace{0.3cm}{\ttfamily [protected]}}
+
+The searcher used for finding contact pairs in this collection 
+
+Definition at line 322 of file Collection.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_collection_af738df03c851e2a536df358860680930}\label{classparticls_1_1_collection_af738df03c851e2a536df358860680930}} 
+\index{particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}!shouldWriteCSV@{shouldWriteCSV}}
+\index{shouldWriteCSV@{shouldWriteCSV}!particls::Collection$<$ dim $>$@{particls::Collection$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{shouldWriteCSV}{shouldWriteCSV}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+bool \mbox{\hyperlink{classparticls_1_1_collection}{particls\+::\+Collection}}$<$ dim $>$\+::should\+Write\+C\+SV = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 350 of file Collection.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_collection_8hpp}{Collection.\+hpp}}\end{DoxyCompactItemize}

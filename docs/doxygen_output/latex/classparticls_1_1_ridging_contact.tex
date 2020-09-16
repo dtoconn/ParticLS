@@ -1,0 +1,522 @@
+\hypertarget{classparticls_1_1_ridging_contact}{}\doxysection{particls\+::Ridging\+Contact$<$ dim $>$ Class Template Reference}
+\label{classparticls_1_1_ridging_contact}\index{particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}}
+
+
+A viscoelastic-\/plastic contact law to model sea ice ridging.  
+
+
+
+
+{\ttfamily \#include $<$Ridging\+Contact.\+hpp$>$}
+
+
+
+Inheritance diagram for particls\+::Ridging\+Contact$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classparticls_1_1_ridging_contact__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for particls\+::Ridging\+Contact$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classparticls_1_1_ridging_contact__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_ridging_contact_abd429f7fc70ace67efcd70fbdb6cfb95}{Ridging\+Contact}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part1, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part2, Y\+A\+M\+L\+::\+Node const \&options)
+\item 
+\mbox{\hyperlink{classparticls_1_1_ridging_contact_a7d3bc641715d37b967190c010a85e229}{Ridging\+Contact}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part1, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part2, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&neighbors, Y\+A\+M\+L\+::\+Node const \&options)
+\item 
+virtual \mbox{\hyperlink{classparticls_1_1_ridging_contact_a2fd04bde3d3cb94dbebce5a55d17f651}{$\sim$\+Ridging\+Contact}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_ridging_contact_aaf693f950b9a8a4a2cf7610088bac8fd}{Compute\+Contact\+Force}} (double const time, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}} $>$ const \&parameter=nullptr) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_ridging_contact_a62762890ca739a1f18cd6ef97fdd35b4}{Fill\+R\+H\+S\+Impl}} (double const time, Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$ rhs) override
+\item 
+\mbox{\hyperlink{classparticls_1_1_ridging_contact_ad2f98fcdc8a83f7b9747b80fcad67f9f}{Ridging\+Contact}} ()=default
+\begin{DoxyCompactList}\small\item\em Private default constructor for serialize. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classparticls_1_1_ridging_contact_a1959a94f98e8e764059c7bd3f00c7cf5}{serialize}} (Archive \&ar)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact_a7cfff3be247f411f39e8bddc89e7b954}{kne}}
+\begin{DoxyCompactList}\small\item\em Elastic normal contact stiffness. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact_a9397c38df5c54a051f6c44e05adcedb3}{kte}}
+\begin{DoxyCompactList}\small\item\em Tangential contact stiffness. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact_ad440c560d82d2169c8f90119c4cd501a}{knp}}
+\begin{DoxyCompactList}\small\item\em Plastic hardening coefficient (default value of 928 N/m$^\wedge$2) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact_a5e5b3340b937788562b071555f446daa}{kr}}
+\item 
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact_a5890319ec51c4db571f85233684a3391}{damping\+\_\+ratio}}
+\begin{DoxyCompactList}\small\item\em Damping ratio (percentage of critical damping) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact_aef45a70031a65a8892021a362160c3bf}{mu}}
+\begin{DoxyCompactList}\small\item\em Friction coefficient. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact_a2731581dfcaca878f8354db85db5944d}{eta}}
+\begin{DoxyCompactList}\small\item\em Damping coefficient. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact_aa2be3c4dccca887d23a5ba373f022d67}{sigma\+\_\+c}}
+\begin{DoxyCompactList}\small\item\em Ice compressive failure strength (default value of 2.\+6e6 Pa) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact_ab2fc3d12ff105bd4f86c530b2a739b82}{h\+\_\+star}}
+\begin{DoxyCompactList}\small\item\em Thickness threshold that defines the transition from ridging to crushing. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact_a89a3443946c60e28ef2e047f67c640dd}{min\+\_\+thickness}}
+\begin{DoxyCompactList}\small\item\em The minimum thickness in the contact pair. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact_ad009d7e8110863d3d696720c5f43ac9c}{e\+\_\+area}}
+\item 
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact_a5ff4c0c29a4ce06e373f65a5b3ff5355}{p\+\_\+area}}
+\item 
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact_a8b8d94b55a8444023b8bd2aa73a85e44}{ridge\+\_\+volume}}
+\item 
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact_a5bc5119003e0030563ada7a5d67fd51f}{dt}}
+\item 
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact_a1e1f8f2a976634f6cc19814a111b036e}{fn\+\_\+m1}}
+\item 
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact_af6eec2b60f9d9779d39c6acc3ad8f8a6}{fn\+\_\+m2}}
+\item 
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact_a6cd75c835e0547a82f3989637d6891e7}{area\+\_\+m1}}
+\item 
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact_ac3f5d3268ecb89d7330b63a68b927ccd}{area\+\_\+m2}}
+\item 
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact_ac6dcae9dde839ccd36f3ee2648964764}{e\+\_\+area\+\_\+m1}}
+\item 
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact_a64610703f0a4e03cbddeee854d22a442}{e\+\_\+area\+\_\+m2}}
+\item 
+Eigen\+::\+Matrix$<$ double, 2, 1 $>$ \mbox{\hyperlink{classparticls_1_1_ridging_contact_afa9afc418e5ae89e78a583e192f5934b}{n\+\_\+old}}
+\item 
+Eigen\+::\+Matrix$<$ double, 2, 1 $>$ \mbox{\hyperlink{classparticls_1_1_ridging_contact_aa75c10a21d526ca09da9f58db99b8fd1}{Fs\+\_\+old}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classparticls_1_1_ridging_contact_ab2f44cbb59a08132f4c843e5225bba0e}{cereal\+::access}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+class particls\+::\+Ridging\+Contact$<$ dim $>$}
+
+A viscoelastic-\/plastic contact law to model sea ice ridging. 
+
+A viscoelastic-\/plastic contact law to model sea ice ridging based on the paper \char`\"{}\+On the mesoscale interaction of lead ice and floes\char`\"{} by Mark Hopkins. 
+
+Definition at line 22 of file Ridging\+Contact.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_ridging_contact_abd429f7fc70ace67efcd70fbdb6cfb95}\label{classparticls_1_1_ridging_contact_abd429f7fc70ace67efcd70fbdb6cfb95}} 
+\index{particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}!RidgingContact@{RidgingContact}}
+\index{RidgingContact@{RidgingContact}!particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{RidgingContact()}{RidgingContact()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_ridging_contact}{particls\+::\+Ridging\+Contact}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_ridging_contact}{Ridging\+Contact}} (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part1,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part2,  }\item[{Y\+A\+M\+L\+::\+Node const \&}]{options }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em part1} & Home particle in the contact pair \\
+\hline
+\mbox{\texttt{ in}}  & {\em part2} & Neighbor particle in the contact pair \\
+\hline
+\mbox{\texttt{ in}}  & {\em options} & Contact model parameters, e.\+g. friction coefficient \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_ridging_contact_a7d3bc641715d37b967190c010a85e229}\label{classparticls_1_1_ridging_contact_a7d3bc641715d37b967190c010a85e229}} 
+\index{particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}!RidgingContact@{RidgingContact}}
+\index{RidgingContact@{RidgingContact}!particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{RidgingContact()}{RidgingContact()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_ridging_contact}{particls\+::\+Ridging\+Contact}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_ridging_contact}{Ridging\+Contact}} (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part1,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part2,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&}]{neighbors,  }\item[{Y\+A\+M\+L\+::\+Node const \&}]{options }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em part1} & Home particle in the contact pair \\
+\hline
+\mbox{\texttt{ in}}  & {\em part2} & Neighbor particle in the contact pair \\
+\hline
+\mbox{\texttt{ in}}  & {\em neighbors} & The nearest neighbors of the first particle (part1) \\
+\hline
+\mbox{\texttt{ in}}  & {\em options} & Contact model parameters, e.\+g. friction coefficient \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_ridging_contact_a2fd04bde3d3cb94dbebce5a55d17f651}\label{classparticls_1_1_ridging_contact_a2fd04bde3d3cb94dbebce5a55d17f651}} 
+\index{particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}!````~RidgingContact@{$\sim$RidgingContact}}
+\index{````~RidgingContact@{$\sim$RidgingContact}!particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$RidgingContact()}{~RidgingContact()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual \mbox{\hyperlink{classparticls_1_1_ridging_contact}{particls\+::\+Ridging\+Contact}}$<$ dim $>$\+::$\sim$\mbox{\hyperlink{classparticls_1_1_ridging_contact}{Ridging\+Contact}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classparticls_1_1_ridging_contact_ad2f98fcdc8a83f7b9747b80fcad67f9f}\label{classparticls_1_1_ridging_contact_ad2f98fcdc8a83f7b9747b80fcad67f9f}} 
+\index{particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}!RidgingContact@{RidgingContact}}
+\index{RidgingContact@{RidgingContact}!particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{RidgingContact()}{RidgingContact()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_ridging_contact}{particls\+::\+Ridging\+Contact}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_ridging_contact}{Ridging\+Contact}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [default]}}
+
+
+
+Private default constructor for serialize. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_ridging_contact_aaf693f950b9a8a4a2cf7610088bac8fd}\label{classparticls_1_1_ridging_contact_aaf693f950b9a8a4a2cf7610088bac8fd}} 
+\index{particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}!ComputeContactForce@{ComputeContactForce}}
+\index{ComputeContactForce@{ComputeContactForce}!particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeContactForce()}{ComputeContactForce()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_ridging_contact}{particls\+::\+Ridging\+Contact}}$<$ dim $>$\+::Compute\+Contact\+Force (\begin{DoxyParamCaption}\item[{double const}]{time,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}} $>$ const \&}]{parameter = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Increments the force and moment vectors. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & The time when we are computing the force \\
+\hline
+\mbox{\texttt{ in}}  & {\em parameter} & Not needed for elastic force \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_contact_force_a49937350b2ecdd8897f7d2c91567d7fa}{particls\+::\+Contact\+Force$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_ridging_contact_a62762890ca739a1f18cd6ef97fdd35b4}\label{classparticls_1_1_ridging_contact_a62762890ca739a1f18cd6ef97fdd35b4}} 
+\index{particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}!FillRHSImpl@{FillRHSImpl}}
+\index{FillRHSImpl@{FillRHSImpl}!particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{FillRHSImpl()}{FillRHSImpl()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_ridging_contact}{particls\+::\+Ridging\+Contact}}$<$ dim $>$\+::Fill\+R\+H\+S\+Impl (\begin{DoxyParamCaption}\item[{double const}]{time,  }\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+Computes the right hand side of the shear force O\+DE. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & The current simulation time. \\
+\hline
+\mbox{\texttt{ in}}  & {\em rhs} & The right hand side vector. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classparticls_1_1_state_object_a6ad9738629390c509f53a4d41cf67fde}{particls\+::\+State\+Object}}.
+
+\mbox{\Hypertarget{classparticls_1_1_ridging_contact_a1959a94f98e8e764059c7bd3f00c7cf5}\label{classparticls_1_1_ridging_contact_a1959a94f98e8e764059c7bd3f00c7cf5}} 
+\index{particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}!serialize@{serialize}}
+\index{serialize@{serialize}!particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+template$<$class Archive $>$ \\
+void \mbox{\hyperlink{classparticls_1_1_ridging_contact}{particls\+::\+Ridging\+Contact}}$<$ dim $>$\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 125 of file Ridging\+Contact.\+hpp.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_ridging_contact_ab2f44cbb59a08132f4c843e5225bba0e}\label{classparticls_1_1_ridging_contact_ab2f44cbb59a08132f4c843e5225bba0e}} 
+\index{particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}!cereal::access@{cereal::access}}
+\index{cereal::access@{cereal::access}!particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{cereal::access}{cereal::access}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+friend class cereal\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 119 of file Ridging\+Contact.\+hpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticls_1_1_ridging_contact_a6cd75c835e0547a82f3989637d6891e7}\label{classparticls_1_1_ridging_contact_a6cd75c835e0547a82f3989637d6891e7}} 
+\index{particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}!area\_m1@{area\_m1}}
+\index{area\_m1@{area\_m1}!particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{area\_m1}{area\_m1}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact}{particls\+::\+Ridging\+Contact}}$<$ dim $>$\+::area\+\_\+m1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 112 of file Ridging\+Contact.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_ridging_contact_ac3f5d3268ecb89d7330b63a68b927ccd}\label{classparticls_1_1_ridging_contact_ac3f5d3268ecb89d7330b63a68b927ccd}} 
+\index{particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}!area\_m2@{area\_m2}}
+\index{area\_m2@{area\_m2}!particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{area\_m2}{area\_m2}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact}{particls\+::\+Ridging\+Contact}}$<$ dim $>$\+::area\+\_\+m2\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 113 of file Ridging\+Contact.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_ridging_contact_a5890319ec51c4db571f85233684a3391}\label{classparticls_1_1_ridging_contact_a5890319ec51c4db571f85233684a3391}} 
+\index{particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}!damping\_ratio@{damping\_ratio}}
+\index{damping\_ratio@{damping\_ratio}!particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{damping\_ratio}{damping\_ratio}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact}{particls\+::\+Ridging\+Contact}}$<$ dim $>$\+::damping\+\_\+ratio\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Damping ratio (percentage of critical damping) 
+
+
+
+Definition at line 80 of file Ridging\+Contact.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_ridging_contact_a5bc5119003e0030563ada7a5d67fd51f}\label{classparticls_1_1_ridging_contact_a5bc5119003e0030563ada7a5d67fd51f}} 
+\index{particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}!dt@{dt}}
+\index{dt@{dt}!particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{dt}{dt}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact}{particls\+::\+Ridging\+Contact}}$<$ dim $>$\+::dt\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 107 of file Ridging\+Contact.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_ridging_contact_ad009d7e8110863d3d696720c5f43ac9c}\label{classparticls_1_1_ridging_contact_ad009d7e8110863d3d696720c5f43ac9c}} 
+\index{particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}!e\_area@{e\_area}}
+\index{e\_area@{e\_area}!particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{e\_area}{e\_area}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact}{particls\+::\+Ridging\+Contact}}$<$ dim $>$\+::e\+\_\+area\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 98 of file Ridging\+Contact.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_ridging_contact_ac6dcae9dde839ccd36f3ee2648964764}\label{classparticls_1_1_ridging_contact_ac6dcae9dde839ccd36f3ee2648964764}} 
+\index{particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}!e\_area\_m1@{e\_area\_m1}}
+\index{e\_area\_m1@{e\_area\_m1}!particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{e\_area\_m1}{e\_area\_m1}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact}{particls\+::\+Ridging\+Contact}}$<$ dim $>$\+::e\+\_\+area\+\_\+m1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 114 of file Ridging\+Contact.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_ridging_contact_a64610703f0a4e03cbddeee854d22a442}\label{classparticls_1_1_ridging_contact_a64610703f0a4e03cbddeee854d22a442}} 
+\index{particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}!e\_area\_m2@{e\_area\_m2}}
+\index{e\_area\_m2@{e\_area\_m2}!particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{e\_area\_m2}{e\_area\_m2}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact}{particls\+::\+Ridging\+Contact}}$<$ dim $>$\+::e\+\_\+area\+\_\+m2\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 115 of file Ridging\+Contact.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_ridging_contact_a2731581dfcaca878f8354db85db5944d}\label{classparticls_1_1_ridging_contact_a2731581dfcaca878f8354db85db5944d}} 
+\index{particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}!eta@{eta}}
+\index{eta@{eta}!particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{eta}{eta}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact}{particls\+::\+Ridging\+Contact}}$<$ dim $>$\+::eta\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Damping coefficient. 
+
+
+
+Definition at line 86 of file Ridging\+Contact.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_ridging_contact_a1e1f8f2a976634f6cc19814a111b036e}\label{classparticls_1_1_ridging_contact_a1e1f8f2a976634f6cc19814a111b036e}} 
+\index{particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}!fn\_m1@{fn\_m1}}
+\index{fn\_m1@{fn\_m1}!particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{fn\_m1}{fn\_m1}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact}{particls\+::\+Ridging\+Contact}}$<$ dim $>$\+::fn\+\_\+m1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 110 of file Ridging\+Contact.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_ridging_contact_af6eec2b60f9d9779d39c6acc3ad8f8a6}\label{classparticls_1_1_ridging_contact_af6eec2b60f9d9779d39c6acc3ad8f8a6}} 
+\index{particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}!fn\_m2@{fn\_m2}}
+\index{fn\_m2@{fn\_m2}!particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{fn\_m2}{fn\_m2}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact}{particls\+::\+Ridging\+Contact}}$<$ dim $>$\+::fn\+\_\+m2\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 111 of file Ridging\+Contact.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_ridging_contact_aa75c10a21d526ca09da9f58db99b8fd1}\label{classparticls_1_1_ridging_contact_aa75c10a21d526ca09da9f58db99b8fd1}} 
+\index{particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}!Fs\_old@{Fs\_old}}
+\index{Fs\_old@{Fs\_old}!particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Fs\_old}{Fs\_old}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, 2, 1$>$ \mbox{\hyperlink{classparticls_1_1_ridging_contact}{particls\+::\+Ridging\+Contact}}$<$ dim $>$\+::Fs\+\_\+old\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 117 of file Ridging\+Contact.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_ridging_contact_ab2fc3d12ff105bd4f86c530b2a739b82}\label{classparticls_1_1_ridging_contact_ab2fc3d12ff105bd4f86c530b2a739b82}} 
+\index{particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}!h\_star@{h\_star}}
+\index{h\_star@{h\_star}!particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{h\_star}{h\_star}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact}{particls\+::\+Ridging\+Contact}}$<$ dim $>$\+::h\+\_\+star\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Thickness threshold that defines the transition from ridging to crushing. 
+
+
+
+Definition at line 92 of file Ridging\+Contact.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_ridging_contact_a7cfff3be247f411f39e8bddc89e7b954}\label{classparticls_1_1_ridging_contact_a7cfff3be247f411f39e8bddc89e7b954}} 
+\index{particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}!kne@{kne}}
+\index{kne@{kne}!particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{kne}{kne}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact}{particls\+::\+Ridging\+Contact}}$<$ dim $>$\+::kne\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Elastic normal contact stiffness. 
+
+
+
+Definition at line 67 of file Ridging\+Contact.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_ridging_contact_ad440c560d82d2169c8f90119c4cd501a}\label{classparticls_1_1_ridging_contact_ad440c560d82d2169c8f90119c4cd501a}} 
+\index{particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}!knp@{knp}}
+\index{knp@{knp}!particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{knp}{knp}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact}{particls\+::\+Ridging\+Contact}}$<$ dim $>$\+::knp\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Plastic hardening coefficient (default value of 928 N/m$^\wedge$2) 
+
+
+
+Definition at line 73 of file Ridging\+Contact.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_ridging_contact_a5e5b3340b937788562b071555f446daa}\label{classparticls_1_1_ridging_contact_a5e5b3340b937788562b071555f446daa}} 
+\index{particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}!kr@{kr}}
+\index{kr@{kr}!particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{kr}{kr}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact}{particls\+::\+Ridging\+Contact}}$<$ dim $>$\+::kr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 77 of file Ridging\+Contact.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_ridging_contact_a9397c38df5c54a051f6c44e05adcedb3}\label{classparticls_1_1_ridging_contact_a9397c38df5c54a051f6c44e05adcedb3}} 
+\index{particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}!kte@{kte}}
+\index{kte@{kte}!particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{kte}{kte}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact}{particls\+::\+Ridging\+Contact}}$<$ dim $>$\+::kte\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tangential contact stiffness. 
+
+
+
+Definition at line 70 of file Ridging\+Contact.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_ridging_contact_a89a3443946c60e28ef2e047f67c640dd}\label{classparticls_1_1_ridging_contact_a89a3443946c60e28ef2e047f67c640dd}} 
+\index{particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}!min\_thickness@{min\_thickness}}
+\index{min\_thickness@{min\_thickness}!particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{min\_thickness}{min\_thickness}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact}{particls\+::\+Ridging\+Contact}}$<$ dim $>$\+::min\+\_\+thickness\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The minimum thickness in the contact pair. 
+
+
+
+Definition at line 95 of file Ridging\+Contact.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_ridging_contact_aef45a70031a65a8892021a362160c3bf}\label{classparticls_1_1_ridging_contact_aef45a70031a65a8892021a362160c3bf}} 
+\index{particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}!mu@{mu}}
+\index{mu@{mu}!particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{mu}{mu}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact}{particls\+::\+Ridging\+Contact}}$<$ dim $>$\+::mu\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Friction coefficient. 
+
+
+
+Definition at line 83 of file Ridging\+Contact.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_ridging_contact_afa9afc418e5ae89e78a583e192f5934b}\label{classparticls_1_1_ridging_contact_afa9afc418e5ae89e78a583e192f5934b}} 
+\index{particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}!n\_old@{n\_old}}
+\index{n\_old@{n\_old}!particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{n\_old}{n\_old}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, 2, 1$>$ \mbox{\hyperlink{classparticls_1_1_ridging_contact}{particls\+::\+Ridging\+Contact}}$<$ dim $>$\+::n\+\_\+old\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 116 of file Ridging\+Contact.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_ridging_contact_a5ff4c0c29a4ce06e373f65a5b3ff5355}\label{classparticls_1_1_ridging_contact_a5ff4c0c29a4ce06e373f65a5b3ff5355}} 
+\index{particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}!p\_area@{p\_area}}
+\index{p\_area@{p\_area}!particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{p\_area}{p\_area}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact}{particls\+::\+Ridging\+Contact}}$<$ dim $>$\+::p\+\_\+area\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 101 of file Ridging\+Contact.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_ridging_contact_a8b8d94b55a8444023b8bd2aa73a85e44}\label{classparticls_1_1_ridging_contact_a8b8d94b55a8444023b8bd2aa73a85e44}} 
+\index{particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}!ridge\_volume@{ridge\_volume}}
+\index{ridge\_volume@{ridge\_volume}!particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ridge\_volume}{ridge\_volume}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact}{particls\+::\+Ridging\+Contact}}$<$ dim $>$\+::ridge\+\_\+volume\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 104 of file Ridging\+Contact.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_ridging_contact_aa2be3c4dccca887d23a5ba373f022d67}\label{classparticls_1_1_ridging_contact_aa2be3c4dccca887d23a5ba373f022d67}} 
+\index{particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}!sigma\_c@{sigma\_c}}
+\index{sigma\_c@{sigma\_c}!particls::RidgingContact$<$ dim $>$@{particls::RidgingContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{sigma\_c}{sigma\_c}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_ridging_contact}{particls\+::\+Ridging\+Contact}}$<$ dim $>$\+::sigma\+\_\+c\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ice compressive failure strength (default value of 2.\+6e6 Pa) 
+
+
+
+Definition at line 89 of file Ridging\+Contact.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_ridging_contact_8hpp}{Ridging\+Contact.\+hpp}}\end{DoxyCompactItemize}

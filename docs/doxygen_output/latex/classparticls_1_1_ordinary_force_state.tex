@@ -1,0 +1,159 @@
+\hypertarget{classparticls_1_1_ordinary_force_state}{}\doxysection{particls\+::Ordinary\+Force\+State$<$ dim $>$ Class Template Reference}
+\label{classparticls_1_1_ordinary_force_state}\index{particls::OrdinaryForceState$<$ dim $>$@{particls::OrdinaryForceState$<$ dim $>$}}
+
+
+{\ttfamily \#include $<$Ordinary\+Force\+State.\+hpp$>$}
+
+
+
+Inheritance diagram for particls\+::Ordinary\+Force\+State$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{classparticls_1_1_ordinary_force_state__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for particls\+::Ordinary\+Force\+State$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{classparticls_1_1_ordinary_force_state__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_ordinary_force_state_a862ccbf8327ed9deef402b5627918171}{Ordinary\+Force\+State}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part1, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part2, Y\+A\+M\+L\+::\+Node const \&options)
+\item 
+\mbox{\hyperlink{classparticls_1_1_ordinary_force_state_acbf137385b133fbfa43335d2a8bd54fb}{Ordinary\+Force\+State}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part1, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part2, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&neighbors, Y\+A\+M\+L\+::\+Node const \&options)
+\item 
+virtual \mbox{\hyperlink{classparticls_1_1_ordinary_force_state_a45b604d1cd9cd5ff5b0ab2ff5ae5da8a}{$\sim$\+Ordinary\+Force\+State}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::pair$<$ double, bool $>$ \mbox{\hyperlink{classparticls_1_1_ordinary_force_state_a33a763bd396da338400d3fd32f0cc616}{Scalar\+Force\+State}} (double const time, Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&x, Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&bond, double const bond\+Length, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}} $>$ const \&parameter)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classparticls_1_1_ordinary_force_state_a5e9c16db9cfdf603af731918d76ab72f}{Force\+State\+Impl}} (double const time, Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&x, Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&bond, double const bond\+Length, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}} $>$ const \&parameter, Eigen\+::\+Ref$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ force\+State) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+class particls\+::\+Ordinary\+Force\+State$<$ dim $>$}
+
+
+
+Definition at line 9 of file Ordinary\+Force\+State.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_ordinary_force_state_a862ccbf8327ed9deef402b5627918171}\label{classparticls_1_1_ordinary_force_state_a862ccbf8327ed9deef402b5627918171}} 
+\index{particls::OrdinaryForceState$<$ dim $>$@{particls::OrdinaryForceState$<$ dim $>$}!OrdinaryForceState@{OrdinaryForceState}}
+\index{OrdinaryForceState@{OrdinaryForceState}!particls::OrdinaryForceState$<$ dim $>$@{particls::OrdinaryForceState$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{OrdinaryForceState()}{OrdinaryForceState()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_ordinary_force_state}{particls\+::\+Ordinary\+Force\+State}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_ordinary_force_state}{Ordinary\+Force\+State}} (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part1,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part2,  }\item[{Y\+A\+M\+L\+::\+Node const \&}]{options }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em part1} & The first particle in the peridynamic force state bond \\
+\hline
+\mbox{\texttt{ in}}  & {\em part2} & The second particle in the peridynamic force state bond \\
+\hline
+\mbox{\texttt{ in}}  & {\em options} & Options for the state object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_ordinary_force_state_acbf137385b133fbfa43335d2a8bd54fb}\label{classparticls_1_1_ordinary_force_state_acbf137385b133fbfa43335d2a8bd54fb}} 
+\index{particls::OrdinaryForceState$<$ dim $>$@{particls::OrdinaryForceState$<$ dim $>$}!OrdinaryForceState@{OrdinaryForceState}}
+\index{OrdinaryForceState@{OrdinaryForceState}!particls::OrdinaryForceState$<$ dim $>$@{particls::OrdinaryForceState$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{OrdinaryForceState()}{OrdinaryForceState()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_ordinary_force_state}{particls\+::\+Ordinary\+Force\+State}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_ordinary_force_state}{Ordinary\+Force\+State}} (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part1,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part2,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&}]{neighbors,  }\item[{Y\+A\+M\+L\+::\+Node const \&}]{options }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em part1} & The first particle in the peridynamic force state bond \\
+\hline
+\mbox{\texttt{ in}}  & {\em part2} & The second particle in the peridynamic force state bond \\
+\hline
+\mbox{\texttt{ in}}  & {\em neighbors} & The nearest neighbors of the first particle (part1) \\
+\hline
+\mbox{\texttt{ in}}  & {\em options} & Options for the state object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_ordinary_force_state_a45b604d1cd9cd5ff5b0ab2ff5ae5da8a}\label{classparticls_1_1_ordinary_force_state_a45b604d1cd9cd5ff5b0ab2ff5ae5da8a}} 
+\index{particls::OrdinaryForceState$<$ dim $>$@{particls::OrdinaryForceState$<$ dim $>$}!````~OrdinaryForceState@{$\sim$OrdinaryForceState}}
+\index{````~OrdinaryForceState@{$\sim$OrdinaryForceState}!particls::OrdinaryForceState$<$ dim $>$@{particls::OrdinaryForceState$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$OrdinaryForceState()}{~OrdinaryForceState()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual \mbox{\hyperlink{classparticls_1_1_ordinary_force_state}{particls\+::\+Ordinary\+Force\+State}}$<$ dim $>$\+::$\sim$\mbox{\hyperlink{classparticls_1_1_ordinary_force_state}{Ordinary\+Force\+State}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_ordinary_force_state_a5e9c16db9cfdf603af731918d76ab72f}\label{classparticls_1_1_ordinary_force_state_a5e9c16db9cfdf603af731918d76ab72f}} 
+\index{particls::OrdinaryForceState$<$ dim $>$@{particls::OrdinaryForceState$<$ dim $>$}!ForceStateImpl@{ForceStateImpl}}
+\index{ForceStateImpl@{ForceStateImpl}!particls::OrdinaryForceState$<$ dim $>$@{particls::OrdinaryForceState$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ForceStateImpl()}{ForceStateImpl()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual bool \mbox{\hyperlink{classparticls_1_1_ordinary_force_state}{particls\+::\+Ordinary\+Force\+State}}$<$ dim $>$\+::Force\+State\+Impl (\begin{DoxyParamCaption}\item[{double const}]{time,  }\item[{Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&}]{x,  }\item[{Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&}]{bond,  }\item[{double const}]{bond\+Length,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}} $>$ const \&}]{parameter,  }\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$}]{force\+State }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & The time when we are evaluating the force state \\
+\hline
+\mbox{\texttt{ in}}  & {\em x} & The spatial location where we are evaluating the force state \\
+\hline
+\mbox{\texttt{ in}}  & {\em bond} & The bond between the location $x$ and another point $x^{\prime}$ in space ( $\xi = x^{\prime} - x$) \\
+\hline
+\mbox{\texttt{ in}}  & {\em bond\+Length} & The length of the bond (equal to bond.\+norm() but has been pre computed so we pass it here) \\
+\hline
+\mbox{\texttt{ in}}  & {\em parameter} & Time-\/dependent parameters shared accross all forces of this type acting on a particle. These parameters have been percomputed for this time step \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_peridynamic_force_state_ac31d05a09eb59d9cafb0e9deb37ee6f7}{particls\+::\+Peridynamic\+Force\+State$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_ordinary_force_state_a33a763bd396da338400d3fd32f0cc616}\label{classparticls_1_1_ordinary_force_state_a33a763bd396da338400d3fd32f0cc616}} 
+\index{particls::OrdinaryForceState$<$ dim $>$@{particls::OrdinaryForceState$<$ dim $>$}!ScalarForceState@{ScalarForceState}}
+\index{ScalarForceState@{ScalarForceState}!particls::OrdinaryForceState$<$ dim $>$@{particls::OrdinaryForceState$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ScalarForceState()}{ScalarForceState()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual std\+::pair$<$double, bool$>$ \mbox{\hyperlink{classparticls_1_1_ordinary_force_state}{particls\+::\+Ordinary\+Force\+State}}$<$ dim $>$\+::Scalar\+Force\+State (\begin{DoxyParamCaption}\item[{double const}]{time,  }\item[{Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&}]{x,  }\item[{Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&}]{bond,  }\item[{double const}]{bond\+Length,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}} $>$ const \&}]{parameter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & The time when we are evaluating the force state \\
+\hline
+\mbox{\texttt{ in}}  & {\em x} & The spatial location where we are evaluating the force state \\
+\hline
+\mbox{\texttt{ in}}  & {\em bond} & The bond between the location $x$ and another point $x^{\prime}$ in space ( $\xi = x^{\prime} - x$) \\
+\hline
+\mbox{\texttt{ in}}  & {\em bond\+Length} & The length of the bond (equal to bond.\+norm() but has been pre computed so we pass it here) \\
+\hline
+\mbox{\texttt{ in}}  & {\em parameter} & Time-\/dependent parameters shared accross all forces of this type acting on a particle. These parameters have been percomputed for this time step \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+First\+: the scalar force state, second\+: true---the bond still exists, false---the bond has broken 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classparticls_1_1_linear_peridynamic_solid_a08934441a713ece6345b917181d1ad06}{particls\+::\+Linear\+Peridynamic\+Solid$<$ dim $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_ordinary_force_state_8hpp}{Ordinary\+Force\+State.\+hpp}}\end{DoxyCompactItemize}

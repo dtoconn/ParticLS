@@ -1,0 +1,138 @@
+\hypertarget{classparticls_1_1_log_normal_distribution}{}\doxysection{particls\+::Log\+Normal\+Distribution Class Reference}
+\label{classparticls_1_1_log_normal_distribution}\index{particls::LogNormalDistribution@{particls::LogNormalDistribution}}
+
+
+{\ttfamily \#include $<$Log\+Normal\+Distribution.\+hpp$>$}
+
+
+
+Inheritance diagram for particls\+::Log\+Normal\+Distribution\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classparticls_1_1_log_normal_distribution__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for particls\+::Log\+Normal\+Distribution\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classparticls_1_1_log_normal_distribution__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_log_normal_distribution_a9b1f217ca957a87217d17a2bb1b9c022}{Log\+Normal\+Distribution}} (double mean\+\_\+in, double std\+\_\+in, double nugget\+\_\+in=0.\+0)
+\item 
+virtual \mbox{\hyperlink{classparticls_1_1_log_normal_distribution_ae9a66ed2a6631b8548b50a69399fb520}{$\sim$\+Log\+Normal\+Distribution}} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_log_normal_distribution_a2dbed7851f37c8a41202bf57a01bd01e}{Sample}} () override
+\begin{DoxyCompactList}\small\item\em Return a sample from the distribution. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classparticls_1_1_log_normal_distribution_a3577a24473e7b462adfde3eea0ba48fb}{mean}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classparticls_1_1_distribution}{Distribution}} mean. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_log_normal_distribution_a8da3bc6aa9c4b2544e648b9b5869d00d}{std}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classparticls_1_1_distribution}{Distribution}} standard deviation. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_log_normal_distribution_a2afec3fa478171800a9317c17ceb2bba}{nugget}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classparticls_1_1_distribution}{Distribution}} nugget -\/ amount the samples are shifted from zero. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Generates samples of the form $x= exp(z) + a$, where $z$ is a normal random variable and $a$ is a \`{}\`{}nugget" that shifts the samples away from zero. 
+
+Definition at line 13 of file Log\+Normal\+Distribution.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_log_normal_distribution_a9b1f217ca957a87217d17a2bb1b9c022}\label{classparticls_1_1_log_normal_distribution_a9b1f217ca957a87217d17a2bb1b9c022}} 
+\index{particls::LogNormalDistribution@{particls::LogNormalDistribution}!LogNormalDistribution@{LogNormalDistribution}}
+\index{LogNormalDistribution@{LogNormalDistribution}!particls::LogNormalDistribution@{particls::LogNormalDistribution}}
+\doxysubsubsection{\texorpdfstring{LogNormalDistribution()}{LogNormalDistribution()}}
+{\footnotesize\ttfamily particls\+::\+Log\+Normal\+Distribution\+::\+Log\+Normal\+Distribution (\begin{DoxyParamCaption}\item[{double}]{mean\+\_\+in,  }\item[{double}]{std\+\_\+in,  }\item[{double}]{nugget\+\_\+in = {\ttfamily 0.0} }\end{DoxyParamCaption})}
+
+Construct the lognormal distribution given the mean, standard deviation, and nugget of the underlying Gaussian random variable \mbox{\Hypertarget{classparticls_1_1_log_normal_distribution_ae9a66ed2a6631b8548b50a69399fb520}\label{classparticls_1_1_log_normal_distribution_ae9a66ed2a6631b8548b50a69399fb520}} 
+\index{particls::LogNormalDistribution@{particls::LogNormalDistribution}!````~LogNormalDistribution@{$\sim$LogNormalDistribution}}
+\index{````~LogNormalDistribution@{$\sim$LogNormalDistribution}!particls::LogNormalDistribution@{particls::LogNormalDistribution}}
+\doxysubsubsection{\texorpdfstring{$\sim$LogNormalDistribution()}{~LogNormalDistribution()}}
+{\footnotesize\ttfamily virtual particls\+::\+Log\+Normal\+Distribution\+::$\sim$\+Log\+Normal\+Distribution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Default destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_log_normal_distribution_a2dbed7851f37c8a41202bf57a01bd01e}\label{classparticls_1_1_log_normal_distribution_a2dbed7851f37c8a41202bf57a01bd01e}} 
+\index{particls::LogNormalDistribution@{particls::LogNormalDistribution}!Sample@{Sample}}
+\index{Sample@{Sample}!particls::LogNormalDistribution@{particls::LogNormalDistribution}}
+\doxysubsubsection{\texorpdfstring{Sample()}{Sample()}}
+{\footnotesize\ttfamily virtual double particls\+::\+Log\+Normal\+Distribution\+::\+Sample (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Return a sample from the distribution. 
+
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_scalar_distribution_a74012c23970e37c0ceec93a38590adaa}{particls\+::\+Scalar\+Distribution}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticls_1_1_log_normal_distribution_a3577a24473e7b462adfde3eea0ba48fb}\label{classparticls_1_1_log_normal_distribution_a3577a24473e7b462adfde3eea0ba48fb}} 
+\index{particls::LogNormalDistribution@{particls::LogNormalDistribution}!mean@{mean}}
+\index{mean@{mean}!particls::LogNormalDistribution@{particls::LogNormalDistribution}}
+\doxysubsubsection{\texorpdfstring{mean}{mean}}
+{\footnotesize\ttfamily double particls\+::\+Log\+Normal\+Distribution\+::mean\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\mbox{\hyperlink{classparticls_1_1_distribution}{Distribution}} mean. 
+
+
+
+Definition at line 29 of file Log\+Normal\+Distribution.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_log_normal_distribution_a2afec3fa478171800a9317c17ceb2bba}\label{classparticls_1_1_log_normal_distribution_a2afec3fa478171800a9317c17ceb2bba}} 
+\index{particls::LogNormalDistribution@{particls::LogNormalDistribution}!nugget@{nugget}}
+\index{nugget@{nugget}!particls::LogNormalDistribution@{particls::LogNormalDistribution}}
+\doxysubsubsection{\texorpdfstring{nugget}{nugget}}
+{\footnotesize\ttfamily double particls\+::\+Log\+Normal\+Distribution\+::nugget\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\mbox{\hyperlink{classparticls_1_1_distribution}{Distribution}} nugget -\/ amount the samples are shifted from zero. 
+
+
+
+Definition at line 35 of file Log\+Normal\+Distribution.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_log_normal_distribution_a8da3bc6aa9c4b2544e648b9b5869d00d}\label{classparticls_1_1_log_normal_distribution_a8da3bc6aa9c4b2544e648b9b5869d00d}} 
+\index{particls::LogNormalDistribution@{particls::LogNormalDistribution}!std@{std}}
+\index{std@{std}!particls::LogNormalDistribution@{particls::LogNormalDistribution}}
+\doxysubsubsection{\texorpdfstring{std}{std}}
+{\footnotesize\ttfamily double particls\+::\+Log\+Normal\+Distribution\+::std\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\mbox{\hyperlink{classparticls_1_1_distribution}{Distribution}} standard deviation. 
+
+
+
+Definition at line 32 of file Log\+Normal\+Distribution.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_log_normal_distribution_8hpp}{Log\+Normal\+Distribution.\+hpp}}\end{DoxyCompactItemize}

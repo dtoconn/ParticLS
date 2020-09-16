@@ -1,0 +1,673 @@
+\hypertarget{classparticls_1_1_contact_force}{}\doxysection{particls\+::Contact\+Force$<$ dim $>$ Class Template Reference}
+\label{classparticls_1_1_contact_force}\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+
+
+{\ttfamily \#include $<$Contact\+Force.\+hpp$>$}
+
+
+
+Inheritance diagram for particls\+::Contact\+Force$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classparticls_1_1_contact_force__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for particls\+::Contact\+Force$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classparticls_1_1_contact_force__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}}$<$ dim $>$ $>$ $>$ \mbox{\hyperlink{classparticls_1_1_contact_force_a23c679c10d7244dc351d5af842a6942c}{Contact\+Force\+List}}
+\item 
+typedef std\+::function$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}}$<$ dim $>$ $>$std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const  \&part1, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const  \&part2, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const  \&neighbors, Y\+A\+M\+L\+::\+Node const  \&options)$>$ \mbox{\hyperlink{classparticls_1_1_contact_force_aac3ae6d4007efd2706bc4d4eb8bedc61}{Contact\+Force\+Constructor}}
+\item 
+typedef std\+::map$<$ std\+::string, \mbox{\hyperlink{classparticls_1_1_contact_force_aac3ae6d4007efd2706bc4d4eb8bedc61}{Contact\+Force\+Constructor}} $>$ \mbox{\hyperlink{classparticls_1_1_contact_force_a6837aee68052d3bb134066d9c21084db}{Contact\+Force\+Map}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_contact_force_a22d0eaf2ba294e0883ff4e812ccd79ae}{Contact\+Force}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part1, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part2, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&neighbors, Y\+A\+M\+L\+::\+Node const \&options, unsigned int const dimension=dim)
+\item 
+virtual \mbox{\hyperlink{classparticls_1_1_contact_force_a56b8517b9b16bf45ffdcafcd4509c2fc}{$\sim$\+Contact\+Force}} ()=default
+\item 
+std\+::pair$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ \mbox{\hyperlink{classparticls_1_1_contact_force_a4be0f906721d96b9d5d7d4eb31329cf6}{Particles}} () const
+\begin{DoxyCompactList}\small\item\em Return the particles. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classparticls_1_1_contact_force_a4108877b0815fa65d2eddc6982271068}{Removeable}} () const
+\begin{DoxyCompactList}\small\item\em Can this contact for be removed? \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_contact_force_afaf0899541103f89c7067926f942d5e8}{Normalized\+Beam\+Vector}} (Eigen\+::\+Ref$<$ typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Position $>$ beam\+Vec) const
+\begin{DoxyCompactList}\small\item\em Compute the normalized beam vector and its magnitude. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_contact_force_a68a55b00dc09364bd43708b8b2251b56}{Unnormalized\+Beam\+Vector}} (Eigen\+::\+Ref$<$ typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Position $>$ beam\+Vec) const
+\begin{DoxyCompactList}\small\item\em Compute the unnormalized beam vector. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classparticls_1_1_contact_force_a6a4575379b489490defd80ff0abe3f1c}{Bonded}} () const
+\begin{DoxyCompactList}\small\item\em True\+: a beam has been created between the particles, False\+: a beam has not been created between the particles. \end{DoxyCompactList}\item 
+bool \& \mbox{\hyperlink{classparticls_1_1_contact_force_a072bd0ae70c94fd7ea7e25d80a6e790e}{Bonded}} ()
+\begin{DoxyCompactList}\small\item\em True\+: a beam has been created between the particles, False\+: a beam has not been created between the particles. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_contact_force_a425f58aa3500bf2bfc50bf41b453329a}{Compute\+Force}} (double const time, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}} $>$ const \&parameter) override
+\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_contact_force_a49937350b2ecdd8897f7d2c91567d7fa}{Compute\+Contact\+Force}} (double const time, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}} $>$ const \&parameter)=0
+\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}}$<$ dim $>$ $>$ \mbox{\hyperlink{classparticls_1_1_contact_force_a7a229ec11cf4f8ac5a02b64037dbb6e3}{Pair\+Force}} () const
+\begin{DoxyCompactList}\small\item\em The contact force corresponding to the bond in the opposite direction. \end{DoxyCompactList}\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}}$<$ dim $>$ $>$ \& \mbox{\hyperlink{classparticls_1_1_contact_force_a7069ac9382af71a7c35a14ae55e80d61}{Pair\+Force}} ()
+\begin{DoxyCompactList}\small\item\em The contact force corresponding to the bond in the opposite direction. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classparticls_1_1_contact_force_acdad6b84e7e22bfc6054f9a29e2828a8}{Recently\+Computed}} () const
+\begin{DoxyCompactList}\small\item\em Has the force been recently computed? \end{DoxyCompactList}\item 
+bool \& \mbox{\hyperlink{classparticls_1_1_contact_force_a8bbaa28e7e373ccbb51134fc1dd1a768}{Recently\+Computed}} ()
+\begin{DoxyCompactList}\small\item\em Has the force been recently computed? \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structparticls_1_1_contact_summary}{Contact\+Summary}}$<$ dim $>$ $>$ $>$ \mbox{\hyperlink{classparticls_1_1_contact_force_a036de6ae6020fb3593e70f0b5cc7f0a6}{Get\+Contact\+Summary}} () const
+\begin{DoxyCompactList}\small\item\em Get the contact summary. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structparticls_1_1_contact_summary}{Contact\+Summary}}$<$ dim $>$ $>$ $>$ \& \mbox{\hyperlink{classparticls_1_1_contact_force_a55ab80b0290b6bc8aff81cd824e09c89}{Get\+Contact\+Summary}} ()
+\begin{DoxyCompactList}\small\item\em Get the contact summary. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_contact_force_a3fa3511f6a7898e2cb8970e716630e6e}{Zero\+Forces\+Moments}} () override
+\begin{DoxyCompactList}\small\item\em Zero out the forces and moment from this object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classparticls_1_1_contact_force_ab7511be422f3b7855042d3c316063326}{Pair\+Dependence}} () const
+\begin{DoxyCompactList}\small\item\em Does the force depend on its pair? \end{DoxyCompactList}\item 
+bool \& \mbox{\hyperlink{classparticls_1_1_contact_force_aa4370bbcc5e65f1dab6c565b06327b33}{Pair\+Dependence}} ()
+\begin{DoxyCompactList}\small\item\em Does the force depend on its pair? \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_contact_force_a0bfa868f23b5387174cffef886dc80e0}{Force\+Magnitude}} () const
+\begin{DoxyCompactList}\small\item\em Returns the norm of the computed contact force. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}}$<$ dim $>$ $>$ \mbox{\hyperlink{classparticls_1_1_contact_force_ad4b7a3005dd55c0faf7944562fe54272}{Create}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part1, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part2, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&neighbors, Y\+A\+M\+L\+::\+Node const \&options)
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_contact_force_a6837aee68052d3bb134066d9c21084db}{Contact\+Force\+Map}} $>$ \mbox{\hyperlink{classparticls_1_1_contact_force_a7f414d9adf4490885f2428505d8dbbaf}{Get\+Contact\+Force\+Map}} ()
+\item 
+static void \mbox{\hyperlink{classparticls_1_1_contact_force_aafa7c290316cce1726bbf732a0d1316e}{Add\+Forces}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$$>$ const \&part1, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$$>$ const \&part2, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&neighbors, Y\+A\+M\+L\+::\+Node const \&options)
+\begin{DoxyCompactList}\small\item\em Create a contact force and add it to both the particles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classparticls_1_1_contact_force_af101024704d62e10e1b00f048145529d}{Angle}} (Eigen\+::\+Vector\+Xd const \&vec1, Eigen\+::\+Vector\+Xd const \&vec2) const
+\item 
+void \mbox{\hyperlink{classparticls_1_1_contact_force_ae641df525bcb6113d2c64a1fffc75d9a}{Update\+Contact\+Summary}} ()
+\begin{DoxyCompactList}\small\item\em Update the contact summary. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classparticls_1_1_contact_force_af4fc5520d7eecef23fb5fbae61a46e6e}{Contact\+Force}} ()=default
+\begin{DoxyCompactList}\small\item\em Private default constructor for serialize. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classparticls_1_1_contact_force_a8dc187340b28757f0155d5d4d01f296a}{serialize}} (Archive \&ar)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ \mbox{\hyperlink{classparticls_1_1_contact_force_aff9a27bc25fbbde944d92b19fb77a421}{particle1}}
+\begin{DoxyCompactList}\small\item\em The first particle on which this force is acting. \end{DoxyCompactList}\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ \mbox{\hyperlink{classparticls_1_1_contact_force_a9485010894e9cc5d60b6790df3d2fa82}{particle2}}
+\item 
+bool \mbox{\hyperlink{classparticls_1_1_contact_force_aa9ab5237ad5ea570c4e85a23609fafc4}{bonded}} = false
+\begin{DoxyCompactList}\small\item\em Is there a beam between the particles? \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structparticls_1_1_contact_summary}{Contact\+Summary}}$<$ dim $>$ $>$ $>$ \mbox{\hyperlink{classparticls_1_1_contact_force_ac434113df791c1e226d08bb91f3f3f5c}{summary}}
+\begin{DoxyCompactList}\small\item\em A contact summary between the two particles. \end{DoxyCompactList}\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}}$<$ dim $>$ $>$ \mbox{\hyperlink{classparticls_1_1_contact_force_a8adc940b5d618d41adfeef0310175306}{other\+Force}}
+\begin{DoxyCompactList}\small\item\em A contact force corresponding to the bond in the opposite direction. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classparticls_1_1_contact_force_a3e6bb023a39fadc07d812f1c9f0afb52}{compute\+Contact}} = true
+\begin{DoxyCompactList}\small\item\em Determine whether the contact summary needs to be re-\/computed. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classparticls_1_1_contact_force_ab557c96c1919f56a700ba7ab382a598f}{recently\+Computed}} = false
+\begin{DoxyCompactList}\small\item\em Has the force been recently computed? \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classparticls_1_1_contact_force_a682bd50fc819d57cb41b959fdc4e6089}{pair\+Dependence}} = false
+\begin{DoxyCompactList}\small\item\em Do the pair forces depend on each other? \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classparticls_1_1_contact_force_ab2f44cbb59a08132f4c843e5225bba0e}{cereal\+::access}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+class particls\+::\+Contact\+Force$<$ dim $>$}
+
+
+
+Definition at line 17 of file Contact\+Force.\+hpp.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classparticls_1_1_contact_force_aac3ae6d4007efd2706bc4d4eb8bedc61}\label{classparticls_1_1_contact_force_aac3ae6d4007efd2706bc4d4eb8bedc61}} 
+\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}!ContactForceConstructor@{ContactForceConstructor}}
+\index{ContactForceConstructor@{ContactForceConstructor}!particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ContactForceConstructor}{ContactForceConstructor}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+typedef std\+::function$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}}$<$dim$>$ $>$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$dim$>$ $>$ const\& part1, std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$dim$>$ $>$ const\& part2, std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$dim$>$ $>$ $>$ const\& neighbors, Y\+A\+M\+L\+::\+Node const\& options)$>$ \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_contact_force_aac3ae6d4007efd2706bc4d4eb8bedc61}{Contact\+Force\+Constructor}}}
+
+
+
+Definition at line 40 of file Contact\+Force.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_contact_force_a23c679c10d7244dc351d5af842a6942c}\label{classparticls_1_1_contact_force_a23c679c10d7244dc351d5af842a6942c}} 
+\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}!ContactForceList@{ContactForceList}}
+\index{ContactForceList@{ContactForceList}!particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ContactForceList}{ContactForceList}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+typedef std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}}$<$dim$>$ $>$ $>$ \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_contact_force_a23c679c10d7244dc351d5af842a6942c}{Contact\+Force\+List}}}
+
+
+
+Definition at line 29 of file Contact\+Force.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_contact_force_a6837aee68052d3bb134066d9c21084db}\label{classparticls_1_1_contact_force_a6837aee68052d3bb134066d9c21084db}} 
+\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}!ContactForceMap@{ContactForceMap}}
+\index{ContactForceMap@{ContactForceMap}!particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ContactForceMap}{ContactForceMap}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+typedef std\+::map$<$std\+::string, \mbox{\hyperlink{classparticls_1_1_contact_force_aac3ae6d4007efd2706bc4d4eb8bedc61}{Contact\+Force\+Constructor}}$>$ \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_contact_force_a6837aee68052d3bb134066d9c21084db}{Contact\+Force\+Map}}}
+
+
+
+Definition at line 41 of file Contact\+Force.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_contact_force_a22d0eaf2ba294e0883ff4e812ccd79ae}\label{classparticls_1_1_contact_force_a22d0eaf2ba294e0883ff4e812ccd79ae}} 
+\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}!ContactForce@{ContactForce}}
+\index{ContactForce@{ContactForce}!particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ContactForce()}{ContactForce()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}} (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part1,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part2,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&}]{neighbors,  }\item[{Y\+A\+M\+L\+::\+Node const \&}]{options,  }\item[{unsigned int const}]{dimension = {\ttfamily dim} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em part1} & The first particle on which this force is acting \\
+\hline
+\mbox{\texttt{ in}}  & {\em part2} & The second particle on which is force is acting \\
+\hline
+\mbox{\texttt{ in}}  & {\em neighbors} & The nearest neighbors of the first particle (part1) \\
+\hline
+\mbox{\texttt{ in}}  & {\em options} & Options for the contact force \\
+\hline
+\mbox{\texttt{ in}}  & {\em dimension} & The dimension of the state (defaults to Contact\+Force\+::dim) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_contact_force_a56b8517b9b16bf45ffdcafcd4509c2fc}\label{classparticls_1_1_contact_force_a56b8517b9b16bf45ffdcafcd4509c2fc}} 
+\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}!````~ContactForce@{$\sim$ContactForce}}
+\index{````~ContactForce@{$\sim$ContactForce}!particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$ContactForce()}{~ContactForce()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$ dim $>$\+::$\sim$\mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classparticls_1_1_contact_force_af4fc5520d7eecef23fb5fbae61a46e6e}\label{classparticls_1_1_contact_force_af4fc5520d7eecef23fb5fbae61a46e6e}} 
+\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}!ContactForce@{ContactForce}}
+\index{ContactForce@{ContactForce}!particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ContactForce()}{ContactForce()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [default]}}
+
+
+
+Private default constructor for serialize. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_contact_force_aafa7c290316cce1726bbf732a0d1316e}\label{classparticls_1_1_contact_force_aafa7c290316cce1726bbf732a0d1316e}} 
+\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}!AddForces@{AddForces}}
+\index{AddForces@{AddForces}!particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{AddForces()}{AddForces()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+static void \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$ dim $>$\+::Add\+Forces (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$$>$ const \&}]{part1,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$$>$ const \&}]{part2,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&}]{neighbors,  }\item[{Y\+A\+M\+L\+::\+Node const \&}]{options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create a contact force and add it to both the particles. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em part1} & The first particle on which this force is acting \\
+\hline
+\mbox{\texttt{ in}}  & {\em part2} & The second particle on which is force is acting \\
+\hline
+\mbox{\texttt{ in}}  & {\em neighbors} & The nearest neighbors of the first particle (part1) \\
+\hline
+\mbox{\texttt{ in}}  & {\em options} & Options for the contact force \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_contact_force_af101024704d62e10e1b00f048145529d}\label{classparticls_1_1_contact_force_af101024704d62e10e1b00f048145529d}} 
+\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}!Angle@{Angle}}
+\index{Angle@{Angle}!particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Angle()}{Angle()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$ dim $>$\+::Angle (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector\+Xd const \&}]{vec1,  }\item[{Eigen\+::\+Vector\+Xd const \&}]{vec2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Computes the angle between two unit vectors 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em vec1} & A unit vector \\
+\hline
+\mbox{\texttt{ in}}  & {\em vec2} & A unit vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The angle between vec1 and vec2 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_contact_force_a072bd0ae70c94fd7ea7e25d80a6e790e}\label{classparticls_1_1_contact_force_a072bd0ae70c94fd7ea7e25d80a6e790e}} 
+\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}!Bonded@{Bonded}}
+\index{Bonded@{Bonded}!particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Bonded()}{Bonded()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+bool\& \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$ dim $>$\+::Bonded (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+True\+: a beam has been created between the particles, False\+: a beam has not been created between the particles. 
+
+\mbox{\Hypertarget{classparticls_1_1_contact_force_a6a4575379b489490defd80ff0abe3f1c}\label{classparticls_1_1_contact_force_a6a4575379b489490defd80ff0abe3f1c}} 
+\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}!Bonded@{Bonded}}
+\index{Bonded@{Bonded}!particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Bonded()}{Bonded()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+bool \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$ dim $>$\+::Bonded (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+True\+: a beam has been created between the particles, False\+: a beam has not been created between the particles. 
+
+\mbox{\Hypertarget{classparticls_1_1_contact_force_a49937350b2ecdd8897f7d2c91567d7fa}\label{classparticls_1_1_contact_force_a49937350b2ecdd8897f7d2c91567d7fa}} 
+\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}!ComputeContactForce@{ComputeContactForce}}
+\index{ComputeContactForce@{ComputeContactForce}!particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeContactForce()}{ComputeContactForce()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$ dim $>$\+::Compute\+Contact\+Force (\begin{DoxyParamCaption}\item[{double const}]{time,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}} $>$ const \&}]{parameter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Increments the force and moment vectors. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & The time when we are computing the force \\
+\hline
+\mbox{\texttt{ in}}  & {\em parameter} & Time-\/dependent parameters shared accross all forces of this type acting on a particle. This parameters have been percomputed for this time step \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classparticls_1_1_ridging_contact_aaf693f950b9a8a4a2cf7610088bac8fd}{particls\+::\+Ridging\+Contact$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_elastic_contact_af882e1ba317e47eda043ea051832f651}{particls\+::\+Elastic\+Contact$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_visco_elastic_contact_aaceb60e2f9bafe1422950933b4079a51}{particls\+::\+Visco\+Elastic\+Contact$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_cohesive_beam_a9bd5f9fc24c360827604a3876367731c}{particls\+::\+Cohesive\+Beam$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_hertzian_contact_a06f1c73cb11609b0bd91cc60f82067dd}{particls\+::\+Hertzian\+Contact$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_peridynamic_force_a5e88269a5604504accb140a6b408326c}{particls\+::\+Peridynamic\+Force$<$ dim $>$}}, and \mbox{\hyperlink{classparticls_1_1_negative_contact_force_a2bccf7553a90b8b2c1dc722455cb6343}{particls\+::\+Negative\+Contact\+Force$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_contact_force_a425f58aa3500bf2bfc50bf41b453329a}\label{classparticls_1_1_contact_force_a425f58aa3500bf2bfc50bf41b453329a}} 
+\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}!ComputeForce@{ComputeForce}}
+\index{ComputeForce@{ComputeForce}!particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeForce()}{ComputeForce()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$ dim $>$\+::Compute\+Force (\begin{DoxyParamCaption}\item[{double const}]{time,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}} $>$ const \&}]{parameter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Increments the force and moment vectors. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & The time when we are computing the force \\
+\hline
+\mbox{\texttt{ in}}  & {\em parameter} & Time-\/dependent parameters shared accross all forces of this type acting on a particle. This parameters have been percomputed for this time step \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_generic_force_af4acd2fd1156e7d4f90473bad776e8ed}{particls\+::\+Generic\+Force$<$ dim $>$}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classparticls_1_1_symmetric_contact_force_a746797833aa47faaa42ea92781dda725}{particls\+::\+Symmetric\+Contact\+Force$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_contact_force_ad4b7a3005dd55c0faf7944562fe54272}\label{classparticls_1_1_contact_force_ad4b7a3005dd55c0faf7944562fe54272}} 
+\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}!Create@{Create}}
+\index{Create@{Create}!particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+static std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}}$<$dim$>$ $>$ \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$ dim $>$\+::Create (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part1,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part2,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&}]{neighbors,  }\item[{Y\+A\+M\+L\+::\+Node const \&}]{options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+A function to create contact forces from options specified in a Y\+A\+M\+L\+::\+Node object. The options\mbox{[}\char`\"{}\+Type\char`\"{}\mbox{]} should contain a string specifying the type of body force to construct. The other entries in the Y\+A\+M\+L\+::\+Node are used to specify options for specific conact force types. \mbox{\Hypertarget{classparticls_1_1_contact_force_a0bfa868f23b5387174cffef886dc80e0}\label{classparticls_1_1_contact_force_a0bfa868f23b5387174cffef886dc80e0}} 
+\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}!ForceMagnitude@{ForceMagnitude}}
+\index{ForceMagnitude@{ForceMagnitude}!particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ForceMagnitude()}{ForceMagnitude()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$ dim $>$\+::Force\+Magnitude (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the norm of the computed contact force. 
+
+\mbox{\Hypertarget{classparticls_1_1_contact_force_a7f414d9adf4490885f2428505d8dbbaf}\label{classparticls_1_1_contact_force_a7f414d9adf4490885f2428505d8dbbaf}} 
+\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}!GetContactForceMap@{GetContactForceMap}}
+\index{GetContactForceMap@{GetContactForceMap}!particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{GetContactForceMap()}{GetContactForceMap()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+static std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_contact_force_a6837aee68052d3bb134066d9c21084db}{Contact\+Force\+Map}}$>$ \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$ dim $>$\+::Get\+Contact\+Force\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classparticls_1_1_contact_force_a55ab80b0290b6bc8aff81cd824e09c89}\label{classparticls_1_1_contact_force_a55ab80b0290b6bc8aff81cd824e09c89}} 
+\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}!GetContactSummary@{GetContactSummary}}
+\index{GetContactSummary@{GetContactSummary}!particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{GetContactSummary()}{GetContactSummary()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structparticls_1_1_contact_summary}{Contact\+Summary}}$<$dim$>$ $>$ $>$\& \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$ dim $>$\+::Get\+Contact\+Summary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the contact summary. 
+
+\mbox{\Hypertarget{classparticls_1_1_contact_force_a036de6ae6020fb3593e70f0b5cc7f0a6}\label{classparticls_1_1_contact_force_a036de6ae6020fb3593e70f0b5cc7f0a6}} 
+\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}!GetContactSummary@{GetContactSummary}}
+\index{GetContactSummary@{GetContactSummary}!particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{GetContactSummary()}{GetContactSummary()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structparticls_1_1_contact_summary}{Contact\+Summary}}$<$dim$>$ $>$ $>$ \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$ dim $>$\+::Get\+Contact\+Summary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the contact summary. 
+
+\mbox{\Hypertarget{classparticls_1_1_contact_force_afaf0899541103f89c7067926f942d5e8}\label{classparticls_1_1_contact_force_afaf0899541103f89c7067926f942d5e8}} 
+\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}!NormalizedBeamVector@{NormalizedBeamVector}}
+\index{NormalizedBeamVector@{NormalizedBeamVector}!particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{NormalizedBeamVector()}{NormalizedBeamVector()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$ dim $>$\+::Normalized\+Beam\+Vector (\begin{DoxyParamCaption}\item[{Eigen\+::\+Ref$<$ typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Position $>$}]{beam\+Vec }\end{DoxyParamCaption}) const}
+
+
+
+Compute the normalized beam vector and its magnitude. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em beam\+Vec} & The normalized vector that points from particle 1 to particle 2 (home to neighbor) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The magnitude of the beam vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_contact_force_aa4370bbcc5e65f1dab6c565b06327b33}\label{classparticls_1_1_contact_force_aa4370bbcc5e65f1dab6c565b06327b33}} 
+\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}!PairDependence@{PairDependence}}
+\index{PairDependence@{PairDependence}!particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{PairDependence()}{PairDependence()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+bool\& \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$ dim $>$\+::Pair\+Dependence (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Does the force depend on its pair? 
+
+\mbox{\Hypertarget{classparticls_1_1_contact_force_ab7511be422f3b7855042d3c316063326}\label{classparticls_1_1_contact_force_ab7511be422f3b7855042d3c316063326}} 
+\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}!PairDependence@{PairDependence}}
+\index{PairDependence@{PairDependence}!particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{PairDependence()}{PairDependence()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+bool \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$ dim $>$\+::Pair\+Dependence (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Does the force depend on its pair? 
+
+\mbox{\Hypertarget{classparticls_1_1_contact_force_a7069ac9382af71a7c35a14ae55e80d61}\label{classparticls_1_1_contact_force_a7069ac9382af71a7c35a14ae55e80d61}} 
+\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}!PairForce@{PairForce}}
+\index{PairForce@{PairForce}!particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{PairForce()}{PairForce()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::weak\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}}$<$dim$>$ $>$\& \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$ dim $>$\+::Pair\+Force (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The contact force corresponding to the bond in the opposite direction. 
+
+\mbox{\Hypertarget{classparticls_1_1_contact_force_a7a229ec11cf4f8ac5a02b64037dbb6e3}\label{classparticls_1_1_contact_force_a7a229ec11cf4f8ac5a02b64037dbb6e3}} 
+\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}!PairForce@{PairForce}}
+\index{PairForce@{PairForce}!particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{PairForce()}{PairForce()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::weak\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}}$<$dim$>$ $>$ \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$ dim $>$\+::Pair\+Force (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+The contact force corresponding to the bond in the opposite direction. 
+
+\mbox{\Hypertarget{classparticls_1_1_contact_force_a4be0f906721d96b9d5d7d4eb31329cf6}\label{classparticls_1_1_contact_force_a4be0f906721d96b9d5d7d4eb31329cf6}} 
+\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}!Particles@{Particles}}
+\index{Particles@{Particles}!particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Particles()}{Particles()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::pair$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$dim$>$ $>$, std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$dim$>$ $>$ $>$ \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$ dim $>$\+::Particles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return the particles. 
+
+\begin{DoxyReturn}{Returns}
+A pair of particles\+: first is Contact\+Force\+::part1 and second is Contact\+Force\+::part2 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_contact_force_a8bbaa28e7e373ccbb51134fc1dd1a768}\label{classparticls_1_1_contact_force_a8bbaa28e7e373ccbb51134fc1dd1a768}} 
+\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}!RecentlyComputed@{RecentlyComputed}}
+\index{RecentlyComputed@{RecentlyComputed}!particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{RecentlyComputed()}{RecentlyComputed()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+bool\& \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$ dim $>$\+::Recently\+Computed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Has the force been recently computed? 
+
+\mbox{\Hypertarget{classparticls_1_1_contact_force_acdad6b84e7e22bfc6054f9a29e2828a8}\label{classparticls_1_1_contact_force_acdad6b84e7e22bfc6054f9a29e2828a8}} 
+\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}!RecentlyComputed@{RecentlyComputed}}
+\index{RecentlyComputed@{RecentlyComputed}!particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{RecentlyComputed()}{RecentlyComputed()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+bool \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$ dim $>$\+::Recently\+Computed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Has the force been recently computed? 
+
+\mbox{\Hypertarget{classparticls_1_1_contact_force_a4108877b0815fa65d2eddc6982271068}\label{classparticls_1_1_contact_force_a4108877b0815fa65d2eddc6982271068}} 
+\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}!Removeable@{Removeable}}
+\index{Removeable@{Removeable}!particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Removeable()}{Removeable()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual bool \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$ dim $>$\+::Removeable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Can this contact for be removed? 
+
+Some contact forces should not be removed even if the two particles are far apart. For example, existing cohesive beams should not be removed until after they break. Defaults to returning true always. Can be overriden by children. \begin{DoxyReturn}{Returns}
+True\+: the contact force between two particles can be removed, False\+: the contact force between two particles cannot be removed. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classparticls_1_1_peridynamic_force_aedb9ca9730077d8fc48bf45eb7a55080}{particls\+::\+Peridynamic\+Force$<$ dim $>$}}, and \mbox{\hyperlink{classparticls_1_1_cohesive_beam_ad4ef759fdaf4545303cc2b28f2344d03}{particls\+::\+Cohesive\+Beam$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_contact_force_a8dc187340b28757f0155d5d4d01f296a}\label{classparticls_1_1_contact_force_a8dc187340b28757f0155d5d4d01f296a}} 
+\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}!serialize@{serialize}}
+\index{serialize@{serialize}!particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+template$<$class Archive $>$ \\
+void \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$ dim $>$\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 154 of file Contact\+Force.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_contact_force_a68a55b00dc09364bd43708b8b2251b56}\label{classparticls_1_1_contact_force_a68a55b00dc09364bd43708b8b2251b56}} 
+\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}!UnnormalizedBeamVector@{UnnormalizedBeamVector}}
+\index{UnnormalizedBeamVector@{UnnormalizedBeamVector}!particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{UnnormalizedBeamVector()}{UnnormalizedBeamVector()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$ dim $>$\+::Unnormalized\+Beam\+Vector (\begin{DoxyParamCaption}\item[{Eigen\+::\+Ref$<$ typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Position $>$}]{beam\+Vec }\end{DoxyParamCaption}) const}
+
+
+
+Compute the unnormalized beam vector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em beam\+Vec} & The vector that points from particle 1 to particle 2 (home to neighbor) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_contact_force_ae641df525bcb6113d2c64a1fffc75d9a}\label{classparticls_1_1_contact_force_ae641df525bcb6113d2c64a1fffc75d9a}} 
+\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}!UpdateContactSummary@{UpdateContactSummary}}
+\index{UpdateContactSummary@{UpdateContactSummary}!particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{UpdateContactSummary()}{UpdateContactSummary()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$ dim $>$\+::Update\+Contact\+Summary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Update the contact summary. 
+
+\mbox{\Hypertarget{classparticls_1_1_contact_force_a3fa3511f6a7898e2cb8970e716630e6e}\label{classparticls_1_1_contact_force_a3fa3511f6a7898e2cb8970e716630e6e}} 
+\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}!ZeroForcesMoments@{ZeroForcesMoments}}
+\index{ZeroForcesMoments@{ZeroForcesMoments}!particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ZeroForcesMoments()}{ZeroForcesMoments()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$ dim $>$\+::Zero\+Forces\+Moments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Zero out the forces and moment from this object. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classparticls_1_1_generic_force_a165305f3a73372f91454b98cb5a07b2d}{particls\+::\+Generic\+Force$<$ dim $>$}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classparticls_1_1_cohesive_beam_a64ab25f4cdcf4204227a82bbba16f5c2}{particls\+::\+Cohesive\+Beam$<$ dim $>$}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_contact_force_ab2f44cbb59a08132f4c843e5225bba0e}\label{classparticls_1_1_contact_force_ab2f44cbb59a08132f4c843e5225bba0e}} 
+\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}!cereal::access@{cereal::access}}
+\index{cereal::access@{cereal::access}!particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{cereal::access}{cereal::access}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+friend class cereal\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 148 of file Contact\+Force.\+hpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticls_1_1_contact_force_aa9ab5237ad5ea570c4e85a23609fafc4}\label{classparticls_1_1_contact_force_aa9ab5237ad5ea570c4e85a23609fafc4}} 
+\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}!bonded@{bonded}}
+\index{bonded@{bonded}!particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{bonded}{bonded}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+bool \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$ dim $>$\+::bonded = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Is there a beam between the particles? 
+
+
+
+Definition at line 159 of file Contact\+Force.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_contact_force_a3e6bb023a39fadc07d812f1c9f0afb52}\label{classparticls_1_1_contact_force_a3e6bb023a39fadc07d812f1c9f0afb52}} 
+\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}!computeContact@{computeContact}}
+\index{computeContact@{computeContact}!particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{computeContact}{computeContact}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+bool \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$ dim $>$\+::compute\+Contact = true\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Determine whether the contact summary needs to be re-\/computed. 
+
+True (default)\+: compute the contact summary between particles. False\+: do not compute the contact summary and just pass a nullptr for the contact summary 
+
+Definition at line 174 of file Contact\+Force.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_contact_force_a8adc940b5d618d41adfeef0310175306}\label{classparticls_1_1_contact_force_a8adc940b5d618d41adfeef0310175306}} 
+\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}!otherForce@{otherForce}}
+\index{otherForce@{otherForce}!particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{otherForce}{otherForce}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::weak\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}}$<$dim$>$ $>$ \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$ dim $>$\+::other\+Force\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+A contact force corresponding to the bond in the opposite direction. 
+
+
+
+Definition at line 168 of file Contact\+Force.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_contact_force_a682bd50fc819d57cb41b959fdc4e6089}\label{classparticls_1_1_contact_force_a682bd50fc819d57cb41b959fdc4e6089}} 
+\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}!pairDependence@{pairDependence}}
+\index{pairDependence@{pairDependence}!particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{pairDependence}{pairDependence}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+bool \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$ dim $>$\+::pair\+Dependence = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Do the pair forces depend on each other? 
+
+If we are ignoring forces on a particle we only need to create a contact force if the pairs depend on each other (e.\+g., peridynamics) 
+
+Definition at line 186 of file Contact\+Force.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_contact_force_aff9a27bc25fbbde944d92b19fb77a421}\label{classparticls_1_1_contact_force_aff9a27bc25fbbde944d92b19fb77a421}} 
+\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}!particle1@{particle1}}
+\index{particle1@{particle1}!particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{particle1}{particle1}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::weak\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$dim$>$ $>$ \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$ dim $>$\+::particle1\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The first particle on which this force is acting. 
+
+
+
+Definition at line 143 of file Contact\+Force.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_contact_force_a9485010894e9cc5d60b6790df3d2fa82}\label{classparticls_1_1_contact_force_a9485010894e9cc5d60b6790df3d2fa82}} 
+\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}!particle2@{particle2}}
+\index{particle2@{particle2}!particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{particle2}{particle2}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::weak\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$dim$>$ $>$ \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$ dim $>$\+::particle2\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 146 of file Contact\+Force.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_contact_force_ab557c96c1919f56a700ba7ab382a598f}\label{classparticls_1_1_contact_force_ab557c96c1919f56a700ba7ab382a598f}} 
+\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}!recentlyComputed@{recentlyComputed}}
+\index{recentlyComputed@{recentlyComputed}!particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{recentlyComputed}{recentlyComputed}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+bool \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$ dim $>$\+::recently\+Computed = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Has the force been recently computed? 
+
+True\+: The force has recently been computed (e.\+g., for this timestepstep), False (default)\+: the foce has not been recently computed and needs to be recomputed 
+
+Definition at line 180 of file Contact\+Force.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_contact_force_ac434113df791c1e226d08bb91f3f3f5c}\label{classparticls_1_1_contact_force_ac434113df791c1e226d08bb91f3f3f5c}} 
+\index{particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}!summary@{summary}}
+\index{summary@{summary}!particls::ContactForce$<$ dim $>$@{particls::ContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{summary}{summary}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structparticls_1_1_contact_summary}{Contact\+Summary}}$<$dim$>$ $>$ $>$ \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$ dim $>$\+::summary\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+A contact summary between the two particles. 
+
+This is only up to date if recently\+Computed is up to date. 
+
+Definition at line 165 of file Contact\+Force.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_contact_force_8hpp}{Contact\+Force.\+hpp}}\end{DoxyCompactItemize}

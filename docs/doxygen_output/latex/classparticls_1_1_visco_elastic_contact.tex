@@ -1,0 +1,302 @@
+\hypertarget{classparticls_1_1_visco_elastic_contact}{}\doxysection{particls\+::Visco\+Elastic\+Contact$<$ dim $>$ Class Template Reference}
+\label{classparticls_1_1_visco_elastic_contact}\index{particls::ViscoElasticContact$<$ dim $>$@{particls::ViscoElasticContact$<$ dim $>$}}
+
+
+A linear viscous-\/elastic contact model.  
+
+
+
+
+{\ttfamily \#include $<$Visco\+Elastic\+Contact.\+hpp$>$}
+
+
+
+Inheritance diagram for particls\+::Visco\+Elastic\+Contact$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classparticls_1_1_visco_elastic_contact__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for particls\+::Visco\+Elastic\+Contact$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classparticls_1_1_visco_elastic_contact__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_visco_elastic_contact_a0f398270bf7c5288b701e076c89e0252}{Visco\+Elastic\+Contact}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part1, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part2, Y\+A\+M\+L\+::\+Node const \&options)
+\item 
+\mbox{\hyperlink{classparticls_1_1_visco_elastic_contact_a44a6acb191b48f5ec3e1fa75da47af35}{Visco\+Elastic\+Contact}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part1, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part2, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&neighbors, Y\+A\+M\+L\+::\+Node const \&options)
+\item 
+virtual \mbox{\hyperlink{classparticls_1_1_visco_elastic_contact_a0bf04b4c77bb5c91cabb599c77799403}{$\sim$\+Visco\+Elastic\+Contact}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_visco_elastic_contact_aaceb60e2f9bafe1422950933b4079a51}{Compute\+Contact\+Force}} (double const time, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}} $>$ const \&parameter=nullptr) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_visco_elastic_contact_adcad6643d8284853cce374a6a27cf8d8}{Fill\+R\+H\+S\+Impl}} (double const time, Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$ rhs) override
+\item 
+\mbox{\hyperlink{classparticls_1_1_visco_elastic_contact_a38aeca537879f7073ab8bc619569b709}{Visco\+Elastic\+Contact}} ()=default
+\begin{DoxyCompactList}\small\item\em Private default constructor for serialize. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classparticls_1_1_visco_elastic_contact_af38cb190a15d3afedead2ab80b5d7198}{serialize}} (Archive \&ar)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classparticls_1_1_visco_elastic_contact_a3672af6133b2dcd03f8cdec8a16df6d8}{kn}}
+\begin{DoxyCompactList}\small\item\em Normal contact stiffness. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_visco_elastic_contact_a2178ee2d5d1ea75ed0a42ae72439ef91}{ks}}
+\begin{DoxyCompactList}\small\item\em Shear contact stiffness. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_visco_elastic_contact_a4205b5f3fb8f6c5fceaf7e7491f6b483}{k\+\_\+ratio}}
+\begin{DoxyCompactList}\small\item\em The ratio of the normal stiffness to the tangential stiffness. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_visco_elastic_contact_a0f8e0b7d99944886cad93ffada6538ad}{mu}}
+\begin{DoxyCompactList}\small\item\em Friction coefficient. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_visco_elastic_contact_adab87644aac3a8e219207abf07ae5373}{bn}}
+\begin{DoxyCompactList}\small\item\em Viscous damping coefficient. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_visco_elastic_contact_a0a5cd8635de3ea501d396e5e67efbda9}{bs}}
+\begin{DoxyCompactList}\small\item\em Shear viscous damping coefficient. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classparticls_1_1_visco_elastic_contact_ab2f44cbb59a08132f4c843e5225bba0e}{cereal\+::access}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+class particls\+::\+Visco\+Elastic\+Contact$<$ dim $>$}
+
+A linear viscous-\/elastic contact model. 
+
+Linear elastic contact model for two non-\/adhesive particles, with viscous damping. 
+
+Definition at line 21 of file Visco\+Elastic\+Contact.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_visco_elastic_contact_a0f398270bf7c5288b701e076c89e0252}\label{classparticls_1_1_visco_elastic_contact_a0f398270bf7c5288b701e076c89e0252}} 
+\index{particls::ViscoElasticContact$<$ dim $>$@{particls::ViscoElasticContact$<$ dim $>$}!ViscoElasticContact@{ViscoElasticContact}}
+\index{ViscoElasticContact@{ViscoElasticContact}!particls::ViscoElasticContact$<$ dim $>$@{particls::ViscoElasticContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ViscoElasticContact()}{ViscoElasticContact()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_visco_elastic_contact}{particls\+::\+Visco\+Elastic\+Contact}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_visco_elastic_contact}{Visco\+Elastic\+Contact}} (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part1,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part2,  }\item[{Y\+A\+M\+L\+::\+Node const \&}]{options }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em part1} & Home particle in the contact pair \\
+\hline
+\mbox{\texttt{ in}}  & {\em part2} & Neighbor particle in the contact pair \\
+\hline
+\mbox{\texttt{ in}}  & {\em options} & Contact model parameters, e.\+g. friction coefficient \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_visco_elastic_contact_a44a6acb191b48f5ec3e1fa75da47af35}\label{classparticls_1_1_visco_elastic_contact_a44a6acb191b48f5ec3e1fa75da47af35}} 
+\index{particls::ViscoElasticContact$<$ dim $>$@{particls::ViscoElasticContact$<$ dim $>$}!ViscoElasticContact@{ViscoElasticContact}}
+\index{ViscoElasticContact@{ViscoElasticContact}!particls::ViscoElasticContact$<$ dim $>$@{particls::ViscoElasticContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ViscoElasticContact()}{ViscoElasticContact()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_visco_elastic_contact}{particls\+::\+Visco\+Elastic\+Contact}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_visco_elastic_contact}{Visco\+Elastic\+Contact}} (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part1,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part2,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&}]{neighbors,  }\item[{Y\+A\+M\+L\+::\+Node const \&}]{options }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em part1} & Home particle in the contact pair \\
+\hline
+\mbox{\texttt{ in}}  & {\em part2} & Neighbor particle in the contact pair \\
+\hline
+\mbox{\texttt{ in}}  & {\em neighbors} & The nearest neighbors of the first particle (part1) \\
+\hline
+\mbox{\texttt{ in}}  & {\em options} & Contact model parameters, e.\+g. friction coefficient \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_visco_elastic_contact_a0bf04b4c77bb5c91cabb599c77799403}\label{classparticls_1_1_visco_elastic_contact_a0bf04b4c77bb5c91cabb599c77799403}} 
+\index{particls::ViscoElasticContact$<$ dim $>$@{particls::ViscoElasticContact$<$ dim $>$}!````~ViscoElasticContact@{$\sim$ViscoElasticContact}}
+\index{````~ViscoElasticContact@{$\sim$ViscoElasticContact}!particls::ViscoElasticContact$<$ dim $>$@{particls::ViscoElasticContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$ViscoElasticContact()}{~ViscoElasticContact()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual \mbox{\hyperlink{classparticls_1_1_visco_elastic_contact}{particls\+::\+Visco\+Elastic\+Contact}}$<$ dim $>$\+::$\sim$\mbox{\hyperlink{classparticls_1_1_visco_elastic_contact}{Visco\+Elastic\+Contact}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classparticls_1_1_visco_elastic_contact_a38aeca537879f7073ab8bc619569b709}\label{classparticls_1_1_visco_elastic_contact_a38aeca537879f7073ab8bc619569b709}} 
+\index{particls::ViscoElasticContact$<$ dim $>$@{particls::ViscoElasticContact$<$ dim $>$}!ViscoElasticContact@{ViscoElasticContact}}
+\index{ViscoElasticContact@{ViscoElasticContact}!particls::ViscoElasticContact$<$ dim $>$@{particls::ViscoElasticContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ViscoElasticContact()}{ViscoElasticContact()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_visco_elastic_contact}{particls\+::\+Visco\+Elastic\+Contact}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_visco_elastic_contact}{Visco\+Elastic\+Contact}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [default]}}
+
+
+
+Private default constructor for serialize. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_visco_elastic_contact_aaceb60e2f9bafe1422950933b4079a51}\label{classparticls_1_1_visco_elastic_contact_aaceb60e2f9bafe1422950933b4079a51}} 
+\index{particls::ViscoElasticContact$<$ dim $>$@{particls::ViscoElasticContact$<$ dim $>$}!ComputeContactForce@{ComputeContactForce}}
+\index{ComputeContactForce@{ComputeContactForce}!particls::ViscoElasticContact$<$ dim $>$@{particls::ViscoElasticContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeContactForce()}{ComputeContactForce()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_visco_elastic_contact}{particls\+::\+Visco\+Elastic\+Contact}}$<$ dim $>$\+::Compute\+Contact\+Force (\begin{DoxyParamCaption}\item[{double const}]{time,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}} $>$ const \&}]{parameter = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Increments the force and moment vectors. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & The time when we are computing the force \\
+\hline
+\mbox{\texttt{ in}}  & {\em parameter} & Not needed for viscoelastic force \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_contact_force_a49937350b2ecdd8897f7d2c91567d7fa}{particls\+::\+Contact\+Force$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_visco_elastic_contact_adcad6643d8284853cce374a6a27cf8d8}\label{classparticls_1_1_visco_elastic_contact_adcad6643d8284853cce374a6a27cf8d8}} 
+\index{particls::ViscoElasticContact$<$ dim $>$@{particls::ViscoElasticContact$<$ dim $>$}!FillRHSImpl@{FillRHSImpl}}
+\index{FillRHSImpl@{FillRHSImpl}!particls::ViscoElasticContact$<$ dim $>$@{particls::ViscoElasticContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{FillRHSImpl()}{FillRHSImpl()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_visco_elastic_contact}{particls\+::\+Visco\+Elastic\+Contact}}$<$ dim $>$\+::Fill\+R\+H\+S\+Impl (\begin{DoxyParamCaption}\item[{double const}]{time,  }\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+Computes the right hand side of the shear force O\+DE. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & The current simulation time. \\
+\hline
+\mbox{\texttt{ in}}  & {\em rhs} & The right hand side vector. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classparticls_1_1_state_object_a6ad9738629390c509f53a4d41cf67fde}{particls\+::\+State\+Object}}.
+
+\mbox{\Hypertarget{classparticls_1_1_visco_elastic_contact_af38cb190a15d3afedead2ab80b5d7198}\label{classparticls_1_1_visco_elastic_contact_af38cb190a15d3afedead2ab80b5d7198}} 
+\index{particls::ViscoElasticContact$<$ dim $>$@{particls::ViscoElasticContact$<$ dim $>$}!serialize@{serialize}}
+\index{serialize@{serialize}!particls::ViscoElasticContact$<$ dim $>$@{particls::ViscoElasticContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+template$<$class Archive $>$ \\
+void \mbox{\hyperlink{classparticls_1_1_visco_elastic_contact}{particls\+::\+Visco\+Elastic\+Contact}}$<$ dim $>$\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 82 of file Visco\+Elastic\+Contact.\+hpp.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_visco_elastic_contact_ab2f44cbb59a08132f4c843e5225bba0e}\label{classparticls_1_1_visco_elastic_contact_ab2f44cbb59a08132f4c843e5225bba0e}} 
+\index{particls::ViscoElasticContact$<$ dim $>$@{particls::ViscoElasticContact$<$ dim $>$}!cereal::access@{cereal::access}}
+\index{cereal::access@{cereal::access}!particls::ViscoElasticContact$<$ dim $>$@{particls::ViscoElasticContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{cereal::access}{cereal::access}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+friend class cereal\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 76 of file Visco\+Elastic\+Contact.\+hpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticls_1_1_visco_elastic_contact_adab87644aac3a8e219207abf07ae5373}\label{classparticls_1_1_visco_elastic_contact_adab87644aac3a8e219207abf07ae5373}} 
+\index{particls::ViscoElasticContact$<$ dim $>$@{particls::ViscoElasticContact$<$ dim $>$}!bn@{bn}}
+\index{bn@{bn}!particls::ViscoElasticContact$<$ dim $>$@{particls::ViscoElasticContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{bn}{bn}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_visco_elastic_contact}{particls\+::\+Visco\+Elastic\+Contact}}$<$ dim $>$\+::bn\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Viscous damping coefficient. 
+
+
+
+Definition at line 71 of file Visco\+Elastic\+Contact.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_visco_elastic_contact_a0a5cd8635de3ea501d396e5e67efbda9}\label{classparticls_1_1_visco_elastic_contact_a0a5cd8635de3ea501d396e5e67efbda9}} 
+\index{particls::ViscoElasticContact$<$ dim $>$@{particls::ViscoElasticContact$<$ dim $>$}!bs@{bs}}
+\index{bs@{bs}!particls::ViscoElasticContact$<$ dim $>$@{particls::ViscoElasticContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{bs}{bs}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_visco_elastic_contact}{particls\+::\+Visco\+Elastic\+Contact}}$<$ dim $>$\+::bs\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Shear viscous damping coefficient. 
+
+
+
+Definition at line 74 of file Visco\+Elastic\+Contact.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_visco_elastic_contact_a4205b5f3fb8f6c5fceaf7e7491f6b483}\label{classparticls_1_1_visco_elastic_contact_a4205b5f3fb8f6c5fceaf7e7491f6b483}} 
+\index{particls::ViscoElasticContact$<$ dim $>$@{particls::ViscoElasticContact$<$ dim $>$}!k\_ratio@{k\_ratio}}
+\index{k\_ratio@{k\_ratio}!particls::ViscoElasticContact$<$ dim $>$@{particls::ViscoElasticContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{k\_ratio}{k\_ratio}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_visco_elastic_contact}{particls\+::\+Visco\+Elastic\+Contact}}$<$ dim $>$\+::k\+\_\+ratio\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The ratio of the normal stiffness to the tangential stiffness. 
+
+
+
+Definition at line 65 of file Visco\+Elastic\+Contact.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_visco_elastic_contact_a3672af6133b2dcd03f8cdec8a16df6d8}\label{classparticls_1_1_visco_elastic_contact_a3672af6133b2dcd03f8cdec8a16df6d8}} 
+\index{particls::ViscoElasticContact$<$ dim $>$@{particls::ViscoElasticContact$<$ dim $>$}!kn@{kn}}
+\index{kn@{kn}!particls::ViscoElasticContact$<$ dim $>$@{particls::ViscoElasticContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{kn}{kn}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_visco_elastic_contact}{particls\+::\+Visco\+Elastic\+Contact}}$<$ dim $>$\+::kn\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Normal contact stiffness. 
+
+
+
+Definition at line 59 of file Visco\+Elastic\+Contact.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_visco_elastic_contact_a2178ee2d5d1ea75ed0a42ae72439ef91}\label{classparticls_1_1_visco_elastic_contact_a2178ee2d5d1ea75ed0a42ae72439ef91}} 
+\index{particls::ViscoElasticContact$<$ dim $>$@{particls::ViscoElasticContact$<$ dim $>$}!ks@{ks}}
+\index{ks@{ks}!particls::ViscoElasticContact$<$ dim $>$@{particls::ViscoElasticContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ks}{ks}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_visco_elastic_contact}{particls\+::\+Visco\+Elastic\+Contact}}$<$ dim $>$\+::ks\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Shear contact stiffness. 
+
+
+
+Definition at line 62 of file Visco\+Elastic\+Contact.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_visco_elastic_contact_a0f8e0b7d99944886cad93ffada6538ad}\label{classparticls_1_1_visco_elastic_contact_a0f8e0b7d99944886cad93ffada6538ad}} 
+\index{particls::ViscoElasticContact$<$ dim $>$@{particls::ViscoElasticContact$<$ dim $>$}!mu@{mu}}
+\index{mu@{mu}!particls::ViscoElasticContact$<$ dim $>$@{particls::ViscoElasticContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{mu}{mu}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_visco_elastic_contact}{particls\+::\+Visco\+Elastic\+Contact}}$<$ dim $>$\+::mu\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Friction coefficient. 
+
+
+
+Definition at line 68 of file Visco\+Elastic\+Contact.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_visco_elastic_contact_8hpp}{Visco\+Elastic\+Contact.\+hpp}}\end{DoxyCompactItemize}

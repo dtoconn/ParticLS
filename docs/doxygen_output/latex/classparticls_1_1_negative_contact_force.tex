@@ -1,0 +1,174 @@
+\hypertarget{classparticls_1_1_negative_contact_force}{}\doxysection{particls\+::Negative\+Contact\+Force$<$ dim $>$ Class Template Reference}
+\label{classparticls_1_1_negative_contact_force}\index{particls::NegativeContactForce$<$ dim $>$@{particls::NegativeContactForce$<$ dim $>$}}
+
+
+{\ttfamily \#include $<$Negative\+Contact\+Force.\+hpp$>$}
+
+
+
+Inheritance diagram for particls\+::Negative\+Contact\+Force$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classparticls_1_1_negative_contact_force__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for particls\+::Negative\+Contact\+Force$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classparticls_1_1_negative_contact_force__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_negative_contact_force_adf42a4cc054686e64cc39a58c89839eb}{Negative\+Contact\+Force}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_symmetric_contact_force}{Symmetric\+Contact\+Force}}$<$ dim $>$ $>$ const \&\mbox{\hyperlink{classparticls_1_1_negative_contact_force_a2d053b2222228c75f47d62e52cf26f6c}{opposite\+Force}}, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part1, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part2, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&neighbors, Y\+A\+M\+L\+::\+Node const \&options)
+\item 
+virtual \mbox{\hyperlink{classparticls_1_1_negative_contact_force_a75f550539802e61c53bac0a263961988}{$\sim$\+Negative\+Contact\+Force}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_negative_contact_force_a2bccf7553a90b8b2c1dc722455cb6343}{Compute\+Contact\+Force}} (double const time, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}} $>$ const \&parameter) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_negative_contact_force_a51258ae4e2998de4031d7303958f324a}{Negative\+Contact\+Force}} ()=default
+\begin{DoxyCompactList}\small\item\em Private default constructor for serialize. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classparticls_1_1_negative_contact_force_ad072f2f645883444d95c79e44db449b6}{serialize}} (Archive \&ar)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_symmetric_contact_force}{Symmetric\+Contact\+Force}}$<$ dim $>$ $>$ \mbox{\hyperlink{classparticls_1_1_negative_contact_force_a2d053b2222228c75f47d62e52cf26f6c}{opposite\+Force}}
+\begin{DoxyCompactList}\small\item\em The contact model owned by the other particle in the contact pair. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classparticls_1_1_negative_contact_force_ab2f44cbb59a08132f4c843e5225bba0e}{cereal\+::access}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+class particls\+::\+Negative\+Contact\+Force$<$ dim $>$}
+
+
+
+Definition at line 8 of file Negative\+Contact\+Force.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_negative_contact_force_adf42a4cc054686e64cc39a58c89839eb}\label{classparticls_1_1_negative_contact_force_adf42a4cc054686e64cc39a58c89839eb}} 
+\index{particls::NegativeContactForce$<$ dim $>$@{particls::NegativeContactForce$<$ dim $>$}!NegativeContactForce@{NegativeContactForce}}
+\index{NegativeContactForce@{NegativeContactForce}!particls::NegativeContactForce$<$ dim $>$@{particls::NegativeContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{NegativeContactForce()}{NegativeContactForce()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_negative_contact_force}{particls\+::\+Negative\+Contact\+Force}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_negative_contact_force}{Negative\+Contact\+Force}} (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_symmetric_contact_force}{Symmetric\+Contact\+Force}}$<$ dim $>$ $>$ const \&}]{opposite\+Force,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part1,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part2,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&}]{neighbors,  }\item[{Y\+A\+M\+L\+::\+Node const \&}]{options }\end{DoxyParamCaption})}
+
+Constructs the negative contact force object in the symmetric contact pair 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em opposite\+Force} & The neighbor contact force in the pair \\
+\hline
+\mbox{\texttt{ in}}  & {\em part1} & Home particle in the contact pair \\
+\hline
+\mbox{\texttt{ in}}  & {\em part2} & Neighbor particle in the contact pair \\
+\hline
+\mbox{\texttt{ in}}  & {\em neighbors} & The nearest neighbors of the first particle (part1) \\
+\hline
+\mbox{\texttt{ in}}  & {\em options} & Neighbor contact model parameters, e.\+g. friction coefficient \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_negative_contact_force_a75f550539802e61c53bac0a263961988}\label{classparticls_1_1_negative_contact_force_a75f550539802e61c53bac0a263961988}} 
+\index{particls::NegativeContactForce$<$ dim $>$@{particls::NegativeContactForce$<$ dim $>$}!````~NegativeContactForce@{$\sim$NegativeContactForce}}
+\index{````~NegativeContactForce@{$\sim$NegativeContactForce}!particls::NegativeContactForce$<$ dim $>$@{particls::NegativeContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$NegativeContactForce()}{~NegativeContactForce()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual \mbox{\hyperlink{classparticls_1_1_negative_contact_force}{particls\+::\+Negative\+Contact\+Force}}$<$ dim $>$\+::$\sim$\mbox{\hyperlink{classparticls_1_1_negative_contact_force}{Negative\+Contact\+Force}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classparticls_1_1_negative_contact_force_a51258ae4e2998de4031d7303958f324a}\label{classparticls_1_1_negative_contact_force_a51258ae4e2998de4031d7303958f324a}} 
+\index{particls::NegativeContactForce$<$ dim $>$@{particls::NegativeContactForce$<$ dim $>$}!NegativeContactForce@{NegativeContactForce}}
+\index{NegativeContactForce@{NegativeContactForce}!particls::NegativeContactForce$<$ dim $>$@{particls::NegativeContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{NegativeContactForce()}{NegativeContactForce()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_negative_contact_force}{particls\+::\+Negative\+Contact\+Force}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_negative_contact_force}{Negative\+Contact\+Force}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [default]}}
+
+
+
+Private default constructor for serialize. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_negative_contact_force_a2bccf7553a90b8b2c1dc722455cb6343}\label{classparticls_1_1_negative_contact_force_a2bccf7553a90b8b2c1dc722455cb6343}} 
+\index{particls::NegativeContactForce$<$ dim $>$@{particls::NegativeContactForce$<$ dim $>$}!ComputeContactForce@{ComputeContactForce}}
+\index{ComputeContactForce@{ComputeContactForce}!particls::NegativeContactForce$<$ dim $>$@{particls::NegativeContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeContactForce()}{ComputeContactForce()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_negative_contact_force}{particls\+::\+Negative\+Contact\+Force}}$<$ dim $>$\+::Compute\+Contact\+Force (\begin{DoxyParamCaption}\item[{double const}]{time,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}} $>$ const \&}]{parameter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Increments the force and moment vectors. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & The time when we are computing the force \\
+\hline
+\mbox{\texttt{ in}}  & {\em parameter} & Time-\/dependent parameters \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_contact_force_a49937350b2ecdd8897f7d2c91567d7fa}{particls\+::\+Contact\+Force$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_negative_contact_force_ad072f2f645883444d95c79e44db449b6}\label{classparticls_1_1_negative_contact_force_ad072f2f645883444d95c79e44db449b6}} 
+\index{particls::NegativeContactForce$<$ dim $>$@{particls::NegativeContactForce$<$ dim $>$}!serialize@{serialize}}
+\index{serialize@{serialize}!particls::NegativeContactForce$<$ dim $>$@{particls::NegativeContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+template$<$class Archive $>$ \\
+void \mbox{\hyperlink{classparticls_1_1_negative_contact_force}{particls\+::\+Negative\+Contact\+Force}}$<$ dim $>$\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 41 of file Negative\+Contact\+Force.\+hpp.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_negative_contact_force_ab2f44cbb59a08132f4c843e5225bba0e}\label{classparticls_1_1_negative_contact_force_ab2f44cbb59a08132f4c843e5225bba0e}} 
+\index{particls::NegativeContactForce$<$ dim $>$@{particls::NegativeContactForce$<$ dim $>$}!cereal::access@{cereal::access}}
+\index{cereal::access@{cereal::access}!particls::NegativeContactForce$<$ dim $>$@{particls::NegativeContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{cereal::access}{cereal::access}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+friend class cereal\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 35 of file Negative\+Contact\+Force.\+hpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticls_1_1_negative_contact_force_a2d053b2222228c75f47d62e52cf26f6c}\label{classparticls_1_1_negative_contact_force_a2d053b2222228c75f47d62e52cf26f6c}} 
+\index{particls::NegativeContactForce$<$ dim $>$@{particls::NegativeContactForce$<$ dim $>$}!oppositeForce@{oppositeForce}}
+\index{oppositeForce@{oppositeForce}!particls::NegativeContactForce$<$ dim $>$@{particls::NegativeContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{oppositeForce}{oppositeForce}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_symmetric_contact_force}{Symmetric\+Contact\+Force}}$<$dim$>$ $>$ \mbox{\hyperlink{classparticls_1_1_negative_contact_force}{particls\+::\+Negative\+Contact\+Force}}$<$ dim $>$\+::opposite\+Force\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The contact model owned by the other particle in the contact pair. 
+
+
+
+Definition at line 33 of file Negative\+Contact\+Force.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_negative_contact_force_8hpp}{Negative\+Contact\+Force.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,154 @@
+\hypertarget{classparticls_1_1_symmetric_contact_force}{}\doxysection{particls\+::Symmetric\+Contact\+Force$<$ dim $>$ Class Template Reference}
+\label{classparticls_1_1_symmetric_contact_force}\index{particls::SymmetricContactForce$<$ dim $>$@{particls::SymmetricContactForce$<$ dim $>$}}
+
+
+{\ttfamily \#include $<$Symmetric\+Contact\+Force.\+hpp$>$}
+
+
+
+Inheritance diagram for particls\+::Symmetric\+Contact\+Force$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classparticls_1_1_symmetric_contact_force__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for particls\+::Symmetric\+Contact\+Force$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classparticls_1_1_symmetric_contact_force__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_symmetric_contact_force_ae4cc0c275c9edca1f268b91679298ad6}{Symmetric\+Contact\+Force}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part1, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part2, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&neighbors, Y\+A\+M\+L\+::\+Node const \&options, unsigned int const dimension=dim)
+\item 
+virtual \mbox{\hyperlink{classparticls_1_1_symmetric_contact_force_a2fc6204695afa7e2ec5dafa6b729693b}{$\sim$\+Symmetric\+Contact\+Force}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_symmetric_contact_force_a746797833aa47faaa42ea92781dda725}{Compute\+Force}} (double const time, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}} $>$ const \&parameter) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_symmetric_contact_force_a3a66f94c34ea8eab571b154c73fc9541}{Symmetric\+Contact\+Force}} ()=default
+\begin{DoxyCompactList}\small\item\em Protected default constructor for serialize. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classparticls_1_1_symmetric_contact_force_aa71a016cda57b8517236853e321c862a}{serialize}} (Archive \&ar)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classparticls_1_1_symmetric_contact_force_ab2f44cbb59a08132f4c843e5225bba0e}{cereal\+::access}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+class particls\+::\+Symmetric\+Contact\+Force$<$ dim $>$}
+
+
+
+Definition at line 11 of file Symmetric\+Contact\+Force.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_symmetric_contact_force_ae4cc0c275c9edca1f268b91679298ad6}\label{classparticls_1_1_symmetric_contact_force_ae4cc0c275c9edca1f268b91679298ad6}} 
+\index{particls::SymmetricContactForce$<$ dim $>$@{particls::SymmetricContactForce$<$ dim $>$}!SymmetricContactForce@{SymmetricContactForce}}
+\index{SymmetricContactForce@{SymmetricContactForce}!particls::SymmetricContactForce$<$ dim $>$@{particls::SymmetricContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{SymmetricContactForce()}{SymmetricContactForce()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_symmetric_contact_force}{particls\+::\+Symmetric\+Contact\+Force}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_symmetric_contact_force}{Symmetric\+Contact\+Force}} (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part1,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part2,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&}]{neighbors,  }\item[{Y\+A\+M\+L\+::\+Node const \&}]{options,  }\item[{unsigned int const}]{dimension = {\ttfamily dim} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em part1} & Home particle in the contact pair \\
+\hline
+\mbox{\texttt{ in}}  & {\em part2} & Neighbor particle in the contact pair \\
+\hline
+\mbox{\texttt{ in}}  & {\em neighbors} & The nearest neighbors of the first particle (part1) \\
+\hline
+\mbox{\texttt{ in}}  & {\em options} & Contact model parameters, e.\+g. friction coefficient \\
+\hline
+\mbox{\texttt{ in}}  & {\em dimension} & The dimension of the state (defaults to Contact\+Force\+::dim) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_symmetric_contact_force_a2fc6204695afa7e2ec5dafa6b729693b}\label{classparticls_1_1_symmetric_contact_force_a2fc6204695afa7e2ec5dafa6b729693b}} 
+\index{particls::SymmetricContactForce$<$ dim $>$@{particls::SymmetricContactForce$<$ dim $>$}!````~SymmetricContactForce@{$\sim$SymmetricContactForce}}
+\index{````~SymmetricContactForce@{$\sim$SymmetricContactForce}!particls::SymmetricContactForce$<$ dim $>$@{particls::SymmetricContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$SymmetricContactForce()}{~SymmetricContactForce()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual \mbox{\hyperlink{classparticls_1_1_symmetric_contact_force}{particls\+::\+Symmetric\+Contact\+Force}}$<$ dim $>$\+::$\sim$\mbox{\hyperlink{classparticls_1_1_symmetric_contact_force}{Symmetric\+Contact\+Force}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classparticls_1_1_symmetric_contact_force_a3a66f94c34ea8eab571b154c73fc9541}\label{classparticls_1_1_symmetric_contact_force_a3a66f94c34ea8eab571b154c73fc9541}} 
+\index{particls::SymmetricContactForce$<$ dim $>$@{particls::SymmetricContactForce$<$ dim $>$}!SymmetricContactForce@{SymmetricContactForce}}
+\index{SymmetricContactForce@{SymmetricContactForce}!particls::SymmetricContactForce$<$ dim $>$@{particls::SymmetricContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{SymmetricContactForce()}{SymmetricContactForce()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_symmetric_contact_force}{particls\+::\+Symmetric\+Contact\+Force}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_symmetric_contact_force}{Symmetric\+Contact\+Force}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [default]}}
+
+
+
+Protected default constructor for serialize. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_symmetric_contact_force_a746797833aa47faaa42ea92781dda725}\label{classparticls_1_1_symmetric_contact_force_a746797833aa47faaa42ea92781dda725}} 
+\index{particls::SymmetricContactForce$<$ dim $>$@{particls::SymmetricContactForce$<$ dim $>$}!ComputeForce@{ComputeForce}}
+\index{ComputeForce@{ComputeForce}!particls::SymmetricContactForce$<$ dim $>$@{particls::SymmetricContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeForce()}{ComputeForce()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_symmetric_contact_force}{particls\+::\+Symmetric\+Contact\+Force}}$<$ dim $>$\+::Compute\+Force (\begin{DoxyParamCaption}\item[{double const}]{time,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}} $>$ const \&}]{parameter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Increments the force and moment vectors. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & The time when we are computing the force \\
+\hline
+\mbox{\texttt{ in}}  & {\em parameter} & Time-\/dependent parameters shared accross all forces of this type acting on a particle. This parameters have been percomputed for this time step \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classparticls_1_1_contact_force_a425f58aa3500bf2bfc50bf41b453329a}{particls\+::\+Contact\+Force$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_symmetric_contact_force_aa71a016cda57b8517236853e321c862a}\label{classparticls_1_1_symmetric_contact_force_aa71a016cda57b8517236853e321c862a}} 
+\index{particls::SymmetricContactForce$<$ dim $>$@{particls::SymmetricContactForce$<$ dim $>$}!serialize@{serialize}}
+\index{serialize@{serialize}!particls::SymmetricContactForce$<$ dim $>$@{particls::SymmetricContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+template$<$class Archive $>$ \\
+void \mbox{\hyperlink{classparticls_1_1_symmetric_contact_force}{particls\+::\+Symmetric\+Contact\+Force}}$<$ dim $>$\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 42 of file Symmetric\+Contact\+Force.\+hpp.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_symmetric_contact_force_ab2f44cbb59a08132f4c843e5225bba0e}\label{classparticls_1_1_symmetric_contact_force_ab2f44cbb59a08132f4c843e5225bba0e}} 
+\index{particls::SymmetricContactForce$<$ dim $>$@{particls::SymmetricContactForce$<$ dim $>$}!cereal::access@{cereal::access}}
+\index{cereal::access@{cereal::access}!particls::SymmetricContactForce$<$ dim $>$@{particls::SymmetricContactForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{cereal::access}{cereal::access}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+friend class cereal\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 39 of file Symmetric\+Contact\+Force.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_symmetric_contact_force_8hpp}{Symmetric\+Contact\+Force.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,176 @@
+\hypertarget{classparticls_1_1_k_d_tree}{}\doxysection{particls\+::K\+D\+Tree$<$ dim $>$ Class Template Reference}
+\label{classparticls_1_1_k_d_tree}\index{particls::KDTree$<$ dim $>$@{particls::KDTree$<$ dim $>$}}
+
+
+{\ttfamily \#include $<$K\+D\+Tree.\+hpp$>$}
+
+
+
+Inheritance diagram for particls\+::K\+D\+Tree$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classparticls_1_1_k_d_tree__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for particls\+::K\+D\+Tree$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classparticls_1_1_k_d_tree__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_k_d_tree_a61f8ff91c81f9eee926a3e2384fc391c}{K\+D\+Tree}} (Y\+A\+M\+L\+::\+Node const \&options)
+\item 
+virtual \mbox{\hyperlink{classparticls_1_1_k_d_tree_a23d554328d7058d2294a8b676d36b9a4}{$\sim$\+K\+D\+Tree}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_k_d_tree_a6420cb773b67f549838e2785893b0875}{Compute}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&particles) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_k_d_tree_aa2728b6681492a7f4bc0a229193f5780}{K\+D\+Tree}} ()=default
+\begin{DoxyCompactList}\small\item\em Private default constructor for serialize. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classparticls_1_1_k_d_tree_a75dd5ddf3b2188cb7a31d8df3f6ecbb1}{serialize}} (Archive \&ar)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{classparticls_1_1_k_d_tree_a1872db9362e2b7ec5fdadb04e952b683}{max\+Leaf}}
+\begin{DoxyCompactList}\small\item\em Maximum leaf size for the kd tree. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_k_d_tree_af8635e7cd1433cbd9345bc375b875cba}{threshold2}}
+\begin{DoxyCompactList}\small\item\em Squared radius for the searcher to look for particles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classparticls_1_1_k_d_tree_ab2f44cbb59a08132f4c843e5225bba0e}{cereal\+::access}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+class particls\+::\+K\+D\+Tree$<$ dim $>$}
+
+
+
+Definition at line 12 of file K\+D\+Tree.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_k_d_tree_a61f8ff91c81f9eee926a3e2384fc391c}\label{classparticls_1_1_k_d_tree_a61f8ff91c81f9eee926a3e2384fc391c}} 
+\index{particls::KDTree$<$ dim $>$@{particls::KDTree$<$ dim $>$}!KDTree@{KDTree}}
+\index{KDTree@{KDTree}!particls::KDTree$<$ dim $>$@{particls::KDTree$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{KDTree()}{KDTree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_k_d_tree}{particls\+::\+K\+D\+Tree}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_k_d_tree}{K\+D\+Tree}} (\begin{DoxyParamCaption}\item[{Y\+A\+M\+L\+::\+Node const \&}]{options }\end{DoxyParamCaption})}
+
+options Options for the search algorithm \mbox{\Hypertarget{classparticls_1_1_k_d_tree_a23d554328d7058d2294a8b676d36b9a4}\label{classparticls_1_1_k_d_tree_a23d554328d7058d2294a8b676d36b9a4}} 
+\index{particls::KDTree$<$ dim $>$@{particls::KDTree$<$ dim $>$}!````~KDTree@{$\sim$KDTree}}
+\index{````~KDTree@{$\sim$KDTree}!particls::KDTree$<$ dim $>$@{particls::KDTree$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$KDTree()}{~KDTree()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual \mbox{\hyperlink{classparticls_1_1_k_d_tree}{particls\+::\+K\+D\+Tree}}$<$ dim $>$\+::$\sim$\mbox{\hyperlink{classparticls_1_1_k_d_tree}{K\+D\+Tree}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classparticls_1_1_k_d_tree_aa2728b6681492a7f4bc0a229193f5780}\label{classparticls_1_1_k_d_tree_aa2728b6681492a7f4bc0a229193f5780}} 
+\index{particls::KDTree$<$ dim $>$@{particls::KDTree$<$ dim $>$}!KDTree@{KDTree}}
+\index{KDTree@{KDTree}!particls::KDTree$<$ dim $>$@{particls::KDTree$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{KDTree()}{KDTree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_k_d_tree}{particls\+::\+K\+D\+Tree}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_k_d_tree}{K\+D\+Tree}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [default]}}
+
+
+
+Private default constructor for serialize. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_k_d_tree_a6420cb773b67f549838e2785893b0875}\label{classparticls_1_1_k_d_tree_a6420cb773b67f549838e2785893b0875}} 
+\index{particls::KDTree$<$ dim $>$@{particls::KDTree$<$ dim $>$}!Compute@{Compute}}
+\index{Compute@{Compute}!particls::KDTree$<$ dim $>$@{particls::KDTree$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Compute()}{Compute()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_k_d_tree}{particls\+::\+K\+D\+Tree}}$<$ dim $>$\+::Compute (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&}]{particles }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em particles} & The particles whose nearest neighbors we need to find \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_searcher_ae65bbfe253b9f6bcba4bbb3b4d1adf50}{particls\+::\+Searcher$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_k_d_tree_a75dd5ddf3b2188cb7a31d8df3f6ecbb1}\label{classparticls_1_1_k_d_tree_a75dd5ddf3b2188cb7a31d8df3f6ecbb1}} 
+\index{particls::KDTree$<$ dim $>$@{particls::KDTree$<$ dim $>$}!serialize@{serialize}}
+\index{serialize@{serialize}!particls::KDTree$<$ dim $>$@{particls::KDTree$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+template$<$class Archive $>$ \\
+void \mbox{\hyperlink{classparticls_1_1_k_d_tree}{particls\+::\+K\+D\+Tree}}$<$ dim $>$\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 41 of file K\+D\+Tree.\+hpp.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_k_d_tree_ab2f44cbb59a08132f4c843e5225bba0e}\label{classparticls_1_1_k_d_tree_ab2f44cbb59a08132f4c843e5225bba0e}} 
+\index{particls::KDTree$<$ dim $>$@{particls::KDTree$<$ dim $>$}!cereal::access@{cereal::access}}
+\index{cereal::access@{cereal::access}!particls::KDTree$<$ dim $>$@{particls::KDTree$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{cereal::access}{cereal::access}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+friend class cereal\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 35 of file K\+D\+Tree.\+hpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticls_1_1_k_d_tree_a1872db9362e2b7ec5fdadb04e952b683}\label{classparticls_1_1_k_d_tree_a1872db9362e2b7ec5fdadb04e952b683}} 
+\index{particls::KDTree$<$ dim $>$@{particls::KDTree$<$ dim $>$}!maxLeaf@{maxLeaf}}
+\index{maxLeaf@{maxLeaf}!particls::KDTree$<$ dim $>$@{particls::KDTree$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{maxLeaf}{maxLeaf}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+unsigned int \mbox{\hyperlink{classparticls_1_1_k_d_tree}{particls\+::\+K\+D\+Tree}}$<$ dim $>$\+::max\+Leaf\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Maximum leaf size for the kd tree. 
+
+
+
+Definition at line 30 of file K\+D\+Tree.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_k_d_tree_af8635e7cd1433cbd9345bc375b875cba}\label{classparticls_1_1_k_d_tree_af8635e7cd1433cbd9345bc375b875cba}} 
+\index{particls::KDTree$<$ dim $>$@{particls::KDTree$<$ dim $>$}!threshold2@{threshold2}}
+\index{threshold2@{threshold2}!particls::KDTree$<$ dim $>$@{particls::KDTree$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{threshold2}{threshold2}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_k_d_tree}{particls\+::\+K\+D\+Tree}}$<$ dim $>$\+::threshold2\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Squared radius for the searcher to look for particles. 
+
+
+
+Definition at line 33 of file K\+D\+Tree.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_k_d_tree_8hpp}{K\+D\+Tree.\+hpp}}\end{DoxyCompactItemize}

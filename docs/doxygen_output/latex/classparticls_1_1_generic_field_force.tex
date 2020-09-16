@@ -1,0 +1,233 @@
+\hypertarget{classparticls_1_1_generic_field_force}{}\doxysection{particls\+::Generic\+Field\+Force$<$ dim $>$ Class Template Reference}
+\label{classparticls_1_1_generic_field_force}\index{particls::GenericFieldForce$<$ dim $>$@{particls::GenericFieldForce$<$ dim $>$}}
+
+
+{\ttfamily \#include $<$Generic\+Field\+Force.\+hpp$>$}
+
+
+
+Inheritance diagram for particls\+::Generic\+Field\+Force$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classparticls_1_1_generic_field_force__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for particls\+::Generic\+Field\+Force$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classparticls_1_1_generic_field_force__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_generic_field_force_a5f1ca142cc45aff8f1300c6c0f483173}{Generic\+Field\+Force}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&\mbox{\hyperlink{classparticls_1_1_body_force_ad2e61420ecbcd5a1f2f18d92667af2ae}{particle}}, Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&\mbox{\hyperlink{classparticls_1_1_generic_field_force_a52aa09bf1fb9f78694e8735c93c4288e}{field\+\_\+vector}}=Eigen\+::\+Matrix$<$ double, dim, 1 $>$\+::Zero())
+\item 
+\mbox{\hyperlink{classparticls_1_1_generic_field_force_a521ccc82aac443073ed02444202065a5}{Generic\+Field\+Force}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&\mbox{\hyperlink{classparticls_1_1_body_force_ad2e61420ecbcd5a1f2f18d92667af2ae}{particle}}, Y\+A\+M\+L\+::\+Node const \&options)
+\item 
+virtual \mbox{\hyperlink{classparticls_1_1_generic_field_force_ac96ee2ea84a46fc101af5001accf58e3}{$\sim$\+Generic\+Field\+Force}} ()=default
+\begin{DoxyCompactList}\small\item\em Use the default destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_generic_field_force_ad330c131608c266ad135692f35774380}{Compute\+Force}} (double const time, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}} $>$ const \&parameter=nullptr) override
+\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_generic_field_force_a3b83b8f35a8bba3c633e46d3571b72c1}{Apply\+Vector\+Field}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_vector_field}{Generic\+Vector\+Field}}$<$ dim $>$ $>$ const \&vector\+\_\+field)
+\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_generic_field_force_ae8de92503803234d2d4db6b2c5f1029d}{Update\+Field\+Vector}} (double const time, Eigen\+::\+Matrix$<$ double, dim, 1 $>$ position)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_generic_field_force_a76068169ff1c5c5b010dbc2f709295f1}{Generic\+Field\+Force}} ()=default
+\begin{DoxyCompactList}\small\item\em Protected default constructor for serialize (needs to be called by children) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_vector_field}{Generic\+Vector\+Field}}$<$ dim $>$ $>$ \mbox{\hyperlink{classparticls_1_1_generic_field_force_af2eb78b659ff5a1b438d5169ba721a7e}{force\+\_\+field}}
+\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classparticls_1_1_generic_field_force_a52aa09bf1fb9f78694e8735c93c4288e}{field\+\_\+vector}}
+\begin{DoxyCompactList}\small\item\em The member that stores the current field vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classparticls_1_1_generic_field_force_a056a31db273dd3430a66e11e240be62a}{serialize}} (Archive \&ar)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classparticls_1_1_generic_field_force_ab2f44cbb59a08132f4c843e5225bba0e}{cereal\+::access}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+class particls\+::\+Generic\+Field\+Force$<$ dim $>$}
+
+
+
+Definition at line 16 of file Generic\+Field\+Force.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_generic_field_force_a5f1ca142cc45aff8f1300c6c0f483173}\label{classparticls_1_1_generic_field_force_a5f1ca142cc45aff8f1300c6c0f483173}} 
+\index{particls::GenericFieldForce$<$ dim $>$@{particls::GenericFieldForce$<$ dim $>$}!GenericFieldForce@{GenericFieldForce}}
+\index{GenericFieldForce@{GenericFieldForce}!particls::GenericFieldForce$<$ dim $>$@{particls::GenericFieldForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{GenericFieldForce()}{GenericFieldForce()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_generic_field_force}{particls\+::\+Generic\+Field\+Force}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_generic_field_force}{Generic\+Field\+Force}} (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{particle,  }\item[{Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&}]{field\+\_\+vector = {\ttfamily Eigen\+:\+:Matrix$<$~double,~dim,~1~$>$\+:\+:Zero()} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em particle} & The particle on which the force is acting \\
+\hline
+\mbox{\texttt{ in}}  & {\em field\+\_\+vector} & The field vector that makes up this generic field -\/ defaults to vector of zeros \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_generic_field_force_a521ccc82aac443073ed02444202065a5}\label{classparticls_1_1_generic_field_force_a521ccc82aac443073ed02444202065a5}} 
+\index{particls::GenericFieldForce$<$ dim $>$@{particls::GenericFieldForce$<$ dim $>$}!GenericFieldForce@{GenericFieldForce}}
+\index{GenericFieldForce@{GenericFieldForce}!particls::GenericFieldForce$<$ dim $>$@{particls::GenericFieldForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{GenericFieldForce()}{GenericFieldForce()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_generic_field_force}{particls\+::\+Generic\+Field\+Force}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_generic_field_force}{Generic\+Field\+Force}} (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{particle,  }\item[{Y\+A\+M\+L\+::\+Node const \&}]{options }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em particle} & The particle on which the force is acting \\
+\hline
+\mbox{\texttt{ in}}  & {\em options} & The Y\+A\+ML node with `options\mbox{[}\char`\"{}\+Generic\+Field\+Force\char`\"{}\mbox{]}' as a dim dimenional vector (e.\+g., \char`\"{}\mbox{[}0.\+0, 0.\+0, -\/9.\+81\mbox{]}\char`\"{}) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_generic_field_force_ac96ee2ea84a46fc101af5001accf58e3}\label{classparticls_1_1_generic_field_force_ac96ee2ea84a46fc101af5001accf58e3}} 
+\index{particls::GenericFieldForce$<$ dim $>$@{particls::GenericFieldForce$<$ dim $>$}!````~GenericFieldForce@{$\sim$GenericFieldForce}}
+\index{````~GenericFieldForce@{$\sim$GenericFieldForce}!particls::GenericFieldForce$<$ dim $>$@{particls::GenericFieldForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$GenericFieldForce()}{~GenericFieldForce()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual \mbox{\hyperlink{classparticls_1_1_generic_field_force}{particls\+::\+Generic\+Field\+Force}}$<$ dim $>$\+::$\sim$\mbox{\hyperlink{classparticls_1_1_generic_field_force}{Generic\+Field\+Force}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Use the default destructor. 
+
+\mbox{\Hypertarget{classparticls_1_1_generic_field_force_a76068169ff1c5c5b010dbc2f709295f1}\label{classparticls_1_1_generic_field_force_a76068169ff1c5c5b010dbc2f709295f1}} 
+\index{particls::GenericFieldForce$<$ dim $>$@{particls::GenericFieldForce$<$ dim $>$}!GenericFieldForce@{GenericFieldForce}}
+\index{GenericFieldForce@{GenericFieldForce}!particls::GenericFieldForce$<$ dim $>$@{particls::GenericFieldForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{GenericFieldForce()}{GenericFieldForce()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_generic_field_force}{particls\+::\+Generic\+Field\+Force}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_generic_field_force}{Generic\+Field\+Force}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [default]}}
+
+
+
+Protected default constructor for serialize (needs to be called by children) 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_generic_field_force_a3b83b8f35a8bba3c633e46d3571b72c1}\label{classparticls_1_1_generic_field_force_a3b83b8f35a8bba3c633e46d3571b72c1}} 
+\index{particls::GenericFieldForce$<$ dim $>$@{particls::GenericFieldForce$<$ dim $>$}!ApplyVectorField@{ApplyVectorField}}
+\index{ApplyVectorField@{ApplyVectorField}!particls::GenericFieldForce$<$ dim $>$@{particls::GenericFieldForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ApplyVectorField()}{ApplyVectorField()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_generic_field_force}{particls\+::\+Generic\+Field\+Force}}$<$ dim $>$\+::Apply\+Vector\+Field (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_vector_field}{Generic\+Vector\+Field}}$<$ dim $>$ $>$ const \&}]{vector\+\_\+field }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classparticls_1_1_generic_field_force_ad330c131608c266ad135692f35774380}\label{classparticls_1_1_generic_field_force_ad330c131608c266ad135692f35774380}} 
+\index{particls::GenericFieldForce$<$ dim $>$@{particls::GenericFieldForce$<$ dim $>$}!ComputeForce@{ComputeForce}}
+\index{ComputeForce@{ComputeForce}!particls::GenericFieldForce$<$ dim $>$@{particls::GenericFieldForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeForce()}{ComputeForce()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_generic_field_force}{particls\+::\+Generic\+Field\+Force}}$<$ dim $>$\+::Compute\+Force (\begin{DoxyParamCaption}\item[{double const}]{time,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}} $>$ const \&}]{parameter = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & The time when we are computing the force \\
+\hline
+\mbox{\texttt{ in}}  & {\em parameter} & Not needed for computing force \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_generic_force_af4acd2fd1156e7d4f90473bad776e8ed}{particls\+::\+Generic\+Force$<$ dim $>$}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classparticls_1_1_drag_force_a15f9ac6c069bf17b931b2c1904374bd1}{particls\+::\+Drag\+Force$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_generic_field_force_a056a31db273dd3430a66e11e240be62a}\label{classparticls_1_1_generic_field_force_a056a31db273dd3430a66e11e240be62a}} 
+\index{particls::GenericFieldForce$<$ dim $>$@{particls::GenericFieldForce$<$ dim $>$}!serialize@{serialize}}
+\index{serialize@{serialize}!particls::GenericFieldForce$<$ dim $>$@{particls::GenericFieldForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+template$<$class Archive $>$ \\
+void \mbox{\hyperlink{classparticls_1_1_generic_field_force}{particls\+::\+Generic\+Field\+Force}}$<$ dim $>$\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 66 of file Generic\+Field\+Force.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_generic_field_force_ae8de92503803234d2d4db6b2c5f1029d}\label{classparticls_1_1_generic_field_force_ae8de92503803234d2d4db6b2c5f1029d}} 
+\index{particls::GenericFieldForce$<$ dim $>$@{particls::GenericFieldForce$<$ dim $>$}!UpdateFieldVector@{UpdateFieldVector}}
+\index{UpdateFieldVector@{UpdateFieldVector}!particls::GenericFieldForce$<$ dim $>$@{particls::GenericFieldForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{UpdateFieldVector()}{UpdateFieldVector()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_generic_field_force}{particls\+::\+Generic\+Field\+Force}}$<$ dim $>$\+::Update\+Field\+Vector (\begin{DoxyParamCaption}\item[{double const}]{time,  }\item[{Eigen\+::\+Matrix$<$ double, dim, 1 $>$}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & The time when we are computing the force \\
+\hline
+\mbox{\texttt{ in}}  & {\em position} & Position where we want the field value \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_generic_field_force_ab2f44cbb59a08132f4c843e5225bba0e}\label{classparticls_1_1_generic_field_force_ab2f44cbb59a08132f4c843e5225bba0e}} 
+\index{particls::GenericFieldForce$<$ dim $>$@{particls::GenericFieldForce$<$ dim $>$}!cereal::access@{cereal::access}}
+\index{cereal::access@{cereal::access}!particls::GenericFieldForce$<$ dim $>$@{particls::GenericFieldForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{cereal::access}{cereal::access}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+friend class cereal\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 63 of file Generic\+Field\+Force.\+hpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticls_1_1_generic_field_force_a52aa09bf1fb9f78694e8735c93c4288e}\label{classparticls_1_1_generic_field_force_a52aa09bf1fb9f78694e8735c93c4288e}} 
+\index{particls::GenericFieldForce$<$ dim $>$@{particls::GenericFieldForce$<$ dim $>$}!field\_vector@{field\_vector}}
+\index{field\_vector@{field\_vector}!particls::GenericFieldForce$<$ dim $>$@{particls::GenericFieldForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{field\_vector}{field\_vector}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classparticls_1_1_generic_field_force}{particls\+::\+Generic\+Field\+Force}}$<$ dim $>$\+::field\+\_\+vector\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The member that stores the current field vector. 
+
+
+
+Definition at line 56 of file Generic\+Field\+Force.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_generic_field_force_af2eb78b659ff5a1b438d5169ba721a7e}\label{classparticls_1_1_generic_field_force_af2eb78b659ff5a1b438d5169ba721a7e}} 
+\index{particls::GenericFieldForce$<$ dim $>$@{particls::GenericFieldForce$<$ dim $>$}!force\_field@{force\_field}}
+\index{force\_field@{force\_field}!particls::GenericFieldForce$<$ dim $>$@{particls::GenericFieldForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{force\_field}{force\_field}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_generic_vector_field}{Generic\+Vector\+Field}}$<$dim$>$ $>$ \mbox{\hyperlink{classparticls_1_1_generic_field_force}{particls\+::\+Generic\+Field\+Force}}$<$ dim $>$\+::force\+\_\+field\hspace{0.3cm}{\ttfamily [protected]}}
+
+The vector field object that stores or computes the underlying field -\/ examples include uniform or interpolated vector fields 
+
+Definition at line 53 of file Generic\+Field\+Force.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_generic_field_force_8hpp}{Generic\+Field\+Force.\+hpp}}\end{DoxyCompactItemize}

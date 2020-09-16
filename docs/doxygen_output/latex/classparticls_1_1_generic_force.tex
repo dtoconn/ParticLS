@@ -1,0 +1,308 @@
+\hypertarget{classparticls_1_1_generic_force}{}\doxysection{particls\+::Generic\+Force$<$ dim $>$ Class Template Reference}
+\label{classparticls_1_1_generic_force}\index{particls::GenericForce$<$ dim $>$@{particls::GenericForce$<$ dim $>$}}
+
+
+{\ttfamily \#include $<$Generic\+Force.\+hpp$>$}
+
+
+
+Inheritance diagram for particls\+::Generic\+Force$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classparticls_1_1_generic_force__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force}{Generic\+Force}}$<$ dim $>$ $>$ $>$ \mbox{\hyperlink{classparticls_1_1_generic_force_a0a7c208e8b5880d0fe6141e43a65817d}{Force\+List}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_generic_force_ab206be64b1ea620b3102ca0f7c2e817b}{Generic\+Force}} ()
+\item 
+virtual \mbox{\hyperlink{classparticls_1_1_generic_force_a5e0b93f8779c267c38b8ac355dafbac6}{$\sim$\+Generic\+Force}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_generic_force_af4acd2fd1156e7d4f90473bad776e8ed}{Compute\+Force}} (double const time, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}} $>$ const \&parameter)=0
+\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}} $>$ \mbox{\hyperlink{classparticls_1_1_generic_force_a965cb4bd8af45c8b06a0d1f7148dba97}{Force\+Parameter}} (double const time) const
+\begin{DoxyCompactList}\small\item\em Compute time-\/dependent parameters required to compute the force acting on this particle. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_generic_force_a165305f3a73372f91454b98cb5a07b2d}{Zero\+Forces\+Moments}} ()
+\begin{DoxyCompactList}\small\item\em Zero out the forces and moment from this object. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$ dim $>$\+::velocity, 1 $>$ \mbox{\hyperlink{classparticls_1_1_generic_force_a1b3183ddbc89732c368581dbfba9a8b2}{Get\+Force}} () const
+\item 
+Eigen\+::\+Matrix$<$ double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$ dim $>$\+::velocity, 1 $>$ \& \mbox{\hyperlink{classparticls_1_1_generic_force_a3cc0f9da5e85a3e02e12401107723159}{Get\+Force}} ()
+\item 
+Eigen\+::\+Matrix$<$ double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_generic_force_a1f16616598331f20fb264d175f13c4fc}{moment}}, 1 $>$ \mbox{\hyperlink{classparticls_1_1_generic_force_a7060ddcceaad59bc4d4ed455dec2100b}{Get\+Moment}} () const
+\item 
+Eigen\+::\+Matrix$<$ double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_generic_force_a1f16616598331f20fb264d175f13c4fc}{moment}}, 1 $>$ \& \mbox{\hyperlink{classparticls_1_1_generic_force_a5f719162ff6ffe60173c426081b8b271}{Get\+Moment}} ()
+\item 
+std\+::string \mbox{\hyperlink{classparticls_1_1_generic_force_ab53cc26443a298b8bcbcad9b135e7049}{Force\+Name}} () const
+\item 
+std\+::string \& \mbox{\hyperlink{classparticls_1_1_generic_force_ac7d18e1caaf00cc5b7aeb2d5693f8cd3}{Force\+Name}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Eigen\+::\+Matrix$<$ double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_generic_force_a1f16616598331f20fb264d175f13c4fc}{moment}}, 1 $>$ \mbox{\hyperlink{classparticls_1_1_generic_force_a416af4caee8d489cefd3c34f9ece053d}{Cross\+Product}} (typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Position const \&moment\+\_\+arm, typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Position const \&\mbox{\hyperlink{classparticls_1_1_generic_force_a1c4cd5dc45569f1061b7fed055221481}{force}}) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Eigen\+::\+Matrix$<$ double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$ dim $>$\+::velocity, 1 $>$ \mbox{\hyperlink{classparticls_1_1_generic_force_a1c4cd5dc45569f1061b7fed055221481}{force}}
+\begin{DoxyCompactList}\small\item\em The force from this object. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$ dim $>$\+::moment, 1 $>$ \mbox{\hyperlink{classparticls_1_1_generic_force_a1f16616598331f20fb264d175f13c4fc}{moment}}
+\begin{DoxyCompactList}\small\item\em The moment from this object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classparticls_1_1_generic_force_a02a6973ae5a5592fcff8d8ff06fd01f0}{force\+Name}} = \char`\"{}Generic\+Force\char`\"{}
+\begin{DoxyCompactList}\small\item\em The name of this force. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classparticls_1_1_generic_force_a61c89d65deaa5b727987ef1c54dbdf8d}{serialize}} (Archive \&ar)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classparticls_1_1_generic_force_ab2f44cbb59a08132f4c843e5225bba0e}{cereal\+::access}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+class particls\+::\+Generic\+Force$<$ dim $>$}
+
+
+
+Definition at line 20 of file Generic\+Force.\+hpp.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classparticls_1_1_generic_force_a0a7c208e8b5880d0fe6141e43a65817d}\label{classparticls_1_1_generic_force_a0a7c208e8b5880d0fe6141e43a65817d}} 
+\index{particls::GenericForce$<$ dim $>$@{particls::GenericForce$<$ dim $>$}!ForceList@{ForceList}}
+\index{ForceList@{ForceList}!particls::GenericForce$<$ dim $>$@{particls::GenericForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ForceList}{ForceList}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+typedef std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_generic_force}{Generic\+Force}}$<$dim$>$ $>$ $>$ \mbox{\hyperlink{classparticls_1_1_generic_force}{particls\+::\+Generic\+Force}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_generic_force_a0a7c208e8b5880d0fe6141e43a65817d}{Force\+List}}}
+
+
+
+Definition at line 34 of file Generic\+Force.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_generic_force_ab206be64b1ea620b3102ca0f7c2e817b}\label{classparticls_1_1_generic_force_ab206be64b1ea620b3102ca0f7c2e817b}} 
+\index{particls::GenericForce$<$ dim $>$@{particls::GenericForce$<$ dim $>$}!GenericForce@{GenericForce}}
+\index{GenericForce@{GenericForce}!particls::GenericForce$<$ dim $>$@{particls::GenericForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{GenericForce()}{GenericForce()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_generic_force}{particls\+::\+Generic\+Force}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_generic_force}{Generic\+Force}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classparticls_1_1_generic_force_a5e0b93f8779c267c38b8ac355dafbac6}\label{classparticls_1_1_generic_force_a5e0b93f8779c267c38b8ac355dafbac6}} 
+\index{particls::GenericForce$<$ dim $>$@{particls::GenericForce$<$ dim $>$}!````~GenericForce@{$\sim$GenericForce}}
+\index{````~GenericForce@{$\sim$GenericForce}!particls::GenericForce$<$ dim $>$@{particls::GenericForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$GenericForce()}{~GenericForce()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual \mbox{\hyperlink{classparticls_1_1_generic_force}{particls\+::\+Generic\+Force}}$<$ dim $>$\+::$\sim$\mbox{\hyperlink{classparticls_1_1_generic_force}{Generic\+Force}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_generic_force_af4acd2fd1156e7d4f90473bad776e8ed}\label{classparticls_1_1_generic_force_af4acd2fd1156e7d4f90473bad776e8ed}} 
+\index{particls::GenericForce$<$ dim $>$@{particls::GenericForce$<$ dim $>$}!ComputeForce@{ComputeForce}}
+\index{ComputeForce@{ComputeForce}!particls::GenericForce$<$ dim $>$@{particls::GenericForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeForce()}{ComputeForce()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_generic_force}{particls\+::\+Generic\+Force}}$<$ dim $>$\+::Compute\+Force (\begin{DoxyParamCaption}\item[{double const}]{time,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}} $>$ const \&}]{parameter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Increments the force and moment vectors. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & The time when we are computing the force \\
+\hline
+\mbox{\texttt{ in}}  & {\em parameter} & Time-\/dependent parameters shared accross all forces of this type acting on a particle. These parameters have been percomputed for this time step \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classparticls_1_1_drag_force_a15f9ac6c069bf17b931b2c1904374bd1}{particls\+::\+Drag\+Force$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_generic_field_force_ad330c131608c266ad135692f35774380}{particls\+::\+Generic\+Field\+Force$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_uniform_acceleration_adc8a7ea59d69b00de0224a18433ac996}{particls\+::\+Uniform\+Acceleration$<$ dim $>$}}, \mbox{\hyperlink{classparticls_1_1_contact_force_a425f58aa3500bf2bfc50bf41b453329a}{particls\+::\+Contact\+Force$<$ dim $>$}}, and \mbox{\hyperlink{classparticls_1_1_symmetric_contact_force_a746797833aa47faaa42ea92781dda725}{particls\+::\+Symmetric\+Contact\+Force$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_generic_force_a416af4caee8d489cefd3c34f9ece053d}\label{classparticls_1_1_generic_force_a416af4caee8d489cefd3c34f9ece053d}} 
+\index{particls::GenericForce$<$ dim $>$@{particls::GenericForce$<$ dim $>$}!CrossProduct@{CrossProduct}}
+\index{CrossProduct@{CrossProduct}!particls::GenericForce$<$ dim $>$@{particls::GenericForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{CrossProduct()}{CrossProduct()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$dim$>$\+::\mbox{\hyperlink{classparticls_1_1_generic_force_a1f16616598331f20fb264d175f13c4fc}{moment}}, 1$>$ \mbox{\hyperlink{classparticls_1_1_generic_force}{particls\+::\+Generic\+Force}}$<$ dim $>$\+::Cross\+Product (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Position const \&}]{moment\+\_\+arm,  }\item[{typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Position const \&}]{force }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Computes the cross product (moment) between two vectors. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em moment\+\_\+arm} & Vector from the particle centroid to the contact point. \\
+\hline
+\mbox{\texttt{ in}}  & {\em force} & The force from contact acting at a point. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector output from the cross product calculation. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_generic_force_ac7d18e1caaf00cc5b7aeb2d5693f8cd3}\label{classparticls_1_1_generic_force_ac7d18e1caaf00cc5b7aeb2d5693f8cd3}} 
+\index{particls::GenericForce$<$ dim $>$@{particls::GenericForce$<$ dim $>$}!ForceName@{ForceName}}
+\index{ForceName@{ForceName}!particls::GenericForce$<$ dim $>$@{particls::GenericForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ForceName()}{ForceName()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::string\& \mbox{\hyperlink{classparticls_1_1_generic_force}{particls\+::\+Generic\+Force}}$<$ dim $>$\+::Force\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classparticls_1_1_generic_force_ab53cc26443a298b8bcbcad9b135e7049}\label{classparticls_1_1_generic_force_ab53cc26443a298b8bcbcad9b135e7049}} 
+\index{particls::GenericForce$<$ dim $>$@{particls::GenericForce$<$ dim $>$}!ForceName@{ForceName}}
+\index{ForceName@{ForceName}!particls::GenericForce$<$ dim $>$@{particls::GenericForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ForceName()}{ForceName()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::string \mbox{\hyperlink{classparticls_1_1_generic_force}{particls\+::\+Generic\+Force}}$<$ dim $>$\+::Force\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classparticls_1_1_generic_force_a965cb4bd8af45c8b06a0d1f7148dba97}\label{classparticls_1_1_generic_force_a965cb4bd8af45c8b06a0d1f7148dba97}} 
+\index{particls::GenericForce$<$ dim $>$@{particls::GenericForce$<$ dim $>$}!ForceParameter@{ForceParameter}}
+\index{ForceParameter@{ForceParameter}!particls::GenericForce$<$ dim $>$@{particls::GenericForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ForceParameter()}{ForceParameter()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}}$>$ \mbox{\hyperlink{classparticls_1_1_generic_force}{particls\+::\+Generic\+Force}}$<$ dim $>$\+::Force\+Parameter (\begin{DoxyParamCaption}\item[{double const}]{time }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Compute time-\/dependent parameters required to compute the force acting on this particle. 
+
+These parameters could also depend on the particle\textquotesingle{}s nearest neighbors. By default, return a null pointer. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & The current time \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The time-\/dependent parameters required by this force 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classparticls_1_1_peridynamic_force_a7a1bf9cbef7a625665d1f0d315d7bc6b}{particls\+::\+Peridynamic\+Force$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_generic_force_a3cc0f9da5e85a3e02e12401107723159}\label{classparticls_1_1_generic_force_a3cc0f9da5e85a3e02e12401107723159}} 
+\index{particls::GenericForce$<$ dim $>$@{particls::GenericForce$<$ dim $>$}!GetForce@{GetForce}}
+\index{GetForce@{GetForce}!particls::GenericForce$<$ dim $>$@{particls::GenericForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{GetForce()}{GetForce()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$dim$>$\+::velocity, 1$>$\& \mbox{\hyperlink{classparticls_1_1_generic_force}{particls\+::\+Generic\+Force}}$<$ dim $>$\+::Get\+Force (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classparticls_1_1_generic_force_a1b3183ddbc89732c368581dbfba9a8b2}\label{classparticls_1_1_generic_force_a1b3183ddbc89732c368581dbfba9a8b2}} 
+\index{particls::GenericForce$<$ dim $>$@{particls::GenericForce$<$ dim $>$}!GetForce@{GetForce}}
+\index{GetForce@{GetForce}!particls::GenericForce$<$ dim $>$@{particls::GenericForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{GetForce()}{GetForce()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$dim$>$\+::velocity, 1$>$ \mbox{\hyperlink{classparticls_1_1_generic_force}{particls\+::\+Generic\+Force}}$<$ dim $>$\+::Get\+Force (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classparticls_1_1_generic_force_a5f719162ff6ffe60173c426081b8b271}\label{classparticls_1_1_generic_force_a5f719162ff6ffe60173c426081b8b271}} 
+\index{particls::GenericForce$<$ dim $>$@{particls::GenericForce$<$ dim $>$}!GetMoment@{GetMoment}}
+\index{GetMoment@{GetMoment}!particls::GenericForce$<$ dim $>$@{particls::GenericForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{GetMoment()}{GetMoment()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$dim$>$\+::\mbox{\hyperlink{classparticls_1_1_generic_force_a1f16616598331f20fb264d175f13c4fc}{moment}}, 1$>$\& \mbox{\hyperlink{classparticls_1_1_generic_force}{particls\+::\+Generic\+Force}}$<$ dim $>$\+::Get\+Moment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classparticls_1_1_generic_force_a7060ddcceaad59bc4d4ed455dec2100b}\label{classparticls_1_1_generic_force_a7060ddcceaad59bc4d4ed455dec2100b}} 
+\index{particls::GenericForce$<$ dim $>$@{particls::GenericForce$<$ dim $>$}!GetMoment@{GetMoment}}
+\index{GetMoment@{GetMoment}!particls::GenericForce$<$ dim $>$@{particls::GenericForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{GetMoment()}{GetMoment()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$dim$>$\+::\mbox{\hyperlink{classparticls_1_1_generic_force_a1f16616598331f20fb264d175f13c4fc}{moment}}, 1$>$ \mbox{\hyperlink{classparticls_1_1_generic_force}{particls\+::\+Generic\+Force}}$<$ dim $>$\+::Get\+Moment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classparticls_1_1_generic_force_a61c89d65deaa5b727987ef1c54dbdf8d}\label{classparticls_1_1_generic_force_a61c89d65deaa5b727987ef1c54dbdf8d}} 
+\index{particls::GenericForce$<$ dim $>$@{particls::GenericForce$<$ dim $>$}!serialize@{serialize}}
+\index{serialize@{serialize}!particls::GenericForce$<$ dim $>$@{particls::GenericForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+template$<$class Archive $>$ \\
+void \mbox{\hyperlink{classparticls_1_1_generic_force}{particls\+::\+Generic\+Force}}$<$ dim $>$\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 83 of file Generic\+Force.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_generic_force_a165305f3a73372f91454b98cb5a07b2d}\label{classparticls_1_1_generic_force_a165305f3a73372f91454b98cb5a07b2d}} 
+\index{particls::GenericForce$<$ dim $>$@{particls::GenericForce$<$ dim $>$}!ZeroForcesMoments@{ZeroForcesMoments}}
+\index{ZeroForcesMoments@{ZeroForcesMoments}!particls::GenericForce$<$ dim $>$@{particls::GenericForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ZeroForcesMoments()}{ZeroForcesMoments()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_generic_force}{particls\+::\+Generic\+Force}}$<$ dim $>$\+::Zero\+Forces\+Moments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Zero out the forces and moment from this object. 
+
+
+
+Reimplemented in \mbox{\hyperlink{classparticls_1_1_contact_force_a3fa3511f6a7898e2cb8970e716630e6e}{particls\+::\+Contact\+Force$<$ dim $>$}}, and \mbox{\hyperlink{classparticls_1_1_cohesive_beam_a64ab25f4cdcf4204227a82bbba16f5c2}{particls\+::\+Cohesive\+Beam$<$ dim $>$}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_generic_force_ab2f44cbb59a08132f4c843e5225bba0e}\label{classparticls_1_1_generic_force_ab2f44cbb59a08132f4c843e5225bba0e}} 
+\index{particls::GenericForce$<$ dim $>$@{particls::GenericForce$<$ dim $>$}!cereal::access@{cereal::access}}
+\index{cereal::access@{cereal::access}!particls::GenericForce$<$ dim $>$@{particls::GenericForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{cereal::access}{cereal::access}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+friend class cereal\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 80 of file Generic\+Force.\+hpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticls_1_1_generic_force_a1c4cd5dc45569f1061b7fed055221481}\label{classparticls_1_1_generic_force_a1c4cd5dc45569f1061b7fed055221481}} 
+\index{particls::GenericForce$<$ dim $>$@{particls::GenericForce$<$ dim $>$}!force@{force}}
+\index{force@{force}!particls::GenericForce$<$ dim $>$@{particls::GenericForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{force}{force}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$dim$>$\+::velocity, 1$>$ \mbox{\hyperlink{classparticls_1_1_generic_force}{particls\+::\+Generic\+Force}}$<$ dim $>$\+::force\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The force from this object. 
+
+
+
+Definition at line 70 of file Generic\+Force.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_generic_force_a02a6973ae5a5592fcff8d8ff06fd01f0}\label{classparticls_1_1_generic_force_a02a6973ae5a5592fcff8d8ff06fd01f0}} 
+\index{particls::GenericForce$<$ dim $>$@{particls::GenericForce$<$ dim $>$}!forceName@{forceName}}
+\index{forceName@{forceName}!particls::GenericForce$<$ dim $>$@{particls::GenericForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{forceName}{forceName}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::string \mbox{\hyperlink{classparticls_1_1_generic_force}{particls\+::\+Generic\+Force}}$<$ dim $>$\+::force\+Name = \char`\"{}Generic\+Force\char`\"{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The name of this force. 
+
+
+
+Definition at line 76 of file Generic\+Force.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_generic_force_a1f16616598331f20fb264d175f13c4fc}\label{classparticls_1_1_generic_force_a1f16616598331f20fb264d175f13c4fc}} 
+\index{particls::GenericForce$<$ dim $>$@{particls::GenericForce$<$ dim $>$}!moment@{moment}}
+\index{moment@{moment}!particls::GenericForce$<$ dim $>$@{particls::GenericForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{moment}{moment}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$dim$>$\+::moment, 1$>$ \mbox{\hyperlink{classparticls_1_1_generic_force}{particls\+::\+Generic\+Force}}$<$ dim $>$\+::moment\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The moment from this object. 
+
+
+
+Definition at line 73 of file Generic\+Force.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_generic_force_8hpp}{Generic\+Force.\+hpp}}\end{DoxyCompactItemize}

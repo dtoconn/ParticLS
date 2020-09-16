@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classparticls_1_1_distribution.html" title="Base class for distributions." alt="" coords="5,31,144,57"/>
+<area shape="rect" id="node2" href="$classparticls_1_1_scalar_distribution.html" title="Base class for distributions that return real&#45;valued scalar random numbers." alt="" coords="192,31,367,57"/>
+<area shape="rect" id="node3" href="$classparticls_1_1_log_normal_distribution.html" title=" " alt="" coords="415,5,616,32"/>
+<area shape="rect" id="node4" href="$classparticls_1_1_normal_distribution.html" title="Generates samples that follow a normal distribution." alt="" coords="425,56,605,83"/>
+</map>

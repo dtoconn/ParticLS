@@ -1,0 +1,820 @@
+\hypertarget{classparticls_1_1_cohesive_beam}{}\doxysection{particls\+::Cohesive\+Beam$<$ dim $>$ Class Template Reference}
+\label{classparticls_1_1_cohesive_beam}\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+
+
+Cohesive beam model for adhesive contact.  
+
+
+
+
+{\ttfamily \#include $<$Cohesive\+Beam.\+hpp$>$}
+
+
+
+Inheritance diagram for particls\+::Cohesive\+Beam$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classparticls_1_1_cohesive_beam__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for particls\+::Cohesive\+Beam$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classparticls_1_1_cohesive_beam__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structparticls_1_1_cohesive_beam_1_1_deformation}{Deformation}}
+\begin{DoxyCompactList}\small\item\em This object describes the amount of deformation (compression, tension, bending, torsion) on the beam. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_cohesive_beam_a66b6d02eb8e67fe403ade01450c2cdce}{Cohesive\+Beam}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part1, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part2, Y\+A\+M\+L\+::\+Node const \&options)
+\item 
+\mbox{\hyperlink{classparticls_1_1_cohesive_beam_ab25a687c78ac08cb5504af171e593652}{Cohesive\+Beam}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part1, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part2, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&neighbors, Y\+A\+M\+L\+::\+Node const \&options)
+\item 
+virtual \mbox{\hyperlink{classparticls_1_1_cohesive_beam_aad564955d3792138b84bafea6c4690b2}{$\sim$\+Cohesive\+Beam}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_cohesive_beam_a9bd5f9fc24c360827604a3876367731c}{Compute\+Contact\+Force}} (double const time, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}} $>$ const \&parameter=nullptr) override
+\item 
+virtual bool \mbox{\hyperlink{classparticls_1_1_cohesive_beam_ad4ef759fdaf4545303cc2b28f2344d03}{Removeable}} () const override
+\begin{DoxyCompactList}\small\item\em Can this contact force be removed? \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_cohesive_beam_a64ab25f4cdcf4204227a82bbba16f5c2}{Zero\+Forces\+Moments}} () override
+\begin{DoxyCompactList}\small\item\em Zero out the forces and moment from this object. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}}$<$ dim $>$ $>$ \mbox{\hyperlink{classparticls_1_1_cohesive_beam_afef56684f933727a933b01518b68316c}{Non\+Bonded\+Contact\+Law}} () const
+\begin{DoxyCompactList}\small\item\em Contact law used when particles are not bonded -\/ still integrated in time when inactive. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classparticls_1_1_cohesive_beam_aea2d7c11e0ab55831f5e9fe6a705e175}{Create\+Non\+Bonded}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part1, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part2, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&neighbors, Y\+A\+M\+L\+::\+Node const \&options)
+\begin{DoxyCompactList}\small\item\em Create the nonbonded contact law. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_cohesive_beam_a8fdf4ddf7916426b79c092738ba0e480}{Update\+Coefficients}} ()
+\begin{DoxyCompactList}\small\item\em Update the parameters of the force and moment matrices. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structparticls_1_1_cohesive_beam_1_1_deformation}{Deformation}} $>$ \mbox{\hyperlink{classparticls_1_1_cohesive_beam_aa3fdbae3295af6e81e10c36094304e3a}{Compute\+Beam\+Force}} (Eigen\+::\+Ref$<$ Eigen\+::\+Matrix$<$ double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$ dim $>$\+::velocity, 1 $>$ $>$ \mbox{\hyperlink{classparticls_1_1_generic_force_a1c4cd5dc45569f1061b7fed055221481}{force}}, Eigen\+::\+Ref$<$ Eigen\+::\+Matrix$<$ double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_generic_force_a1f16616598331f20fb264d175f13c4fc}{moment}}, 1 $>$ $>$ \mbox{\hyperlink{classparticls_1_1_generic_force_a1f16616598331f20fb264d175f13c4fc}{moment}}) const
+\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_cohesive_beam_a2e6566fd12235af7060fe2c0974fb053}{Compute\+Non\+Beam\+Force}} (double const time)
+\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_cohesive_beam_ac3e8baf7bbd5967c00cdfcb7993f2f13}{Create\+Bond}} (double const max\+Distance, double const max\+Relative\+Velocity)
+\begin{DoxyCompactList}\small\item\em Determine if we want to create the beam. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_cohesive_beam_a118fba48e71b9d7c001df6d031eb1332}{Destroy\+Bond}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{Cohesive\+Beam}}$<$ dim $>$\+::\mbox{\hyperlink{structparticls_1_1_cohesive_beam_1_1_deformation}{Deformation}} $>$ const \&deformation)
+\begin{DoxyCompactList}\small\item\em Determine if we want to destroy the beam. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classparticls_1_1_cohesive_beam_afc11ddd6143f853e7a875870c86a6950}{Strain\+Failure}} (double const dl) const
+\begin{DoxyCompactList}\small\item\em Determine if the bond failed due to strain failure. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classparticls_1_1_cohesive_beam_ae44e5e22fbfb0731b075eab4e646fa49}{Bending\+Failure}} (double const theta) const
+\begin{DoxyCompactList}\small\item\em Determine if the bond failed due to bending. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classparticls_1_1_cohesive_beam_a454cec119bcc024c9579af2d49113fad}{Torsion\+Failure}} (double const theta) const
+\begin{DoxyCompactList}\small\item\em Determine if the bond failed due to torsion. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_cohesive_beam_a528966830cd5cdf81a28f38997c3d6a1}{Reference\+Frame}} (typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Orientation const \&home\+\_\+angle, Eigen\+::\+Ref$<$ Eigen\+::\+Matrix$<$ double, dim, dim $>$ $>$ frame) const
+\begin{DoxyCompactList}\small\item\em Compute reference vectors. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Orientation \mbox{\hyperlink{classparticls_1_1_cohesive_beam_a9a64eebe0ec128abd60cf0ad13f7fd7a}{Particle\+Reference\+Angle}} (typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Position const \&Xref, typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Orientation const \&home\+\_\+angle) const
+\begin{DoxyCompactList}\small\item\em Compute the angles between the particle frame axis and the referance coordinates. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_cohesive_beam_a1931807422669b6a1add8e6ab2b98140}{Rotate\+To\+Beam\+Ref\+Frame}} ()
+\item 
+void \mbox{\hyperlink{classparticls_1_1_cohesive_beam_a2a2b21169c5d4f9cba98e69a3e3159ec}{Beam\+Frame\+Forces\+Moments}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{Cohesive\+Beam}}$<$ dim $>$\+::\mbox{\hyperlink{structparticls_1_1_cohesive_beam_1_1_deformation}{Deformation}} $>$ const \&deformation, Eigen\+::\+Ref$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ bf\+\_\+force, Eigen\+::\+Ref$<$ Eigen\+::\+Matrix$<$ double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_generic_force_a1f16616598331f20fb264d175f13c4fc}{moment}}, 1 $>$ $>$ bf\+\_\+moment)
+\item 
+void \mbox{\hyperlink{classparticls_1_1_cohesive_beam_af8c1c769f04d0f80da20eeb969adddbe}{Beam\+Failure\+Initialization}} (Y\+A\+M\+L\+::\+Node const \&options)
+\begin{DoxyCompactList}\small\item\em Initialize the failure parameters of the cohesive beam. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_cohesive_beam_a443a7b9653d2197be646e30088810d32}{Strain\+Based\+Failure}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{Cohesive\+Beam}}$<$ dim $>$\+::\mbox{\hyperlink{structparticls_1_1_cohesive_beam_1_1_deformation}{Deformation}} $>$ const \&deformation)
+\begin{DoxyCompactList}\small\item\em Checking the failure of the beam with the strain-\/based model. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_cohesive_beam_a8b5f7f9841b075f153c66aee9995625c}{Stress\+Based\+Failure}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{Cohesive\+Beam}}$<$ dim $>$\+::\mbox{\hyperlink{structparticls_1_1_cohesive_beam_1_1_deformation}{Deformation}} $>$ const \&deformation)
+\begin{DoxyCompactList}\small\item\em Checking the failure of the beam with the stress-\/based model. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_cohesive_beam_a83d5e0a352a721ffe919be2d869a25ff}{Initial\+Particle\+Reference\+Angles}} (typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Position const \&Xref, typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Orientation const \&home\+\_\+orientation, typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Orientation const \&neigh\+\_\+orientation)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const double \mbox{\hyperlink{classparticls_1_1_cohesive_beam_a5bc46d119adf7c3db72dbdb8137611d5}{beam\+Radius}}
+\begin{DoxyCompactList}\small\item\em The radius of the beam. \end{DoxyCompactList}\item 
+const double \mbox{\hyperlink{classparticls_1_1_cohesive_beam_ab888ba68a197e59c980b786290a60778}{youngs}}
+\begin{DoxyCompactList}\small\item\em Young\textquotesingle{}s modulus of the beam. \end{DoxyCompactList}\item 
+const double \mbox{\hyperlink{classparticls_1_1_cohesive_beam_a43d0d6c7dd61b71a3d9f623f748083cf}{poisson}}
+\begin{DoxyCompactList}\small\item\em Poisson\textquotesingle{}s ratio for the beam. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_cohesive_beam_a5f6caf5a93e6719010b7f528dcc93881}{tension\+\_\+threshold}}
+\begin{DoxyCompactList}\small\item\em Threshold for tension failure. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_cohesive_beam_a7bbdefcdd9a541b032e21329700a62af}{damping\+\_\+ratio}}
+\begin{DoxyCompactList}\small\item\em Critical damping ratio (defaults to 0) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_cohesive_beam_aead500113437f1e71bfdc4c3debf23a5}{c\+\_\+normal}} = 0
+\begin{DoxyCompactList}\small\item\em Normal damping coefficient. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_cohesive_beam_a9b97fb592524225ae20a7eea26f1cf54}{c\+\_\+shear}} = 0
+\begin{DoxyCompactList}\small\item\em Shear damping coefficient. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_cohesive_beam_a18ac703d63bd8578f7b2e56a563c68ac}{c\+\_\+torsion}} = 0
+\begin{DoxyCompactList}\small\item\em Torsion damping coefficient. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_cohesive_beam_af9995e799f40ca8846a5302ea67ce397}{compression\+\_\+threshold}}
+\begin{DoxyCompactList}\small\item\em Threshold for compression failure. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_cohesive_beam_a240528e8d23770e5b529dae8d5eaf25d}{bending\+\_\+threshold}}
+\begin{DoxyCompactList}\small\item\em Threshold for bending failure. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_cohesive_beam_ae9e6b5fa8db1423fe4b5c144da770114}{torsion\+\_\+threshold}}
+\begin{DoxyCompactList}\small\item\em Threshold for torsion failure. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}}$<$ dim $>$ $>$ \mbox{\hyperlink{classparticls_1_1_cohesive_beam_a683e61d7712edaa2bdb9f7e3678d7577}{nonbonded\+Law}}
+\begin{DoxyCompactList}\small\item\em The non-\/bonded contact law. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Orientation \mbox{\hyperlink{classparticls_1_1_cohesive_beam_ab35a17bf399b1ed0984a149da53b4e1e}{part1\+\_\+orientation0}}
+\begin{DoxyCompactList}\small\item\em Initial orientation for particle 1. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Orientation \mbox{\hyperlink{classparticls_1_1_cohesive_beam_a6eefc7a8555d422b5c1068f43cd0fb0d}{part2\+\_\+orientation0}}
+\begin{DoxyCompactList}\small\item\em Initial orientation for particle 2. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_cohesive_beam_adf763d294585f1ac7a3cce6ff480544a}{initial\+\_\+length}}
+\begin{DoxyCompactList}\small\item\em Initial length of cohesive beam. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classparticls_1_1_cohesive_beam_a64c89f1b459ddbb90622d5e6fd0a7daa}{bond\+\_\+failure\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em Beam failure type, e.\+g. stress or strain -\/based. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_cohesive_beam_ac3076e061d60a38862ae4d4ae63455e3}{failure\+\_\+stress}}
+\begin{DoxyCompactList}\small\item\em Stress-\/based faiure criterion. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_cohesive_beam_a027f66c4c74c5887d2ec301783237b37}{force\+Mat}}
+\begin{DoxyCompactList}\small\item\em A diagonal matrix to compute the forces. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_generic_force_a1f16616598331f20fb264d175f13c4fc}{moment}}, 1 $>$ \mbox{\hyperlink{classparticls_1_1_cohesive_beam_a1e9032529e48439d1b215682305d45c4}{moment\+Mat}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+class particls\+::\+Cohesive\+Beam$<$ dim $>$}
+
+Cohesive beam model for adhesive contact. 
+
+The cohesive beam model constructs a linear elastic Euler-\/\+Bernoulli beam between particle pairs to approximate the behavior of a continuous material. 
+
+Definition at line 19 of file Cohesive\+Beam.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_a66b6d02eb8e67fe403ade01450c2cdce}\label{classparticls_1_1_cohesive_beam_a66b6d02eb8e67fe403ade01450c2cdce}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!CohesiveBeam@{CohesiveBeam}}
+\index{CohesiveBeam@{CohesiveBeam}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{CohesiveBeam()}{CohesiveBeam()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_cohesive_beam}{Cohesive\+Beam}} (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part1,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part2,  }\item[{Y\+A\+M\+L\+::\+Node const \&}]{options }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em part1} & Home particle in the beam pair \\
+\hline
+\mbox{\texttt{ in}}  & {\em part2} & Neighbor particle in the beam pair \\
+\hline
+\mbox{\texttt{ in}}  & {\em options} & Cohesive beam model parameters \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_ab25a687c78ac08cb5504af171e593652}\label{classparticls_1_1_cohesive_beam_ab25a687c78ac08cb5504af171e593652}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!CohesiveBeam@{CohesiveBeam}}
+\index{CohesiveBeam@{CohesiveBeam}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{CohesiveBeam()}{CohesiveBeam()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_cohesive_beam}{Cohesive\+Beam}} (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part1,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part2,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&}]{neighbors,  }\item[{Y\+A\+M\+L\+::\+Node const \&}]{options }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em part1} & Home particle in the beam pair \\
+\hline
+\mbox{\texttt{ in}}  & {\em part2} & Neighbor particle in the beam pair \\
+\hline
+\mbox{\texttt{ in}}  & {\em neighbors} & The nearest neighbors of the first particle (part1) \\
+\hline
+\mbox{\texttt{ in}}  & {\em options} & Cohesive beam model parameters \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_aad564955d3792138b84bafea6c4690b2}\label{classparticls_1_1_cohesive_beam_aad564955d3792138b84bafea6c4690b2}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!````~CohesiveBeam@{$\sim$CohesiveBeam}}
+\index{````~CohesiveBeam@{$\sim$CohesiveBeam}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$CohesiveBeam()}{~CohesiveBeam()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::$\sim$\mbox{\hyperlink{classparticls_1_1_cohesive_beam}{Cohesive\+Beam}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_af8c1c769f04d0f80da20eeb969adddbe}\label{classparticls_1_1_cohesive_beam_af8c1c769f04d0f80da20eeb969adddbe}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!BeamFailureInitialization@{BeamFailureInitialization}}
+\index{BeamFailureInitialization@{BeamFailureInitialization}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{BeamFailureInitialization()}{BeamFailureInitialization()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::Beam\+Failure\+Initialization (\begin{DoxyParamCaption}\item[{Y\+A\+M\+L\+::\+Node const \&}]{options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Initialize the failure parameters of the cohesive beam. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em options} & Beam Y\+A\+ML options \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_a2a2b21169c5d4f9cba98e69a3e3159ec}\label{classparticls_1_1_cohesive_beam_a2a2b21169c5d4f9cba98e69a3e3159ec}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!BeamFrameForcesMoments@{BeamFrameForcesMoments}}
+\index{BeamFrameForcesMoments@{BeamFrameForcesMoments}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{BeamFrameForcesMoments()}{BeamFrameForcesMoments()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::Beam\+Frame\+Forces\+Moments (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{Cohesive\+Beam}}$<$ dim $>$\+::\mbox{\hyperlink{structparticls_1_1_cohesive_beam_1_1_deformation}{Deformation}} $>$ const \&}]{deformation,  }\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$}]{bf\+\_\+force,  }\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Matrix$<$ double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_generic_force_a1f16616598331f20fb264d175f13c4fc}{moment}}, 1 $>$ $>$}]{bf\+\_\+moment }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em deformation} & Current state of the beam deformation \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_ae44e5e22fbfb0731b075eab4e646fa49}\label{classparticls_1_1_cohesive_beam_ae44e5e22fbfb0731b075eab4e646fa49}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!BendingFailure@{BendingFailure}}
+\index{BendingFailure@{BendingFailure}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{BendingFailure()}{BendingFailure()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+bool \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::Bending\+Failure (\begin{DoxyParamCaption}\item[{double const}]{theta }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Determine if the bond failed due to bending. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em theta} & The maximum amount of bending on the beam \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True\+: the beam failed due to bending, False\+: the beam did not fail due to bending 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_aa3fdbae3295af6e81e10c36094304e3a}\label{classparticls_1_1_cohesive_beam_aa3fdbae3295af6e81e10c36094304e3a}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!ComputeBeamForce@{ComputeBeamForce}}
+\index{ComputeBeamForce@{ComputeBeamForce}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeBeamForce()}{ComputeBeamForce()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structparticls_1_1_cohesive_beam_1_1_deformation}{Deformation}}$>$ \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::Compute\+Beam\+Force (\begin{DoxyParamCaption}\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Matrix$<$ double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$ dim $>$\+::velocity, 1 $>$ $>$}]{force,  }\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Matrix$<$ double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_generic_force_a1f16616598331f20fb264d175f13c4fc}{moment}}, 1 $>$ $>$}]{moment }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Computes the elastic beam forces and moments between two particles. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em force} & Vector of the current forces acting on the home particle. \\
+\hline
+\mbox{\texttt{ in}}  & {\em moment} & Vector of the current moments acting on the particle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An object describing the deformation of the beam 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_a9bd5f9fc24c360827604a3876367731c}\label{classparticls_1_1_cohesive_beam_a9bd5f9fc24c360827604a3876367731c}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!ComputeContactForce@{ComputeContactForce}}
+\index{ComputeContactForce@{ComputeContactForce}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeContactForce()}{ComputeContactForce()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::Compute\+Contact\+Force (\begin{DoxyParamCaption}\item[{double const}]{time,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}} $>$ const \&}]{parameter = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Increments the force and moment vectors. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & The time when we are computing the force \\
+\hline
+\mbox{\texttt{ in}}  & {\em parameter} & Not needed for cohesive beam \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_contact_force_a49937350b2ecdd8897f7d2c91567d7fa}{particls\+::\+Contact\+Force$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_a2e6566fd12235af7060fe2c0974fb053}\label{classparticls_1_1_cohesive_beam_a2e6566fd12235af7060fe2c0974fb053}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!ComputeNonBeamForce@{ComputeNonBeamForce}}
+\index{ComputeNonBeamForce@{ComputeNonBeamForce}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeNonBeamForce()}{ComputeNonBeamForce()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::Compute\+Non\+Beam\+Force (\begin{DoxyParamCaption}\item[{double const}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+Computes the forces and moments between two particles if there is no beam present. This does nothing by default but can be overloaded if no beam implies some other kind of force. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & The current simulation time. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_ac3e8baf7bbd5967c00cdfcb7993f2f13}\label{classparticls_1_1_cohesive_beam_ac3e8baf7bbd5967c00cdfcb7993f2f13}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!CreateBond@{CreateBond}}
+\index{CreateBond@{CreateBond}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{CreateBond()}{CreateBond()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::Create\+Bond (\begin{DoxyParamCaption}\item[{double const}]{max\+Distance,  }\item[{double const}]{max\+Relative\+Velocity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Determine if we want to create the beam. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em max\+Distance} & The maximum distance between particles for a beam to be created \\
+\hline
+\mbox{\texttt{ in}}  & {\em max\+Relative\+Velocity} & The maximum relative velocity between particles for a beam to be created \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_aea2d7c11e0ab55831f5e9fe6a705e175}\label{classparticls_1_1_cohesive_beam_aea2d7c11e0ab55831f5e9fe6a705e175}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!CreateNonBonded@{CreateNonBonded}}
+\index{CreateNonBonded@{CreateNonBonded}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{CreateNonBonded()}{CreateNonBonded()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::Create\+Non\+Bonded (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part1,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part2,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&}]{neighbors,  }\item[{Y\+A\+M\+L\+::\+Node const \&}]{options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create the nonbonded contact law. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em part1} & The force is acting on this particle \\
+\hline
+\mbox{\texttt{ in}}  & {\em part2} & The force on part1 is due to this particle \\
+\hline
+\mbox{\texttt{ in}}  & {\em neighbors} & All of the nearest neighbors to part1 (including part2) \\
+\hline
+\mbox{\texttt{ in}}  & {\em options} & All of the options required to construct the non-\/contact force \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_a118fba48e71b9d7c001df6d031eb1332}\label{classparticls_1_1_cohesive_beam_a118fba48e71b9d7c001df6d031eb1332}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!DestroyBond@{DestroyBond}}
+\index{DestroyBond@{DestroyBond}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{DestroyBond()}{DestroyBond()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::Destroy\+Bond (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{Cohesive\+Beam}}$<$ dim $>$\+::\mbox{\hyperlink{structparticls_1_1_cohesive_beam_1_1_deformation}{Deformation}} $>$ const \&}]{deformation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Determine if we want to destroy the beam. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em deformation} & The amount that the beam has been stretched/compressed ( $\Delta l$), the amount that the beam as been bent (in 3D, return the maximum bending normal to the beam), and the torsion (3D only) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_a83d5e0a352a721ffe919be2d869a25ff}\label{classparticls_1_1_cohesive_beam_a83d5e0a352a721ffe919be2d869a25ff}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!InitialParticleReferenceAngles@{InitialParticleReferenceAngles}}
+\index{InitialParticleReferenceAngles@{InitialParticleReferenceAngles}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{InitialParticleReferenceAngles()}{InitialParticleReferenceAngles()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::Initial\+Particle\+Reference\+Angles (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Position const \&}]{Xref,  }\item[{typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Orientation const \&}]{home\+\_\+orientation,  }\item[{typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Orientation const \&}]{neigh\+\_\+orientation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Calculates the angles (quaternions) that rotate the home and neighbor particle into the intial beam frame 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Xref} & Initial vector that points from home to neighbor \\
+\hline
+\mbox{\texttt{ in}}  & {\em home\+\_\+orientation} & Current orietation of the home particle \\
+\hline
+\mbox{\texttt{ in}}  & {\em neigh\+\_\+orientation} & Current orientation of the neighbor particle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_afef56684f933727a933b01518b68316c}\label{classparticls_1_1_cohesive_beam_afef56684f933727a933b01518b68316c}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!NonBondedContactLaw@{NonBondedContactLaw}}
+\index{NonBondedContactLaw@{NonBondedContactLaw}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{NonBondedContactLaw()}{NonBondedContactLaw()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}}$<$dim$>$ $>$ \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::Non\+Bonded\+Contact\+Law (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Contact law used when particles are not bonded -\/ still integrated in time when inactive. 
+
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_a9a64eebe0ec128abd60cf0ad13f7fd7a}\label{classparticls_1_1_cohesive_beam_a9a64eebe0ec128abd60cf0ad13f7fd7a}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!ParticleReferenceAngle@{ParticleReferenceAngle}}
+\index{ParticleReferenceAngle@{ParticleReferenceAngle}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ParticleReferenceAngle()}{ParticleReferenceAngle()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$dim$>$\+::Orientation \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::Particle\+Reference\+Angle (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Position const \&}]{Xref,  }\item[{typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Orientation const \&}]{home\+\_\+angle }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Compute the angles between the particle frame axis and the referance coordinates. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Xref} & The vector pointing from the input particle to other particle \\
+\hline
+\mbox{\texttt{ in}}  & {\em orientation} & The rotation into the particle\textquotesingle{}s current orientation (relative to the bond) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The orientation between the particle and the vector pointing from particle 1 to particle 2 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_a528966830cd5cdf81a28f38997c3d6a1}\label{classparticls_1_1_cohesive_beam_a528966830cd5cdf81a28f38997c3d6a1}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!ReferenceFrame@{ReferenceFrame}}
+\index{ReferenceFrame@{ReferenceFrame}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ReferenceFrame()}{ReferenceFrame()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::Reference\+Frame (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Orientation const \&}]{home\+\_\+angle,  }\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Matrix$<$ double, dim, dim $>$ $>$}]{frame }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Compute reference vectors. 
+
+Compute the reference frame\+: $[X, Y, Z]$, where \$X\$ points from particle 1 to particle 2 (home to neighbor), and $Y$ and $Z$ are orthogonal (in 2D there is no $Z$). 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em home\+\_\+angle} & The rotation of the home particle relative to the bond from particle 1 to 2 \\
+\hline
+\mbox{\texttt{ out}}  & {\em frame} & The reference frame \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The distance between the two positions (bond length) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_ad4ef759fdaf4545303cc2b28f2344d03}\label{classparticls_1_1_cohesive_beam_ad4ef759fdaf4545303cc2b28f2344d03}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!Removeable@{Removeable}}
+\index{Removeable@{Removeable}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Removeable()}{Removeable()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual bool \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::Removeable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Can this contact force be removed? 
+
+Cohesive beams can only be destroyed if they are not bonded. \begin{DoxyReturn}{Returns}
+True\+: A bond exists, False\+: A bond does not exist. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classparticls_1_1_contact_force_a4108877b0815fa65d2eddc6982271068}{particls\+::\+Contact\+Force$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_a1931807422669b6a1add8e6ab2b98140}\label{classparticls_1_1_cohesive_beam_a1931807422669b6a1add8e6ab2b98140}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!RotateToBeamRefFrame@{RotateToBeamRefFrame}}
+\index{RotateToBeamRefFrame@{RotateToBeamRefFrame}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{RotateToBeamRefFrame()}{RotateToBeamRefFrame()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::Rotate\+To\+Beam\+Ref\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Initializes parameters of the cohesive beam. Defines rotation from constructed beam state to reference beam configuration. \mbox{\Hypertarget{classparticls_1_1_cohesive_beam_a443a7b9653d2197be646e30088810d32}\label{classparticls_1_1_cohesive_beam_a443a7b9653d2197be646e30088810d32}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!StrainBasedFailure@{StrainBasedFailure}}
+\index{StrainBasedFailure@{StrainBasedFailure}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{StrainBasedFailure()}{StrainBasedFailure()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::Strain\+Based\+Failure (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{Cohesive\+Beam}}$<$ dim $>$\+::\mbox{\hyperlink{structparticls_1_1_cohesive_beam_1_1_deformation}{Deformation}} $>$ const \&}]{deformation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Checking the failure of the beam with the strain-\/based model. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em deformation} & Current state of the beam deformation \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_afc11ddd6143f853e7a875870c86a6950}\label{classparticls_1_1_cohesive_beam_afc11ddd6143f853e7a875870c86a6950}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!StrainFailure@{StrainFailure}}
+\index{StrainFailure@{StrainFailure}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{StrainFailure()}{StrainFailure()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+bool \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::Strain\+Failure (\begin{DoxyParamCaption}\item[{double const}]{dl }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Determine if the bond failed due to strain failure. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em dl} & The amount that the beam as been stretched (positive) or compressed (negative) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True\+: the beam failed due to strain failure, False\+: the beam did not fail due to strain failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_a8b5f7f9841b075f153c66aee9995625c}\label{classparticls_1_1_cohesive_beam_a8b5f7f9841b075f153c66aee9995625c}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!StressBasedFailure@{StressBasedFailure}}
+\index{StressBasedFailure@{StressBasedFailure}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{StressBasedFailure()}{StressBasedFailure()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::Stress\+Based\+Failure (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{Cohesive\+Beam}}$<$ dim $>$\+::\mbox{\hyperlink{structparticls_1_1_cohesive_beam_1_1_deformation}{Deformation}} $>$ const \&}]{deformation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Checking the failure of the beam with the stress-\/based model. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em deformation} & Current state of the beam deformation \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_a454cec119bcc024c9579af2d49113fad}\label{classparticls_1_1_cohesive_beam_a454cec119bcc024c9579af2d49113fad}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!TorsionFailure@{TorsionFailure}}
+\index{TorsionFailure@{TorsionFailure}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{TorsionFailure()}{TorsionFailure()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+bool \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::Torsion\+Failure (\begin{DoxyParamCaption}\item[{double const}]{theta }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Determine if the bond failed due to torsion. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em theta} & The maximum amount of torsion on the beam \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True\+: the beam failed due to torsion, False\+: the beam did not fail due to torsion 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_a8fdf4ddf7916426b79c092738ba0e480}\label{classparticls_1_1_cohesive_beam_a8fdf4ddf7916426b79c092738ba0e480}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!UpdateCoefficients@{UpdateCoefficients}}
+\index{UpdateCoefficients@{UpdateCoefficients}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{UpdateCoefficients()}{UpdateCoefficients()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::Update\+Coefficients (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Update the parameters of the force and moment matrices. 
+
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_a64ab25f4cdcf4204227a82bbba16f5c2}\label{classparticls_1_1_cohesive_beam_a64ab25f4cdcf4204227a82bbba16f5c2}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!ZeroForcesMoments@{ZeroForcesMoments}}
+\index{ZeroForcesMoments@{ZeroForcesMoments}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ZeroForcesMoments()}{ZeroForcesMoments()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::Zero\+Forces\+Moments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Zero out the forces and moment from this object. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classparticls_1_1_contact_force_a3fa3511f6a7898e2cb8970e716630e6e}{particls\+::\+Contact\+Force$<$ dim $>$}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_a5bc46d119adf7c3db72dbdb8137611d5}\label{classparticls_1_1_cohesive_beam_a5bc46d119adf7c3db72dbdb8137611d5}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!beamRadius@{beamRadius}}
+\index{beamRadius@{beamRadius}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{beamRadius}{beamRadius}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+const double \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::beam\+Radius\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The radius of the beam. 
+
+
+
+Definition at line 202 of file Cohesive\+Beam.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_a240528e8d23770e5b529dae8d5eaf25d}\label{classparticls_1_1_cohesive_beam_a240528e8d23770e5b529dae8d5eaf25d}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!bending\_threshold@{bending\_threshold}}
+\index{bending\_threshold@{bending\_threshold}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{bending\_threshold}{bending\_threshold}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::bending\+\_\+threshold\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Threshold for bending failure. 
+
+
+
+Definition at line 229 of file Cohesive\+Beam.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_a64c89f1b459ddbb90622d5e6fd0a7daa}\label{classparticls_1_1_cohesive_beam_a64c89f1b459ddbb90622d5e6fd0a7daa}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!bond\_failure\_type@{bond\_failure\_type}}
+\index{bond\_failure\_type@{bond\_failure\_type}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{bond\_failure\_type}{bond\_failure\_type}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::string \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::bond\+\_\+failure\+\_\+type\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Beam failure type, e.\+g. stress or strain -\/based. 
+
+
+
+Definition at line 247 of file Cohesive\+Beam.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_aead500113437f1e71bfdc4c3debf23a5}\label{classparticls_1_1_cohesive_beam_aead500113437f1e71bfdc4c3debf23a5}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!c\_normal@{c\_normal}}
+\index{c\_normal@{c\_normal}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{c\_normal}{c\_normal}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::c\+\_\+normal = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Normal damping coefficient. 
+
+
+
+Definition at line 217 of file Cohesive\+Beam.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_a9b97fb592524225ae20a7eea26f1cf54}\label{classparticls_1_1_cohesive_beam_a9b97fb592524225ae20a7eea26f1cf54}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!c\_shear@{c\_shear}}
+\index{c\_shear@{c\_shear}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{c\_shear}{c\_shear}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::c\+\_\+shear = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Shear damping coefficient. 
+
+
+
+Definition at line 220 of file Cohesive\+Beam.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_a18ac703d63bd8578f7b2e56a563c68ac}\label{classparticls_1_1_cohesive_beam_a18ac703d63bd8578f7b2e56a563c68ac}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!c\_torsion@{c\_torsion}}
+\index{c\_torsion@{c\_torsion}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{c\_torsion}{c\_torsion}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::c\+\_\+torsion = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Torsion damping coefficient. 
+
+
+
+Definition at line 223 of file Cohesive\+Beam.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_af9995e799f40ca8846a5302ea67ce397}\label{classparticls_1_1_cohesive_beam_af9995e799f40ca8846a5302ea67ce397}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!compression\_threshold@{compression\_threshold}}
+\index{compression\_threshold@{compression\_threshold}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{compression\_threshold}{compression\_threshold}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::compression\+\_\+threshold\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Threshold for compression failure. 
+
+
+
+Definition at line 226 of file Cohesive\+Beam.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_a7bbdefcdd9a541b032e21329700a62af}\label{classparticls_1_1_cohesive_beam_a7bbdefcdd9a541b032e21329700a62af}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!damping\_ratio@{damping\_ratio}}
+\index{damping\_ratio@{damping\_ratio}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{damping\_ratio}{damping\_ratio}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::damping\+\_\+ratio\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Critical damping ratio (defaults to 0) 
+
+
+
+Definition at line 214 of file Cohesive\+Beam.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_ac3076e061d60a38862ae4d4ae63455e3}\label{classparticls_1_1_cohesive_beam_ac3076e061d60a38862ae4d4ae63455e3}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!failure\_stress@{failure\_stress}}
+\index{failure\_stress@{failure\_stress}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{failure\_stress}{failure\_stress}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::failure\+\_\+stress\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Stress-\/based faiure criterion. 
+
+
+
+Definition at line 250 of file Cohesive\+Beam.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_a027f66c4c74c5887d2ec301783237b37}\label{classparticls_1_1_cohesive_beam_a027f66c4c74c5887d2ec301783237b37}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!forceMat@{forceMat}}
+\index{forceMat@{forceMat}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{forceMat}{forceMat}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, dim, 1$>$ \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::force\+Mat\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A diagonal matrix to compute the forces. 
+
+
+
+Definition at line 253 of file Cohesive\+Beam.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_adf763d294585f1ac7a3cce6ff480544a}\label{classparticls_1_1_cohesive_beam_adf763d294585f1ac7a3cce6ff480544a}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!initial\_length@{initial\_length}}
+\index{initial\_length@{initial\_length}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{initial\_length}{initial\_length}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::initial\+\_\+length\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Initial length of cohesive beam. 
+
+
+
+Definition at line 244 of file Cohesive\+Beam.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_a1e9032529e48439d1b215682305d45c4}\label{classparticls_1_1_cohesive_beam_a1e9032529e48439d1b215682305d45c4}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!momentMat@{momentMat}}
+\index{momentMat@{momentMat}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{momentMat}{momentMat}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$dim$>$\+::\mbox{\hyperlink{classparticls_1_1_generic_force_a1f16616598331f20fb264d175f13c4fc}{moment}}, 1$>$ \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::moment\+Mat\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 256 of file Cohesive\+Beam.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_a683e61d7712edaa2bdb9f7e3678d7577}\label{classparticls_1_1_cohesive_beam_a683e61d7712edaa2bdb9f7e3678d7577}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!nonbondedLaw@{nonbondedLaw}}
+\index{nonbondedLaw@{nonbondedLaw}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{nonbondedLaw}{nonbondedLaw}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}}$<$dim$>$ $>$ \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::nonbonded\+Law\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The non-\/bonded contact law. 
+
+
+
+Definition at line 235 of file Cohesive\+Beam.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_ab35a17bf399b1ed0984a149da53b4e1e}\label{classparticls_1_1_cohesive_beam_ab35a17bf399b1ed0984a149da53b4e1e}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!part1\_orientation0@{part1\_orientation0}}
+\index{part1\_orientation0@{part1\_orientation0}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{part1\_orientation0}{part1\_orientation0}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$dim$>$\+::Orientation \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::part1\+\_\+orientation0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Initial orientation for particle 1. 
+
+
+
+Definition at line 238 of file Cohesive\+Beam.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_a6eefc7a8555d422b5c1068f43cd0fb0d}\label{classparticls_1_1_cohesive_beam_a6eefc7a8555d422b5c1068f43cd0fb0d}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!part2\_orientation0@{part2\_orientation0}}
+\index{part2\_orientation0@{part2\_orientation0}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{part2\_orientation0}{part2\_orientation0}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$dim$>$\+::Orientation \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::part2\+\_\+orientation0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Initial orientation for particle 2. 
+
+
+
+Definition at line 241 of file Cohesive\+Beam.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_a43d0d6c7dd61b71a3d9f623f748083cf}\label{classparticls_1_1_cohesive_beam_a43d0d6c7dd61b71a3d9f623f748083cf}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!poisson@{poisson}}
+\index{poisson@{poisson}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{poisson}{poisson}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+const double \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::poisson\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Poisson\textquotesingle{}s ratio for the beam. 
+
+
+
+Definition at line 208 of file Cohesive\+Beam.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_a5f6caf5a93e6719010b7f528dcc93881}\label{classparticls_1_1_cohesive_beam_a5f6caf5a93e6719010b7f528dcc93881}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!tension\_threshold@{tension\_threshold}}
+\index{tension\_threshold@{tension\_threshold}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{tension\_threshold}{tension\_threshold}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::tension\+\_\+threshold\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Threshold for tension failure. 
+
+
+
+Definition at line 211 of file Cohesive\+Beam.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_ae9e6b5fa8db1423fe4b5c144da770114}\label{classparticls_1_1_cohesive_beam_ae9e6b5fa8db1423fe4b5c144da770114}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!torsion\_threshold@{torsion\_threshold}}
+\index{torsion\_threshold@{torsion\_threshold}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{torsion\_threshold}{torsion\_threshold}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::torsion\+\_\+threshold\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Threshold for torsion failure. 
+
+
+
+Definition at line 232 of file Cohesive\+Beam.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_cohesive_beam_ab888ba68a197e59c980b786290a60778}\label{classparticls_1_1_cohesive_beam_ab888ba68a197e59c980b786290a60778}} 
+\index{particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}!youngs@{youngs}}
+\index{youngs@{youngs}!particls::CohesiveBeam$<$ dim $>$@{particls::CohesiveBeam$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{youngs}{youngs}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+const double \mbox{\hyperlink{classparticls_1_1_cohesive_beam}{particls\+::\+Cohesive\+Beam}}$<$ dim $>$\+::youngs\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Young\textquotesingle{}s modulus of the beam. 
+
+
+
+Definition at line 205 of file Cohesive\+Beam.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_cohesive_beam_8hpp}{Cohesive\+Beam.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,65 @@
+\hypertarget{_searcher_8hpp}{}\doxysection{Searcher.\+hpp File Reference}
+\label{_searcher_8hpp}\index{Searcher.hpp@{Searcher.hpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cereal/access.\+hpp$>$}\newline
+{\ttfamily \#include $<$cereal/types/vector.\+hpp$>$}\newline
+{\ttfamily \#include $<$yaml-\/cpp/yaml.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Partic\+L\+S/\+Utilities/\+Register\+Class\+Name.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Partic\+L\+S/\+States/\+Particle.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Partic\+L\+S/\+Geometry/\+Regular\+Grid.\+hpp\char`\"{}}\newline
+Include dependency graph for Searcher.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_searcher_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_searcher_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classparticls_1_1_searcher}{particls\+::\+Searcher$<$ dim $>$}}
+\begin{DoxyCompactList}\small\item\em Defines a searcher for a collection of particles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceparticls}{particls}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_searcher_8hpp_a19e0262b8f05a1ebbc4d8013e09f69ab}{P\+A\+R\+T\+I\+C\+L\+S\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+S\+E\+A\+R\+C\+H\+ER}}(N\+A\+ME,  D\+IM)~static auto reg \#\#N\+A\+ME \#\#D\+IM = \mbox{\hyperlink{classparticls_1_1_searcher}{particls\+::\+Searcher}}$<$D\+IM$>$\+::Get\+Searcher\+Map()-\/$>$insert(std\+::make\+\_\+pair(\#N\+A\+ME, \mbox{\hyperlink{structparticls_1_1shared__factory}{particls\+::shared\+\_\+factory}}$<$N\+A\+ME$<$D\+IM$>$ $>$()));
+\item 
+\#define \mbox{\hyperlink{_searcher_8hpp_a8ac413bbed825a2e2dcecd798602b162}{P\+A\+R\+T\+I\+C\+L\+S\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+F\+I\+X\+E\+D\+\_\+\+D\+I\+M\+E\+N\+S\+I\+O\+N\+\_\+\+S\+E\+A\+R\+C\+H\+ER}}(N\+A\+ME,  D\+IM)~static auto reg \#\#N\+A\+ME \#\#D\+IM = \mbox{\hyperlink{classparticls_1_1_searcher}{particls\+::\+Searcher}}$<$D\+IM$>$\+::Get\+Searcher\+Map()-\/$>$insert(std\+::make\+\_\+pair(\#N\+A\+ME, \mbox{\hyperlink{structparticls_1_1shared__factory}{particls\+::shared\+\_\+factory}}$<$N\+A\+ME$>$()));
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_searcher_8hpp_a8ac413bbed825a2e2dcecd798602b162}\label{_searcher_8hpp_a8ac413bbed825a2e2dcecd798602b162}} 
+\index{Searcher.hpp@{Searcher.hpp}!PARTICLS\_REGISTER\_FIXED\_DIMENSION\_SEARCHER@{PARTICLS\_REGISTER\_FIXED\_DIMENSION\_SEARCHER}}
+\index{PARTICLS\_REGISTER\_FIXED\_DIMENSION\_SEARCHER@{PARTICLS\_REGISTER\_FIXED\_DIMENSION\_SEARCHER}!Searcher.hpp@{Searcher.hpp}}
+\doxysubsubsection{\texorpdfstring{PARTICLS\_REGISTER\_FIXED\_DIMENSION\_SEARCHER}{PARTICLS\_REGISTER\_FIXED\_DIMENSION\_SEARCHER}}
+{\footnotesize\ttfamily \#define P\+A\+R\+T\+I\+C\+L\+S\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+F\+I\+X\+E\+D\+\_\+\+D\+I\+M\+E\+N\+S\+I\+O\+N\+\_\+\+S\+E\+A\+R\+C\+H\+ER(\begin{DoxyParamCaption}\item[{}]{N\+A\+ME,  }\item[{}]{D\+IM }\end{DoxyParamCaption})~static auto reg \#\#N\+A\+ME \#\#D\+IM = \mbox{\hyperlink{classparticls_1_1_searcher}{particls\+::\+Searcher}}$<$D\+IM$>$\+::Get\+Searcher\+Map()-\/$>$insert(std\+::make\+\_\+pair(\#N\+A\+ME, \mbox{\hyperlink{structparticls_1_1shared__factory}{particls\+::shared\+\_\+factory}}$<$N\+A\+ME$>$()));}
+
+
+
+Definition at line 82 of file Searcher.\+hpp.
+
+\mbox{\Hypertarget{_searcher_8hpp_a19e0262b8f05a1ebbc4d8013e09f69ab}\label{_searcher_8hpp_a19e0262b8f05a1ebbc4d8013e09f69ab}} 
+\index{Searcher.hpp@{Searcher.hpp}!PARTICLS\_REGISTER\_SEARCHER@{PARTICLS\_REGISTER\_SEARCHER}}
+\index{PARTICLS\_REGISTER\_SEARCHER@{PARTICLS\_REGISTER\_SEARCHER}!Searcher.hpp@{Searcher.hpp}}
+\doxysubsubsection{\texorpdfstring{PARTICLS\_REGISTER\_SEARCHER}{PARTICLS\_REGISTER\_SEARCHER}}
+{\footnotesize\ttfamily \#define P\+A\+R\+T\+I\+C\+L\+S\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+S\+E\+A\+R\+C\+H\+ER(\begin{DoxyParamCaption}\item[{}]{N\+A\+ME,  }\item[{}]{D\+IM }\end{DoxyParamCaption})~static auto reg \#\#N\+A\+ME \#\#D\+IM = \mbox{\hyperlink{classparticls_1_1_searcher}{particls\+::\+Searcher}}$<$D\+IM$>$\+::Get\+Searcher\+Map()-\/$>$insert(std\+::make\+\_\+pair(\#N\+A\+ME, \mbox{\hyperlink{structparticls_1_1shared__factory}{particls\+::shared\+\_\+factory}}$<$N\+A\+ME$<$D\+IM$>$ $>$()));}
+
+
+
+Definition at line 81 of file Searcher.\+hpp.
+

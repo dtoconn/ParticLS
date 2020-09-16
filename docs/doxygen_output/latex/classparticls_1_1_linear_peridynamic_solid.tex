@@ -1,0 +1,280 @@
+\hypertarget{classparticls_1_1_linear_peridynamic_solid}{}\doxysection{particls\+::Linear\+Peridynamic\+Solid$<$ dim $>$ Class Template Reference}
+\label{classparticls_1_1_linear_peridynamic_solid}\index{particls::LinearPeridynamicSolid$<$ dim $>$@{particls::LinearPeridynamicSolid$<$ dim $>$}}
+
+
+{\ttfamily \#include $<$Linear\+Peridynamic\+Solid.\+hpp$>$}
+
+
+
+Inheritance diagram for particls\+::Linear\+Peridynamic\+Solid$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{classparticls_1_1_linear_peridynamic_solid__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for particls\+::Linear\+Peridynamic\+Solid$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{classparticls_1_1_linear_peridynamic_solid__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_linear_peridynamic_solid_a0fd65f581ef6e57b664390554b611356}{Linear\+Peridynamic\+Solid}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part1, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part2, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&\mbox{\hyperlink{classparticls_1_1_linear_peridynamic_solid_ad630196150b699aa56c2c8171940ff86}{neighbors}}, Y\+A\+M\+L\+::\+Node const \&options)
+\item 
+virtual \mbox{\hyperlink{classparticls_1_1_linear_peridynamic_solid_a2e8e448fc6b2a50d8882ae875987e8f7}{$\sim$\+Linear\+Peridynamic\+Solid}} ()=default
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_linear_peridynamic_solid_a441e8af505217c54d96615c17b210338}{Influence\+Function}} (Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&bond) const
+\begin{DoxyCompactList}\small\item\em The influence function. \end{DoxyCompactList}\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}} $>$ \mbox{\hyperlink{classparticls_1_1_linear_peridynamic_solid_a6a0dfaf1d590e3b3791f97c082e5277b}{Force\+Parameter}} (double const time) const override
+\begin{DoxyCompactList}\small\item\em Compute the parameters for the force state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::pair$<$ double, bool $>$ \mbox{\hyperlink{classparticls_1_1_linear_peridynamic_solid_a08934441a713ece6345b917181d1ad06}{Scalar\+Force\+State}} (double const time, Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&x, Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&bond, double const bond\+Length, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}} $>$ const \&parameter) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const double \mbox{\hyperlink{classparticls_1_1_linear_peridynamic_solid_a9dfaadb021e2b3d088cb2e7daa4295df}{bulk\+Modulus}}
+\begin{DoxyCompactList}\small\item\em The buld modulus of the material. \end{DoxyCompactList}\item 
+const double \mbox{\hyperlink{classparticls_1_1_linear_peridynamic_solid_a50e091624430973b2c3ee7c7c65e0b04}{shear\+Modulus}}
+\begin{DoxyCompactList}\small\item\em The peridynamic shear modulus. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_linear_peridynamic_solid_ad7e3274cb8193c8240c03e13bd1622db}{weighted\+Volume}}
+\begin{DoxyCompactList}\small\item\em The weighted volume. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ \mbox{\hyperlink{classparticls_1_1_linear_peridynamic_solid_ad630196150b699aa56c2c8171940ff86}{neighbors}}
+\begin{DoxyCompactList}\small\item\em Store the nearest neighbors. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classparticls_1_1_linear_peridynamic_solid_a30cb6432864aa311b7c4d8d654b119ce}{initial\+Bond\+Length}}
+\begin{DoxyCompactList}\small\item\em Store the intial bond length with each neighbor. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classparticls_1_1_linear_peridynamic_solid_a99477daa629c2f14802f2b9d75525a4c}{influence\+Function}}
+\begin{DoxyCompactList}\small\item\em Strore the influence function for each particle. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classparticls_1_1_linear_peridynamic_solid_a6132a304f377c4e8096889a6eb2e7a6a}{ind}}
+\begin{DoxyCompactList}\small\item\em The index corresponding to the second particle in this bond. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+class particls\+::\+Linear\+Peridynamic\+Solid$<$ dim $>$}
+
+
+
+Definition at line 9 of file Linear\+Peridynamic\+Solid.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_linear_peridynamic_solid_a0fd65f581ef6e57b664390554b611356}\label{classparticls_1_1_linear_peridynamic_solid_a0fd65f581ef6e57b664390554b611356}} 
+\index{particls::LinearPeridynamicSolid$<$ dim $>$@{particls::LinearPeridynamicSolid$<$ dim $>$}!LinearPeridynamicSolid@{LinearPeridynamicSolid}}
+\index{LinearPeridynamicSolid@{LinearPeridynamicSolid}!particls::LinearPeridynamicSolid$<$ dim $>$@{particls::LinearPeridynamicSolid$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{LinearPeridynamicSolid()}{LinearPeridynamicSolid()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_linear_peridynamic_solid}{particls\+::\+Linear\+Peridynamic\+Solid}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_linear_peridynamic_solid}{Linear\+Peridynamic\+Solid}} (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part1,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part2,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&}]{neighbors,  }\item[{Y\+A\+M\+L\+::\+Node const \&}]{options }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em part1} & The first particle in the peridynamic force state bond \\
+\hline
+\mbox{\texttt{ in}}  & {\em part2} & The second particle in the peridynamic force state bond \\
+\hline
+\mbox{\texttt{ in}}  & {\em neighbors} & The nearest neighbors of the first particle (part1) \\
+\hline
+\mbox{\texttt{ in}}  & {\em options} & Options for the state object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_linear_peridynamic_solid_a2e8e448fc6b2a50d8882ae875987e8f7}\label{classparticls_1_1_linear_peridynamic_solid_a2e8e448fc6b2a50d8882ae875987e8f7}} 
+\index{particls::LinearPeridynamicSolid$<$ dim $>$@{particls::LinearPeridynamicSolid$<$ dim $>$}!````~LinearPeridynamicSolid@{$\sim$LinearPeridynamicSolid}}
+\index{````~LinearPeridynamicSolid@{$\sim$LinearPeridynamicSolid}!particls::LinearPeridynamicSolid$<$ dim $>$@{particls::LinearPeridynamicSolid$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$LinearPeridynamicSolid()}{~LinearPeridynamicSolid()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual \mbox{\hyperlink{classparticls_1_1_linear_peridynamic_solid}{particls\+::\+Linear\+Peridynamic\+Solid}}$<$ dim $>$\+::$\sim$\mbox{\hyperlink{classparticls_1_1_linear_peridynamic_solid}{Linear\+Peridynamic\+Solid}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_linear_peridynamic_solid_a6a0dfaf1d590e3b3791f97c082e5277b}\label{classparticls_1_1_linear_peridynamic_solid_a6a0dfaf1d590e3b3791f97c082e5277b}} 
+\index{particls::LinearPeridynamicSolid$<$ dim $>$@{particls::LinearPeridynamicSolid$<$ dim $>$}!ForceParameter@{ForceParameter}}
+\index{ForceParameter@{ForceParameter}!particls::LinearPeridynamicSolid$<$ dim $>$@{particls::LinearPeridynamicSolid$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ForceParameter()}{ForceParameter()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}}$>$ \mbox{\hyperlink{classparticls_1_1_linear_peridynamic_solid}{particls\+::\+Linear\+Peridynamic\+Solid}}$<$ dim $>$\+::Force\+Parameter (\begin{DoxyParamCaption}\item[{double const}]{time }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compute the parameters for the force state. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & The current time \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classparticls_1_1_peridynamic_force_state_a34e15b2334de58b9521c4a609a6f560c}{particls\+::\+Peridynamic\+Force\+State$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_linear_peridynamic_solid_a441e8af505217c54d96615c17b210338}\label{classparticls_1_1_linear_peridynamic_solid_a441e8af505217c54d96615c17b210338}} 
+\index{particls::LinearPeridynamicSolid$<$ dim $>$@{particls::LinearPeridynamicSolid$<$ dim $>$}!InfluenceFunction@{InfluenceFunction}}
+\index{InfluenceFunction@{InfluenceFunction}!particls::LinearPeridynamicSolid$<$ dim $>$@{particls::LinearPeridynamicSolid$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{InfluenceFunction()}{InfluenceFunction()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_linear_peridynamic_solid}{particls\+::\+Linear\+Peridynamic\+Solid}}$<$ dim $>$\+::Influence\+Function (\begin{DoxyParamCaption}\item[{Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&}]{bond }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The influence function. 
+
+Defualts to 1. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em bond} & The bond vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The influence function 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_linear_peridynamic_solid_a08934441a713ece6345b917181d1ad06}\label{classparticls_1_1_linear_peridynamic_solid_a08934441a713ece6345b917181d1ad06}} 
+\index{particls::LinearPeridynamicSolid$<$ dim $>$@{particls::LinearPeridynamicSolid$<$ dim $>$}!ScalarForceState@{ScalarForceState}}
+\index{ScalarForceState@{ScalarForceState}!particls::LinearPeridynamicSolid$<$ dim $>$@{particls::LinearPeridynamicSolid$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ScalarForceState()}{ScalarForceState()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual std\+::pair$<$double, bool$>$ \mbox{\hyperlink{classparticls_1_1_linear_peridynamic_solid}{particls\+::\+Linear\+Peridynamic\+Solid}}$<$ dim $>$\+::Scalar\+Force\+State (\begin{DoxyParamCaption}\item[{double const}]{time,  }\item[{Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&}]{x,  }\item[{Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&}]{bond,  }\item[{double const}]{bond\+Length,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}} $>$ const \&}]{parameter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & The time when we are evaluating the force state \\
+\hline
+\mbox{\texttt{ in}}  & {\em x} & The spatial location where we are evaluating the force state \\
+\hline
+\mbox{\texttt{ in}}  & {\em bond} & The bond between the location $x$ and another point $x^{\prime}$ in space ( $\xi = x^{\prime} - x$) \\
+\hline
+\mbox{\texttt{ in}}  & {\em bond\+Length} & The length of the bond (equal to bond.\+norm() but has been pre computed so we pass it here) \\
+\hline
+\mbox{\texttt{ in}}  & {\em parameter} & Time-\/dependent parameters shared accross all forces of this type acting on a particle. This parameters have been percomputed for this time step \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+First\+: the scalar force state, second\+: true---the bonded still exstis, false---the bond has broken 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_ordinary_force_state_a33a763bd396da338400d3fd32f0cc616}{particls\+::\+Ordinary\+Force\+State$<$ dim $>$}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticls_1_1_linear_peridynamic_solid_a9dfaadb021e2b3d088cb2e7daa4295df}\label{classparticls_1_1_linear_peridynamic_solid_a9dfaadb021e2b3d088cb2e7daa4295df}} 
+\index{particls::LinearPeridynamicSolid$<$ dim $>$@{particls::LinearPeridynamicSolid$<$ dim $>$}!bulkModulus@{bulkModulus}}
+\index{bulkModulus@{bulkModulus}!particls::LinearPeridynamicSolid$<$ dim $>$@{particls::LinearPeridynamicSolid$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{bulkModulus}{bulkModulus}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+const double \mbox{\hyperlink{classparticls_1_1_linear_peridynamic_solid}{particls\+::\+Linear\+Peridynamic\+Solid}}$<$ dim $>$\+::bulk\+Modulus\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The buld modulus of the material. 
+
+
+
+Definition at line 51 of file Linear\+Peridynamic\+Solid.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_linear_peridynamic_solid_a6132a304f377c4e8096889a6eb2e7a6a}\label{classparticls_1_1_linear_peridynamic_solid_a6132a304f377c4e8096889a6eb2e7a6a}} 
+\index{particls::LinearPeridynamicSolid$<$ dim $>$@{particls::LinearPeridynamicSolid$<$ dim $>$}!ind@{ind}}
+\index{ind@{ind}!particls::LinearPeridynamicSolid$<$ dim $>$@{particls::LinearPeridynamicSolid$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ind}{ind}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+unsigned int \mbox{\hyperlink{classparticls_1_1_linear_peridynamic_solid}{particls\+::\+Linear\+Peridynamic\+Solid}}$<$ dim $>$\+::ind\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The index corresponding to the second particle in this bond. 
+
+
+
+Definition at line 72 of file Linear\+Peridynamic\+Solid.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_linear_peridynamic_solid_a99477daa629c2f14802f2b9d75525a4c}\label{classparticls_1_1_linear_peridynamic_solid_a99477daa629c2f14802f2b9d75525a4c}} 
+\index{particls::LinearPeridynamicSolid$<$ dim $>$@{particls::LinearPeridynamicSolid$<$ dim $>$}!influenceFunction@{influenceFunction}}
+\index{influenceFunction@{influenceFunction}!particls::LinearPeridynamicSolid$<$ dim $>$@{particls::LinearPeridynamicSolid$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{influenceFunction}{influenceFunction}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$double$>$ \mbox{\hyperlink{classparticls_1_1_linear_peridynamic_solid}{particls\+::\+Linear\+Peridynamic\+Solid}}$<$ dim $>$\+::influence\+Function\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Strore the influence function for each particle. 
+
+
+
+Definition at line 69 of file Linear\+Peridynamic\+Solid.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_linear_peridynamic_solid_a30cb6432864aa311b7c4d8d654b119ce}\label{classparticls_1_1_linear_peridynamic_solid_a30cb6432864aa311b7c4d8d654b119ce}} 
+\index{particls::LinearPeridynamicSolid$<$ dim $>$@{particls::LinearPeridynamicSolid$<$ dim $>$}!initialBondLength@{initialBondLength}}
+\index{initialBondLength@{initialBondLength}!particls::LinearPeridynamicSolid$<$ dim $>$@{particls::LinearPeridynamicSolid$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{initialBondLength}{initialBondLength}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$double$>$ \mbox{\hyperlink{classparticls_1_1_linear_peridynamic_solid}{particls\+::\+Linear\+Peridynamic\+Solid}}$<$ dim $>$\+::initial\+Bond\+Length\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Store the intial bond length with each neighbor. 
+
+
+
+Definition at line 66 of file Linear\+Peridynamic\+Solid.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_linear_peridynamic_solid_ad630196150b699aa56c2c8171940ff86}\label{classparticls_1_1_linear_peridynamic_solid_ad630196150b699aa56c2c8171940ff86}} 
+\index{particls::LinearPeridynamicSolid$<$ dim $>$@{particls::LinearPeridynamicSolid$<$ dim $>$}!neighbors@{neighbors}}
+\index{neighbors@{neighbors}!particls::LinearPeridynamicSolid$<$ dim $>$@{particls::LinearPeridynamicSolid$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{neighbors}{neighbors}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+const std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$dim$>$ $>$ $>$ \mbox{\hyperlink{classparticls_1_1_linear_peridynamic_solid}{particls\+::\+Linear\+Peridynamic\+Solid}}$<$ dim $>$\+::neighbors\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Store the nearest neighbors. 
+
+
+
+Definition at line 63 of file Linear\+Peridynamic\+Solid.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_linear_peridynamic_solid_a50e091624430973b2c3ee7c7c65e0b04}\label{classparticls_1_1_linear_peridynamic_solid_a50e091624430973b2c3ee7c7c65e0b04}} 
+\index{particls::LinearPeridynamicSolid$<$ dim $>$@{particls::LinearPeridynamicSolid$<$ dim $>$}!shearModulus@{shearModulus}}
+\index{shearModulus@{shearModulus}!particls::LinearPeridynamicSolid$<$ dim $>$@{particls::LinearPeridynamicSolid$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{shearModulus}{shearModulus}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+const double \mbox{\hyperlink{classparticls_1_1_linear_peridynamic_solid}{particls\+::\+Linear\+Peridynamic\+Solid}}$<$ dim $>$\+::shear\+Modulus\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The peridynamic shear modulus. 
+
+Defaults to zero (linear peridynamic fluid) 
+
+Definition at line 57 of file Linear\+Peridynamic\+Solid.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_linear_peridynamic_solid_ad7e3274cb8193c8240c03e13bd1622db}\label{classparticls_1_1_linear_peridynamic_solid_ad7e3274cb8193c8240c03e13bd1622db}} 
+\index{particls::LinearPeridynamicSolid$<$ dim $>$@{particls::LinearPeridynamicSolid$<$ dim $>$}!weightedVolume@{weightedVolume}}
+\index{weightedVolume@{weightedVolume}!particls::LinearPeridynamicSolid$<$ dim $>$@{particls::LinearPeridynamicSolid$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{weightedVolume}{weightedVolume}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_linear_peridynamic_solid}{particls\+::\+Linear\+Peridynamic\+Solid}}$<$ dim $>$\+::weighted\+Volume\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The weighted volume. 
+
+
+
+Definition at line 60 of file Linear\+Peridynamic\+Solid.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_linear_peridynamic_solid_8hpp}{Linear\+Peridynamic\+Solid.\+hpp}}\end{DoxyCompactItemize}

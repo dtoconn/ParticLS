@@ -1,0 +1,6 @@
+<map id="particls::Searcher&lt; dim &gt;" name="particls::Searcher&lt; dim &gt;">
+<area shape="rect" id="node1" title="Defines a searcher for a collection of particles." alt="" coords="5,71,129,112"/>
+<area shape="rect" id="node2" href="$classparticls_1_1_axis_aligned_grid.html" title="An axis&#45;aligned search grid for finding particle pairs." alt="" coords="189,5,354,47"/>
+<area shape="rect" id="node3" href="$classparticls_1_1_brute_force_searcher.html" title=" " alt="" coords="177,71,365,112"/>
+<area shape="rect" id="node4" href="$classparticls_1_1_k_d_tree.html" title=" " alt="" coords="190,137,353,163"/>
+</map>

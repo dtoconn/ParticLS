@@ -1,0 +1,986 @@
+\hypertarget{classparticls_1_1_convex_polyhedra}{}\doxysection{particls\+::Convex\+Polyhedra$<$ dim $>$ Class Template Reference}
+\label{classparticls_1_1_convex_polyhedra}\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+
+
+{\ttfamily \#include $<$Convex\+Polyhedra.\+hpp$>$}
+
+
+
+Inheritance diagram for particls\+::Convex\+Polyhedra$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classparticls_1_1_convex_polyhedra__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for particls\+::Convex\+Polyhedra$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classparticls_1_1_convex_polyhedra__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a585be97cd47debe7ffe994fe0e90e07e}{Convex\+Polyhedra}} (std\+::vector$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ \&\mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a69eb247610ee648d1c3fd0b76cab4b9c}{face\+Normals}}, std\+::vector$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&points, double const \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a4d8ba7db888edaad7567f20faf77fbb1}{density}}, double const \mbox{\hyperlink{classparticls_1_1_geometry_a4d54ac4b46adaaf85ca3285bed0d4663}{thickness}}=1.\+0)
+\item 
+\mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a87fdc2c7dcf130fb5c2ce8da8116e779}{Convex\+Polyhedra}} (std\+::vector$<$ Eigen\+::\+Vector2d $>$ const \&vertices\+\_\+in, double const \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a4d8ba7db888edaad7567f20faf77fbb1}{density}}, double const \mbox{\hyperlink{classparticls_1_1_geometry_a4d54ac4b46adaaf85ca3285bed0d4663}{thickness}}=1.\+0)
+\item 
+virtual \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a76d01caffa4c1f02262978bf25ad5e39}{$\sim$\+Convex\+Polyhedra}} ()=default
+\item 
+void \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a5145aa5a8d2cbe1afa17874f46e4f0be}{Extruded\+Vertices}} (std\+::vector$<$ Eigen\+::\+Vector2d $>$ const \&vertices\+\_\+in, double const \mbox{\hyperlink{classparticls_1_1_geometry_a4d54ac4b46adaaf85ca3285bed0d4663}{thickness}})
+\item 
+void \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a055125ad25ca58338a983dd0b62d533a}{Extruded\+Faces}} ()
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_ad69c37071833748cfd6025fa4e00d230}{Signed\+Distance}} (Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&position, Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&ref\+\_\+pt) const override
+\item 
+virtual Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_ab58a070925dd606a1ef0901bda475d2a}{Signed\+Distance\+Grad}} (Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&position, Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&ref\+\_\+pt) const override
+\item 
+std\+::pair$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$, unsigned int $>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a9cebe97d98b33064d363b3ddc7dd4b56}{Normal\+Vector}} (Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&position, Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&ref\+\_\+pt) const
+\item 
+virtual Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_acedea2a70cf70e6ac4971123ffaa29cf}{Proximal\+Operator}} (Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&x, Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&ref\+\_\+pt, double const \&lambda) const override
+\item 
+virtual Eigen\+::\+Matrix$<$ double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$ dim $>$\+::moment, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$ dim $>$\+::moment $>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a784c22b16575b158efca20b82e359302}{Moment\+Of\+Inertia}} () override
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a5e99417ee57b9099d41e186127995be8}{Mass}} () override
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a69699fd3ccfbfd57306368b0024d8614}{Volume}} () override
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a28264e1af6fa465a9deafec9dafe4c4f}{Thickness}} () override
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a13091679f12b07c44b47a0c9af3c90f7}{Density}} (Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&position, Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&ref\+\_\+pt) const override
+\begin{DoxyCompactList}\small\item\em The density. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a37c4d41a4289d66ee2418ba95f63a5f5}{Density}} () const override
+\item 
+virtual Eigen\+::\+Matrix$<$ double, 2, dim $>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_acefb384006df6c854de08aa029dc5e36}{Bounds}} () const override
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a6bfb7ac97199c5b27cc78984336fadcc}{Moment\+Arm}} () override
+\begin{DoxyCompactList}\small\item\em Return the moment arm of the polyhedra. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_ae05eaf62f0306c186a41c3ace1c7561b}{Effective\+Length}} ()
+\begin{DoxyCompactList}\small\item\em Return the effective length of the polyhedra. \end{DoxyCompactList}\item 
+const std\+::vector$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ \& \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_aa5ddf59b09519b584e8abe4b57b57ab1}{Vertices}} () const
+\begin{DoxyCompactList}\small\item\em Get the vertices of the polyhedra. \end{DoxyCompactList}\item 
+const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \& \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a6c5969e672b6919fc307042158618a86}{Vertex}} (unsigned int const i) const
+\begin{DoxyCompactList}\small\item\em Get a specific vertex. \end{DoxyCompactList}\item 
+std\+::vector$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_af11bdc2d2eb18abd0c8cfc371077c0ac}{Face\+Vertices}} (unsigned int const ind) const
+\begin{DoxyCompactList}\small\item\em Get the vertices of one of the polyhedra\textquotesingle{}s faces. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a0761468eb6a5bc1d9e7b6bebf0e81db2}{Face\+Distances}} (Eigen\+::\+Vector\+Xd const \&point) const
+\begin{DoxyCompactList}\small\item\em Compute the distance to each face. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a0f0e688aad96ce69105e8d79563a5815}{Input\+Center\+Of\+Mass}} () const
+\begin{DoxyCompactList}\small\item\em Get the center of mass of the vertices that were given to this geometry. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a86033ab1333fd3832b977318c70ab0d6}{Append\+V\+TK}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{V\+T\+K\+Data}}$<$ dim $>$$>$ const \&V\+T\+K\+Data\+Object, typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Position const \&position, typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Orientation const \&orientation) const override
+\item 
+unsigned int \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a24d4c7cc250483739ebd50585ec63bbd}{Num\+Faces}} () const
+\begin{DoxyCompactList}\small\item\em The number of sides (2D) or faces (3D) of the polyhedra. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a6f6c594e3903943996aa233b4fc59b8a}{Face\+Normal}} (unsigned int const ind) const
+\begin{DoxyCompactList}\small\item\em Get the normal vector for the face ind. \end{DoxyCompactList}\item 
+std\+::vector$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_ac1775fd672831c580e56e953a550fb52}{Get\+Normals}} ()
+\begin{DoxyCompactList}\small\item\em Get the normal vectors. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a4a6928834ab878d717dfdffb629b31b1}{Point\+On\+Face}} (unsigned int const faceind) const
+\begin{DoxyCompactList}\small\item\em Get a point on the face. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a2bf696a622b47bc41b662ce436062066}{Radius}} () const override
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a12b91743d8fe1426056aa4be1139eccb}{Bounding\+Radius}} () const override
+\item 
+virtual Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a035cc5ce8065c1e6810ef1c6afb233f2}{Bounding\+Center}} () const override
+\item 
+double \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_ac52d57503b733fc5c53917a7bd703771}{Compute\+Surface\+Area}} () override
+\begin{DoxyCompactList}\small\item\em Compute the horizontal surface area of a particle. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a76c38137b7b7ee67b5a7b5199c383125}{Compute\+Cross\+Section\+Area}} (typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Orientation const \&orientation, Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&direction) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_afc61b3cdf8dba792ede09ec2f9e3b436}{Sort2\+D\+Vertices}} (std\+::vector$<$ Eigen\+::\+Vector2d $>$ \&\mbox{\hyperlink{classparticls_1_1_convex_polyhedra_ae3dea3fcf190eedff906fc3fafdfce2b}{vertices}})
+\begin{DoxyCompactList}\small\item\em Sort the vertices of a polygon to be counterclockwise. \end{DoxyCompactList}\item 
+static std\+::vector$<$ unsigned int $>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a249efab492a0cc5a4f10246bf738821f}{Sort2\+D\+Vertices}} (std\+::vector$<$ Eigen\+::\+Vector2d $>$ const \&\mbox{\hyperlink{classparticls_1_1_convex_polyhedra_ae3dea3fcf190eedff906fc3fafdfce2b}{vertices}})
+\begin{DoxyCompactList}\small\item\em Sort the vertices of a polygon to be counterclockwise. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_afc03fda73b930cd97826c9d60c01d1ff}{Initialize}} ()
+\begin{DoxyCompactList}\small\item\em Inialize the volume/area, mass, and moment of inertia. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a0fa7f24d558bf8dc8b4f9d3314602fe8}{Compute\+Volume}} (Eigen\+::\+Vector\+Xd const \&integrals)
+\begin{DoxyCompactList}\small\item\em Compute the volume of the rigid body. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_afd41263ddfe4688ed2c2ec603e9d6349}{Compute\+Mass}} ()
+\begin{DoxyCompactList}\small\item\em Compute the mass of the rigid body. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a9a586878f108c5d0491bdbf18e2494d3}{Compute\+MoI}} (Eigen\+::\+Vector\+Xd const \&integrals)
+\begin{DoxyCompactList}\small\item\em Compute the moment of inertia. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_abade108bf764e12bb2aa4391f0b69a69}{Compute\+Effective\+Length}} ()
+\begin{DoxyCompactList}\small\item\em Compute the effective length of the particle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a1bb2088758fc74e351594d30a8ca36d2}{Compute\+Moment\+Arm}} ()
+\begin{DoxyCompactList}\small\item\em Compute the moment arm of the particle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a9af696f4ccef459d5d404efe136672e4}{Compute\+Bounding\+Sphere}} ()
+\begin{DoxyCompactList}\small\item\em Computes the radius and centroid for the bounding sphere. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a80320abfa59fee8fe965d97956831df0}{Point\+To\+Face}} (Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&position, unsigned int const ind) const
+\begin{DoxyCompactList}\small\item\em Compute a vector that points to the closest point on the $i^{ith}$ face or edge to a given position. \end{DoxyCompactList}\item 
+std\+::vector$<$ unsigned int $>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_aed9378bc50531f28d41eb02f556fde14}{Convex\+Polyhedra\+S\+DF}} (Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&position, Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$ distances, Eigen\+::\+Ref$<$ Eigen\+::\+Matrix$<$ double, dim, Eigen\+::\+Dynamic $>$ $>$ grad) const
+\begin{DoxyCompactList}\small\item\em Compute the gradient and the signed distance function. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector2d \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_aed2947d65c5366c900765014e3cb23b7}{Compute2\+D\+Centroid}} (std\+::vector$<$ Eigen\+::\+Vector2d $>$ const \&\mbox{\hyperlink{classparticls_1_1_convex_polyhedra_ae3dea3fcf190eedff906fc3fafdfce2b}{vertices}}, std\+::vector$<$ unsigned int $>$ const \&index) const
+\begin{DoxyCompactList}\small\item\em Compute the centroid of a polygon. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a7725268dcebe1a79dd141c908b41a5c9}{Center\+Vertices}} (Eigen\+::\+Vector\+Xd const \&integrals)
+\begin{DoxyCompactList}\small\item\em Shift vertices so that they are centered at zero. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_ab3e5248de162de94d2c7f8ddad15feb8}{Volume\+Integrals}} () const
+\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_afbeee3da1debb11854bf576e2861cd5c}{Face\+Integrals}} (std\+::vector$<$ unsigned int $>$ const \&verts=std\+::vector$<$ unsigned int $>$(), Eigen\+::\+Vector3d const \&normal=Eigen\+::\+Vector3d(0.\+0, 0.\+0, 1.\+0), Eigen\+::\+Vector3i const \&abc=Eigen\+::\+Vector3i(0, 1, 2)) const
+\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a07d3a7d010cb49ed386a2a64638b4bc7}{Projection\+Integrals}} (std\+::vector$<$ unsigned int $>$ const \&verts=std\+::vector$<$ unsigned int $>$(), Eigen\+::\+Vector3i const \&abc=Eigen\+::\+Vector3i(0, 1, 2)) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const double \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a4d8ba7db888edaad7567f20faf77fbb1}{density}}
+\begin{DoxyCompactList}\small\item\em The density of the polyhedra. \end{DoxyCompactList}\item 
+std\+::vector$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_ae3dea3fcf190eedff906fc3fafdfce2b}{vertices}}
+\begin{DoxyCompactList}\small\item\em The vertices of the polyhedra. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ unsigned int $>$ $>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a135971bc45136ddabcc8083e6ef6e224}{face\+Vertices}}
+\begin{DoxyCompactList}\small\item\em The vertices corresponding to each face. \end{DoxyCompactList}\item 
+std\+::vector$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a69eb247610ee648d1c3fd0b76cab4b9c}{face\+Normals}}
+\begin{DoxyCompactList}\small\item\em The outward pointing normal vector for each face. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a3e29f57e6b7d63c4e72e436d443c4a6c}{com}}
+\begin{DoxyCompactList}\small\item\em The center of mass given the vertices in their input configuration. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a0d24c0ed4770ec5d9ad5c07d53ca1e8c}{effective\+\_\+length}}
+\begin{DoxyCompactList}\small\item\em Effective length of the polygonal shape. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_ac6a52306576e9344251cbec8f6ded22a}{bounding\+\_\+radius}}
+\begin{DoxyCompactList}\small\item\em Radius of the bounding sphere. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_ae95223c49fce4120fb4be09d74f9e0af}{bounding\+\_\+center}}
+\begin{DoxyCompactList}\small\item\em Position of the bounding sphere center in particle coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+class particls\+::\+Convex\+Polyhedra$<$ dim $>$}
+
+
+
+Definition at line 8 of file Convex\+Polyhedra.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_a585be97cd47debe7ffe994fe0e90e07e}\label{classparticls_1_1_convex_polyhedra_a585be97cd47debe7ffe994fe0e90e07e}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!ConvexPolyhedra@{ConvexPolyhedra}}
+\index{ConvexPolyhedra@{ConvexPolyhedra}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ConvexPolyhedra()}{ConvexPolyhedra()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{Convex\+Polyhedra}} (\begin{DoxyParamCaption}\item[{std\+::vector$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ \&}]{face\+Normals,  }\item[{std\+::vector$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{points,  }\item[{double const}]{density,  }\item[{double const}]{thickness = {\ttfamily 1.0} }\end{DoxyParamCaption})}
+
+Construct a polyhedra from a set of face normals and a set of points on those faces. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em face\+Normals} & Vector of normal vectors for each polyhedra face \\
+\hline
+\mbox{\texttt{ in}}  & {\em points} & Vector of points that exist on each polyhedra face \\
+\hline
+\mbox{\texttt{ in}}  & {\em density} & \mbox{\hyperlink{classparticls_1_1_particle}{Particle}} density \\
+\hline
+\mbox{\texttt{ in}}  & {\em thickness} & \mbox{\hyperlink{classparticls_1_1_particle}{Particle}} thickness (defaults to 1) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_a87fdc2c7dcf130fb5c2ce8da8116e779}\label{classparticls_1_1_convex_polyhedra_a87fdc2c7dcf130fb5c2ce8da8116e779}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!ConvexPolyhedra@{ConvexPolyhedra}}
+\index{ConvexPolyhedra@{ConvexPolyhedra}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ConvexPolyhedra()}{ConvexPolyhedra()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{Convex\+Polyhedra}} (\begin{DoxyParamCaption}\item[{std\+::vector$<$ Eigen\+::\+Vector2d $>$ const \&}]{vertices\+\_\+in,  }\item[{double const}]{density,  }\item[{double const}]{thickness = {\ttfamily 1.0} }\end{DoxyParamCaption})}
+
+Construct a polyhedra from a set of 2D vertices. For 3D applications, the vertices are extruded into the third dimension by the \char`\"{}thickness\char`\"{} amount. @seealso \mbox{\hyperlink{classparticls_1_1_convex_polyhedra_a055125ad25ca58338a983dd0b62d533a}{Convex\+Polyhedra\+::\+Extruded\+Faces}} 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em vertices\+\_\+in} & Vector of 2D vertices outlining \\
+\hline
+\mbox{\texttt{ in}}  & {\em density} & \mbox{\hyperlink{classparticls_1_1_particle}{Particle}} density \\
+\hline
+\mbox{\texttt{ in}}  & {\em thickness} & \mbox{\hyperlink{classparticls_1_1_particle}{Particle}} thickness (defaults to 1) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_a76d01caffa4c1f02262978bf25ad5e39}\label{classparticls_1_1_convex_polyhedra_a76d01caffa4c1f02262978bf25ad5e39}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!````~ConvexPolyhedra@{$\sim$ConvexPolyhedra}}
+\index{````~ConvexPolyhedra@{$\sim$ConvexPolyhedra}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$ConvexPolyhedra()}{~ConvexPolyhedra()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::$\sim$\mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{Convex\+Polyhedra}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_a86033ab1333fd3832b977318c70ab0d6}\label{classparticls_1_1_convex_polyhedra_a86033ab1333fd3832b977318c70ab0d6}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!AppendVTK@{AppendVTK}}
+\index{AppendVTK@{AppendVTK}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{AppendVTK()}{AppendVTK()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Append\+V\+TK (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{V\+T\+K\+Data}}$<$ dim $>$$>$ const \&}]{V\+T\+K\+Data\+Object,  }\item[{typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Position const \&}]{position,  }\item[{typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Orientation const \&}]{orientation }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Append polygon to a vtk filter. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em append\+\_\+filter} & The filter we want to add to \\
+\hline
+\mbox{\texttt{ in}}  & {\em position} & The position of the polygon in global coordinates \\
+\hline
+\mbox{\texttt{ in}}  & {\em orientation} & The orientation of the polygon \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classparticls_1_1_geometry_a230e8356221a5fd1f1bd7c5a9adde601}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_a035cc5ce8065c1e6810ef1c6afb233f2}\label{classparticls_1_1_convex_polyhedra_a035cc5ce8065c1e6810ef1c6afb233f2}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!BoundingCenter@{BoundingCenter}}
+\index{BoundingCenter@{BoundingCenter}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{BoundingCenter()}{BoundingCenter()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual Eigen\+::\+Matrix$<$double, dim, 1$>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Bounding\+Center (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The bounding sphere center of the polygon in particle coordinates 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classparticls_1_1_geometry_ab830faad1b64657840d5eb543a051f90}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_a12b91743d8fe1426056aa4be1139eccb}\label{classparticls_1_1_convex_polyhedra_a12b91743d8fe1426056aa4be1139eccb}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!BoundingRadius@{BoundingRadius}}
+\index{BoundingRadius@{BoundingRadius}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{BoundingRadius()}{BoundingRadius()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Bounding\+Radius (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The bounding sphere radius of the polygon 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_a131058bc06253f0e36dc20b29fb20f00}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_acefb384006df6c854de08aa029dc5e36}\label{classparticls_1_1_convex_polyhedra_acefb384006df6c854de08aa029dc5e36}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!Bounds@{Bounds}}
+\index{Bounds@{Bounds}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Bounds()}{Bounds()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual Eigen\+::\+Matrix$<$double, 2, dim$>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Bounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The particle bounds in the reference domain 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_ac69bbd465018c723451c09d6c313ea8e}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_a7725268dcebe1a79dd141c908b41a5c9}\label{classparticls_1_1_convex_polyhedra_a7725268dcebe1a79dd141c908b41a5c9}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!CenterVertices@{CenterVertices}}
+\index{CenterVertices@{CenterVertices}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{CenterVertices()}{CenterVertices()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, dim, 1$>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Center\+Vertices (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector\+Xd const \&}]{integrals }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Shift vertices so that they are centered at zero. 
+
+from\+: \href{http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.56.127&rep=rep1&type=pdf}{\texttt{ http\+://citeseerx.\+ist.\+psu.\+edu/viewdoc/download?doi=10.\+1.\+1.\+56.\+127\&rep=rep1\&type=pdf}} 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em integrals} & The result from Volume\+Integrals \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The center of mass of the vertices before the shift 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_aed2947d65c5366c900765014e3cb23b7}\label{classparticls_1_1_convex_polyhedra_aed2947d65c5366c900765014e3cb23b7}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!Compute2DCentroid@{Compute2DCentroid}}
+\index{Compute2DCentroid@{Compute2DCentroid}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Compute2DCentroid()}{Compute2DCentroid()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Vector2d \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Compute2\+D\+Centroid (\begin{DoxyParamCaption}\item[{std\+::vector$<$ Eigen\+::\+Vector2d $>$ const \&}]{vertices,  }\item[{std\+::vector$<$ unsigned int $>$ const \&}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Compute the centroid of a polygon. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em vertices} & The vertices of a polygon \\
+\hline
+\mbox{\texttt{ in}}  & {\em index} & The order of the vertices so they are counter clockwise \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The polygon\textquotesingle{}s centroid 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_a9af696f4ccef459d5d404efe136672e4}\label{classparticls_1_1_convex_polyhedra_a9af696f4ccef459d5d404efe136672e4}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!ComputeBoundingSphere@{ComputeBoundingSphere}}
+\index{ComputeBoundingSphere@{ComputeBoundingSphere}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeBoundingSphere()}{ComputeBoundingSphere()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Compute\+Bounding\+Sphere (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Computes the radius and centroid for the bounding sphere. 
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_a76c38137b7b7ee67b5a7b5199c383125}\label{classparticls_1_1_convex_polyhedra_a76c38137b7b7ee67b5a7b5199c383125}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!ComputeCrossSectionArea@{ComputeCrossSectionArea}}
+\index{ComputeCrossSectionArea@{ComputeCrossSectionArea}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeCrossSectionArea()}{ComputeCrossSectionArea()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Compute\+Cross\+Section\+Area (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Orientation const \&}]{orientation,  }\item[{Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Calculate the cross-\/sectional area of a particle given the direction of an incoming vector 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em orientation} & 1x1 matrix (in 2d) or quaternion (in 3d) defining the particle\textquotesingle{}s orientation \\
+\hline
+\mbox{\texttt{ in}}  & {\em direction} & The direction vector \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_aa28bce3e7b0d6a6552ad996c3cbdb983}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_abade108bf764e12bb2aa4391f0b69a69}\label{classparticls_1_1_convex_polyhedra_abade108bf764e12bb2aa4391f0b69a69}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!ComputeEffectiveLength@{ComputeEffectiveLength}}
+\index{ComputeEffectiveLength@{ComputeEffectiveLength}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeEffectiveLength()}{ComputeEffectiveLength()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Compute\+Effective\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Compute the effective length of the particle. 
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_afd41263ddfe4688ed2c2ec603e9d6349}\label{classparticls_1_1_convex_polyhedra_afd41263ddfe4688ed2c2ec603e9d6349}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!ComputeMass@{ComputeMass}}
+\index{ComputeMass@{ComputeMass}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeMass()}{ComputeMass()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Compute\+Mass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Compute the mass of the rigid body. 
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_a9a586878f108c5d0491bdbf18e2494d3}\label{classparticls_1_1_convex_polyhedra_a9a586878f108c5d0491bdbf18e2494d3}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!ComputeMoI@{ComputeMoI}}
+\index{ComputeMoI@{ComputeMoI}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeMoI()}{ComputeMoI()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Compute\+MoI (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector\+Xd const \&}]{integrals }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Compute the moment of inertia. 
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_a1bb2088758fc74e351594d30a8ca36d2}\label{classparticls_1_1_convex_polyhedra_a1bb2088758fc74e351594d30a8ca36d2}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!ComputeMomentArm@{ComputeMomentArm}}
+\index{ComputeMomentArm@{ComputeMomentArm}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeMomentArm()}{ComputeMomentArm()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Compute\+Moment\+Arm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Compute the moment arm of the particle. 
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_ac52d57503b733fc5c53917a7bd703771}\label{classparticls_1_1_convex_polyhedra_ac52d57503b733fc5c53917a7bd703771}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!ComputeSurfaceArea@{ComputeSurfaceArea}}
+\index{ComputeSurfaceArea@{ComputeSurfaceArea}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeSurfaceArea()}{ComputeSurfaceArea()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Compute\+Surface\+Area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compute the horizontal surface area of a particle. 
+
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_a7523e50b6e5028067259b538daa84372}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_a0fa7f24d558bf8dc8b4f9d3314602fe8}\label{classparticls_1_1_convex_polyhedra_a0fa7f24d558bf8dc8b4f9d3314602fe8}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!ComputeVolume@{ComputeVolume}}
+\index{ComputeVolume@{ComputeVolume}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeVolume()}{ComputeVolume()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Compute\+Volume (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector\+Xd const \&}]{integrals }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Compute the volume of the rigid body. 
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_aed9378bc50531f28d41eb02f556fde14}\label{classparticls_1_1_convex_polyhedra_aed9378bc50531f28d41eb02f556fde14}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!ConvexPolyhedraSDF@{ConvexPolyhedraSDF}}
+\index{ConvexPolyhedraSDF@{ConvexPolyhedraSDF}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ConvexPolyhedraSDF()}{ConvexPolyhedraSDF()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$unsigned int$>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Convex\+Polyhedra\+S\+DF (\begin{DoxyParamCaption}\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{position,  }\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$}]{distances,  }\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Matrix$<$ double, dim, Eigen\+::\+Dynamic $>$ $>$}]{grad }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Compute the gradient and the signed distance function. 
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_a37c4d41a4289d66ee2418ba95f63a5f5}\label{classparticls_1_1_convex_polyhedra_a37c4d41a4289d66ee2418ba95f63a5f5}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!Density@{Density}}
+\index{Density@{Density}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Density()}{Density()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Density (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The densty of the particle 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_a23e59421a15e4307a1cc68bb7903aa5d}{particls\+::\+Geometry$<$ dim $>$}}.
+
+
+
+Definition at line 104 of file Convex\+Polyhedra.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_a13091679f12b07c44b47a0c9af3c90f7}\label{classparticls_1_1_convex_polyhedra_a13091679f12b07c44b47a0c9af3c90f7}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!Density@{Density}}
+\index{Density@{Density}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Density()}{Density()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Density (\begin{DoxyParamCaption}\item[{Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&}]{position,  }\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{ref\+\_\+pt }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+The density. 
+
+If the point is outside of the domain, return 0 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & We want the density at this point \\
+\hline
+\mbox{\texttt{ in}}  & {\em ref\+\_\+pt} & Reference point for one-\/sided signed distance functions \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The density 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_a7974532b017a2b662659db57db623c03}{particls\+::\+Geometry$<$ dim $>$}}.
+
+
+
+Definition at line 99 of file Convex\+Polyhedra.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_ae05eaf62f0306c186a41c3ace1c7561b}\label{classparticls_1_1_convex_polyhedra_ae05eaf62f0306c186a41c3ace1c7561b}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!EffectiveLength@{EffectiveLength}}
+\index{EffectiveLength@{EffectiveLength}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{EffectiveLength()}{EffectiveLength()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Effective\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Return the effective length of the polyhedra. 
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_a055125ad25ca58338a983dd0b62d533a}\label{classparticls_1_1_convex_polyhedra_a055125ad25ca58338a983dd0b62d533a}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!ExtrudedFaces@{ExtrudedFaces}}
+\index{ExtrudedFaces@{ExtrudedFaces}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ExtrudedFaces()}{ExtrudedFaces()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Extruded\+Faces (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Calculate the face normals \mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_a5145aa5a8d2cbe1afa17874f46e4f0be}\label{classparticls_1_1_convex_polyhedra_a5145aa5a8d2cbe1afa17874f46e4f0be}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!ExtrudedVertices@{ExtrudedVertices}}
+\index{ExtrudedVertices@{ExtrudedVertices}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ExtrudedVertices()}{ExtrudedVertices()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Extruded\+Vertices (\begin{DoxyParamCaption}\item[{std\+::vector$<$ Eigen\+::\+Vector2d $>$ const \&}]{vertices\+\_\+in,  }\item[{double const}]{thickness }\end{DoxyParamCaption})}
+
+Extrude a set of 2D vertices by an amount of 0.\+5$\ast$thickness in either direction of the 3rd dimension. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em vertices\+\_\+in} & Vector of 2D vertices \\
+\hline
+\mbox{\texttt{ in}}  & {\em thickness} & \mbox{\hyperlink{classparticls_1_1_particle}{Particle}} thickness (defaults to 1) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_a0761468eb6a5bc1d9e7b6bebf0e81db2}\label{classparticls_1_1_convex_polyhedra_a0761468eb6a5bc1d9e7b6bebf0e81db2}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!FaceDistances@{FaceDistances}}
+\index{FaceDistances@{FaceDistances}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{FaceDistances()}{FaceDistances()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Face\+Distances (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector\+Xd const \&}]{point }\end{DoxyParamCaption}) const}
+
+
+
+Compute the distance to each face. 
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_afbeee3da1debb11854bf576e2861cd5c}\label{classparticls_1_1_convex_polyhedra_afbeee3da1debb11854bf576e2861cd5c}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!FaceIntegrals@{FaceIntegrals}}
+\index{FaceIntegrals@{FaceIntegrals}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{FaceIntegrals()}{FaceIntegrals()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Face\+Integrals (\begin{DoxyParamCaption}\item[{std\+::vector$<$ unsigned int $>$ const \&}]{verts = {\ttfamily std\+:\+:vector$<$~unsigned~int~$>$()},  }\item[{Eigen\+::\+Vector3d const \&}]{normal = {\ttfamily Eigen\+:\+:Vector3d(0.0,~0.0,~1.0)},  }\item[{Eigen\+::\+Vector3i const \&}]{abc = {\ttfamily Eigen\+:\+:Vector3i(0,~1,~2)} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_a6f6c594e3903943996aa233b4fc59b8a}\label{classparticls_1_1_convex_polyhedra_a6f6c594e3903943996aa233b4fc59b8a}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!FaceNormal@{FaceNormal}}
+\index{FaceNormal@{FaceNormal}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{FaceNormal()}{FaceNormal()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, dim, 1$>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Face\+Normal (\begin{DoxyParamCaption}\item[{unsigned int const}]{ind }\end{DoxyParamCaption}) const}
+
+
+
+Get the normal vector for the face ind. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ind} & We want the normal vector of this face \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The normal vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_af11bdc2d2eb18abd0c8cfc371077c0ac}\label{classparticls_1_1_convex_polyhedra_af11bdc2d2eb18abd0c8cfc371077c0ac}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!FaceVertices@{FaceVertices}}
+\index{FaceVertices@{FaceVertices}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{FaceVertices()}{FaceVertices()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$Eigen\+::\+Matrix$<$double, dim, 1$>$ $>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Face\+Vertices (\begin{DoxyParamCaption}\item[{unsigned int const}]{ind }\end{DoxyParamCaption}) const}
+
+
+
+Get the vertices of one of the polyhedra\textquotesingle{}s faces. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ind} & The index of the face whose vertices we want \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The vertices of the face 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_ac1775fd672831c580e56e953a550fb52}\label{classparticls_1_1_convex_polyhedra_ac1775fd672831c580e56e953a550fb52}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!GetNormals@{GetNormals}}
+\index{GetNormals@{GetNormals}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{GetNormals()}{GetNormals()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$Eigen\+::\+Matrix$<$double, dim, 1$>$ $>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Get\+Normals (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the normal vectors. 
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_afc03fda73b930cd97826c9d60c01d1ff}\label{classparticls_1_1_convex_polyhedra_afc03fda73b930cd97826c9d60c01d1ff}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Inialize the volume/area, mass, and moment of inertia. 
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_a0f0e688aad96ce69105e8d79563a5815}\label{classparticls_1_1_convex_polyhedra_a0f0e688aad96ce69105e8d79563a5815}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!InputCenterOfMass@{InputCenterOfMass}}
+\index{InputCenterOfMass@{InputCenterOfMass}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{InputCenterOfMass()}{InputCenterOfMass()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, dim, 1$>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Input\+Center\+Of\+Mass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the center of mass of the vertices that were given to this geometry. 
+
+The vertices were shifted by this point so the center of mass is at zero. \begin{DoxyReturn}{Returns}
+The center of mass of the input vertices 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_a5e99417ee57b9099d41e186127995be8}\label{classparticls_1_1_convex_polyhedra_a5e99417ee57b9099d41e186127995be8}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!Mass@{Mass}}
+\index{Mass@{Mass}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Mass()}{Mass()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Mass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The mass of the particle 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_af5e06af2734085d1acda7926d4ea8944}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_a6bfb7ac97199c5b27cc78984336fadcc}\label{classparticls_1_1_convex_polyhedra_a6bfb7ac97199c5b27cc78984336fadcc}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!MomentArm@{MomentArm}}
+\index{MomentArm@{MomentArm}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{MomentArm()}{MomentArm()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Moment\+Arm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Return the moment arm of the polyhedra. 
+
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_a99110ee074b3090c6b2d6df6cdca51ef}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_a784c22b16575b158efca20b82e359302}\label{classparticls_1_1_convex_polyhedra_a784c22b16575b158efca20b82e359302}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!MomentOfInertia@{MomentOfInertia}}
+\index{MomentOfInertia@{MomentOfInertia}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{MomentOfInertia()}{MomentOfInertia()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual Eigen\+::\+Matrix$<$double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$dim$>$\+::moment, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$dim$>$\+::moment$>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Moment\+Of\+Inertia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The moment of inertia for this geometry 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_a35147032c4a967cc71d82e006f78e403}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_a9cebe97d98b33064d363b3ddc7dd4b56}\label{classparticls_1_1_convex_polyhedra_a9cebe97d98b33064d363b3ddc7dd4b56}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!NormalVector@{NormalVector}}
+\index{NormalVector@{NormalVector}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{NormalVector()}{NormalVector()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::pair$<$Eigen\+::\+Matrix$<$double, dim, 1$>$, unsigned int$>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Normal\+Vector (\begin{DoxyParamCaption}\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{position,  }\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{ref\+\_\+pt }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & The position in space \\
+\hline
+\mbox{\texttt{ in}}  & {\em ref\+\_\+pt} & If the normal is non-\/unique (e.\+g, at a corner) chose the one that points toward this point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+First\+: Return the normal vector of the polyhedra face that points in the direction closest to a ref\+\_\+pt, Second\+: the index of that face that is associated with this normal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_a24d4c7cc250483739ebd50585ec63bbd}\label{classparticls_1_1_convex_polyhedra_a24d4c7cc250483739ebd50585ec63bbd}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!NumFaces@{NumFaces}}
+\index{NumFaces@{NumFaces}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{NumFaces()}{NumFaces()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+unsigned int \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Num\+Faces (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+The number of sides (2D) or faces (3D) of the polyhedra. 
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_a4a6928834ab878d717dfdffb629b31b1}\label{classparticls_1_1_convex_polyhedra_a4a6928834ab878d717dfdffb629b31b1}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!PointOnFace@{PointOnFace}}
+\index{PointOnFace@{PointOnFace}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{PointOnFace()}{PointOnFace()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, dim, 1$>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Point\+On\+Face (\begin{DoxyParamCaption}\item[{unsigned int const}]{faceind }\end{DoxyParamCaption}) const}
+
+
+
+Get a point on the face. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em faceind} & We want a point on the face corresponding to this index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A point on this face (will be one of the vertices) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_a80320abfa59fee8fe965d97956831df0}\label{classparticls_1_1_convex_polyhedra_a80320abfa59fee8fe965d97956831df0}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!PointToFace@{PointToFace}}
+\index{PointToFace@{PointToFace}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{PointToFace()}{PointToFace()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, dim, 1$>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Point\+To\+Face (\begin{DoxyParamCaption}\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{position,  }\item[{unsigned int const}]{ind }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Compute a vector that points to the closest point on the $i^{ith}$ face or edge to a given position. 
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_a07d3a7d010cb49ed386a2a64638b4bc7}\label{classparticls_1_1_convex_polyhedra_a07d3a7d010cb49ed386a2a64638b4bc7}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!ProjectionIntegrals@{ProjectionIntegrals}}
+\index{ProjectionIntegrals@{ProjectionIntegrals}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ProjectionIntegrals()}{ProjectionIntegrals()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Projection\+Integrals (\begin{DoxyParamCaption}\item[{std\+::vector$<$ unsigned int $>$ const \&}]{verts = {\ttfamily std\+:\+:vector$<$~unsigned~int~$>$()},  }\item[{Eigen\+::\+Vector3i const \&}]{abc = {\ttfamily Eigen\+:\+:Vector3i(0,~1,~2)} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_acedea2a70cf70e6ac4971123ffaa29cf}\label{classparticls_1_1_convex_polyhedra_acedea2a70cf70e6ac4971123ffaa29cf}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!ProximalOperator@{ProximalOperator}}
+\index{ProximalOperator@{ProximalOperator}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ProximalOperator()}{ProximalOperator()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual Eigen\+::\+Matrix$<$double, dim, 1$>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Proximal\+Operator (\begin{DoxyParamCaption}\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{x,  }\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{ref\+\_\+pt,  }\item[{double const \&}]{lambda }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Applies the proximal operator for the level set defined in this geometry. @seealso \mbox{\hyperlink{classparticls_1_1_rigid_body_a4450bda4a3826d2dd69dbd872f1153f4}{Rigid\+Body\+::\+Proximal\+Operator}} 
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_ae5a6e81ee65d5f0ad2c342ff63bb111b}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_a2bf696a622b47bc41b662ce436062066}\label{classparticls_1_1_convex_polyhedra_a2bf696a622b47bc41b662ce436062066}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!Radius@{Radius}}
+\index{Radius@{Radius}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Radius()}{Radius()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Radius (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The effective radius of the polygon 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_a56f0f42d4045cb15696ccaf5590dd910}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_ad69c37071833748cfd6025fa4e00d230}\label{classparticls_1_1_convex_polyhedra_ad69c37071833748cfd6025fa4e00d230}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!SignedDistance@{SignedDistance}}
+\index{SignedDistance@{SignedDistance}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{SignedDistance()}{SignedDistance()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Signed\+Distance (\begin{DoxyParamCaption}\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{position,  }\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{ref\+\_\+pt }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & The position in space \\
+\hline
+\mbox{\texttt{ in}}  & {\em ref\+\_\+pt} & Reference point for determining which side of the boundary the position is \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The distance from the boundary (positive-\/outside, negative-\/inside, zero-\/on boundary) 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_a4ec0bb5ebbfd45460b26127d9456023f}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_ab58a070925dd606a1ef0901bda475d2a}\label{classparticls_1_1_convex_polyhedra_ab58a070925dd606a1ef0901bda475d2a}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!SignedDistanceGrad@{SignedDistanceGrad}}
+\index{SignedDistanceGrad@{SignedDistanceGrad}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{SignedDistanceGrad()}{SignedDistanceGrad()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual Eigen\+::\+Matrix$<$double, dim, 1$>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Signed\+Distance\+Grad (\begin{DoxyParamCaption}\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{position,  }\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{ref\+\_\+pt }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & The position in space \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The gradient of the signed distance function 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classparticls_1_1_geometry_a21d6c20edb4ef1aab9b6ca2eec4e7eb1}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_afc61b3cdf8dba792ede09ec2f9e3b436}\label{classparticls_1_1_convex_polyhedra_afc61b3cdf8dba792ede09ec2f9e3b436}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!Sort2DVertices@{Sort2DVertices}}
+\index{Sort2DVertices@{Sort2DVertices}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Sort2DVertices()}{Sort2DVertices()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+static void \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Sort2\+D\+Vertices (\begin{DoxyParamCaption}\item[{std\+::vector$<$ Eigen\+::\+Vector2d $>$ \&}]{vertices }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sort the vertices of a polygon to be counterclockwise. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em vertices} & The vertices of a polygon, after function call they are sorted counterclockwise \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_a249efab492a0cc5a4f10246bf738821f}\label{classparticls_1_1_convex_polyhedra_a249efab492a0cc5a4f10246bf738821f}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!Sort2DVertices@{Sort2DVertices}}
+\index{Sort2DVertices@{Sort2DVertices}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Sort2DVertices()}{Sort2DVertices()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+static std\+::vector$<$unsigned int$>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Sort2\+D\+Vertices (\begin{DoxyParamCaption}\item[{std\+::vector$<$ Eigen\+::\+Vector2d $>$ const \&}]{vertices }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sort the vertices of a polygon to be counterclockwise. 
+
+Keep the input vertices in the same order but return the permutation that sorts them. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em vertices} & The vertices of a polygon \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The permutation required to sort the vertices 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_a28264e1af6fa465a9deafec9dafe4c4f}\label{classparticls_1_1_convex_polyhedra_a28264e1af6fa465a9deafec9dafe4c4f}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!Thickness@{Thickness}}
+\index{Thickness@{Thickness}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Thickness()}{Thickness()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Thickness (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The particle thickness (only valid for 2D simulations) 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_a27fe28ba995dc81e4d6dcd3a6162091b}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_a6c5969e672b6919fc307042158618a86}\label{classparticls_1_1_convex_polyhedra_a6c5969e672b6919fc307042158618a86}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!Vertex@{Vertex}}
+\index{Vertex@{Vertex}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Vertex()}{Vertex()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+const Eigen\+::\+Matrix$<$double, dim, 1$>$\& \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Vertex (\begin{DoxyParamCaption}\item[{unsigned int const}]{i }\end{DoxyParamCaption}) const}
+
+
+
+Get a specific vertex. 
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_aa5ddf59b09519b584e8abe4b57b57ab1}\label{classparticls_1_1_convex_polyhedra_aa5ddf59b09519b584e8abe4b57b57ab1}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!Vertices@{Vertices}}
+\index{Vertices@{Vertices}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Vertices()}{Vertices()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+const std\+::vector$<$Eigen\+::\+Matrix$<$double, dim, 1$>$ $>$\& \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Vertices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the vertices of the polyhedra. 
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_a69699fd3ccfbfd57306368b0024d8614}\label{classparticls_1_1_convex_polyhedra_a69699fd3ccfbfd57306368b0024d8614}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!Volume@{Volume}}
+\index{Volume@{Volume}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Volume()}{Volume()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The volume of the particle 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_a4f38eaff1a219f41698f6dbef1525495}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_ab3e5248de162de94d2c7f8ddad15feb8}\label{classparticls_1_1_convex_polyhedra_ab3e5248de162de94d2c7f8ddad15feb8}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!VolumeIntegrals@{VolumeIntegrals}}
+\index{VolumeIntegrals@{VolumeIntegrals}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{VolumeIntegrals()}{VolumeIntegrals()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::Volume\+Integrals (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_ae95223c49fce4120fb4be09d74f9e0af}\label{classparticls_1_1_convex_polyhedra_ae95223c49fce4120fb4be09d74f9e0af}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!bounding\_center@{bounding\_center}}
+\index{bounding\_center@{bounding\_center}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{bounding\_center}{bounding\_center}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, dim, 1$>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::bounding\+\_\+center\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Position of the bounding sphere center in particle coordinates. 
+
+
+
+Definition at line 287 of file Convex\+Polyhedra.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_ac6a52306576e9344251cbec8f6ded22a}\label{classparticls_1_1_convex_polyhedra_ac6a52306576e9344251cbec8f6ded22a}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!bounding\_radius@{bounding\_radius}}
+\index{bounding\_radius@{bounding\_radius}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{bounding\_radius}{bounding\_radius}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::bounding\+\_\+radius\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Radius of the bounding sphere. 
+
+
+
+Definition at line 284 of file Convex\+Polyhedra.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_a3e29f57e6b7d63c4e72e436d443c4a6c}\label{classparticls_1_1_convex_polyhedra_a3e29f57e6b7d63c4e72e436d443c4a6c}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!com@{com}}
+\index{com@{com}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{com}{com}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, dim, 1$>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::com\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The center of mass given the vertices in their input configuration. 
+
+
+
+Definition at line 278 of file Convex\+Polyhedra.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_a4d8ba7db888edaad7567f20faf77fbb1}\label{classparticls_1_1_convex_polyhedra_a4d8ba7db888edaad7567f20faf77fbb1}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!density@{density}}
+\index{density@{density}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{density}{density}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+const double \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::density\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The density of the polyhedra. 
+
+
+
+Definition at line 260 of file Convex\+Polyhedra.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_a0d24c0ed4770ec5d9ad5c07d53ca1e8c}\label{classparticls_1_1_convex_polyhedra_a0d24c0ed4770ec5d9ad5c07d53ca1e8c}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!effective\_length@{effective\_length}}
+\index{effective\_length@{effective\_length}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{effective\_length}{effective\_length}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::effective\+\_\+length\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Effective length of the polygonal shape. 
+
+
+
+Definition at line 281 of file Convex\+Polyhedra.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_a69eb247610ee648d1c3fd0b76cab4b9c}\label{classparticls_1_1_convex_polyhedra_a69eb247610ee648d1c3fd0b76cab4b9c}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!faceNormals@{faceNormals}}
+\index{faceNormals@{faceNormals}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{faceNormals}{faceNormals}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$Eigen\+::\+Matrix$<$double, dim, 1$>$ $>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::face\+Normals\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The outward pointing normal vector for each face. 
+
+
+
+Definition at line 275 of file Convex\+Polyhedra.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_a135971bc45136ddabcc8083e6ef6e224}\label{classparticls_1_1_convex_polyhedra_a135971bc45136ddabcc8083e6ef6e224}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!faceVertices@{faceVertices}}
+\index{faceVertices@{faceVertices}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{faceVertices}{faceVertices}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$std\+::vector$<$unsigned int$>$ $>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::face\+Vertices\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The vertices corresponding to each face. 
+
+Each vector of integers stores the indices of the vertices for the $i^{th}$ face. In 2D, there is only one face, so this is empty. 
+
+Definition at line 272 of file Convex\+Polyhedra.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_convex_polyhedra_ae3dea3fcf190eedff906fc3fafdfce2b}\label{classparticls_1_1_convex_polyhedra_ae3dea3fcf190eedff906fc3fafdfce2b}} 
+\index{particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}!vertices@{vertices}}
+\index{vertices@{vertices}!particls::ConvexPolyhedra$<$ dim $>$@{particls::ConvexPolyhedra$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{vertices}{vertices}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$Eigen\+::\+Matrix$<$double, dim, 1$>$ $>$ \mbox{\hyperlink{classparticls_1_1_convex_polyhedra}{particls\+::\+Convex\+Polyhedra}}$<$ dim $>$\+::vertices\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The vertices of the polyhedra. 
+
+In 2D, these should be in counter clockwise direction. 
+
+Definition at line 266 of file Convex\+Polyhedra.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_convex_polyhedra_8hpp}{Convex\+Polyhedra.\+hpp}}\end{DoxyCompactItemize}

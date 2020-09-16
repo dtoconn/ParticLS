@@ -1,0 +1,160 @@
+\hypertarget{classparticls_1_1_particle_tracker}{}\doxysection{particls\+::Particle\+Tracker$<$ dim $>$ Class Template Reference}
+\label{classparticls_1_1_particle_tracker}\index{particls::ParticleTracker$<$ dim $>$@{particls::ParticleTracker$<$ dim $>$}}
+
+
+{\ttfamily \#include $<$Particle\+Tracker.\+hpp$>$}
+
+
+
+Inheritance diagram for particls\+::Particle\+Tracker$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{classparticls_1_1_particle_tracker__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for particls\+::Particle\+Tracker$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{classparticls_1_1_particle_tracker__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classparticls_1_1_particle_tracker_aa927bb96f6e38bc82aaa9d96295e212d}{Quantity}} \{ \mbox{\hyperlink{classparticls_1_1_particle_tracker_aa927bb96f6e38bc82aaa9d96295e212dacd57eab9ba31e1f564d9e56906fd73c5}{Position}}, 
+\mbox{\hyperlink{classparticls_1_1_particle_tracker_aa927bb96f6e38bc82aaa9d96295e212da43b4238a29c1046ca29e83277b0962ce}{Velocity}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_particle_tracker_a6dbb0f05d2f228923378d8008a888667}{Particle\+Tracker}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&\mbox{\hyperlink{classparticls_1_1_particle_tracker_a85ce8143e9ffee8aef83d0cf7e7c2b9b}{particle}}, \mbox{\hyperlink{classparticls_1_1_particle_tracker_aa927bb96f6e38bc82aaa9d96295e212d}{Quantity}} const \&\mbox{\hyperlink{classparticls_1_1_particle_tracker_a92dee7338759c6abf4371faeddbfa603}{qoi}}=Quantity\+::\+Position)
+\item 
+virtual \mbox{\hyperlink{classparticls_1_1_particle_tracker_a5eec47fde5a4688fba6ef04095de7306}{$\sim$\+Particle\+Tracker}} ()=default
+\item 
+virtual Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classparticls_1_1_particle_tracker_ae4a91f787e84d6d1a333fa8436539f44}{Quantity\+Of\+Interest}} (double const time) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ \mbox{\hyperlink{classparticls_1_1_particle_tracker_a85ce8143e9ffee8aef83d0cf7e7c2b9b}{particle}}
+\item 
+const \mbox{\hyperlink{classparticls_1_1_particle_tracker_aa927bb96f6e38bc82aaa9d96295e212d}{Quantity}} \mbox{\hyperlink{classparticls_1_1_particle_tracker_a92dee7338759c6abf4371faeddbfa603}{qoi}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+class particls\+::\+Particle\+Tracker$<$ dim $>$}
+
+
+
+Definition at line 10 of file Particle\+Tracker.\+hpp.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classparticls_1_1_particle_tracker_aa927bb96f6e38bc82aaa9d96295e212d}\label{classparticls_1_1_particle_tracker_aa927bb96f6e38bc82aaa9d96295e212d}} 
+\index{particls::ParticleTracker$<$ dim $>$@{particls::ParticleTracker$<$ dim $>$}!Quantity@{Quantity}}
+\index{Quantity@{Quantity}!particls::ParticleTracker$<$ dim $>$@{particls::ParticleTracker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Quantity}{Quantity}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+enum \mbox{\hyperlink{classparticls_1_1_particle_tracker_aa927bb96f6e38bc82aaa9d96295e212d}{particls\+::\+Particle\+Tracker\+::\+Quantity}}}
+
+Enum for specifying which particle quantity of interest we want to track. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Position@{Position}!particls::ParticleTracker$<$ dim $>$@{particls::ParticleTracker$<$ dim $>$}}\index{particls::ParticleTracker$<$ dim $>$@{particls::ParticleTracker$<$ dim $>$}!Position@{Position}}}\mbox{\Hypertarget{classparticls_1_1_particle_tracker_aa927bb96f6e38bc82aaa9d96295e212dacd57eab9ba31e1f564d9e56906fd73c5}\label{classparticls_1_1_particle_tracker_aa927bb96f6e38bc82aaa9d96295e212dacd57eab9ba31e1f564d9e56906fd73c5}} 
+Position&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Velocity@{Velocity}!particls::ParticleTracker$<$ dim $>$@{particls::ParticleTracker$<$ dim $>$}}\index{particls::ParticleTracker$<$ dim $>$@{particls::ParticleTracker$<$ dim $>$}!Velocity@{Velocity}}}\mbox{\Hypertarget{classparticls_1_1_particle_tracker_aa927bb96f6e38bc82aaa9d96295e212da43b4238a29c1046ca29e83277b0962ce}\label{classparticls_1_1_particle_tracker_aa927bb96f6e38bc82aaa9d96295e212da43b4238a29c1046ca29e83277b0962ce}} 
+Velocity&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 16 of file Particle\+Tracker.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_particle_tracker_a6dbb0f05d2f228923378d8008a888667}\label{classparticls_1_1_particle_tracker_a6dbb0f05d2f228923378d8008a888667}} 
+\index{particls::ParticleTracker$<$ dim $>$@{particls::ParticleTracker$<$ dim $>$}!ParticleTracker@{ParticleTracker}}
+\index{ParticleTracker@{ParticleTracker}!particls::ParticleTracker$<$ dim $>$@{particls::ParticleTracker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ParticleTracker()}{ParticleTracker()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_particle_tracker}{particls\+::\+Particle\+Tracker}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_particle_tracker}{Particle\+Tracker}} (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{particle,  }\item[{\mbox{\hyperlink{classparticls_1_1_particle_tracker_aa927bb96f6e38bc82aaa9d96295e212d}{Quantity}} const \&}]{qoi = {\ttfamily Quantity\+:\+:Position} }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{classparticls_1_1_observer}{Observer}} that tracks a particle\textquotesingle{}s state throughout a simulation. The default state is the particle\textquotesingle{}s \textquotesingle{}Position\textquotesingle{}, but it can also return the particle\textquotesingle{}s \textquotesingle{}Velocity\textquotesingle{}. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em particle} & \mbox{\hyperlink{classparticls_1_1_particle}{Particle}} that is tracked. \\
+\hline
+\mbox{\texttt{ in}}  & {\em qoi} & Quantity of interest we want to evaluate. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_particle_tracker_a5eec47fde5a4688fba6ef04095de7306}\label{classparticls_1_1_particle_tracker_a5eec47fde5a4688fba6ef04095de7306}} 
+\index{particls::ParticleTracker$<$ dim $>$@{particls::ParticleTracker$<$ dim $>$}!````~ParticleTracker@{$\sim$ParticleTracker}}
+\index{````~ParticleTracker@{$\sim$ParticleTracker}!particls::ParticleTracker$<$ dim $>$@{particls::ParticleTracker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$ParticleTracker()}{~ParticleTracker()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual \mbox{\hyperlink{classparticls_1_1_particle_tracker}{particls\+::\+Particle\+Tracker}}$<$ dim $>$\+::$\sim$\mbox{\hyperlink{classparticls_1_1_particle_tracker}{Particle\+Tracker}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_particle_tracker_ae4a91f787e84d6d1a333fa8436539f44}\label{classparticls_1_1_particle_tracker_ae4a91f787e84d6d1a333fa8436539f44}} 
+\index{particls::ParticleTracker$<$ dim $>$@{particls::ParticleTracker$<$ dim $>$}!QuantityOfInterest@{QuantityOfInterest}}
+\index{QuantityOfInterest@{QuantityOfInterest}!particls::ParticleTracker$<$ dim $>$@{particls::ParticleTracker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{QuantityOfInterest()}{QuantityOfInterest()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classparticls_1_1_particle_tracker}{particls\+::\+Particle\+Tracker}}$<$ dim $>$\+::Quantity\+Of\+Interest (\begin{DoxyParamCaption}\item[{double const}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & Time at which the quantity of interest is evaluated. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The particle\textquotesingle{}s quantity of interest at a specific time. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_observer_a5d8df2033058cad52ea402fb9e834c63}{particls\+::\+Observer}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticls_1_1_particle_tracker_a85ce8143e9ffee8aef83d0cf7e7c2b9b}\label{classparticls_1_1_particle_tracker_a85ce8143e9ffee8aef83d0cf7e7c2b9b}} 
+\index{particls::ParticleTracker$<$ dim $>$@{particls::ParticleTracker$<$ dim $>$}!particle@{particle}}
+\index{particle@{particle}!particls::ParticleTracker$<$ dim $>$@{particls::ParticleTracker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{particle}{particle}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$dim$>$ $>$ \mbox{\hyperlink{classparticls_1_1_particle_tracker}{particls\+::\+Particle\+Tracker}}$<$ dim $>$\+::particle\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 38 of file Particle\+Tracker.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_particle_tracker_a92dee7338759c6abf4371faeddbfa603}\label{classparticls_1_1_particle_tracker_a92dee7338759c6abf4371faeddbfa603}} 
+\index{particls::ParticleTracker$<$ dim $>$@{particls::ParticleTracker$<$ dim $>$}!qoi@{qoi}}
+\index{qoi@{qoi}!particls::ParticleTracker$<$ dim $>$@{particls::ParticleTracker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{qoi}{qoi}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+const \mbox{\hyperlink{classparticls_1_1_particle_tracker_aa927bb96f6e38bc82aaa9d96295e212d}{Quantity}} \mbox{\hyperlink{classparticls_1_1_particle_tracker}{particls\+::\+Particle\+Tracker}}$<$ dim $>$\+::qoi\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 40 of file Particle\+Tracker.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_particle_tracker_8hpp}{Particle\+Tracker.\+hpp}}\end{DoxyCompactItemize}

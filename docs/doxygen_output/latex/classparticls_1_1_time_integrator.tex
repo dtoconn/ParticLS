@@ -1,0 +1,191 @@
+\hypertarget{classparticls_1_1_time_integrator}{}\doxysection{particls\+::Time\+Integrator$<$ dim $>$ Class Template Reference}
+\label{classparticls_1_1_time_integrator}\index{particls::TimeIntegrator$<$ dim $>$@{particls::TimeIntegrator$<$ dim $>$}}
+
+
+{\ttfamily \#include $<$Time\+Integrator.\+hpp$>$}
+
+
+
+Inheritance diagram for particls\+::Time\+Integrator$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classparticls_1_1_time_integrator__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::function$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_time_integrator}{Time\+Integrator}}$<$ dim $>$ $>$Y\+A\+M\+L\+::\+Node const  \&options)$>$ \mbox{\hyperlink{classparticls_1_1_time_integrator_a20b16a97fc43fb23c3b25484b7f2bf68}{Time\+Integrator\+Constructor}}
+\item 
+typedef std\+::map$<$ std\+::string, \mbox{\hyperlink{classparticls_1_1_time_integrator_a20b16a97fc43fb23c3b25484b7f2bf68}{Time\+Integrator\+Constructor}} $>$ \mbox{\hyperlink{classparticls_1_1_time_integrator_a86f1688c91300b7e3229c4b91a365745}{Time\+Integrator\+Map}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_time_integrator_a5a0b3f0982242f9b599799a9ddb247e3}{Time\+Integrator}} (Y\+A\+M\+L\+::\+Node const \&options)
+\item 
+virtual \mbox{\hyperlink{classparticls_1_1_time_integrator_ab2522e2e5ce7a449262e0d4f1f0fb786}{$\sim$\+Time\+Integrator}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_time_integrator_a87eae08ba9d618381e9e95b0fb2a9d3a}{Evolve\+In\+Time}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_collection}{Collection}}$<$ dim $>$ $>$ const \&collection, double const current, double const end) const =0
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_time_integrator_ad529b13b291f1f97d663fe920a3fb4e5}{Timestep\+Size}} () const =0
+\begin{DoxyCompactList}\small\item\em Return the timestep size. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_time_integrator}{Time\+Integrator}}$<$ dim $>$ $>$ \mbox{\hyperlink{classparticls_1_1_time_integrator_a00a540ab5dd3bd7505a6c643eaeec4ea}{Create}} (Y\+A\+M\+L\+::\+Node const \&options)
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_time_integrator_a86f1688c91300b7e3229c4b91a365745}{Time\+Integrator\+Map}} $>$ \mbox{\hyperlink{classparticls_1_1_time_integrator_afaa15ed6c8e052b7ae7bcd1389ad6949}{Get\+Time\+Integrator\+Map}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classparticls_1_1_time_integrator_af6e66c4cae45a570db1ad961535bd019}{serialize}} (Archive \&ar)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classparticls_1_1_time_integrator_ab2f44cbb59a08132f4c843e5225bba0e}{cereal\+::access}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+class particls\+::\+Time\+Integrator$<$ dim $>$}
+
+
+
+Definition at line 12 of file Time\+Integrator.\+hpp.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classparticls_1_1_time_integrator_a20b16a97fc43fb23c3b25484b7f2bf68}\label{classparticls_1_1_time_integrator_a20b16a97fc43fb23c3b25484b7f2bf68}} 
+\index{particls::TimeIntegrator$<$ dim $>$@{particls::TimeIntegrator$<$ dim $>$}!TimeIntegratorConstructor@{TimeIntegratorConstructor}}
+\index{TimeIntegratorConstructor@{TimeIntegratorConstructor}!particls::TimeIntegrator$<$ dim $>$@{particls::TimeIntegrator$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{TimeIntegratorConstructor}{TimeIntegratorConstructor}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+typedef std\+::function$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_time_integrator}{Time\+Integrator}}$<$dim$>$ $>$Y\+A\+M\+L\+::\+Node const\& options)$>$ \mbox{\hyperlink{classparticls_1_1_time_integrator}{particls\+::\+Time\+Integrator}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_time_integrator_a20b16a97fc43fb23c3b25484b7f2bf68}{Time\+Integrator\+Constructor}}}
+
+
+
+Definition at line 29 of file Time\+Integrator.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_time_integrator_a86f1688c91300b7e3229c4b91a365745}\label{classparticls_1_1_time_integrator_a86f1688c91300b7e3229c4b91a365745}} 
+\index{particls::TimeIntegrator$<$ dim $>$@{particls::TimeIntegrator$<$ dim $>$}!TimeIntegratorMap@{TimeIntegratorMap}}
+\index{TimeIntegratorMap@{TimeIntegratorMap}!particls::TimeIntegrator$<$ dim $>$@{particls::TimeIntegrator$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{TimeIntegratorMap}{TimeIntegratorMap}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+typedef std\+::map$<$std\+::string, \mbox{\hyperlink{classparticls_1_1_time_integrator_a20b16a97fc43fb23c3b25484b7f2bf68}{Time\+Integrator\+Constructor}}$>$ \mbox{\hyperlink{classparticls_1_1_time_integrator}{particls\+::\+Time\+Integrator}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_time_integrator_a86f1688c91300b7e3229c4b91a365745}{Time\+Integrator\+Map}}}
+
+
+
+Definition at line 30 of file Time\+Integrator.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_time_integrator_a5a0b3f0982242f9b599799a9ddb247e3}\label{classparticls_1_1_time_integrator_a5a0b3f0982242f9b599799a9ddb247e3}} 
+\index{particls::TimeIntegrator$<$ dim $>$@{particls::TimeIntegrator$<$ dim $>$}!TimeIntegrator@{TimeIntegrator}}
+\index{TimeIntegrator@{TimeIntegrator}!particls::TimeIntegrator$<$ dim $>$@{particls::TimeIntegrator$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{TimeIntegrator()}{TimeIntegrator()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_time_integrator}{particls\+::\+Time\+Integrator}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_time_integrator}{Time\+Integrator}} (\begin{DoxyParamCaption}\item[{Y\+A\+M\+L\+::\+Node const \&}]{options }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em options} & Options for the timestepper \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_time_integrator_ab2522e2e5ce7a449262e0d4f1f0fb786}\label{classparticls_1_1_time_integrator_ab2522e2e5ce7a449262e0d4f1f0fb786}} 
+\index{particls::TimeIntegrator$<$ dim $>$@{particls::TimeIntegrator$<$ dim $>$}!````~TimeIntegrator@{$\sim$TimeIntegrator}}
+\index{````~TimeIntegrator@{$\sim$TimeIntegrator}!particls::TimeIntegrator$<$ dim $>$@{particls::TimeIntegrator$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$TimeIntegrator()}{~TimeIntegrator()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual \mbox{\hyperlink{classparticls_1_1_time_integrator}{particls\+::\+Time\+Integrator}}$<$ dim $>$\+::$\sim$\mbox{\hyperlink{classparticls_1_1_time_integrator}{Time\+Integrator}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_time_integrator_a00a540ab5dd3bd7505a6c643eaeec4ea}\label{classparticls_1_1_time_integrator_a00a540ab5dd3bd7505a6c643eaeec4ea}} 
+\index{particls::TimeIntegrator$<$ dim $>$@{particls::TimeIntegrator$<$ dim $>$}!Create@{Create}}
+\index{Create@{Create}!particls::TimeIntegrator$<$ dim $>$@{particls::TimeIntegrator$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+static std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_time_integrator}{Time\+Integrator}}$<$dim$>$ $>$ \mbox{\hyperlink{classparticls_1_1_time_integrator}{particls\+::\+Time\+Integrator}}$<$ dim $>$\+::Create (\begin{DoxyParamCaption}\item[{Y\+A\+M\+L\+::\+Node const \&}]{options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+A function to create time integrators from options specified in a Y\+A\+M\+L\+::\+Node object. The options\mbox{[}\char`\"{}\+Type\char`\"{}\mbox{]} should contain a string specifying the type of time integrator to construct. The other entries in the Y\+A\+M\+L\+::\+Node are used to specify options for specific body force types. For more information, look at the documentation for children of this class. \mbox{\Hypertarget{classparticls_1_1_time_integrator_a87eae08ba9d618381e9e95b0fb2a9d3a}\label{classparticls_1_1_time_integrator_a87eae08ba9d618381e9e95b0fb2a9d3a}} 
+\index{particls::TimeIntegrator$<$ dim $>$@{particls::TimeIntegrator$<$ dim $>$}!EvolveInTime@{EvolveInTime}}
+\index{EvolveInTime@{EvolveInTime}!particls::TimeIntegrator$<$ dim $>$@{particls::TimeIntegrator$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{EvolveInTime()}{EvolveInTime()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_time_integrator}{particls\+::\+Time\+Integrator}}$<$ dim $>$\+::Evolve\+In\+Time (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_collection}{Collection}}$<$ dim $>$ $>$ const \&}]{collection,  }\item[{double const}]{current,  }\item[{double const}]{end }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em collection} & The collection that is to be evolved from its current state to its end state \\
+\hline
+\mbox{\texttt{ in}}  & {\em current} & The current time \\
+\hline
+\mbox{\texttt{ in}}  & {\em end} & The end time \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classparticls_1_1_centered_difference_a9aa22f3243f78ebc349e1b407b80b38d}{particls\+::\+Centered\+Difference$<$ dim $>$}}, and \mbox{\hyperlink{classparticls_1_1_velocity_verlet_af1bd20150b3da2dadf4a4c09f1c04f84}{particls\+::\+Velocity\+Verlet$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_time_integrator_afaa15ed6c8e052b7ae7bcd1389ad6949}\label{classparticls_1_1_time_integrator_afaa15ed6c8e052b7ae7bcd1389ad6949}} 
+\index{particls::TimeIntegrator$<$ dim $>$@{particls::TimeIntegrator$<$ dim $>$}!GetTimeIntegratorMap@{GetTimeIntegratorMap}}
+\index{GetTimeIntegratorMap@{GetTimeIntegratorMap}!particls::TimeIntegrator$<$ dim $>$@{particls::TimeIntegrator$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{GetTimeIntegratorMap()}{GetTimeIntegratorMap()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+static std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_time_integrator_a86f1688c91300b7e3229c4b91a365745}{Time\+Integrator\+Map}}$>$ \mbox{\hyperlink{classparticls_1_1_time_integrator}{particls\+::\+Time\+Integrator}}$<$ dim $>$\+::Get\+Time\+Integrator\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classparticls_1_1_time_integrator_af6e66c4cae45a570db1ad961535bd019}\label{classparticls_1_1_time_integrator_af6e66c4cae45a570db1ad961535bd019}} 
+\index{particls::TimeIntegrator$<$ dim $>$@{particls::TimeIntegrator$<$ dim $>$}!serialize@{serialize}}
+\index{serialize@{serialize}!particls::TimeIntegrator$<$ dim $>$@{particls::TimeIntegrator$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+template$<$class Archive $>$ \\
+void \mbox{\hyperlink{classparticls_1_1_time_integrator}{particls\+::\+Time\+Integrator}}$<$ dim $>$\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 48 of file Time\+Integrator.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_time_integrator_ad529b13b291f1f97d663fe920a3fb4e5}\label{classparticls_1_1_time_integrator_ad529b13b291f1f97d663fe920a3fb4e5}} 
+\index{particls::TimeIntegrator$<$ dim $>$@{particls::TimeIntegrator$<$ dim $>$}!TimestepSize@{TimestepSize}}
+\index{TimestepSize@{TimestepSize}!particls::TimeIntegrator$<$ dim $>$@{particls::TimeIntegrator$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{TimestepSize()}{TimestepSize()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_time_integrator}{particls\+::\+Time\+Integrator}}$<$ dim $>$\+::Timestep\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Return the timestep size. 
+
+
+
+Implemented in \mbox{\hyperlink{classparticls_1_1_velocity_verlet_af4fc80af12f015f641ff90daca16c3d8}{particls\+::\+Velocity\+Verlet$<$ dim $>$}}, and \mbox{\hyperlink{classparticls_1_1_centered_difference_a2f998a3172234711d4d2704b8be7a171}{particls\+::\+Centered\+Difference$<$ dim $>$}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_time_integrator_ab2f44cbb59a08132f4c843e5225bba0e}\label{classparticls_1_1_time_integrator_ab2f44cbb59a08132f4c843e5225bba0e}} 
+\index{particls::TimeIntegrator$<$ dim $>$@{particls::TimeIntegrator$<$ dim $>$}!cereal::access@{cereal::access}}
+\index{cereal::access@{cereal::access}!particls::TimeIntegrator$<$ dim $>$@{particls::TimeIntegrator$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{cereal::access}{cereal::access}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+friend class cereal\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 45 of file Time\+Integrator.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_time_integrator_8hpp}{Time\+Integrator.\+hpp}}\end{DoxyCompactItemize}

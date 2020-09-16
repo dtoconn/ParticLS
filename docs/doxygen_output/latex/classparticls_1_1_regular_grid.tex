@@ -1,0 +1,210 @@
+\hypertarget{classparticls_1_1_regular_grid}{}\doxysection{particls\+::Regular\+Grid$<$ dim $>$ Class Template Reference}
+\label{classparticls_1_1_regular_grid}\index{particls::RegularGrid$<$ dim $>$@{particls::RegularGrid$<$ dim $>$}}
+
+
+{\ttfamily \#include $<$Regular\+Grid.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_regular_grid_ae33059cc28b9c0492ac5ea5f540e4bc5}{Regular\+Grid}} (Eigen\+::\+Matrix$<$ unsigned int, dim, 1 $>$ const \&num\+\_\+cells\+\_\+in, Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&cell\+\_\+size\+\_\+in, Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&grid\+\_\+origin\+\_\+in)
+\item 
+unsigned int \mbox{\hyperlink{classparticls_1_1_regular_grid_aac05d894d432b0fd32cf0f8dccd609dd}{Num\+Cells}} () const
+\begin{DoxyCompactList}\small\item\em Returns the total number of cells in the grid. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classparticls_1_1_regular_grid_ab985da44bba74b5635ec7bd2b47a1a78}{Num\+Nodes}} () const
+\begin{DoxyCompactList}\small\item\em Returns the total number of nodes in the grid. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classparticls_1_1_regular_grid_a953b68a72bf7fb7979e634b392362724}{Get\+Cell\+Index}} (Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$$>$ const \&pt) const
+\item 
+Eigen\+::\+Matrix$<$ int, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_regular_grid_aa9ac9baa5a265424ce1b6f44b341ac8b}{Get\+Cell}} (Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$$>$ const \&pt) const
+\item 
+Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_regular_grid_ac463b34f78a254e90623a0dd9408ffcb}{Get\+Node\+Loc}} (unsigned int node\+\_\+ind) const
+\item 
+Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_regular_grid_a1c26e5cd1d62b7d7efb18282ef79f78f}{Get\+Cell\+Loc}} (unsigned int cell\+\_\+ind) const
+\item 
+Eigen\+::\+Matrix$<$ int, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_regular_grid_aeb1898c58ef0dc6bc9f2ff9084be0a35}{Get\+Cell\+Multi}} (unsigned int cell\+\_\+ind) const
+\item 
+std\+::vector$<$ unsigned int $>$ \mbox{\hyperlink{classparticls_1_1_regular_grid_a0ed0aec6b4ebb46a0379350d734056a1}{Get\+Nodes}} (unsigned int cell\+\_\+ind) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_regular_grid_ace2f54eb6eb40bf5ca7380497a97239c}{cell\+\_\+size}}
+\begin{DoxyCompactList}\small\item\em Holds the size of each cell in the regular grid (dx,dy,dz) \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ unsigned int, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_regular_grid_a47e6a8eace5c5339d2c35a7d299f6be5}{num\+\_\+cells}}
+\item 
+Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_regular_grid_a2e48df6d1ca696ad9eed92cab393f755}{grid\+\_\+origin}}
+\begin{DoxyCompactList}\small\item\em Holds the location of the bottom left node in the grid. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_regular_grid_a8fb939e86ede7b3632836ca468f1c986}{grid\+\_\+max}}
+\begin{DoxyCompactList}\small\item\em Holds the lction of the upper right node in the grid (the maximum in each coordinate direction) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+class particls\+::\+Regular\+Grid$<$ dim $>$}
+
+
+
+Definition at line 25 of file Regular\+Grid.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_regular_grid_ae33059cc28b9c0492ac5ea5f540e4bc5}\label{classparticls_1_1_regular_grid_ae33059cc28b9c0492ac5ea5f540e4bc5}} 
+\index{particls::RegularGrid$<$ dim $>$@{particls::RegularGrid$<$ dim $>$}!RegularGrid@{RegularGrid}}
+\index{RegularGrid@{RegularGrid}!particls::RegularGrid$<$ dim $>$@{particls::RegularGrid$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{RegularGrid()}{RegularGrid()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_regular_grid}{particls\+::\+Regular\+Grid}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_regular_grid}{Regular\+Grid}} (\begin{DoxyParamCaption}\item[{Eigen\+::\+Matrix$<$ unsigned int, dim, 1 $>$ const \&}]{num\+\_\+cells\+\_\+in,  }\item[{Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&}]{cell\+\_\+size\+\_\+in,  }\item[{Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&}]{grid\+\_\+origin\+\_\+in }\end{DoxyParamCaption})}
+
+Constructs a uniform regular grid that is the same in each direction. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em num\+\_\+cells\+\_\+in} & The number cells to use in each coordinate direction \\
+\hline
+\mbox{\texttt{ in}}  & {\em cell\+\_\+size\+\_\+in} & The size of each cell in each coordinate direction \\
+\hline
+\mbox{\texttt{ in}}  & {\em grid\+\_\+origin\+\_\+in} & The grid origin (bottom left point in 2D) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_regular_grid_aa9ac9baa5a265424ce1b6f44b341ac8b}\label{classparticls_1_1_regular_grid_aa9ac9baa5a265424ce1b6f44b341ac8b}} 
+\index{particls::RegularGrid$<$ dim $>$@{particls::RegularGrid$<$ dim $>$}!GetCell@{GetCell}}
+\index{GetCell@{GetCell}!particls::RegularGrid$<$ dim $>$@{particls::RegularGrid$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{GetCell()}{GetCell()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$int, dim, 1$>$ \mbox{\hyperlink{classparticls_1_1_regular_grid}{particls\+::\+Regular\+Grid}}$<$ dim $>$\+::Get\+Cell (\begin{DoxyParamCaption}\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$$>$ const \&}]{pt }\end{DoxyParamCaption}) const}
+
+Return the (i,j,k) index of the cell containing a particular point. Returns a matrix of -\/1 if the point is outside the grid. \mbox{\Hypertarget{classparticls_1_1_regular_grid_a953b68a72bf7fb7979e634b392362724}\label{classparticls_1_1_regular_grid_a953b68a72bf7fb7979e634b392362724}} 
+\index{particls::RegularGrid$<$ dim $>$@{particls::RegularGrid$<$ dim $>$}!GetCellIndex@{GetCellIndex}}
+\index{GetCellIndex@{GetCellIndex}!particls::RegularGrid$<$ dim $>$@{particls::RegularGrid$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{GetCellIndex()}{GetCellIndex()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+int \mbox{\hyperlink{classparticls_1_1_regular_grid}{particls\+::\+Regular\+Grid}}$<$ dim $>$\+::Get\+Cell\+Index (\begin{DoxyParamCaption}\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$$>$ const \&}]{pt }\end{DoxyParamCaption}) const}
+
+Returns the linear index of the cell containing a particular point. Returns -\/1 if the point is outside the grid. \mbox{\Hypertarget{classparticls_1_1_regular_grid_a1c26e5cd1d62b7d7efb18282ef79f78f}\label{classparticls_1_1_regular_grid_a1c26e5cd1d62b7d7efb18282ef79f78f}} 
+\index{particls::RegularGrid$<$ dim $>$@{particls::RegularGrid$<$ dim $>$}!GetCellLoc@{GetCellLoc}}
+\index{GetCellLoc@{GetCellLoc}!particls::RegularGrid$<$ dim $>$@{particls::RegularGrid$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{GetCellLoc()}{GetCellLoc()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, dim, 1$>$ \mbox{\hyperlink{classparticls_1_1_regular_grid}{particls\+::\+Regular\+Grid}}$<$ dim $>$\+::Get\+Cell\+Loc (\begin{DoxyParamCaption}\item[{unsigned int}]{cell\+\_\+ind }\end{DoxyParamCaption}) const}
+
+Returns a point at the center of a cell given the cell\textquotesingle{}s linear index. \mbox{\Hypertarget{classparticls_1_1_regular_grid_aeb1898c58ef0dc6bc9f2ff9084be0a35}\label{classparticls_1_1_regular_grid_aeb1898c58ef0dc6bc9f2ff9084be0a35}} 
+\index{particls::RegularGrid$<$ dim $>$@{particls::RegularGrid$<$ dim $>$}!GetCellMulti@{GetCellMulti}}
+\index{GetCellMulti@{GetCellMulti}!particls::RegularGrid$<$ dim $>$@{particls::RegularGrid$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{GetCellMulti()}{GetCellMulti()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$int, dim, 1$>$ \mbox{\hyperlink{classparticls_1_1_regular_grid}{particls\+::\+Regular\+Grid}}$<$ dim $>$\+::Get\+Cell\+Multi (\begin{DoxyParamCaption}\item[{unsigned int}]{cell\+\_\+ind }\end{DoxyParamCaption}) const}
+
+Converts the linear index into (i,j) or (i,j,k) \mbox{\Hypertarget{classparticls_1_1_regular_grid_ac463b34f78a254e90623a0dd9408ffcb}\label{classparticls_1_1_regular_grid_ac463b34f78a254e90623a0dd9408ffcb}} 
+\index{particls::RegularGrid$<$ dim $>$@{particls::RegularGrid$<$ dim $>$}!GetNodeLoc@{GetNodeLoc}}
+\index{GetNodeLoc@{GetNodeLoc}!particls::RegularGrid$<$ dim $>$@{particls::RegularGrid$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{GetNodeLoc()}{GetNodeLoc()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, dim, 1$>$ \mbox{\hyperlink{classparticls_1_1_regular_grid}{particls\+::\+Regular\+Grid}}$<$ dim $>$\+::Get\+Node\+Loc (\begin{DoxyParamCaption}\item[{unsigned int}]{node\+\_\+ind }\end{DoxyParamCaption}) const}
+
+Returns the location (x,y,z) of a node given its linear index. \mbox{\Hypertarget{classparticls_1_1_regular_grid_a0ed0aec6b4ebb46a0379350d734056a1}\label{classparticls_1_1_regular_grid_a0ed0aec6b4ebb46a0379350d734056a1}} 
+\index{particls::RegularGrid$<$ dim $>$@{particls::RegularGrid$<$ dim $>$}!GetNodes@{GetNodes}}
+\index{GetNodes@{GetNodes}!particls::RegularGrid$<$ dim $>$@{particls::RegularGrid$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{GetNodes()}{GetNodes()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$unsigned int$>$ \mbox{\hyperlink{classparticls_1_1_regular_grid}{particls\+::\+Regular\+Grid}}$<$ dim $>$\+::Get\+Nodes (\begin{DoxyParamCaption}\item[{unsigned int}]{cell\+\_\+ind }\end{DoxyParamCaption}) const}
+
+Returns the linear indices of nodes surrounding a cell. Notice that for a single cell and a particular coordinate direction, there are only two possible locations for a node, e.\+g., the left and right of the cell for the x direction. Thus, there are 2$^\wedge$2 nodes in 2D and 2$^\wedge$3 nodes in 3D. The nodes are returned so that the x direction changes the most quickly, followed by the y direction, and in 3d, the z direction. For example, if \mbox{[}x1,x2\mbox{]}, \mbox{[}y1,y2\mbox{]}, \mbox{[}z1,z2\mbox{]} are the possible values in each coordinate direction, then this function would return the linear node indices corresponding to these locations\+:
+\begin{DoxyItemize}
+\item In 2D\+: (x1,y1), (x2, y1), (x1, y2), (x2,y2)
+\item In 3D\+: (x1, y1, z1), (x2, y1, z1), (x1, y2, z1), (x2, y2, z1), (x1, y1, z2), (x2, y1, z2), (x1, y2, z2), (x2, y2, z2) 
+\end{DoxyItemize}\mbox{\Hypertarget{classparticls_1_1_regular_grid_aac05d894d432b0fd32cf0f8dccd609dd}\label{classparticls_1_1_regular_grid_aac05d894d432b0fd32cf0f8dccd609dd}} 
+\index{particls::RegularGrid$<$ dim $>$@{particls::RegularGrid$<$ dim $>$}!NumCells@{NumCells}}
+\index{NumCells@{NumCells}!particls::RegularGrid$<$ dim $>$@{particls::RegularGrid$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{NumCells()}{NumCells()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+unsigned int \mbox{\hyperlink{classparticls_1_1_regular_grid}{particls\+::\+Regular\+Grid}}$<$ dim $>$\+::Num\+Cells (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the total number of cells in the grid. 
+
+
+
+Definition at line 38 of file Regular\+Grid.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_regular_grid_ab985da44bba74b5635ec7bd2b47a1a78}\label{classparticls_1_1_regular_grid_ab985da44bba74b5635ec7bd2b47a1a78}} 
+\index{particls::RegularGrid$<$ dim $>$@{particls::RegularGrid$<$ dim $>$}!NumNodes@{NumNodes}}
+\index{NumNodes@{NumNodes}!particls::RegularGrid$<$ dim $>$@{particls::RegularGrid$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{NumNodes()}{NumNodes()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+unsigned int \mbox{\hyperlink{classparticls_1_1_regular_grid}{particls\+::\+Regular\+Grid}}$<$ dim $>$\+::Num\+Nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the total number of nodes in the grid. 
+
+
+
+Definition at line 41 of file Regular\+Grid.\+hpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticls_1_1_regular_grid_ace2f54eb6eb40bf5ca7380497a97239c}\label{classparticls_1_1_regular_grid_ace2f54eb6eb40bf5ca7380497a97239c}} 
+\index{particls::RegularGrid$<$ dim $>$@{particls::RegularGrid$<$ dim $>$}!cell\_size@{cell\_size}}
+\index{cell\_size@{cell\_size}!particls::RegularGrid$<$ dim $>$@{particls::RegularGrid$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{cell\_size}{cell\_size}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, dim, 1$>$ \mbox{\hyperlink{classparticls_1_1_regular_grid}{particls\+::\+Regular\+Grid}}$<$ dim $>$\+::cell\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Holds the size of each cell in the regular grid (dx,dy,dz) 
+
+
+
+Definition at line 79 of file Regular\+Grid.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_regular_grid_a8fb939e86ede7b3632836ca468f1c986}\label{classparticls_1_1_regular_grid_a8fb939e86ede7b3632836ca468f1c986}} 
+\index{particls::RegularGrid$<$ dim $>$@{particls::RegularGrid$<$ dim $>$}!grid\_max@{grid\_max}}
+\index{grid\_max@{grid\_max}!particls::RegularGrid$<$ dim $>$@{particls::RegularGrid$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{grid\_max}{grid\_max}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, dim, 1$>$ \mbox{\hyperlink{classparticls_1_1_regular_grid}{particls\+::\+Regular\+Grid}}$<$ dim $>$\+::grid\+\_\+max\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Holds the lction of the upper right node in the grid (the maximum in each coordinate direction) 
+
+
+
+Definition at line 91 of file Regular\+Grid.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_regular_grid_a2e48df6d1ca696ad9eed92cab393f755}\label{classparticls_1_1_regular_grid_a2e48df6d1ca696ad9eed92cab393f755}} 
+\index{particls::RegularGrid$<$ dim $>$@{particls::RegularGrid$<$ dim $>$}!grid\_origin@{grid\_origin}}
+\index{grid\_origin@{grid\_origin}!particls::RegularGrid$<$ dim $>$@{particls::RegularGrid$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{grid\_origin}{grid\_origin}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, dim, 1$>$ \mbox{\hyperlink{classparticls_1_1_regular_grid}{particls\+::\+Regular\+Grid}}$<$ dim $>$\+::grid\+\_\+origin\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Holds the location of the bottom left node in the grid. 
+
+
+
+Definition at line 88 of file Regular\+Grid.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_regular_grid_a47e6a8eace5c5339d2c35a7d299f6be5}\label{classparticls_1_1_regular_grid_a47e6a8eace5c5339d2c35a7d299f6be5}} 
+\index{particls::RegularGrid$<$ dim $>$@{particls::RegularGrid$<$ dim $>$}!num\_cells@{num\_cells}}
+\index{num\_cells@{num\_cells}!particls::RegularGrid$<$ dim $>$@{particls::RegularGrid$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{num\_cells}{num\_cells}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$unsigned int, dim, 1$>$ \mbox{\hyperlink{classparticls_1_1_regular_grid}{particls\+::\+Regular\+Grid}}$<$ dim $>$\+::num\+\_\+cells\hspace{0.3cm}{\ttfamily [private]}}
+
+Holds the number of cells in each coordinate dimension (Nx,Ny,Nz) Note\+: the number of nodes in each direction is one more than the number of cells. 
+
+Definition at line 85 of file Regular\+Grid.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_regular_grid_8hpp}{Regular\+Grid.\+hpp}}\end{DoxyCompactItemize}

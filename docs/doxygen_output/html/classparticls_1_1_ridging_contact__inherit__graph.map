@@ -1,0 +1,7 @@
+<map id="particls::RidgingContact&lt; dim &gt;" name="particls::RidgingContact&lt; dim &gt;">
+<area shape="rect" id="node1" title="A viscoelastic&#45;plastic contact law to model sea ice ridging." alt="" coords="80,273,243,315"/>
+<area shape="rect" id="node2" href="$classparticls_1_1_symmetric_contact_force.html" title=" " alt="" coords="71,184,252,225"/>
+<area shape="rect" id="node3" href="$classparticls_1_1_contact_force.html" title=" " alt="" coords="86,95,237,136"/>
+<area shape="rect" id="node4" href="$classparticls_1_1_state_object.html" title="Defines the current state of an object and how it evolves in time." alt="" coords="5,13,147,39"/>
+<area shape="rect" id="node5" href="$classparticls_1_1_generic_force.html" title=" " alt="" coords="171,5,322,47"/>
+</map>

@@ -1,0 +1,166 @@
+\hypertarget{classparticls_1_1_gravitational_force}{}\doxysection{particls\+::Gravitational\+Force$<$ dim $>$ Class Template Reference}
+\label{classparticls_1_1_gravitational_force}\index{particls::GravitationalForce$<$ dim $>$@{particls::GravitationalForce$<$ dim $>$}}
+
+
+{\ttfamily \#include $<$Gravitational\+Force.\+hpp$>$}
+
+
+
+Inheritance diagram for particls\+::Gravitational\+Force$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classparticls_1_1_gravitational_force__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for particls\+::Gravitational\+Force$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classparticls_1_1_gravitational_force__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_gravitational_force_a774835a2696cc81a951eff4f67bd0fd9}{Gravitational\+Force}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&\mbox{\hyperlink{classparticls_1_1_body_force_ad2e61420ecbcd5a1f2f18d92667af2ae}{particle}})
+\item 
+\mbox{\hyperlink{classparticls_1_1_gravitational_force_a483b0f97a43b02321ca784b6d785e13c}{Gravitational\+Force}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&\mbox{\hyperlink{classparticls_1_1_body_force_ad2e61420ecbcd5a1f2f18d92667af2ae}{particle}}, Y\+A\+M\+L\+::\+Node const \&options)
+\item 
+virtual \mbox{\hyperlink{classparticls_1_1_gravitational_force_a057f2d79fa9e42e19282e8f9e7be8309}{$\sim$\+Gravitational\+Force}} ()=default
+\begin{DoxyCompactList}\small\item\em Use the default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_gravitational_force_adaa73ce9472d29dbb08a3e0395afef64}{Gravitational\+Force}} ()=default
+\begin{DoxyCompactList}\small\item\em Private default constructor for serialize. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classparticls_1_1_gravitational_force_a247b6a438d4b113954ed5343d395c08a}{serialize}} (Archive \&ar)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classparticls_1_1_gravitational_force_a60347947ad7ba75353a7a83d8e7ed095}{accel\+\_\+gravity}}
+\begin{DoxyCompactList}\small\item\em The acceleration due to gravity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classparticls_1_1_gravitational_force_ab2f44cbb59a08132f4c843e5225bba0e}{cereal\+::access}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+class particls\+::\+Gravitational\+Force$<$ dim $>$}
+
+
+
+Definition at line 13 of file Gravitational\+Force.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_gravitational_force_a774835a2696cc81a951eff4f67bd0fd9}\label{classparticls_1_1_gravitational_force_a774835a2696cc81a951eff4f67bd0fd9}} 
+\index{particls::GravitationalForce$<$ dim $>$@{particls::GravitationalForce$<$ dim $>$}!GravitationalForce@{GravitationalForce}}
+\index{GravitationalForce@{GravitationalForce}!particls::GravitationalForce$<$ dim $>$@{particls::GravitationalForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{GravitationalForce()}{GravitationalForce()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_gravitational_force}{particls\+::\+Gravitational\+Force}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_gravitational_force}{Gravitational\+Force}} (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{particle }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em particle} & The particle on which the force is acting \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_gravitational_force_a483b0f97a43b02321ca784b6d785e13c}\label{classparticls_1_1_gravitational_force_a483b0f97a43b02321ca784b6d785e13c}} 
+\index{particls::GravitationalForce$<$ dim $>$@{particls::GravitationalForce$<$ dim $>$}!GravitationalForce@{GravitationalForce}}
+\index{GravitationalForce@{GravitationalForce}!particls::GravitationalForce$<$ dim $>$@{particls::GravitationalForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{GravitationalForce()}{GravitationalForce()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_gravitational_force}{particls\+::\+Gravitational\+Force}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_gravitational_force}{Gravitational\+Force}} (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{particle,  }\item[{Y\+A\+M\+L\+::\+Node const \&}]{options }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em particle} & The particle on which the force is acting \\
+\hline
+\mbox{\texttt{ in}}  & {\em options} & The Y\+A\+ML node with `options\mbox{[}\char`\"{}\+Gravity\char`\"{}\mbox{]}' as a user-\/defined value (e.\+g., -\/1.\+0) Note\+: If the user does not specify a value in the Y\+A\+ML node, then -\/9.\+81 is used. This assumes gravity is working in the y direction in 2D, and the z direction in 3D. If the user wants to specify a generic acceleration vector, use the {\ttfamily \mbox{\hyperlink{classparticls_1_1_uniform_acceleration}{Uniform\+Acceleration}}} class instead. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_gravitational_force_a057f2d79fa9e42e19282e8f9e7be8309}\label{classparticls_1_1_gravitational_force_a057f2d79fa9e42e19282e8f9e7be8309}} 
+\index{particls::GravitationalForce$<$ dim $>$@{particls::GravitationalForce$<$ dim $>$}!````~GravitationalForce@{$\sim$GravitationalForce}}
+\index{````~GravitationalForce@{$\sim$GravitationalForce}!particls::GravitationalForce$<$ dim $>$@{particls::GravitationalForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$GravitationalForce()}{~GravitationalForce()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual \mbox{\hyperlink{classparticls_1_1_gravitational_force}{particls\+::\+Gravitational\+Force}}$<$ dim $>$\+::$\sim$\mbox{\hyperlink{classparticls_1_1_gravitational_force}{Gravitational\+Force}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Use the default destructor. 
+
+\mbox{\Hypertarget{classparticls_1_1_gravitational_force_adaa73ce9472d29dbb08a3e0395afef64}\label{classparticls_1_1_gravitational_force_adaa73ce9472d29dbb08a3e0395afef64}} 
+\index{particls::GravitationalForce$<$ dim $>$@{particls::GravitationalForce$<$ dim $>$}!GravitationalForce@{GravitationalForce}}
+\index{GravitationalForce@{GravitationalForce}!particls::GravitationalForce$<$ dim $>$@{particls::GravitationalForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{GravitationalForce()}{GravitationalForce()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_gravitational_force}{particls\+::\+Gravitational\+Force}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_gravitational_force}{Gravitational\+Force}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [default]}}
+
+
+
+Private default constructor for serialize. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_gravitational_force_a247b6a438d4b113954ed5343d395c08a}\label{classparticls_1_1_gravitational_force_a247b6a438d4b113954ed5343d395c08a}} 
+\index{particls::GravitationalForce$<$ dim $>$@{particls::GravitationalForce$<$ dim $>$}!serialize@{serialize}}
+\index{serialize@{serialize}!particls::GravitationalForce$<$ dim $>$@{particls::GravitationalForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+template$<$class Archive $>$ \\
+void \mbox{\hyperlink{classparticls_1_1_gravitational_force}{particls\+::\+Gravitational\+Force}}$<$ dim $>$\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 46 of file Gravitational\+Force.\+hpp.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_gravitational_force_ab2f44cbb59a08132f4c843e5225bba0e}\label{classparticls_1_1_gravitational_force_ab2f44cbb59a08132f4c843e5225bba0e}} 
+\index{particls::GravitationalForce$<$ dim $>$@{particls::GravitationalForce$<$ dim $>$}!cereal::access@{cereal::access}}
+\index{cereal::access@{cereal::access}!particls::GravitationalForce$<$ dim $>$@{particls::GravitationalForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{cereal::access}{cereal::access}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+friend class cereal\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 40 of file Gravitational\+Force.\+hpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticls_1_1_gravitational_force_a60347947ad7ba75353a7a83d8e7ed095}\label{classparticls_1_1_gravitational_force_a60347947ad7ba75353a7a83d8e7ed095}} 
+\index{particls::GravitationalForce$<$ dim $>$@{particls::GravitationalForce$<$ dim $>$}!accel\_gravity@{accel\_gravity}}
+\index{accel\_gravity@{accel\_gravity}!particls::GravitationalForce$<$ dim $>$@{particls::GravitationalForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{accel\_gravity}{accel\_gravity}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_gravitational_force}{particls\+::\+Gravitational\+Force}}$<$ dim $>$\+::accel\+\_\+gravity\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The acceleration due to gravity. 
+
+
+
+Definition at line 38 of file Gravitational\+Force.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_gravitational_force_8hpp}{Gravitational\+Force.\+hpp}}\end{DoxyCompactItemize}

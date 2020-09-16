@@ -1,0 +1,158 @@
+\hypertarget{classparticls_1_1_generic_vector_field}{}\doxysection{particls\+::Generic\+Vector\+Field$<$ dim $>$ Class Template Reference}
+\label{classparticls_1_1_generic_vector_field}\index{particls::GenericVectorField$<$ dim $>$@{particls::GenericVectorField$<$ dim $>$}}
+
+
+{\ttfamily \#include $<$Generic\+Vector\+Field.\+hpp$>$}
+
+
+
+Inheritance diagram for particls\+::Generic\+Vector\+Field$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classparticls_1_1_generic_vector_field__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_generic_vector_field_aa650a2dd759fb0e3dc62d0a167393fc0}{Generic\+Vector\+Field}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_generic_vector_field_a20063f7381cef049f9dded081c6089b7}{Compute\+Vector}} (double const \&time, Eigen\+::\+Ref$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$$>$ const \&position)=0
+\item 
+Eigen\+::\+Matrix$<$ double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$ dim $>$\+::velocity, 1 $>$ const  \& \mbox{\hyperlink{classparticls_1_1_generic_vector_field_a46425921d3d22f65657db0e7e84fc3eb}{Get\+Vector}} () const
+\begin{DoxyCompactList}\small\item\em Return vector member. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classparticls_1_1_generic_vector_field_a8a57c76d35f53575701619bfb9b9f3bc}{$\sim$\+Generic\+Vector\+Field}} ()=default
+\begin{DoxyCompactList}\small\item\em Use the default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Eigen\+::\+Matrix$<$ double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$ dim $>$\+::velocity, 1 $>$ \mbox{\hyperlink{classparticls_1_1_generic_vector_field_a46dca2b53596081c04797686426aa1b3}{vector}}
+\begin{DoxyCompactList}\small\item\em Member for tracking a specific vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classparticls_1_1_generic_vector_field_adb3da6dd74961cfcfcee92bce293a78f}{serialize}} (Archive \&ar)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classparticls_1_1_generic_vector_field_ab2f44cbb59a08132f4c843e5225bba0e}{cereal\+::access}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+class particls\+::\+Generic\+Vector\+Field$<$ dim $>$}
+
+
+
+Definition at line 13 of file Generic\+Vector\+Field.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_generic_vector_field_aa650a2dd759fb0e3dc62d0a167393fc0}\label{classparticls_1_1_generic_vector_field_aa650a2dd759fb0e3dc62d0a167393fc0}} 
+\index{particls::GenericVectorField$<$ dim $>$@{particls::GenericVectorField$<$ dim $>$}!GenericVectorField@{GenericVectorField}}
+\index{GenericVectorField@{GenericVectorField}!particls::GenericVectorField$<$ dim $>$@{particls::GenericVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{GenericVectorField()}{GenericVectorField()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_generic_vector_field}{particls\+::\+Generic\+Vector\+Field}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_generic_vector_field}{Generic\+Vector\+Field}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+\mbox{\Hypertarget{classparticls_1_1_generic_vector_field_a8a57c76d35f53575701619bfb9b9f3bc}\label{classparticls_1_1_generic_vector_field_a8a57c76d35f53575701619bfb9b9f3bc}} 
+\index{particls::GenericVectorField$<$ dim $>$@{particls::GenericVectorField$<$ dim $>$}!````~GenericVectorField@{$\sim$GenericVectorField}}
+\index{````~GenericVectorField@{$\sim$GenericVectorField}!particls::GenericVectorField$<$ dim $>$@{particls::GenericVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$GenericVectorField()}{~GenericVectorField()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual \mbox{\hyperlink{classparticls_1_1_generic_vector_field}{particls\+::\+Generic\+Vector\+Field}}$<$ dim $>$\+::$\sim$\mbox{\hyperlink{classparticls_1_1_generic_vector_field}{Generic\+Vector\+Field}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Use the default destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_generic_vector_field_a20063f7381cef049f9dded081c6089b7}\label{classparticls_1_1_generic_vector_field_a20063f7381cef049f9dded081c6089b7}} 
+\index{particls::GenericVectorField$<$ dim $>$@{particls::GenericVectorField$<$ dim $>$}!ComputeVector@{ComputeVector}}
+\index{ComputeVector@{ComputeVector}!particls::GenericVectorField$<$ dim $>$@{particls::GenericVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeVector()}{ComputeVector()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_generic_vector_field}{particls\+::\+Generic\+Vector\+Field}}$<$ dim $>$\+::Compute\+Vector (\begin{DoxyParamCaption}\item[{double const \&}]{time,  }\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$$>$ const \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Compute the vector at a prescribed position and update the vector member 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & Time at which we want the computed vector \\
+\hline
+\mbox{\texttt{ in}}  & {\em position} & Position where we want the computed vector \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classparticls_1_1_interpolated_vector_field_a00b5701fd4c8968969b317f97978dfe9}{particls\+::\+Interpolated\+Vector\+Field$<$ dim $>$}}, and \mbox{\hyperlink{classparticls_1_1_uniform_vector_field_a2b419095517d592d7b253eb133a54c9b}{particls\+::\+Uniform\+Vector\+Field$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_generic_vector_field_a46425921d3d22f65657db0e7e84fc3eb}\label{classparticls_1_1_generic_vector_field_a46425921d3d22f65657db0e7e84fc3eb}} 
+\index{particls::GenericVectorField$<$ dim $>$@{particls::GenericVectorField$<$ dim $>$}!GetVector@{GetVector}}
+\index{GetVector@{GetVector}!particls::GenericVectorField$<$ dim $>$@{particls::GenericVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{GetVector()}{GetVector()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$dim$>$\+::velocity, 1$>$ const\& \mbox{\hyperlink{classparticls_1_1_generic_vector_field}{particls\+::\+Generic\+Vector\+Field}}$<$ dim $>$\+::Get\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return vector member. 
+
+\mbox{\Hypertarget{classparticls_1_1_generic_vector_field_adb3da6dd74961cfcfcee92bce293a78f}\label{classparticls_1_1_generic_vector_field_adb3da6dd74961cfcfcee92bce293a78f}} 
+\index{particls::GenericVectorField$<$ dim $>$@{particls::GenericVectorField$<$ dim $>$}!serialize@{serialize}}
+\index{serialize@{serialize}!particls::GenericVectorField$<$ dim $>$@{particls::GenericVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+template$<$class Archive $>$ \\
+void \mbox{\hyperlink{classparticls_1_1_generic_vector_field}{particls\+::\+Generic\+Vector\+Field}}$<$ dim $>$\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 41 of file Generic\+Vector\+Field.\+hpp.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_generic_vector_field_ab2f44cbb59a08132f4c843e5225bba0e}\label{classparticls_1_1_generic_vector_field_ab2f44cbb59a08132f4c843e5225bba0e}} 
+\index{particls::GenericVectorField$<$ dim $>$@{particls::GenericVectorField$<$ dim $>$}!cereal::access@{cereal::access}}
+\index{cereal::access@{cereal::access}!particls::GenericVectorField$<$ dim $>$@{particls::GenericVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{cereal::access}{cereal::access}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+friend class cereal\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 38 of file Generic\+Vector\+Field.\+hpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticls_1_1_generic_vector_field_a46dca2b53596081c04797686426aa1b3}\label{classparticls_1_1_generic_vector_field_a46dca2b53596081c04797686426aa1b3}} 
+\index{particls::GenericVectorField$<$ dim $>$@{particls::GenericVectorField$<$ dim $>$}!vector@{vector}}
+\index{vector@{vector}!particls::GenericVectorField$<$ dim $>$@{particls::GenericVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{vector}{vector}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$dim$>$\+::velocity, 1$>$ \mbox{\hyperlink{classparticls_1_1_generic_vector_field}{particls\+::\+Generic\+Vector\+Field}}$<$ dim $>$\+::vector\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Member for tracking a specific vector. 
+
+
+
+Definition at line 34 of file Generic\+Vector\+Field.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_generic_vector_field_8hpp}{Generic\+Vector\+Field.\+hpp}}\end{DoxyCompactItemize}

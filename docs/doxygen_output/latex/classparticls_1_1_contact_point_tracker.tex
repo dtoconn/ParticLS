@@ -1,0 +1,252 @@
+\hypertarget{classparticls_1_1_contact_point_tracker}{}\doxysection{particls\+::Contact\+Point\+Tracker$<$ dim $>$ Class Template Reference}
+\label{classparticls_1_1_contact_point_tracker}\index{particls::ContactPointTracker$<$ dim $>$@{particls::ContactPointTracker$<$ dim $>$}}
+
+
+Track the contact points between all of the rigid bodies or particles in a collection.  
+
+
+
+
+{\ttfamily \#include $<$Contact\+Point\+Tracker.\+hpp$>$}
+
+
+
+Inheritance diagram for particls\+::Contact\+Point\+Tracker$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{classparticls_1_1_contact_point_tracker__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for particls\+::Contact\+Point\+Tracker$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{classparticls_1_1_contact_point_tracker__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_contact_point_tracker_a0bdf8c94a0aa3e6b762155642a37c38f}{Contact\+Point\+Tracker}} (std\+::string const \&\mbox{\hyperlink{classparticls_1_1_contact_point_tracker_a1926f5b129bfcaca6efe2a45e40d90f5}{filename}}=\char`\"{}\char`\"{})
+\item 
+\mbox{\hyperlink{classparticls_1_1_contact_point_tracker_a3dbbcfa2b2d4dde40afae4c95021d696}{Contact\+Point\+Tracker}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_rigid_body}{Rigid\+Body}}$<$ dim $>$ $>$ $>$ const \&bodies, std\+::string const \&\mbox{\hyperlink{classparticls_1_1_contact_point_tracker_a1926f5b129bfcaca6efe2a45e40d90f5}{filename}}=\char`\"{}\char`\"{})
+\item 
+\mbox{\hyperlink{classparticls_1_1_contact_point_tracker_aab6fdfd36e88c09d9c772037e3880b81}{Contact\+Point\+Tracker}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_rigid_body}{Rigid\+Body}}$<$ dim $>$ $>$ $>$ const \&bodies, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_searcher}{Searcher}}$<$ dim $>$ $>$ const \&\mbox{\hyperlink{classparticls_1_1_contact_point_tracker_ab4c4b096f0bc126f76cc78f51c53055b}{searcher}}, std\+::string const \&\mbox{\hyperlink{classparticls_1_1_contact_point_tracker_a1926f5b129bfcaca6efe2a45e40d90f5}{filename}}=\char`\"{}\char`\"{})
+\item 
+\mbox{\hyperlink{classparticls_1_1_contact_point_tracker_a428d6400fe441af1b3019d4c1c656ca5}{Contact\+Point\+Tracker}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&particles, std\+::string const \&\mbox{\hyperlink{classparticls_1_1_contact_point_tracker_a1926f5b129bfcaca6efe2a45e40d90f5}{filename}}=\char`\"{}\char`\"{})
+\item 
+\mbox{\hyperlink{classparticls_1_1_contact_point_tracker_a456f230e0dbbec86b6eb1e702b8e4f64}{Contact\+Point\+Tracker}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&particles, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_searcher}{Searcher}}$<$ dim $>$ $>$ const \&\mbox{\hyperlink{classparticls_1_1_contact_point_tracker_ab4c4b096f0bc126f76cc78f51c53055b}{searcher}}, std\+::string const \&\mbox{\hyperlink{classparticls_1_1_contact_point_tracker_a1926f5b129bfcaca6efe2a45e40d90f5}{filename}}=\char`\"{}\char`\"{})
+\item 
+virtual \mbox{\hyperlink{classparticls_1_1_contact_point_tracker_a893cc085d0a5a76200da6fb4cbff2d3d}{$\sim$\+Contact\+Point\+Tracker}} ()=default
+\item 
+virtual Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classparticls_1_1_contact_point_tracker_ad2258b8885a9263b92bed56bb78d93de}{Quantity\+Of\+Interest}} (double const time) override
+\item 
+void \mbox{\hyperlink{classparticls_1_1_contact_point_tracker_a09a7fc7f32fc823e0257850ff252dbe2}{Add\+Rigid\+Body}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_rigid_body}{Rigid\+Body}}$<$ dim $>$ $>$ const \&body)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classparticls_1_1_contact_point_tracker_ad56b58127d77cc9b95a7e93438d06ca3}{Write\+Contact\+Points}} (Eigen\+::\+Vector\+Xd const \&contact\+Points, double const radius)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const double \mbox{\hyperlink{classparticls_1_1_contact_point_tracker_a9631cf4fb1162f9c1550891d66d25b3a}{scale}} = 100.\+0
+\item 
+const std\+::string \mbox{\hyperlink{classparticls_1_1_contact_point_tracker_a1926f5b129bfcaca6efe2a45e40d90f5}{filename}}
+\item 
+unsigned int \mbox{\hyperlink{classparticls_1_1_contact_point_tracker_a61cc68cdae46993ee595656fb537c7f1}{filecount}} = 0
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_collection}{Collection}}$<$ dim $>$ $>$ \mbox{\hyperlink{classparticls_1_1_contact_point_tracker_ada5aa4ffbc02e364a4b2b5912b30606f}{collection}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_searcher}{Searcher}}$<$ dim $>$ $>$ \mbox{\hyperlink{classparticls_1_1_contact_point_tracker_ab4c4b096f0bc126f76cc78f51c53055b}{searcher}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+class particls\+::\+Contact\+Point\+Tracker$<$ dim $>$}
+
+Track the contact points between all of the rigid bodies or particles in a collection. 
+
+Definition at line 15 of file Contact\+Point\+Tracker.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_contact_point_tracker_a0bdf8c94a0aa3e6b762155642a37c38f}\label{classparticls_1_1_contact_point_tracker_a0bdf8c94a0aa3e6b762155642a37c38f}} 
+\index{particls::ContactPointTracker$<$ dim $>$@{particls::ContactPointTracker$<$ dim $>$}!ContactPointTracker@{ContactPointTracker}}
+\index{ContactPointTracker@{ContactPointTracker}!particls::ContactPointTracker$<$ dim $>$@{particls::ContactPointTracker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ContactPointTracker()}{ContactPointTracker()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_contact_point_tracker}{particls\+::\+Contact\+Point\+Tracker}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_contact_point_tracker}{Contact\+Point\+Tracker}} (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{filename = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em filename} & Filename for saving contact point observations. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_contact_point_tracker_a3dbbcfa2b2d4dde40afae4c95021d696}\label{classparticls_1_1_contact_point_tracker_a3dbbcfa2b2d4dde40afae4c95021d696}} 
+\index{particls::ContactPointTracker$<$ dim $>$@{particls::ContactPointTracker$<$ dim $>$}!ContactPointTracker@{ContactPointTracker}}
+\index{ContactPointTracker@{ContactPointTracker}!particls::ContactPointTracker$<$ dim $>$@{particls::ContactPointTracker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ContactPointTracker()}{ContactPointTracker()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_contact_point_tracker}{particls\+::\+Contact\+Point\+Tracker}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_contact_point_tracker}{Contact\+Point\+Tracker}} (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_rigid_body}{Rigid\+Body}}$<$ dim $>$ $>$ $>$ const \&}]{bodies,  }\item[{std\+::string const \&}]{filename = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em bodies} & Set of \mbox{\hyperlink{classparticls_1_1_rigid_body}{Rigid\+Body}} objects that you want to track the contact points between \\
+\hline
+\mbox{\texttt{ in}}  & {\em filename} & Filename for saving contact point observations \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_contact_point_tracker_aab6fdfd36e88c09d9c772037e3880b81}\label{classparticls_1_1_contact_point_tracker_aab6fdfd36e88c09d9c772037e3880b81}} 
+\index{particls::ContactPointTracker$<$ dim $>$@{particls::ContactPointTracker$<$ dim $>$}!ContactPointTracker@{ContactPointTracker}}
+\index{ContactPointTracker@{ContactPointTracker}!particls::ContactPointTracker$<$ dim $>$@{particls::ContactPointTracker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ContactPointTracker()}{ContactPointTracker()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_contact_point_tracker}{particls\+::\+Contact\+Point\+Tracker}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_contact_point_tracker}{Contact\+Point\+Tracker}} (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_rigid_body}{Rigid\+Body}}$<$ dim $>$ $>$ $>$ const \&}]{bodies,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_searcher}{Searcher}}$<$ dim $>$ $>$ const \&}]{searcher,  }\item[{std\+::string const \&}]{filename = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+Provide a searcher so the tracker finds contact points for only the nearest neighbors of each \mbox{\hyperlink{classparticls_1_1_rigid_body}{Rigid\+Body}} 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em bodies} & Set of \mbox{\hyperlink{classparticls_1_1_rigid_body}{Rigid\+Body}} objects that you want to track the contact points between \\
+\hline
+\mbox{\texttt{ in}}  & {\em searcher} & \mbox{\hyperlink{classparticls_1_1_searcher}{Searcher}} object used to search for the nearest neighbors of each \mbox{\hyperlink{classparticls_1_1_rigid_body}{Rigid\+Body}} in bodies \\
+\hline
+\mbox{\texttt{ in}}  & {\em filename} & Filename for saving contact point observations \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_contact_point_tracker_a428d6400fe441af1b3019d4c1c656ca5}\label{classparticls_1_1_contact_point_tracker_a428d6400fe441af1b3019d4c1c656ca5}} 
+\index{particls::ContactPointTracker$<$ dim $>$@{particls::ContactPointTracker$<$ dim $>$}!ContactPointTracker@{ContactPointTracker}}
+\index{ContactPointTracker@{ContactPointTracker}!particls::ContactPointTracker$<$ dim $>$@{particls::ContactPointTracker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ContactPointTracker()}{ContactPointTracker()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_contact_point_tracker}{particls\+::\+Contact\+Point\+Tracker}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_contact_point_tracker}{Contact\+Point\+Tracker}} (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&}]{particles,  }\item[{std\+::string const \&}]{filename = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em particles} & Set of \mbox{\hyperlink{classparticls_1_1_particle}{Particle}} objects that you want to track the contact points between \\
+\hline
+\mbox{\texttt{ in}}  & {\em filename} & Filename for saving contact point observations \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_contact_point_tracker_a456f230e0dbbec86b6eb1e702b8e4f64}\label{classparticls_1_1_contact_point_tracker_a456f230e0dbbec86b6eb1e702b8e4f64}} 
+\index{particls::ContactPointTracker$<$ dim $>$@{particls::ContactPointTracker$<$ dim $>$}!ContactPointTracker@{ContactPointTracker}}
+\index{ContactPointTracker@{ContactPointTracker}!particls::ContactPointTracker$<$ dim $>$@{particls::ContactPointTracker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ContactPointTracker()}{ContactPointTracker()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_contact_point_tracker}{particls\+::\+Contact\+Point\+Tracker}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_contact_point_tracker}{Contact\+Point\+Tracker}} (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&}]{particles,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_searcher}{Searcher}}$<$ dim $>$ $>$ const \&}]{searcher,  }\item[{std\+::string const \&}]{filename = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+Provide a searcher so the tracker finds contact points for only the nearest neighbors of each \mbox{\hyperlink{classparticls_1_1_particle}{Particle}} 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em particles} & Set of \mbox{\hyperlink{classparticls_1_1_particle}{Particle}} objects that you want to track the contact points between \\
+\hline
+\mbox{\texttt{ in}}  & {\em searcher} & \mbox{\hyperlink{classparticls_1_1_searcher}{Searcher}} object used to search for the nearest neighbors of each \mbox{\hyperlink{classparticls_1_1_particle}{Particle}} in particles \\
+\hline
+\mbox{\texttt{ in}}  & {\em filename} & Filename for saving contact point observations \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_contact_point_tracker_a893cc085d0a5a76200da6fb4cbff2d3d}\label{classparticls_1_1_contact_point_tracker_a893cc085d0a5a76200da6fb4cbff2d3d}} 
+\index{particls::ContactPointTracker$<$ dim $>$@{particls::ContactPointTracker$<$ dim $>$}!````~ContactPointTracker@{$\sim$ContactPointTracker}}
+\index{````~ContactPointTracker@{$\sim$ContactPointTracker}!particls::ContactPointTracker$<$ dim $>$@{particls::ContactPointTracker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$ContactPointTracker()}{~ContactPointTracker()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual \mbox{\hyperlink{classparticls_1_1_contact_point_tracker}{particls\+::\+Contact\+Point\+Tracker}}$<$ dim $>$\+::$\sim$\mbox{\hyperlink{classparticls_1_1_contact_point_tracker}{Contact\+Point\+Tracker}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_contact_point_tracker_a09a7fc7f32fc823e0257850ff252dbe2}\label{classparticls_1_1_contact_point_tracker_a09a7fc7f32fc823e0257850ff252dbe2}} 
+\index{particls::ContactPointTracker$<$ dim $>$@{particls::ContactPointTracker$<$ dim $>$}!AddRigidBody@{AddRigidBody}}
+\index{AddRigidBody@{AddRigidBody}!particls::ContactPointTracker$<$ dim $>$@{particls::ContactPointTracker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{AddRigidBody()}{AddRigidBody()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_contact_point_tracker}{particls\+::\+Contact\+Point\+Tracker}}$<$ dim $>$\+::Add\+Rigid\+Body (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_rigid_body}{Rigid\+Body}}$<$ dim $>$ $>$ const \&}]{body }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classparticls_1_1_contact_point_tracker_ad2258b8885a9263b92bed56bb78d93de}\label{classparticls_1_1_contact_point_tracker_ad2258b8885a9263b92bed56bb78d93de}} 
+\index{particls::ContactPointTracker$<$ dim $>$@{particls::ContactPointTracker$<$ dim $>$}!QuantityOfInterest@{QuantityOfInterest}}
+\index{QuantityOfInterest@{QuantityOfInterest}!particls::ContactPointTracker$<$ dim $>$@{particls::ContactPointTracker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{QuantityOfInterest()}{QuantityOfInterest()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classparticls_1_1_contact_point_tracker}{particls\+::\+Contact\+Point\+Tracker}}$<$ dim $>$\+::Quantity\+Of\+Interest (\begin{DoxyParamCaption}\item[{double const}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+the contact points be bewteen partcles (i, j) are stored in this order for i=1\+:n, for j=i+1\+:n (i, j) 
+
+Implements \mbox{\hyperlink{classparticls_1_1_observer_a5d8df2033058cad52ea402fb9e834c63}{particls\+::\+Observer}}.
+
+\mbox{\Hypertarget{classparticls_1_1_contact_point_tracker_ad56b58127d77cc9b95a7e93438d06ca3}\label{classparticls_1_1_contact_point_tracker_ad56b58127d77cc9b95a7e93438d06ca3}} 
+\index{particls::ContactPointTracker$<$ dim $>$@{particls::ContactPointTracker$<$ dim $>$}!WriteContactPoints@{WriteContactPoints}}
+\index{WriteContactPoints@{WriteContactPoints}!particls::ContactPointTracker$<$ dim $>$@{particls::ContactPointTracker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{WriteContactPoints()}{WriteContactPoints()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_contact_point_tracker}{particls\+::\+Contact\+Point\+Tracker}}$<$ dim $>$\+::Write\+Contact\+Points (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector\+Xd const \&}]{contact\+Points,  }\item[{double const}]{radius }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticls_1_1_contact_point_tracker_ada5aa4ffbc02e364a4b2b5912b30606f}\label{classparticls_1_1_contact_point_tracker_ada5aa4ffbc02e364a4b2b5912b30606f}} 
+\index{particls::ContactPointTracker$<$ dim $>$@{particls::ContactPointTracker$<$ dim $>$}!collection@{collection}}
+\index{collection@{collection}!particls::ContactPointTracker$<$ dim $>$@{particls::ContactPointTracker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{collection}{collection}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_collection}{Collection}}$<$dim$>$ $>$ \mbox{\hyperlink{classparticls_1_1_contact_point_tracker}{particls\+::\+Contact\+Point\+Tracker}}$<$ dim $>$\+::collection\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 69 of file Contact\+Point\+Tracker.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_contact_point_tracker_a61cc68cdae46993ee595656fb537c7f1}\label{classparticls_1_1_contact_point_tracker_a61cc68cdae46993ee595656fb537c7f1}} 
+\index{particls::ContactPointTracker$<$ dim $>$@{particls::ContactPointTracker$<$ dim $>$}!filecount@{filecount}}
+\index{filecount@{filecount}!particls::ContactPointTracker$<$ dim $>$@{particls::ContactPointTracker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{filecount}{filecount}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+unsigned int \mbox{\hyperlink{classparticls_1_1_contact_point_tracker}{particls\+::\+Contact\+Point\+Tracker}}$<$ dim $>$\+::filecount = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 67 of file Contact\+Point\+Tracker.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_contact_point_tracker_a1926f5b129bfcaca6efe2a45e40d90f5}\label{classparticls_1_1_contact_point_tracker_a1926f5b129bfcaca6efe2a45e40d90f5}} 
+\index{particls::ContactPointTracker$<$ dim $>$@{particls::ContactPointTracker$<$ dim $>$}!filename@{filename}}
+\index{filename@{filename}!particls::ContactPointTracker$<$ dim $>$@{particls::ContactPointTracker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{filename}{filename}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+const std\+::string \mbox{\hyperlink{classparticls_1_1_contact_point_tracker}{particls\+::\+Contact\+Point\+Tracker}}$<$ dim $>$\+::filename\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 65 of file Contact\+Point\+Tracker.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_contact_point_tracker_a9631cf4fb1162f9c1550891d66d25b3a}\label{classparticls_1_1_contact_point_tracker_a9631cf4fb1162f9c1550891d66d25b3a}} 
+\index{particls::ContactPointTracker$<$ dim $>$@{particls::ContactPointTracker$<$ dim $>$}!scale@{scale}}
+\index{scale@{scale}!particls::ContactPointTracker$<$ dim $>$@{particls::ContactPointTracker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{scale}{scale}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+const double \mbox{\hyperlink{classparticls_1_1_contact_point_tracker}{particls\+::\+Contact\+Point\+Tracker}}$<$ dim $>$\+::scale = 100.\+0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 63 of file Contact\+Point\+Tracker.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_contact_point_tracker_ab4c4b096f0bc126f76cc78f51c53055b}\label{classparticls_1_1_contact_point_tracker_ab4c4b096f0bc126f76cc78f51c53055b}} 
+\index{particls::ContactPointTracker$<$ dim $>$@{particls::ContactPointTracker$<$ dim $>$}!searcher@{searcher}}
+\index{searcher@{searcher}!particls::ContactPointTracker$<$ dim $>$@{particls::ContactPointTracker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{searcher}{searcher}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_searcher}{Searcher}}$<$dim$>$ $>$ \mbox{\hyperlink{classparticls_1_1_contact_point_tracker}{particls\+::\+Contact\+Point\+Tracker}}$<$ dim $>$\+::searcher\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 71 of file Contact\+Point\+Tracker.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_contact_point_tracker_8hpp}{Contact\+Point\+Tracker.\+hpp}}\end{DoxyCompactItemize}

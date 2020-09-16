@@ -1,0 +1,537 @@
+\hypertarget{classparticls_1_1_rounded_box}{}\doxysection{particls\+::Rounded\+Box$<$ dim $>$ Class Template Reference}
+\label{classparticls_1_1_rounded_box}\index{particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}}
+
+
+A 2d or 3d box with rounded corners.  
+
+
+
+
+{\ttfamily \#include $<$Rounded\+Box.\+hpp$>$}
+
+
+
+Inheritance diagram for particls\+::Rounded\+Box$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classparticls_1_1_rounded_box__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for particls\+::Rounded\+Box$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classparticls_1_1_rounded_box__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_rounded_box_aa03458dd72dcf1b060effa0e6091b339}{Rounded\+Box}} (Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&lengths\+\_\+in, double density\+\_\+in, double bevel\+\_\+radius\+\_\+in, double thickness\+\_\+in=1)
+\item 
+virtual \mbox{\hyperlink{classparticls_1_1_rounded_box_aa694312cac14905118eb134286a97b00}{$\sim$\+Rounded\+Box}} ()=default
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_rounded_box_a304ae294351eb5dcda7e417cd4ce3f65}{Signed\+Distance}} (Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&position, Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&ref\+\_\+pt) const override
+\item 
+virtual Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_rounded_box_a360b0b38ba1cbedf0494bfb3081fc51a}{Signed\+Distance\+Grad}} (Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&position, Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&ref\+\_\+pt) const override
+\item 
+virtual Eigen\+::\+Matrix$<$ double, dim, dim $>$ \mbox{\hyperlink{classparticls_1_1_rounded_box_a83c80cb1d462d2b5e01c9c37ab4ba490}{Signed\+Distance\+Hess}} (Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&position, Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&ref\+\_\+pt) const override
+\item 
+virtual Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_rounded_box_a68b202d26159d1472648de35dfe8f828}{Proximal\+Operator}} (Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$$>$ const \&x, Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$$>$ const \&ref\+\_\+pt, double const \&lambda) const override
+\item 
+virtual Eigen\+::\+Matrix$<$ double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$ dim $>$\+::moment, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$ dim $>$\+::moment $>$ \mbox{\hyperlink{classparticls_1_1_rounded_box_aa897ed929c66f8fde335745b87f54396}{Moment\+Of\+Inertia}} () override
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_rounded_box_a40dc578d8f9af6dbcd2cd8973b226a1a}{Mass}} () override
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_rounded_box_ad5fa0670c696b8ed443b59cd624d5881}{Volume}} () override
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_rounded_box_afa17287e66ba5ff80a08ef3de464a40b}{Thickness}} () override
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_rounded_box_a35cfb687cca811cb682cfadbb115be80}{Moment\+Arm}} () override
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_rounded_box_a025535770b7bf0717aa1ad06a382c6d5}{Density}} (Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&position, Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&ref\+\_\+pt) const override
+\begin{DoxyCompactList}\small\item\em The density. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_rounded_box_af962ca9afc797f9969938884648d7ed6}{Density}} () const override
+\item 
+virtual Eigen\+::\+Matrix$<$ double, 2, dim $>$ \mbox{\hyperlink{classparticls_1_1_rounded_box_a5f3e2ef9d36306e77dbaf716237b1b00}{Bounds}} () const override
+\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_rounded_box_aba1ce8d49f6fef509c9573ddeca70e42}{Append\+V\+TK}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{V\+T\+K\+Data}}$<$ dim $>$$>$ const \&V\+T\+K\+Data\+Object, typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Position const \&position, typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Orientation const \&orientation) const override
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_rounded_box_ab626abefd72f3c4285f0eecd4bd9655b}{Radius}} () const override
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_rounded_box_aca309083ed9a6c711158c1d5dc5c5e3e}{Bounding\+Radius}} () const
+\item 
+double \mbox{\hyperlink{classparticls_1_1_rounded_box_a7903b6a70b930d91fd74552ae42ff16a}{Compute\+Surface\+Area}} () override
+\begin{DoxyCompactList}\small\item\em Compute the horizontal surface area of a particle. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_rounded_box_aea18363808294e38dfc859f3624243da}{Compute\+Cross\+Section\+Area}} (typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Orientation const \&orientation, Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&direction) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classparticls_1_1_rounded_box_a6c34d5d5bedf1d398ff581d7b32b0119}{Initialize}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the volume, mass and moment of inertia of the particle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_rounded_box_a56a0b413723cd7ba3cd7d0f6a631b1ad}{Compute\+Volume}} ()
+\begin{DoxyCompactList}\small\item\em Compute the particle volume. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_rounded_box_a15174867c32bde76f3353bd5fdcc6ec8}{Compute\+Mass}} ()
+\begin{DoxyCompactList}\small\item\em Compute the particle mass. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_rounded_box_a08050969b325cc28943205a01affeb50}{Compute\+MoI}} ()
+\begin{DoxyCompactList}\small\item\em Compute the particle moment of intertia. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_rounded_box_a88a770d986dbbe365b8e35619b4aa060}{Compute\+Effective\+Length}} ()
+\begin{DoxyCompactList}\small\item\em Compute the effective length of the particle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_rounded_box_ae924724c735f1cb309d939402332de81}{Compute\+Moment\+Arm}} ()
+\begin{DoxyCompactList}\small\item\em Compute the moment arm of the particle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_rounded_box_a71bf4db7b008ac84201472df4c48e637}{corner\+\_\+pt}}
+\item 
+const double \mbox{\hyperlink{classparticls_1_1_rounded_box_a31fa1df2ae593fd84b0d7e7ae371d2de}{density}}
+\item 
+const double \mbox{\hyperlink{classparticls_1_1_rounded_box_ae98c125d84bd9772ce7cc5544b2e5d01}{bevel\+\_\+radius}}
+\item 
+double \mbox{\hyperlink{classparticls_1_1_rounded_box_a3da94f6385e22a8197fc61d43942a91d}{effective\+\_\+length}}
+\begin{DoxyCompactList}\small\item\em Effective length of the rounded box shape. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+class particls\+::\+Rounded\+Box$<$ dim $>$}
+
+A 2d or 3d box with rounded corners. 
+
+Assumes the centroid of the box is at the origin. 
+
+Definition at line 14 of file Rounded\+Box.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_rounded_box_aa03458dd72dcf1b060effa0e6091b339}\label{classparticls_1_1_rounded_box_aa03458dd72dcf1b060effa0e6091b339}} 
+\index{particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}!RoundedBox@{RoundedBox}}
+\index{RoundedBox@{RoundedBox}!particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{RoundedBox()}{RoundedBox()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_rounded_box}{particls\+::\+Rounded\+Box}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_rounded_box}{Rounded\+Box}} (\begin{DoxyParamCaption}\item[{Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&}]{lengths\+\_\+in,  }\item[{double}]{density\+\_\+in,  }\item[{double}]{bevel\+\_\+radius\+\_\+in,  }\item[{double}]{thickness\+\_\+in = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em density} & The constant density of the particle. \\
+\hline
+\mbox{\texttt{ in}}  & {\em lengths\+\_\+in} & The length of the box in each coordinate direction. Because the box is centered at the origin, it will go from -\/0.\+5$\ast$lengths to 0.\+5$\ast$lengths \\
+\hline
+\mbox{\texttt{ in}}  & {\em bevel\+\_\+radius\+\_\+in} & The radius or the rounded corners \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_rounded_box_aa694312cac14905118eb134286a97b00}\label{classparticls_1_1_rounded_box_aa694312cac14905118eb134286a97b00}} 
+\index{particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}!````~RoundedBox@{$\sim$RoundedBox}}
+\index{````~RoundedBox@{$\sim$RoundedBox}!particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$RoundedBox()}{~RoundedBox()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual \mbox{\hyperlink{classparticls_1_1_rounded_box}{particls\+::\+Rounded\+Box}}$<$ dim $>$\+::$\sim$\mbox{\hyperlink{classparticls_1_1_rounded_box}{Rounded\+Box}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_rounded_box_aba1ce8d49f6fef509c9573ddeca70e42}\label{classparticls_1_1_rounded_box_aba1ce8d49f6fef509c9573ddeca70e42}} 
+\index{particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}!AppendVTK@{AppendVTK}}
+\index{AppendVTK@{AppendVTK}!particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{AppendVTK()}{AppendVTK()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_rounded_box}{particls\+::\+Rounded\+Box}}$<$ dim $>$\+::Append\+V\+TK (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{V\+T\+K\+Data}}$<$ dim $>$$>$ const \&}]{V\+T\+K\+Data\+Object,  }\item[{typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Position const \&}]{position,  }\item[{typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Orientation const \&}]{orientation }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Append a translated and rotated rounded rectangle to a vtk filter. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em append\+\_\+filter} & The filter we want to add to \\
+\hline
+\mbox{\texttt{ in}}  & {\em position} & The position of the rigid body in global coordinates \\
+\hline
+\mbox{\texttt{ in}}  & {\em orientation} & The orientation of the rigid body \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classparticls_1_1_geometry_a230e8356221a5fd1f1bd7c5a9adde601}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_rounded_box_aca309083ed9a6c711158c1d5dc5c5e3e}\label{classparticls_1_1_rounded_box_aca309083ed9a6c711158c1d5dc5c5e3e}} 
+\index{particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}!BoundingRadius@{BoundingRadius}}
+\index{BoundingRadius@{BoundingRadius}!particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{BoundingRadius()}{BoundingRadius()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_rounded_box}{particls\+::\+Rounded\+Box}}$<$ dim $>$\+::Bounding\+Radius (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Returns the particles bounding sphere or circle radius \begin{DoxyReturn}{Returns}
+The bounding radius 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_a131058bc06253f0e36dc20b29fb20f00}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_rounded_box_a5f3e2ef9d36306e77dbaf716237b1b00}\label{classparticls_1_1_rounded_box_a5f3e2ef9d36306e77dbaf716237b1b00}} 
+\index{particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}!Bounds@{Bounds}}
+\index{Bounds@{Bounds}!particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Bounds()}{Bounds()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual Eigen\+::\+Matrix$<$double, 2,dim$>$ \mbox{\hyperlink{classparticls_1_1_rounded_box}{particls\+::\+Rounded\+Box}}$<$ dim $>$\+::Bounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The particle bounds in the reference domain 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_ac69bbd465018c723451c09d6c313ea8e}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_rounded_box_aea18363808294e38dfc859f3624243da}\label{classparticls_1_1_rounded_box_aea18363808294e38dfc859f3624243da}} 
+\index{particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}!ComputeCrossSectionArea@{ComputeCrossSectionArea}}
+\index{ComputeCrossSectionArea@{ComputeCrossSectionArea}!particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeCrossSectionArea()}{ComputeCrossSectionArea()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_rounded_box}{particls\+::\+Rounded\+Box}}$<$ dim $>$\+::Compute\+Cross\+Section\+Area (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Orientation const \&}]{orientation,  }\item[{Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Calculate the cross-\/sectional area of a particle given the direction of an incoming vector 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em orientation} & 1x1 matrix (in 2d) or quaternion (in 3d) defining the particle\textquotesingle{}s orientation \\
+\hline
+\mbox{\texttt{ in}}  & {\em direction} & The direction vector \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_aa28bce3e7b0d6a6552ad996c3cbdb983}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_rounded_box_a88a770d986dbbe365b8e35619b4aa060}\label{classparticls_1_1_rounded_box_a88a770d986dbbe365b8e35619b4aa060}} 
+\index{particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}!ComputeEffectiveLength@{ComputeEffectiveLength}}
+\index{ComputeEffectiveLength@{ComputeEffectiveLength}!particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeEffectiveLength()}{ComputeEffectiveLength()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_rounded_box}{particls\+::\+Rounded\+Box}}$<$ dim $>$\+::Compute\+Effective\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Compute the effective length of the particle. 
+
+\mbox{\Hypertarget{classparticls_1_1_rounded_box_a15174867c32bde76f3353bd5fdcc6ec8}\label{classparticls_1_1_rounded_box_a15174867c32bde76f3353bd5fdcc6ec8}} 
+\index{particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}!ComputeMass@{ComputeMass}}
+\index{ComputeMass@{ComputeMass}!particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeMass()}{ComputeMass()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_rounded_box}{particls\+::\+Rounded\+Box}}$<$ dim $>$\+::Compute\+Mass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Compute the particle mass. 
+
+\mbox{\Hypertarget{classparticls_1_1_rounded_box_a08050969b325cc28943205a01affeb50}\label{classparticls_1_1_rounded_box_a08050969b325cc28943205a01affeb50}} 
+\index{particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}!ComputeMoI@{ComputeMoI}}
+\index{ComputeMoI@{ComputeMoI}!particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeMoI()}{ComputeMoI()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_rounded_box}{particls\+::\+Rounded\+Box}}$<$ dim $>$\+::Compute\+MoI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Compute the particle moment of intertia. 
+
+\mbox{\Hypertarget{classparticls_1_1_rounded_box_ae924724c735f1cb309d939402332de81}\label{classparticls_1_1_rounded_box_ae924724c735f1cb309d939402332de81}} 
+\index{particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}!ComputeMomentArm@{ComputeMomentArm}}
+\index{ComputeMomentArm@{ComputeMomentArm}!particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeMomentArm()}{ComputeMomentArm()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_rounded_box}{particls\+::\+Rounded\+Box}}$<$ dim $>$\+::Compute\+Moment\+Arm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Compute the moment arm of the particle. 
+
+\mbox{\Hypertarget{classparticls_1_1_rounded_box_a7903b6a70b930d91fd74552ae42ff16a}\label{classparticls_1_1_rounded_box_a7903b6a70b930d91fd74552ae42ff16a}} 
+\index{particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}!ComputeSurfaceArea@{ComputeSurfaceArea}}
+\index{ComputeSurfaceArea@{ComputeSurfaceArea}!particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeSurfaceArea()}{ComputeSurfaceArea()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_rounded_box}{particls\+::\+Rounded\+Box}}$<$ dim $>$\+::Compute\+Surface\+Area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compute the horizontal surface area of a particle. 
+
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_a7523e50b6e5028067259b538daa84372}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_rounded_box_a56a0b413723cd7ba3cd7d0f6a631b1ad}\label{classparticls_1_1_rounded_box_a56a0b413723cd7ba3cd7d0f6a631b1ad}} 
+\index{particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}!ComputeVolume@{ComputeVolume}}
+\index{ComputeVolume@{ComputeVolume}!particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeVolume()}{ComputeVolume()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_rounded_box}{particls\+::\+Rounded\+Box}}$<$ dim $>$\+::Compute\+Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Compute the particle volume. 
+
+\mbox{\Hypertarget{classparticls_1_1_rounded_box_af962ca9afc797f9969938884648d7ed6}\label{classparticls_1_1_rounded_box_af962ca9afc797f9969938884648d7ed6}} 
+\index{particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}!Density@{Density}}
+\index{Density@{Density}!particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Density()}{Density()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_rounded_box}{particls\+::\+Rounded\+Box}}$<$ dim $>$\+::Density (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The densty of the particle 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_a23e59421a15e4307a1cc68bb7903aa5d}{particls\+::\+Geometry$<$ dim $>$}}.
+
+
+
+Definition at line 84 of file Rounded\+Box.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_rounded_box_a025535770b7bf0717aa1ad06a382c6d5}\label{classparticls_1_1_rounded_box_a025535770b7bf0717aa1ad06a382c6d5}} 
+\index{particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}!Density@{Density}}
+\index{Density@{Density}!particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Density()}{Density()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_rounded_box}{particls\+::\+Rounded\+Box}}$<$ dim $>$\+::Density (\begin{DoxyParamCaption}\item[{Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&}]{position,  }\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{ref\+\_\+pt }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+The density. 
+
+If the point is outside of the domain, return 0 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & We want the density at this point \\
+\hline
+\mbox{\texttt{ in}}  & {\em ref\+\_\+pt} & Reference point for one-\/sided signed distance functions \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The density 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_a7974532b017a2b662659db57db623c03}{particls\+::\+Geometry$<$ dim $>$}}.
+
+
+
+Definition at line 79 of file Rounded\+Box.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_rounded_box_a6c34d5d5bedf1d398ff581d7b32b0119}\label{classparticls_1_1_rounded_box_a6c34d5d5bedf1d398ff581d7b32b0119}} 
+\index{particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_rounded_box}{particls\+::\+Rounded\+Box}}$<$ dim $>$\+::Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Initialize the volume, mass and moment of inertia of the particle. 
+
+\mbox{\Hypertarget{classparticls_1_1_rounded_box_a40dc578d8f9af6dbcd2cd8973b226a1a}\label{classparticls_1_1_rounded_box_a40dc578d8f9af6dbcd2cd8973b226a1a}} 
+\index{particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}!Mass@{Mass}}
+\index{Mass@{Mass}!particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Mass()}{Mass()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_rounded_box}{particls\+::\+Rounded\+Box}}$<$ dim $>$\+::Mass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The mass of the particle 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_af5e06af2734085d1acda7926d4ea8944}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_rounded_box_a35cfb687cca811cb682cfadbb115be80}\label{classparticls_1_1_rounded_box_a35cfb687cca811cb682cfadbb115be80}} 
+\index{particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}!MomentArm@{MomentArm}}
+\index{MomentArm@{MomentArm}!particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{MomentArm()}{MomentArm()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_rounded_box}{particls\+::\+Rounded\+Box}}$<$ dim $>$\+::Moment\+Arm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The moment arm of the particle 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_a99110ee074b3090c6b2d6df6cdca51ef}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_rounded_box_aa897ed929c66f8fde335745b87f54396}\label{classparticls_1_1_rounded_box_aa897ed929c66f8fde335745b87f54396}} 
+\index{particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}!MomentOfInertia@{MomentOfInertia}}
+\index{MomentOfInertia@{MomentOfInertia}!particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{MomentOfInertia()}{MomentOfInertia()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual Eigen\+::\+Matrix$<$double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$dim$>$\+::moment, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$dim$>$\+::moment$>$ \mbox{\hyperlink{classparticls_1_1_rounded_box}{particls\+::\+Rounded\+Box}}$<$ dim $>$\+::Moment\+Of\+Inertia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Return the moment of inertia for this object. N\+O\+TE\+: This currently returns the moment of inertia for a standard rectangular prism W\+I\+T\+H\+O\+UT rounded corners. This approximation is fine if the bevel radius is small, but might be an issue if the bevel radius is large. 
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_a35147032c4a967cc71d82e006f78e403}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_rounded_box_a68b202d26159d1472648de35dfe8f828}\label{classparticls_1_1_rounded_box_a68b202d26159d1472648de35dfe8f828}} 
+\index{particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}!ProximalOperator@{ProximalOperator}}
+\index{ProximalOperator@{ProximalOperator}!particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ProximalOperator()}{ProximalOperator()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual Eigen\+::\+Matrix$<$double,dim,1$>$ \mbox{\hyperlink{classparticls_1_1_rounded_box}{particls\+::\+Rounded\+Box}}$<$ dim $>$\+::Proximal\+Operator (\begin{DoxyParamCaption}\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$$>$ const \&}]{x,  }\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$$>$ const \&}]{ref\+\_\+pt,  }\item[{double const \&}]{lambda }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Applies the proximal operator for the level set defined in this geometry. @seealso \mbox{\hyperlink{classparticls_1_1_rigid_body_a4450bda4a3826d2dd69dbd872f1153f4}{Rigid\+Body\+::\+Proximal\+Operator}} \mbox{\Hypertarget{classparticls_1_1_rounded_box_ab626abefd72f3c4285f0eecd4bd9655b}\label{classparticls_1_1_rounded_box_ab626abefd72f3c4285f0eecd4bd9655b}} 
+\index{particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}!Radius@{Radius}}
+\index{Radius@{Radius}!particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Radius()}{Radius()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_rounded_box}{particls\+::\+Rounded\+Box}}$<$ dim $>$\+::Radius (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The effective radius of the rounded box 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_a56f0f42d4045cb15696ccaf5590dd910}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_rounded_box_a304ae294351eb5dcda7e417cd4ce3f65}\label{classparticls_1_1_rounded_box_a304ae294351eb5dcda7e417cd4ce3f65}} 
+\index{particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}!SignedDistance@{SignedDistance}}
+\index{SignedDistance@{SignedDistance}!particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{SignedDistance()}{SignedDistance()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_rounded_box}{particls\+::\+Rounded\+Box}}$<$ dim $>$\+::Signed\+Distance (\begin{DoxyParamCaption}\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{position,  }\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{ref\+\_\+pt }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Compute the analytic signed distance function at a point. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & We want the density at this point \\
+\hline
+\mbox{\texttt{ in}}  & {\em ref\+\_\+pt} & Reference point for one-\/sided signed distance functions \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_a4ec0bb5ebbfd45460b26127d9456023f}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_rounded_box_a360b0b38ba1cbedf0494bfb3081fc51a}\label{classparticls_1_1_rounded_box_a360b0b38ba1cbedf0494bfb3081fc51a}} 
+\index{particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}!SignedDistanceGrad@{SignedDistanceGrad}}
+\index{SignedDistanceGrad@{SignedDistanceGrad}!particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{SignedDistanceGrad()}{SignedDistanceGrad()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual Eigen\+::\+Matrix$<$double, dim, 1$>$ \mbox{\hyperlink{classparticls_1_1_rounded_box}{particls\+::\+Rounded\+Box}}$<$ dim $>$\+::Signed\+Distance\+Grad (\begin{DoxyParamCaption}\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{position,  }\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{ref\+\_\+pt }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & The position in space \\
+\hline
+\mbox{\texttt{ in}}  & {\em ref\+\_\+pt} & Reference point for determining which side of the boundary the position is \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The gradient of the signed distance function 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classparticls_1_1_geometry_a21d6c20edb4ef1aab9b6ca2eec4e7eb1}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_rounded_box_a83c80cb1d462d2b5e01c9c37ab4ba490}\label{classparticls_1_1_rounded_box_a83c80cb1d462d2b5e01c9c37ab4ba490}} 
+\index{particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}!SignedDistanceHess@{SignedDistanceHess}}
+\index{SignedDistanceHess@{SignedDistanceHess}!particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{SignedDistanceHess()}{SignedDistanceHess()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual Eigen\+::\+Matrix$<$double, dim, dim$>$ \mbox{\hyperlink{classparticls_1_1_rounded_box}{particls\+::\+Rounded\+Box}}$<$ dim $>$\+::Signed\+Distance\+Hess (\begin{DoxyParamCaption}\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{position,  }\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{ref\+\_\+pt }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & The position in space \\
+\hline
+\mbox{\texttt{ in}}  & {\em ref\+\_\+pt} & Reference point for determining which side of the boundary the position is \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Hessian of the signed distance function 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classparticls_1_1_geometry_a430f478ea9ba1e9c21fca74e79931dbb}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_rounded_box_afa17287e66ba5ff80a08ef3de464a40b}\label{classparticls_1_1_rounded_box_afa17287e66ba5ff80a08ef3de464a40b}} 
+\index{particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}!Thickness@{Thickness}}
+\index{Thickness@{Thickness}!particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Thickness()}{Thickness()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_rounded_box}{particls\+::\+Rounded\+Box}}$<$ dim $>$\+::Thickness (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The particle thickness (only valid for 2D simulations) 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_a27fe28ba995dc81e4d6dcd3a6162091b}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_rounded_box_ad5fa0670c696b8ed443b59cd624d5881}\label{classparticls_1_1_rounded_box_ad5fa0670c696b8ed443b59cd624d5881}} 
+\index{particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}!Volume@{Volume}}
+\index{Volume@{Volume}!particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Volume()}{Volume()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_rounded_box}{particls\+::\+Rounded\+Box}}$<$ dim $>$\+::Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The volume of the particle 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_a4f38eaff1a219f41698f6dbef1525495}{particls\+::\+Geometry$<$ dim $>$}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticls_1_1_rounded_box_ae98c125d84bd9772ce7cc5544b2e5d01}\label{classparticls_1_1_rounded_box_ae98c125d84bd9772ce7cc5544b2e5d01}} 
+\index{particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}!bevel\_radius@{bevel\_radius}}
+\index{bevel\_radius@{bevel\_radius}!particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{bevel\_radius}{bevel\_radius}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+const double \mbox{\hyperlink{classparticls_1_1_rounded_box}{particls\+::\+Rounded\+Box}}$<$ dim $>$\+::bevel\+\_\+radius\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 142 of file Rounded\+Box.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_rounded_box_a71bf4db7b008ac84201472df4c48e637}\label{classparticls_1_1_rounded_box_a71bf4db7b008ac84201472df4c48e637}} 
+\index{particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}!corner\_pt@{corner\_pt}}
+\index{corner\_pt@{corner\_pt}!particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{corner\_pt}{corner\_pt}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+const Eigen\+::\+Matrix$<$double, dim, 1$>$ \mbox{\hyperlink{classparticls_1_1_rounded_box}{particls\+::\+Rounded\+Box}}$<$ dim $>$\+::corner\+\_\+pt\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 140 of file Rounded\+Box.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_rounded_box_a31fa1df2ae593fd84b0d7e7ae371d2de}\label{classparticls_1_1_rounded_box_a31fa1df2ae593fd84b0d7e7ae371d2de}} 
+\index{particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}!density@{density}}
+\index{density@{density}!particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{density}{density}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+const double \mbox{\hyperlink{classparticls_1_1_rounded_box}{particls\+::\+Rounded\+Box}}$<$ dim $>$\+::density\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 141 of file Rounded\+Box.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_rounded_box_a3da94f6385e22a8197fc61d43942a91d}\label{classparticls_1_1_rounded_box_a3da94f6385e22a8197fc61d43942a91d}} 
+\index{particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}!effective\_length@{effective\_length}}
+\index{effective\_length@{effective\_length}!particls::RoundedBox$<$ dim $>$@{particls::RoundedBox$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{effective\_length}{effective\_length}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_rounded_box}{particls\+::\+Rounded\+Box}}$<$ dim $>$\+::effective\+\_\+length\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Effective length of the rounded box shape. 
+
+
+
+Definition at line 145 of file Rounded\+Box.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_rounded_box_8hpp}{Rounded\+Box.\+hpp}}\end{DoxyCompactItemize}

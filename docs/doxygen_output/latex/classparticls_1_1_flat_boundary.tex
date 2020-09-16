@@ -1,0 +1,514 @@
+\hypertarget{classparticls_1_1_flat_boundary}{}\doxysection{particls\+::Flat\+Boundary$<$ dim $>$ Class Template Reference}
+\label{classparticls_1_1_flat_boundary}\index{particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}}
+
+
+Returns a line in 2d and a plane in 3d.  
+
+
+
+
+{\ttfamily \#include $<$Flat\+Boundary.\+hpp$>$}
+
+
+
+Inheritance diagram for particls\+::Flat\+Boundary$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{classparticls_1_1_flat_boundary__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for particls\+::Flat\+Boundary$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{classparticls_1_1_flat_boundary__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_flat_boundary_a783ae775ce3318d0f52a24e5b2d58698}{Flat\+Boundary}} (Eigen\+::\+Matrix$<$ double, dim-\/1, 1 $>$ const \&lengths\+\_\+in, double density\+\_\+in, double thickness\+\_\+in=1)
+\item 
+\mbox{\hyperlink{classparticls_1_1_flat_boundary_ae8da66b221794cb00ac9eba2c797eacc}{Flat\+Boundary}} (Eigen\+::\+Matrix$<$ double, dim-\/1, 1 $>$ const \&lengths\+\_\+in, double density\+\_\+in, Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&fixed\+\_\+ref\+\_\+pt\+\_\+in, double thickness\+\_\+in=1)
+\item 
+virtual \mbox{\hyperlink{classparticls_1_1_flat_boundary_a473c297d0d1fdd791f1867c0a4a0bebf}{$\sim$\+Flat\+Boundary}} ()=default
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_flat_boundary_ad57e5d98ab460ebb48bd2b62233df134}{Signed\+Distance}} (Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&position, Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&ref\+\_\+pt) const override
+\item 
+virtual Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_flat_boundary_ac9bb06b8386b21714e08d28e4f65fabb}{Signed\+Distance\+Grad}} (Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&position, Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&ref\+\_\+pt) const override
+\item 
+virtual Eigen\+::\+Matrix$<$ double, dim, dim $>$ \mbox{\hyperlink{classparticls_1_1_flat_boundary_af69e43b8d7807a1c539fef9a3db7fadc}{Signed\+Distance\+Hess}} (Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&position, Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&ref\+\_\+pt) const override
+\item 
+virtual Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_flat_boundary_a49ab5e9a720cd815ddc37c46aefa84c3}{Proximal\+Operator}} (Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$$>$ const \&x, Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$$>$ const \&ref\+\_\+pt, double const \&lambda) const override
+\item 
+virtual Eigen\+::\+Matrix$<$ double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$ dim $>$\+::moment, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$ dim $>$\+::moment $>$ \mbox{\hyperlink{classparticls_1_1_flat_boundary_a8c8b280bb448d5fc013dae7c1b345584}{Moment\+Of\+Inertia}} () override
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_flat_boundary_a5aecf2aee717776fe0236a9f0055b2b6}{Mass}} () override
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_flat_boundary_ac3e145f94f43d96d50d5276137f870f6}{Volume}} () override
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_flat_boundary_a0b4fdd3065ae7aab3f34a04a7401d02f}{Thickness}} () override
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_flat_boundary_a557560c6dd60c71962694d187c0fbae1}{Radius}} () const override
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_flat_boundary_abca7320d0e890401636d92e5fe08f8ca}{Moment\+Arm}} () override
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_flat_boundary_aa4c24406151840336442295263a7c43a}{Density}} (Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&position, Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&ref\+\_\+pt) const override
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_flat_boundary_a5d7d21506bde894eb8acd0cf8c654c44}{Density}} () const override
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_flat_boundary_a40b1f7ca80041e9fa105943103f56da8}{Bounding\+Radius}} () const override
+\item 
+virtual Eigen\+::\+Matrix$<$ double, 2, dim $>$ \mbox{\hyperlink{classparticls_1_1_flat_boundary_ae2af531e2a0c54103b1dba176afc5e22}{Bounds}} () const override
+\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_flat_boundary_aa2c80db78bcedce51f9ce764412bc8c1}{Append\+V\+TK}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{V\+T\+K\+Data}}$<$ dim $>$$>$ const \&V\+T\+K\+Data\+Object, typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Position const \&position, typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Orientation const \&orientation) const override
+\item 
+double \mbox{\hyperlink{classparticls_1_1_flat_boundary_a73af50ef4a202439498ad3b47a5baa01}{Compute\+Surface\+Area}} () override
+\begin{DoxyCompactList}\small\item\em Compute the horizontal surface area of a particle. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_flat_boundary_ab3428d835721c26f64f7945d5952420a}{Compute\+Cross\+Section\+Area}} (typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Orientation const \&orientation, Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&direction) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Eigen\+::\+Matrix$<$ double, dim-\/1, 1 $>$ \mbox{\hyperlink{classparticls_1_1_flat_boundary_a9f40479181d447f661cb2b9e07dfc81d}{corner\+\_\+pt}}
+\item 
+const double \mbox{\hyperlink{classparticls_1_1_flat_boundary_a29ec2cbd9f15162ba5ae1e7ce2d6831a}{density}}
+\item 
+Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_flat_boundary_aeaed1372f628ad0917100835a16fe571}{fixed\+\_\+ref\+\_\+pt}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classparticls_1_1_flat_boundary_a39a830bfded431629cf7693aedaa9226}{Initialize}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the volume, mass and moment of inertia of the particle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_flat_boundary_a7309526c241721cb02cd8bd6f6deaae3}{Compute\+Volume}} ()
+\begin{DoxyCompactList}\small\item\em Compute the particle volume. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_flat_boundary_a87baa7e68f6e9caffe19f4e9758de050}{Compute\+Mass}} ()
+\begin{DoxyCompactList}\small\item\em Compute the particle mass. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_flat_boundary_a398acdc8436cfc3d29675a4a0773d9ec}{Compute\+MoI}} ()
+\begin{DoxyCompactList}\small\item\em Compute the particle moment of intertia. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_flat_boundary_a84a80206e920112eee1ae8112f58b1d2}{Compute\+Moment\+Arm}} ()
+\begin{DoxyCompactList}\small\item\em Compute the moment arm of the particle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+class particls\+::\+Flat\+Boundary$<$ dim $>$}
+
+Returns a line in 2d and a plane in 3d. 
+
+Assumes the centroid of the object is at the origin. 
+
+Definition at line 14 of file Flat\+Boundary.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_flat_boundary_a783ae775ce3318d0f52a24e5b2d58698}\label{classparticls_1_1_flat_boundary_a783ae775ce3318d0f52a24e5b2d58698}} 
+\index{particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}!FlatBoundary@{FlatBoundary}}
+\index{FlatBoundary@{FlatBoundary}!particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{FlatBoundary()}{FlatBoundary()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_flat_boundary}{particls\+::\+Flat\+Boundary}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_flat_boundary}{Flat\+Boundary}} (\begin{DoxyParamCaption}\item[{Eigen\+::\+Matrix$<$ double, dim-\/1, 1 $>$ const \&}]{lengths\+\_\+in,  }\item[{double}]{density\+\_\+in,  }\item[{double}]{thickness\+\_\+in = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em lengths\+\_\+in} & The length of the boundary in each coordinate direction Because the box is centered at the origin, it will go from -\/0.\+5$\ast$lengths to 0.\+5$\ast$lengths \\
+\hline
+\mbox{\texttt{ in}}  & {\em density\+\_\+in} & \mbox{\hyperlink{classparticls_1_1_particle}{Particle}} density \\
+\hline
+\mbox{\texttt{ in}}  & {\em thickness\+\_\+in} & \mbox{\hyperlink{classparticls_1_1_particle}{Particle}} density \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_flat_boundary_ae8da66b221794cb00ac9eba2c797eacc}\label{classparticls_1_1_flat_boundary_ae8da66b221794cb00ac9eba2c797eacc}} 
+\index{particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}!FlatBoundary@{FlatBoundary}}
+\index{FlatBoundary@{FlatBoundary}!particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{FlatBoundary()}{FlatBoundary()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_flat_boundary}{particls\+::\+Flat\+Boundary}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_flat_boundary}{Flat\+Boundary}} (\begin{DoxyParamCaption}\item[{Eigen\+::\+Matrix$<$ double, dim-\/1, 1 $>$ const \&}]{lengths\+\_\+in,  }\item[{double}]{density\+\_\+in,  }\item[{Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&}]{fixed\+\_\+ref\+\_\+pt\+\_\+in,  }\item[{double}]{thickness\+\_\+in = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em lengths\+\_\+in} & The length of the boundary in each coordinate direction Because the box is centered at the origin, it will go from -\/0.\+5$\ast$lengths to 0.\+5$\ast$lengths \\
+\hline
+\mbox{\texttt{ in}}  & {\em density\+\_\+in} & \mbox{\hyperlink{classparticls_1_1_particle}{Particle}} density \\
+\hline
+\mbox{\texttt{ in}}  & {\em fixed\+\_\+ref\+\_\+pt\+\_\+in} & A fixed reference point that does not change through out the particle\textquotesingle{}s existence. Mostly used for flatboundary particles that are stationary \\
+\hline
+\mbox{\texttt{ in}}  & {\em thickness\+\_\+in} & \mbox{\hyperlink{classparticls_1_1_particle}{Particle}} density \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_flat_boundary_a473c297d0d1fdd791f1867c0a4a0bebf}\label{classparticls_1_1_flat_boundary_a473c297d0d1fdd791f1867c0a4a0bebf}} 
+\index{particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}!````~FlatBoundary@{$\sim$FlatBoundary}}
+\index{````~FlatBoundary@{$\sim$FlatBoundary}!particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$FlatBoundary()}{~FlatBoundary()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual \mbox{\hyperlink{classparticls_1_1_flat_boundary}{particls\+::\+Flat\+Boundary}}$<$ dim $>$\+::$\sim$\mbox{\hyperlink{classparticls_1_1_flat_boundary}{Flat\+Boundary}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_flat_boundary_aa2c80db78bcedce51f9ce764412bc8c1}\label{classparticls_1_1_flat_boundary_aa2c80db78bcedce51f9ce764412bc8c1}} 
+\index{particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}!AppendVTK@{AppendVTK}}
+\index{AppendVTK@{AppendVTK}!particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{AppendVTK()}{AppendVTK()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_flat_boundary}{particls\+::\+Flat\+Boundary}}$<$ dim $>$\+::Append\+V\+TK (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{V\+T\+K\+Data}}$<$ dim $>$$>$ const \&}]{V\+T\+K\+Data\+Object,  }\item[{typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Position const \&}]{position,  }\item[{typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Orientation const \&}]{orientation }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Append a translated and rotated surface to a vtk filter. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em append\+\_\+filter} & The filter we want to add to \\
+\hline
+\mbox{\texttt{ in}}  & {\em position} & The position of the rigid body in global coordinates \\
+\hline
+\mbox{\texttt{ in}}  & {\em orientation} & The orientatin of the rigid body \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classparticls_1_1_geometry_a230e8356221a5fd1f1bd7c5a9adde601}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_flat_boundary_a40b1f7ca80041e9fa105943103f56da8}\label{classparticls_1_1_flat_boundary_a40b1f7ca80041e9fa105943103f56da8}} 
+\index{particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}!BoundingRadius@{BoundingRadius}}
+\index{BoundingRadius@{BoundingRadius}!particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{BoundingRadius()}{BoundingRadius()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_flat_boundary}{particls\+::\+Flat\+Boundary}}$<$ dim $>$\+::Bounding\+Radius (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The radius of the bounding sphere 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_a131058bc06253f0e36dc20b29fb20f00}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_flat_boundary_ae2af531e2a0c54103b1dba176afc5e22}\label{classparticls_1_1_flat_boundary_ae2af531e2a0c54103b1dba176afc5e22}} 
+\index{particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}!Bounds@{Bounds}}
+\index{Bounds@{Bounds}!particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Bounds()}{Bounds()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual Eigen\+::\+Matrix$<$double, 2, dim$>$ \mbox{\hyperlink{classparticls_1_1_flat_boundary}{particls\+::\+Flat\+Boundary}}$<$ dim $>$\+::Bounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Return bounds in the reference domain. 
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_ac69bbd465018c723451c09d6c313ea8e}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_flat_boundary_ab3428d835721c26f64f7945d5952420a}\label{classparticls_1_1_flat_boundary_ab3428d835721c26f64f7945d5952420a}} 
+\index{particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}!ComputeCrossSectionArea@{ComputeCrossSectionArea}}
+\index{ComputeCrossSectionArea@{ComputeCrossSectionArea}!particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeCrossSectionArea()}{ComputeCrossSectionArea()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_flat_boundary}{particls\+::\+Flat\+Boundary}}$<$ dim $>$\+::Compute\+Cross\+Section\+Area (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Orientation const \&}]{orientation,  }\item[{Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Calculate the cross-\/sectional area of a particle given the direction of an incoming vector 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em orientation} & 1x1 matrix (in 2d) or quaternion (in 3d) defining the particle\textquotesingle{}s orientation \\
+\hline
+\mbox{\texttt{ in}}  & {\em direction} & The direction vector \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_aa28bce3e7b0d6a6552ad996c3cbdb983}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_flat_boundary_a87baa7e68f6e9caffe19f4e9758de050}\label{classparticls_1_1_flat_boundary_a87baa7e68f6e9caffe19f4e9758de050}} 
+\index{particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}!ComputeMass@{ComputeMass}}
+\index{ComputeMass@{ComputeMass}!particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeMass()}{ComputeMass()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_flat_boundary}{particls\+::\+Flat\+Boundary}}$<$ dim $>$\+::Compute\+Mass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Compute the particle mass. 
+
+\mbox{\Hypertarget{classparticls_1_1_flat_boundary_a398acdc8436cfc3d29675a4a0773d9ec}\label{classparticls_1_1_flat_boundary_a398acdc8436cfc3d29675a4a0773d9ec}} 
+\index{particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}!ComputeMoI@{ComputeMoI}}
+\index{ComputeMoI@{ComputeMoI}!particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeMoI()}{ComputeMoI()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_flat_boundary}{particls\+::\+Flat\+Boundary}}$<$ dim $>$\+::Compute\+MoI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Compute the particle moment of intertia. 
+
+\mbox{\Hypertarget{classparticls_1_1_flat_boundary_a84a80206e920112eee1ae8112f58b1d2}\label{classparticls_1_1_flat_boundary_a84a80206e920112eee1ae8112f58b1d2}} 
+\index{particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}!ComputeMomentArm@{ComputeMomentArm}}
+\index{ComputeMomentArm@{ComputeMomentArm}!particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeMomentArm()}{ComputeMomentArm()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_flat_boundary}{particls\+::\+Flat\+Boundary}}$<$ dim $>$\+::Compute\+Moment\+Arm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Compute the moment arm of the particle. 
+
+\mbox{\Hypertarget{classparticls_1_1_flat_boundary_a73af50ef4a202439498ad3b47a5baa01}\label{classparticls_1_1_flat_boundary_a73af50ef4a202439498ad3b47a5baa01}} 
+\index{particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}!ComputeSurfaceArea@{ComputeSurfaceArea}}
+\index{ComputeSurfaceArea@{ComputeSurfaceArea}!particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeSurfaceArea()}{ComputeSurfaceArea()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_flat_boundary}{particls\+::\+Flat\+Boundary}}$<$ dim $>$\+::Compute\+Surface\+Area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compute the horizontal surface area of a particle. 
+
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_a7523e50b6e5028067259b538daa84372}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_flat_boundary_a7309526c241721cb02cd8bd6f6deaae3}\label{classparticls_1_1_flat_boundary_a7309526c241721cb02cd8bd6f6deaae3}} 
+\index{particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}!ComputeVolume@{ComputeVolume}}
+\index{ComputeVolume@{ComputeVolume}!particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeVolume()}{ComputeVolume()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_flat_boundary}{particls\+::\+Flat\+Boundary}}$<$ dim $>$\+::Compute\+Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Compute the particle volume. 
+
+\mbox{\Hypertarget{classparticls_1_1_flat_boundary_a5d7d21506bde894eb8acd0cf8c654c44}\label{classparticls_1_1_flat_boundary_a5d7d21506bde894eb8acd0cf8c654c44}} 
+\index{particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}!Density@{Density}}
+\index{Density@{Density}!particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Density()}{Density()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_flat_boundary}{particls\+::\+Flat\+Boundary}}$<$ dim $>$\+::Density (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The densty of the particle 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_a23e59421a15e4307a1cc68bb7903aa5d}{particls\+::\+Geometry$<$ dim $>$}}.
+
+
+
+Definition at line 102 of file Flat\+Boundary.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_flat_boundary_aa4c24406151840336442295263a7c43a}\label{classparticls_1_1_flat_boundary_aa4c24406151840336442295263a7c43a}} 
+\index{particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}!Density@{Density}}
+\index{Density@{Density}!particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Density()}{Density()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_flat_boundary}{particls\+::\+Flat\+Boundary}}$<$ dim $>$\+::Density (\begin{DoxyParamCaption}\item[{Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&}]{position,  }\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{ref\+\_\+pt }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+If the point is outside of the domain, return 0 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & We want the density at this point \\
+\hline
+\mbox{\texttt{ in}}  & {\em ref\+\_\+pt} & Reference point for one-\/sided signed distance functions \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The density 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_a7974532b017a2b662659db57db623c03}{particls\+::\+Geometry$<$ dim $>$}}.
+
+
+
+Definition at line 97 of file Flat\+Boundary.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_flat_boundary_a39a830bfded431629cf7693aedaa9226}\label{classparticls_1_1_flat_boundary_a39a830bfded431629cf7693aedaa9226}} 
+\index{particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_flat_boundary}{particls\+::\+Flat\+Boundary}}$<$ dim $>$\+::Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Initialize the volume, mass and moment of inertia of the particle. 
+
+\mbox{\Hypertarget{classparticls_1_1_flat_boundary_a5aecf2aee717776fe0236a9f0055b2b6}\label{classparticls_1_1_flat_boundary_a5aecf2aee717776fe0236a9f0055b2b6}} 
+\index{particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}!Mass@{Mass}}
+\index{Mass@{Mass}!particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Mass()}{Mass()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_flat_boundary}{particls\+::\+Flat\+Boundary}}$<$ dim $>$\+::Mass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The mass of the particle 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_af5e06af2734085d1acda7926d4ea8944}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_flat_boundary_abca7320d0e890401636d92e5fe08f8ca}\label{classparticls_1_1_flat_boundary_abca7320d0e890401636d92e5fe08f8ca}} 
+\index{particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}!MomentArm@{MomentArm}}
+\index{MomentArm@{MomentArm}!particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{MomentArm()}{MomentArm()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_flat_boundary}{particls\+::\+Flat\+Boundary}}$<$ dim $>$\+::Moment\+Arm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The moment arm of the particle 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_a99110ee074b3090c6b2d6df6cdca51ef}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_flat_boundary_a8c8b280bb448d5fc013dae7c1b345584}\label{classparticls_1_1_flat_boundary_a8c8b280bb448d5fc013dae7c1b345584}} 
+\index{particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}!MomentOfInertia@{MomentOfInertia}}
+\index{MomentOfInertia@{MomentOfInertia}!particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{MomentOfInertia()}{MomentOfInertia()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual Eigen\+::\+Matrix$<$double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$dim$>$\+::moment, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$dim$>$\+::moment$>$ \mbox{\hyperlink{classparticls_1_1_flat_boundary}{particls\+::\+Flat\+Boundary}}$<$ dim $>$\+::Moment\+Of\+Inertia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Return the moment of inertia for this object. N\+O\+TE\+: This currently returns the moment of inertia for a standard rectangular prism W\+I\+T\+H\+O\+UT rounded corners. This approximation is fine if the bevel radius is small, but might be an issue if the bevel radius is large. 
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_a35147032c4a967cc71d82e006f78e403}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_flat_boundary_a49ab5e9a720cd815ddc37c46aefa84c3}\label{classparticls_1_1_flat_boundary_a49ab5e9a720cd815ddc37c46aefa84c3}} 
+\index{particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}!ProximalOperator@{ProximalOperator}}
+\index{ProximalOperator@{ProximalOperator}!particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ProximalOperator()}{ProximalOperator()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual Eigen\+::\+Matrix$<$double,dim,1$>$ \mbox{\hyperlink{classparticls_1_1_flat_boundary}{particls\+::\+Flat\+Boundary}}$<$ dim $>$\+::Proximal\+Operator (\begin{DoxyParamCaption}\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$$>$ const \&}]{x,  }\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$$>$ const \&}]{ref\+\_\+pt,  }\item[{double const \&}]{lambda }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Applies the proximal operator for the level set defined in this geometry. @seealso \mbox{\hyperlink{classparticls_1_1_rigid_body_a4450bda4a3826d2dd69dbd872f1153f4}{Rigid\+Body\+::\+Proximal\+Operator}} \mbox{\Hypertarget{classparticls_1_1_flat_boundary_a557560c6dd60c71962694d187c0fbae1}\label{classparticls_1_1_flat_boundary_a557560c6dd60c71962694d187c0fbae1}} 
+\index{particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}!Radius@{Radius}}
+\index{Radius@{Radius}!particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Radius()}{Radius()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_flat_boundary}{particls\+::\+Flat\+Boundary}}$<$ dim $>$\+::Radius (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The effective radius of the flat boundary 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_a56f0f42d4045cb15696ccaf5590dd910}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_flat_boundary_ad57e5d98ab460ebb48bd2b62233df134}\label{classparticls_1_1_flat_boundary_ad57e5d98ab460ebb48bd2b62233df134}} 
+\index{particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}!SignedDistance@{SignedDistance}}
+\index{SignedDistance@{SignedDistance}!particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{SignedDistance()}{SignedDistance()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_flat_boundary}{particls\+::\+Flat\+Boundary}}$<$ dim $>$\+::Signed\+Distance (\begin{DoxyParamCaption}\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{position,  }\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{ref\+\_\+pt }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Compute the analytic signed distance function at a point. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & Position at which to calculate the signed distance. \\
+\hline
+\mbox{\texttt{ in}}  & {\em ref\+\_\+pt} & Reference point for one-\/sided signed distance functions. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_a4ec0bb5ebbfd45460b26127d9456023f}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_flat_boundary_ac9bb06b8386b21714e08d28e4f65fabb}\label{classparticls_1_1_flat_boundary_ac9bb06b8386b21714e08d28e4f65fabb}} 
+\index{particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}!SignedDistanceGrad@{SignedDistanceGrad}}
+\index{SignedDistanceGrad@{SignedDistanceGrad}!particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{SignedDistanceGrad()}{SignedDistanceGrad()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual Eigen\+::\+Matrix$<$double, dim, 1$>$ \mbox{\hyperlink{classparticls_1_1_flat_boundary}{particls\+::\+Flat\+Boundary}}$<$ dim $>$\+::Signed\+Distance\+Grad (\begin{DoxyParamCaption}\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{position,  }\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{ref\+\_\+pt }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Compute the gradient of the signed distance function at a point. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & Position at which to calculate the signed distance. \\
+\hline
+\mbox{\texttt{ in}}  & {\em ref\+\_\+pt} & Reference point for one-\/sided signed distance functions. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classparticls_1_1_geometry_a21d6c20edb4ef1aab9b6ca2eec4e7eb1}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_flat_boundary_af69e43b8d7807a1c539fef9a3db7fadc}\label{classparticls_1_1_flat_boundary_af69e43b8d7807a1c539fef9a3db7fadc}} 
+\index{particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}!SignedDistanceHess@{SignedDistanceHess}}
+\index{SignedDistanceHess@{SignedDistanceHess}!particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{SignedDistanceHess()}{SignedDistanceHess()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual Eigen\+::\+Matrix$<$double, dim, dim$>$ \mbox{\hyperlink{classparticls_1_1_flat_boundary}{particls\+::\+Flat\+Boundary}}$<$ dim $>$\+::Signed\+Distance\+Hess (\begin{DoxyParamCaption}\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{position,  }\item[{Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{ref\+\_\+pt }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Compute the hessian of the signed distance function at a point. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & Position at which to calculate the signed distance. \\
+\hline
+\mbox{\texttt{ in}}  & {\em ref\+\_\+pt} & Reference point for one-\/sided signed distance functions. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classparticls_1_1_geometry_a430f478ea9ba1e9c21fca74e79931dbb}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_flat_boundary_a0b4fdd3065ae7aab3f34a04a7401d02f}\label{classparticls_1_1_flat_boundary_a0b4fdd3065ae7aab3f34a04a7401d02f}} 
+\index{particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}!Thickness@{Thickness}}
+\index{Thickness@{Thickness}!particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Thickness()}{Thickness()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_flat_boundary}{particls\+::\+Flat\+Boundary}}$<$ dim $>$\+::Thickness (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The thickness of the particle 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_a27fe28ba995dc81e4d6dcd3a6162091b}{particls\+::\+Geometry$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_flat_boundary_ac3e145f94f43d96d50d5276137f870f6}\label{classparticls_1_1_flat_boundary_ac3e145f94f43d96d50d5276137f870f6}} 
+\index{particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}!Volume@{Volume}}
+\index{Volume@{Volume}!particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Volume()}{Volume()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_flat_boundary}{particls\+::\+Flat\+Boundary}}$<$ dim $>$\+::Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The volume of the particle 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_geometry_a4f38eaff1a219f41698f6dbef1525495}{particls\+::\+Geometry$<$ dim $>$}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticls_1_1_flat_boundary_a9f40479181d447f661cb2b9e07dfc81d}\label{classparticls_1_1_flat_boundary_a9f40479181d447f661cb2b9e07dfc81d}} 
+\index{particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}!corner\_pt@{corner\_pt}}
+\index{corner\_pt@{corner\_pt}!particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{corner\_pt}{corner\_pt}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, dim-\/1, 1$>$ \mbox{\hyperlink{classparticls_1_1_flat_boundary}{particls\+::\+Flat\+Boundary}}$<$ dim $>$\+::corner\+\_\+pt\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 147 of file Flat\+Boundary.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_flat_boundary_a29ec2cbd9f15162ba5ae1e7ce2d6831a}\label{classparticls_1_1_flat_boundary_a29ec2cbd9f15162ba5ae1e7ce2d6831a}} 
+\index{particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}!density@{density}}
+\index{density@{density}!particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{density}{density}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+const double \mbox{\hyperlink{classparticls_1_1_flat_boundary}{particls\+::\+Flat\+Boundary}}$<$ dim $>$\+::density\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 148 of file Flat\+Boundary.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_flat_boundary_aeaed1372f628ad0917100835a16fe571}\label{classparticls_1_1_flat_boundary_aeaed1372f628ad0917100835a16fe571}} 
+\index{particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}!fixed\_ref\_pt@{fixed\_ref\_pt}}
+\index{fixed\_ref\_pt@{fixed\_ref\_pt}!particls::FlatBoundary$<$ dim $>$@{particls::FlatBoundary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{fixed\_ref\_pt}{fixed\_ref\_pt}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, dim, 1$>$ \mbox{\hyperlink{classparticls_1_1_flat_boundary}{particls\+::\+Flat\+Boundary}}$<$ dim $>$\+::fixed\+\_\+ref\+\_\+pt\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 149 of file Flat\+Boundary.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_flat_boundary_8hpp}{Flat\+Boundary.\+hpp}}\end{DoxyCompactItemize}

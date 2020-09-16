@@ -1,0 +1,744 @@
+\hypertarget{classparticls_1_1_v_t_k_data}{}\doxysection{particls\+::V\+T\+K\+Data$<$ dim $>$ Class Template Reference}
+\label{classparticls_1_1_v_t_k_data}\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+
+
+Collects data to be written to .vtp file.  
+
+
+
+
+{\ttfamily \#include $<$V\+T\+K\+Data.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structparticls_1_1_v_t_k_data_1_1_beam}{Beam}}
+\begin{DoxyCompactList}\small\item\em Struct to hold the center of 2 particles as well as a force between them. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classparticls_1_1_v_t_k_data_ac7dd796c185eec365b310591cf53c827}{Save\+Data}} \{ \newline
+\mbox{\hyperlink{classparticls_1_1_v_t_k_data_ac7dd796c185eec365b310591cf53c827a88156d46910a2d733443c339a9231d12}{Save\+Data\+::\+Velocity}} = 1, 
+\mbox{\hyperlink{classparticls_1_1_v_t_k_data_ac7dd796c185eec365b310591cf53c827acfb2d17cc0d6ca7658a8822cbd78565c}{Save\+Data\+::\+Angular\+Velocity}}, 
+\mbox{\hyperlink{classparticls_1_1_v_t_k_data_ac7dd796c185eec365b310591cf53c827a7e6d11dd9dbeef53c1cb3cb896bce476}{Save\+Data\+::\+Density}}, 
+\mbox{\hyperlink{classparticls_1_1_v_t_k_data_ac7dd796c185eec365b310591cf53c827aee7a8e262285ed49ea1b4e4ae11525bd}{Save\+Data\+::\+Temperature}}, 
+\newline
+\mbox{\hyperlink{classparticls_1_1_v_t_k_data_ac7dd796c185eec365b310591cf53c827a555f07a3ce79de3a55c707974a30d000}{Save\+Data\+::\+Force\+Density}}, 
+\mbox{\hyperlink{classparticls_1_1_v_t_k_data_ac7dd796c185eec365b310591cf53c827a4a18312b5b75f549d5551e5912ad6ebf}{Save\+Data\+::\+Mask}}, 
+\mbox{\hyperlink{classparticls_1_1_v_t_k_data_ac7dd796c185eec365b310591cf53c827a58c1189a117fed5b74be7d9bb5f29b03}{Save\+Data\+::\+Contact\+Force}}, 
+\mbox{\hyperlink{classparticls_1_1_v_t_k_data_ac7dd796c185eec365b310591cf53c827adc6e84a67852dd96c1ba57da273b26ac}{Save\+Data\+::\+Beam}}
+ \}
+\begin{DoxyCompactList}\small\item\em Create an enumeration that will be used to specify which data points will be written to file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_v_t_k_data_a9f6048570ee2a8573953decd345d4471}{V\+T\+K\+Data}} (std\+::vector$<$ typename \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{V\+T\+K\+Data}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_v_t_k_data_ac7dd796c185eec365b310591cf53c827}{Save\+Data}} $>$ const \&\mbox{\hyperlink{classparticls_1_1_v_t_k_data_ae16dbe71f1983f745010d266c6d39a8c}{user\+List}}, int const \&num\+Particles)
+\begin{DoxyCompactList}\small\item\em Class constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_v_t_k_data_a216f22f1de5652933acaa304164ca45d}{Add\+Data}} (double const \&data, typename \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{V\+T\+K\+Data}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_v_t_k_data_ac7dd796c185eec365b310591cf53c827}{Save\+Data}} const \&data\+Type)
+\begin{DoxyCompactList}\small\item\em Assigns data from a particle to this class\textquotesingle{} corresponding member variable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_v_t_k_data_ab1a65e060cee99f7c269a6979bdb50eb}{Add\+Data}} (Eigen\+::\+Matrix\+Xd const \&data, typename \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{V\+T\+K\+Data}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_v_t_k_data_ac7dd796c185eec365b310591cf53c827}{Save\+Data}} const \&data\+Type)
+\item 
+void \mbox{\hyperlink{classparticls_1_1_v_t_k_data_a5adf393af9400c34df4b20a5625ef4ff}{Add\+Rows}} (int const \&num\+Glyph, int const \&num\+Faces)
+\begin{DoxyCompactList}\small\item\em Used in the particles\textquotesingle{} geometry class to add coloring data rows to final array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_v_t_k_data_a8f28f9f645321439ef5ad262a6795ad5}{Append\+Arrays}} ()
+\begin{DoxyCompactList}\small\item\em Used after particle loop in \mbox{\hyperlink{classparticls_1_1_collection}{Collection}} to append all the stored data to the vtk\+Poly\+Data set. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_v_t_k_data_ad8ea98abdfcbc7f5d977628302f395db}{Append\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Used after all particle data is added to write it the list containing all particle data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_v_t_k_data_ab3b7bb027cef7a53f93a907af9685035}{Simple\+C\+SV}} (std\+::string const \&output)
+\item 
+void \mbox{\hyperlink{classparticls_1_1_v_t_k_data_a233ccb87ca1ecca12c1aad7710a194eb}{Add\+Beam}} (Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&part1\+\_\+center, Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&part2\+\_\+center, double bond\+\_\+force)
+\begin{DoxyCompactList}\small\item\em Create a beam between 2 particles. \end{DoxyCompactList}\item 
+vtk\+Smart\+Pointer$<$ vtk\+Points $>$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data_a6ecb397ab73558e35fbb874c5e3f8723}{Points}} ()
+\begin{DoxyCompactList}\small\item\em Returns list of points used for faces. \end{DoxyCompactList}\item 
+vtk\+Smart\+Pointer$<$ vtk\+Points $>$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data_a5855aa90e9a7f96f4c83e719c1714f16}{Points\+Glyph}} ()
+\begin{DoxyCompactList}\small\item\em Returns list of points used for glyphs. \end{DoxyCompactList}\item 
+vtk\+Smart\+Pointer$<$ vtk\+Double\+Array $>$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data_a7b091c8c35bede768ff786eb2887608e}{Radius}} ()
+\begin{DoxyCompactList}\small\item\em Returns list of scalar values for radii of glyph. \end{DoxyCompactList}\item 
+vtk\+Smart\+Pointer$<$ vtk\+Cell\+Array $>$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data_aaebbfe873077823bcc939378e31f1fa7}{Faces}} ()
+\begin{DoxyCompactList}\small\item\em Returns list of cells (faces) using points in m\+Points. \end{DoxyCompactList}\item 
+vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data_adcdcccb4a18fa6ed59fe8deadc2a893a}{Pd\+Poly}} ()
+\begin{DoxyCompactList}\small\item\em Returns the polydataset that will be written to face file. \end{DoxyCompactList}\item 
+vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data_ad291c2db60ef7348e426dd5f7eb5e074}{Pd\+Glyph}} ()
+\begin{DoxyCompactList}\small\item\em Returns the polydataset that will be written to glyph file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classparticls_1_1_v_t_k_data_acfa956b8195c7ce6829db20c8772c828}{Total\+Particles}} ()
+\begin{DoxyCompactList}\small\item\em Returns the total number of particles in the simulation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_v_t_k_data_aafbc02f2066669c83285efdbad1c38cb}{Write\+Beams}} (std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Write beam\+\_\+list to file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ typename \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{V\+T\+K\+Data}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_v_t_k_data_ac7dd796c185eec365b310591cf53c827}{Save\+Data}} $>$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data_ae16dbe71f1983f745010d266c6d39a8c}{user\+List}}
+\begin{DoxyCompactList}\small\item\em List of user defined options. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structparticls_1_1_v_t_k_data_1_1_beam}{Beam}} $>$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data_a019ccf8a3e80699b65551d3245c16627}{beam\+\_\+list}}
+\begin{DoxyCompactList}\small\item\em List of beams. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classparticls_1_1_v_t_k_data_a51f7f2c19bdafdf0aec1cdd550e89000}{create\+Arrays}} (std\+::string const \&array\+Name, int const \&num\+Components, int const \&column\+Start)
+\begin{DoxyCompactList}\small\item\em Method used by Append\+Arrays to create and append the final arrays to the polydataset with the correct name and number of components. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_v_t_k_data_ab16acbe9f7d04683bf8277ad062d652a}{get\+Num\+Columns}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vtk\+Smart\+Pointer$<$ vtk\+Points $>$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data_af3535893d73e15d09aa4e37f569bbeea}{m\+Points}}
+\begin{DoxyCompactList}\small\item\em List of points used for faces. \end{DoxyCompactList}\item 
+vtk\+Smart\+Pointer$<$ vtk\+Points $>$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data_a6ac662b1ab94a85755bc6c2f7ae1cc93}{m\+Points\+Glyph}}
+\begin{DoxyCompactList}\small\item\em List of points used for glyphs. \end{DoxyCompactList}\item 
+vtk\+Smart\+Pointer$<$ vtk\+Double\+Array $>$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data_a1409bf88932736b23a9fcf28056d1f17}{m\+Radius}}
+\begin{DoxyCompactList}\small\item\em List of scalar values for radii of glyph. \end{DoxyCompactList}\item 
+vtk\+Smart\+Pointer$<$ vtk\+Cell\+Array $>$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data_accd723ec8f8453d3f744bbaa44149039}{m\+Faces}}
+\begin{DoxyCompactList}\small\item\em List of cells (faces) using points in m\+Points. \end{DoxyCompactList}\item 
+vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data_acc03bd557a7dd802c7060d2f4cfcb4b1}{pd\+Poly}}
+\begin{DoxyCompactList}\small\item\em The polydataset that will be written to face file. \end{DoxyCompactList}\item 
+vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data_ae0cc6a18c8356fabff21868b5b20d49e}{pd\+Glyph}}
+\begin{DoxyCompactList}\small\item\em The polydataset that will be written to glyph file. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_v_t_k_data_aa5a0c1be2ef9ca0385dfeaefff00b4d3}{Temperature}}
+\begin{DoxyCompactList}\small\item\em Temperature data. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_v_t_k_data_aa8f096d7f3fd6588e71df283440a997d}{Density}}
+\begin{DoxyCompactList}\small\item\em Density data. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classparticls_1_1_v_t_k_data_a7b420a02d36171ca583ad551d13e5227}{Mask}}
+\begin{DoxyCompactList}\small\item\em Mask value. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classparticls_1_1_v_t_k_data_af84677e4ee2db25eef3efdd84deb6f9e}{Velocity}}
+\begin{DoxyCompactList}\small\item\em Velocity data. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classparticls_1_1_v_t_k_data_a39cc568e0ee0fecee86ea9c15c18c3bb}{Angular\+Velocity}}
+\begin{DoxyCompactList}\small\item\em Angular velocity data. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classparticls_1_1_v_t_k_data_a939f0fd177446398424280a6072f80b7}{Force\+Density}}
+\begin{DoxyCompactList}\small\item\em Force density data. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classparticls_1_1_v_t_k_data_aa26c5a7a05d5d806fd863487d65c0ac4}{Contact\+Force}}
+\begin{DoxyCompactList}\small\item\em Contact force vector. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classparticls_1_1_v_t_k_data_a9122286cd14ccf00fe15fb2028ba1c96}{Data}}
+\begin{DoxyCompactList}\small\item\em This matrix contains a row for every particles that holds each of the pieces of data above in its columns. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classparticls_1_1_v_t_k_data_a1deca75079508d2d2f3164b198e8cab6}{Num\+Cols}}
+\begin{DoxyCompactList}\small\item\em Number of columns for Data. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classparticls_1_1_v_t_k_data_a51408ddde683a918b064d4d1493e17cf}{particle\+Number}} = 0
+\begin{DoxyCompactList}\small\item\em Current particle index, starting at zero, incremented after every geometry adds its rows. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classparticls_1_1_v_t_k_data_a20b9705fe0b8ef4bbdc46a32973cae72}{m\+Total\+Particles}}
+\begin{DoxyCompactList}\small\item\em The total number of particles in the simulation. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data_af61c7662513773892ed55553d8c9302f}{num\+Glyph\+Rows}}
+\begin{DoxyCompactList}\small\item\em A list of the number of rows of data that need to be appended to the glyph polydataset for each particle. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data_a4a6b97a3ff317325cf747a4b17aaf824}{num\+Face\+Rows}}
+\begin{DoxyCompactList}\small\item\em A list of the number of rows of data that need to be appended to the faces polydataset for each particle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+class particls\+::\+V\+T\+K\+Data$<$ dim $>$}
+
+Collects data to be written to .vtp file. 
+
+This class contains all the methods and variables used for visualizing particles. V\+TK is used to write files to be loaded into Para\+View. An object of this class should be created every timestep (often in Collection.\+cpp). Different particles are added to the class in their respective Geometry.\+cpp file. Specific coloring options are specified in a vector of Save\+Data options in Simulation.\+cpp. Each of the specified options will be added to the geometry in a switch statement in Rigid\+Body.\+cpp. 
+
+Definition at line 34 of file V\+T\+K\+Data.\+hpp.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_ac7dd796c185eec365b310591cf53c827}\label{classparticls_1_1_v_t_k_data_ac7dd796c185eec365b310591cf53c827}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!SaveData@{SaveData}}
+\index{SaveData@{SaveData}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{SaveData}{SaveData}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+enum \mbox{\hyperlink{classparticls_1_1_v_t_k_data_ac7dd796c185eec365b310591cf53c827}{particls\+::\+V\+T\+K\+Data\+::\+Save\+Data}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Create an enumeration that will be used to specify which data points will be written to file. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Velocity@{Velocity}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!Velocity@{Velocity}}}\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_ac7dd796c185eec365b310591cf53c827a88156d46910a2d733443c339a9231d12}\label{classparticls_1_1_v_t_k_data_ac7dd796c185eec365b310591cf53c827a88156d46910a2d733443c339a9231d12}} 
+Velocity&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AngularVelocity@{AngularVelocity}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!AngularVelocity@{AngularVelocity}}}\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_ac7dd796c185eec365b310591cf53c827acfb2d17cc0d6ca7658a8822cbd78565c}\label{classparticls_1_1_v_t_k_data_ac7dd796c185eec365b310591cf53c827acfb2d17cc0d6ca7658a8822cbd78565c}} 
+Angular\+Velocity&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Density@{Density}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!Density@{Density}}}\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_ac7dd796c185eec365b310591cf53c827a7e6d11dd9dbeef53c1cb3cb896bce476}\label{classparticls_1_1_v_t_k_data_ac7dd796c185eec365b310591cf53c827a7e6d11dd9dbeef53c1cb3cb896bce476}} 
+Density&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Temperature@{Temperature}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!Temperature@{Temperature}}}\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_ac7dd796c185eec365b310591cf53c827aee7a8e262285ed49ea1b4e4ae11525bd}\label{classparticls_1_1_v_t_k_data_ac7dd796c185eec365b310591cf53c827aee7a8e262285ed49ea1b4e4ae11525bd}} 
+Temperature&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ForceDensity@{ForceDensity}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!ForceDensity@{ForceDensity}}}\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_ac7dd796c185eec365b310591cf53c827a555f07a3ce79de3a55c707974a30d000}\label{classparticls_1_1_v_t_k_data_ac7dd796c185eec365b310591cf53c827a555f07a3ce79de3a55c707974a30d000}} 
+Force\+Density&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Mask@{Mask}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!Mask@{Mask}}}\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_ac7dd796c185eec365b310591cf53c827a4a18312b5b75f549d5551e5912ad6ebf}\label{classparticls_1_1_v_t_k_data_ac7dd796c185eec365b310591cf53c827a4a18312b5b75f549d5551e5912ad6ebf}} 
+Mask&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ContactForce@{ContactForce}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!ContactForce@{ContactForce}}}\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_ac7dd796c185eec365b310591cf53c827a58c1189a117fed5b74be7d9bb5f29b03}\label{classparticls_1_1_v_t_k_data_ac7dd796c185eec365b310591cf53c827a58c1189a117fed5b74be7d9bb5f29b03}} 
+Contact\+Force&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Beam@{Beam}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!Beam@{Beam}}}\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_ac7dd796c185eec365b310591cf53c827adc6e84a67852dd96c1ba57da273b26ac}\label{classparticls_1_1_v_t_k_data_ac7dd796c185eec365b310591cf53c827adc6e84a67852dd96c1ba57da273b26ac}} 
+Beam&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 37 of file V\+T\+K\+Data.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_a9f6048570ee2a8573953decd345d4471}\label{classparticls_1_1_v_t_k_data_a9f6048570ee2a8573953decd345d4471}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!VTKData@{VTKData}}
+\index{VTKData@{VTKData}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{VTKData()}{VTKData()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_v_t_k_data}{particls\+::\+V\+T\+K\+Data}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_v_t_k_data}{V\+T\+K\+Data}} (\begin{DoxyParamCaption}\item[{std\+::vector$<$ typename \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{V\+T\+K\+Data}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_v_t_k_data_ac7dd796c185eec365b310591cf53c827}{Save\+Data}} $>$ const \&}]{user\+List,  }\item[{int const \&}]{num\+Particles }\end{DoxyParamCaption})}
+
+
+
+Class constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em userlist} & A list of options passed by the user to specify which pieces of data should be collected. \\
+\hline
+\mbox{\texttt{ in}}  & {\em num\+Particles} & Total number of particles in the simulation. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_a233ccb87ca1ecca12c1aad7710a194eb}\label{classparticls_1_1_v_t_k_data_a233ccb87ca1ecca12c1aad7710a194eb}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!AddBeam@{AddBeam}}
+\index{AddBeam@{AddBeam}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{AddBeam()}{AddBeam()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{particls\+::\+V\+T\+K\+Data}}$<$ dim $>$\+::Add\+Beam (\begin{DoxyParamCaption}\item[{Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&}]{part1\+\_\+center,  }\item[{Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&}]{part2\+\_\+center,  }\item[{double}]{bond\+\_\+force }\end{DoxyParamCaption})}
+
+
+
+Create a beam between 2 particles. 
+
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_a216f22f1de5652933acaa304164ca45d}\label{classparticls_1_1_v_t_k_data_a216f22f1de5652933acaa304164ca45d}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!AddData@{AddData}}
+\index{AddData@{AddData}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{AddData()}{AddData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{particls\+::\+V\+T\+K\+Data}}$<$ dim $>$\+::Add\+Data (\begin{DoxyParamCaption}\item[{double const \&}]{data,  }\item[{typename \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{V\+T\+K\+Data}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_v_t_k_data_ac7dd796c185eec365b310591cf53c827}{Save\+Data}} const \&}]{data\+Type }\end{DoxyParamCaption})}
+
+
+
+Assigns data from a particle to this class\textquotesingle{} corresponding member variable. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em data} & The piece of data to be assigned to this class\textquotesingle{} corresponding member variable. \\
+\hline
+\mbox{\texttt{ in}}  & {\em data\+Type} & Save\+Data enum to specify which member variable will be written. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_ab1a65e060cee99f7c269a6979bdb50eb}\label{classparticls_1_1_v_t_k_data_ab1a65e060cee99f7c269a6979bdb50eb}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!AddData@{AddData}}
+\index{AddData@{AddData}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{AddData()}{AddData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{particls\+::\+V\+T\+K\+Data}}$<$ dim $>$\+::Add\+Data (\begin{DoxyParamCaption}\item[{Eigen\+::\+Matrix\+Xd const \&}]{data,  }\item[{typename \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{V\+T\+K\+Data}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_v_t_k_data_ac7dd796c185eec365b310591cf53c827}{Save\+Data}} const \&}]{data\+Type }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em data} & The vector of data to be assigned to this class\textquotesingle{} corresponding member variable. \\
+\hline
+\mbox{\texttt{ in}}  & {\em data\+Type} & Save\+Data enum to specify which member variable will be written. \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Length of data vector. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_a5adf393af9400c34df4b20a5625ef4ff}\label{classparticls_1_1_v_t_k_data_a5adf393af9400c34df4b20a5625ef4ff}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!AddRows@{AddRows}}
+\index{AddRows@{AddRows}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{AddRows()}{AddRows()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{particls\+::\+V\+T\+K\+Data}}$<$ dim $>$\+::Add\+Rows (\begin{DoxyParamCaption}\item[{int const \&}]{num\+Glyph,  }\item[{int const \&}]{num\+Faces }\end{DoxyParamCaption})}
+
+
+
+Used in the particles\textquotesingle{} geometry class to add coloring data rows to final array. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em num\+Glyph} & number of glyphs in this geometry. \\
+\hline
+\mbox{\texttt{ in}}  & {\em num\+Faces} & number of faces faces in this geometry. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_a8f28f9f645321439ef5ad262a6795ad5}\label{classparticls_1_1_v_t_k_data_a8f28f9f645321439ef5ad262a6795ad5}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!AppendArrays@{AppendArrays}}
+\index{AppendArrays@{AppendArrays}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{AppendArrays()}{AppendArrays()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{particls\+::\+V\+T\+K\+Data}}$<$ dim $>$\+::Append\+Arrays (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Used after particle loop in \mbox{\hyperlink{classparticls_1_1_collection}{Collection}} to append all the stored data to the vtk\+Poly\+Data set. 
+
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_ad8ea98abdfcbc7f5d977628302f395db}\label{classparticls_1_1_v_t_k_data_ad8ea98abdfcbc7f5d977628302f395db}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!AppendData@{AppendData}}
+\index{AppendData@{AppendData}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{AppendData()}{AppendData()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{particls\+::\+V\+T\+K\+Data}}$<$ dim $>$\+::Append\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Used after all particle data is added to write it the list containing all particle data. 
+
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_a51f7f2c19bdafdf0aec1cdd550e89000}\label{classparticls_1_1_v_t_k_data_a51f7f2c19bdafdf0aec1cdd550e89000}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!createArrays@{createArrays}}
+\index{createArrays@{createArrays}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{createArrays()}{createArrays()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{particls\+::\+V\+T\+K\+Data}}$<$ dim $>$\+::create\+Arrays (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{array\+Name,  }\item[{int const \&}]{num\+Components,  }\item[{int const \&}]{column\+Start }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Method used by Append\+Arrays to create and append the final arrays to the polydataset with the correct name and number of components. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em array\+Name} & name that will appear in Para\+View \\
+\hline
+\mbox{\texttt{ in}}  & {\em num\+Components} & number of components for this piece of data. \\
+\hline
+\mbox{\texttt{ in}}  & {\em column\+Start} & starting index for Data. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_aaebbfe873077823bcc939378e31f1fa7}\label{classparticls_1_1_v_t_k_data_aaebbfe873077823bcc939378e31f1fa7}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!Faces@{Faces}}
+\index{Faces@{Faces}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Faces()}{Faces()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+vtk\+Smart\+Pointer$<$vtk\+Cell\+Array$>$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{particls\+::\+V\+T\+K\+Data}}$<$ dim $>$\+::Faces (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns list of cells (faces) using points in m\+Points. 
+
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_ab16acbe9f7d04683bf8277ad062d652a}\label{classparticls_1_1_v_t_k_data_ab16acbe9f7d04683bf8277ad062d652a}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!getNumColumns@{getNumColumns}}
+\index{getNumColumns@{getNumColumns}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{getNumColumns()}{getNumColumns()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{particls\+::\+V\+T\+K\+Data}}$<$ dim $>$\+::get\+Num\+Columns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_ad291c2db60ef7348e426dd5f7eb5e074}\label{classparticls_1_1_v_t_k_data_ad291c2db60ef7348e426dd5f7eb5e074}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!PdGlyph@{PdGlyph}}
+\index{PdGlyph@{PdGlyph}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{PdGlyph()}{PdGlyph()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+vtk\+Smart\+Pointer$<$vtk\+Poly\+Data$>$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{particls\+::\+V\+T\+K\+Data}}$<$ dim $>$\+::Pd\+Glyph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the polydataset that will be written to glyph file. 
+
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_adcdcccb4a18fa6ed59fe8deadc2a893a}\label{classparticls_1_1_v_t_k_data_adcdcccb4a18fa6ed59fe8deadc2a893a}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!PdPoly@{PdPoly}}
+\index{PdPoly@{PdPoly}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{PdPoly()}{PdPoly()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+vtk\+Smart\+Pointer$<$vtk\+Poly\+Data$>$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{particls\+::\+V\+T\+K\+Data}}$<$ dim $>$\+::Pd\+Poly (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the polydataset that will be written to face file. 
+
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_a6ecb397ab73558e35fbb874c5e3f8723}\label{classparticls_1_1_v_t_k_data_a6ecb397ab73558e35fbb874c5e3f8723}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!Points@{Points}}
+\index{Points@{Points}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Points()}{Points()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+vtk\+Smart\+Pointer$<$vtk\+Points$>$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{particls\+::\+V\+T\+K\+Data}}$<$ dim $>$\+::Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns list of points used for faces. 
+
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_a5855aa90e9a7f96f4c83e719c1714f16}\label{classparticls_1_1_v_t_k_data_a5855aa90e9a7f96f4c83e719c1714f16}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!PointsGlyph@{PointsGlyph}}
+\index{PointsGlyph@{PointsGlyph}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{PointsGlyph()}{PointsGlyph()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+vtk\+Smart\+Pointer$<$vtk\+Points$>$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{particls\+::\+V\+T\+K\+Data}}$<$ dim $>$\+::Points\+Glyph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns list of points used for glyphs. 
+
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_a7b091c8c35bede768ff786eb2887608e}\label{classparticls_1_1_v_t_k_data_a7b091c8c35bede768ff786eb2887608e}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!Radius@{Radius}}
+\index{Radius@{Radius}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Radius()}{Radius()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+vtk\+Smart\+Pointer$<$vtk\+Double\+Array$>$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{particls\+::\+V\+T\+K\+Data}}$<$ dim $>$\+::Radius (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns list of scalar values for radii of glyph. 
+
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_ab3b7bb027cef7a53f93a907af9685035}\label{classparticls_1_1_v_t_k_data_ab3b7bb027cef7a53f93a907af9685035}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!SimpleCSV@{SimpleCSV}}
+\index{SimpleCSV@{SimpleCSV}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{SimpleCSV()}{SimpleCSV()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{particls\+::\+V\+T\+K\+Data}}$<$ dim $>$\+::Simple\+C\+SV (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{output }\end{DoxyParamCaption})}
+
+Get a simple .txt file with list of sphere centers and their radii to be used with paraview in the form x, y, z, radius 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em output} & name or path of file to be create/modified. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_acfa956b8195c7ce6829db20c8772c828}\label{classparticls_1_1_v_t_k_data_acfa956b8195c7ce6829db20c8772c828}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!TotalParticles@{TotalParticles}}
+\index{TotalParticles@{TotalParticles}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{TotalParticles()}{TotalParticles()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+int \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{particls\+::\+V\+T\+K\+Data}}$<$ dim $>$\+::Total\+Particles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the total number of particles in the simulation. 
+
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_aafbc02f2066669c83285efdbad1c38cb}\label{classparticls_1_1_v_t_k_data_aafbc02f2066669c83285efdbad1c38cb}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!WriteBeams@{WriteBeams}}
+\index{WriteBeams@{WriteBeams}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{WriteBeams()}{WriteBeams()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{particls\+::\+V\+T\+K\+Data}}$<$ dim $>$\+::Write\+Beams (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Write beam\+\_\+list to file. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_a39cc568e0ee0fecee86ea9c15c18c3bb}\label{classparticls_1_1_v_t_k_data_a39cc568e0ee0fecee86ea9c15c18c3bb}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!AngularVelocity@{AngularVelocity}}
+\index{AngularVelocity@{AngularVelocity}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{AngularVelocity}{AngularVelocity}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{particls\+::\+V\+T\+K\+Data}}$<$ dim $>$\+::Angular\+Velocity\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Angular velocity data. 
+
+
+
+Definition at line 133 of file V\+T\+K\+Data.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_a019ccf8a3e80699b65551d3245c16627}\label{classparticls_1_1_v_t_k_data_a019ccf8a3e80699b65551d3245c16627}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!beam\_list@{beam\_list}}
+\index{beam\_list@{beam\_list}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{beam\_list}{beam\_list}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$\mbox{\hyperlink{structparticls_1_1_v_t_k_data_1_1_beam}{Beam}}$>$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{particls\+::\+V\+T\+K\+Data}}$<$ dim $>$\+::beam\+\_\+list}
+
+
+
+List of beams. 
+
+
+
+Definition at line 109 of file V\+T\+K\+Data.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_aa26c5a7a05d5d806fd863487d65c0ac4}\label{classparticls_1_1_v_t_k_data_aa26c5a7a05d5d806fd863487d65c0ac4}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!ContactForce@{ContactForce}}
+\index{ContactForce@{ContactForce}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ContactForce}{ContactForce}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{particls\+::\+V\+T\+K\+Data}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Contact force vector. 
+
+
+
+Definition at line 137 of file V\+T\+K\+Data.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_a9122286cd14ccf00fe15fb2028ba1c96}\label{classparticls_1_1_v_t_k_data_a9122286cd14ccf00fe15fb2028ba1c96}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!Data@{Data}}
+\index{Data@{Data}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Data}{Data}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{particls\+::\+V\+T\+K\+Data}}$<$ dim $>$\+::Data\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This matrix contains a row for every particles that holds each of the pieces of data above in its columns. 
+
+
+
+Definition at line 139 of file V\+T\+K\+Data.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_aa8f096d7f3fd6588e71df283440a997d}\label{classparticls_1_1_v_t_k_data_aa8f096d7f3fd6588e71df283440a997d}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!Density@{Density}}
+\index{Density@{Density}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Density}{Density}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{particls\+::\+V\+T\+K\+Data}}$<$ dim $>$\+::Density\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Density data. 
+
+
+
+Definition at line 127 of file V\+T\+K\+Data.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_a939f0fd177446398424280a6072f80b7}\label{classparticls_1_1_v_t_k_data_a939f0fd177446398424280a6072f80b7}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!ForceDensity@{ForceDensity}}
+\index{ForceDensity@{ForceDensity}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ForceDensity}{ForceDensity}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{particls\+::\+V\+T\+K\+Data}}$<$ dim $>$\+::Force\+Density\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Force density data. 
+
+
+
+Definition at line 135 of file V\+T\+K\+Data.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_a7b420a02d36171ca583ad551d13e5227}\label{classparticls_1_1_v_t_k_data_a7b420a02d36171ca583ad551d13e5227}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!Mask@{Mask}}
+\index{Mask@{Mask}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Mask}{Mask}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+int \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{particls\+::\+V\+T\+K\+Data}}$<$ dim $>$\+::Mask\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Mask value. 
+
+
+
+Definition at line 129 of file V\+T\+K\+Data.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_accd723ec8f8453d3f744bbaa44149039}\label{classparticls_1_1_v_t_k_data_accd723ec8f8453d3f744bbaa44149039}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!mFaces@{mFaces}}
+\index{mFaces@{mFaces}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{mFaces}{mFaces}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+vtk\+Smart\+Pointer$<$vtk\+Cell\+Array$>$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{particls\+::\+V\+T\+K\+Data}}$<$ dim $>$\+::m\+Faces\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+List of cells (faces) using points in m\+Points. 
+
+
+
+Definition at line 119 of file V\+T\+K\+Data.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_af3535893d73e15d09aa4e37f569bbeea}\label{classparticls_1_1_v_t_k_data_af3535893d73e15d09aa4e37f569bbeea}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!mPoints@{mPoints}}
+\index{mPoints@{mPoints}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{mPoints}{mPoints}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+vtk\+Smart\+Pointer$<$vtk\+Points$>$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{particls\+::\+V\+T\+K\+Data}}$<$ dim $>$\+::m\+Points\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+List of points used for faces. 
+
+
+
+Definition at line 113 of file V\+T\+K\+Data.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_a6ac662b1ab94a85755bc6c2f7ae1cc93}\label{classparticls_1_1_v_t_k_data_a6ac662b1ab94a85755bc6c2f7ae1cc93}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!mPointsGlyph@{mPointsGlyph}}
+\index{mPointsGlyph@{mPointsGlyph}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{mPointsGlyph}{mPointsGlyph}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+vtk\+Smart\+Pointer$<$vtk\+Points$>$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{particls\+::\+V\+T\+K\+Data}}$<$ dim $>$\+::m\+Points\+Glyph\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+List of points used for glyphs. 
+
+
+
+Definition at line 115 of file V\+T\+K\+Data.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_a1409bf88932736b23a9fcf28056d1f17}\label{classparticls_1_1_v_t_k_data_a1409bf88932736b23a9fcf28056d1f17}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!mRadius@{mRadius}}
+\index{mRadius@{mRadius}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{mRadius}{mRadius}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+vtk\+Smart\+Pointer$<$vtk\+Double\+Array$>$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{particls\+::\+V\+T\+K\+Data}}$<$ dim $>$\+::m\+Radius\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+List of scalar values for radii of glyph. 
+
+
+
+Definition at line 117 of file V\+T\+K\+Data.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_a20b9705fe0b8ef4bbdc46a32973cae72}\label{classparticls_1_1_v_t_k_data_a20b9705fe0b8ef4bbdc46a32973cae72}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!mTotalParticles@{mTotalParticles}}
+\index{mTotalParticles@{mTotalParticles}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{mTotalParticles}{mTotalParticles}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+int \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{particls\+::\+V\+T\+K\+Data}}$<$ dim $>$\+::m\+Total\+Particles\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The total number of particles in the simulation. 
+
+
+
+Definition at line 145 of file V\+T\+K\+Data.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_a1deca75079508d2d2f3164b198e8cab6}\label{classparticls_1_1_v_t_k_data_a1deca75079508d2d2f3164b198e8cab6}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!NumCols@{NumCols}}
+\index{NumCols@{NumCols}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{NumCols}{NumCols}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+int \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{particls\+::\+V\+T\+K\+Data}}$<$ dim $>$\+::Num\+Cols\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Number of columns for Data. 
+
+
+
+Definition at line 141 of file V\+T\+K\+Data.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_a4a6b97a3ff317325cf747a4b17aaf824}\label{classparticls_1_1_v_t_k_data_a4a6b97a3ff317325cf747a4b17aaf824}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!numFaceRows@{numFaceRows}}
+\index{numFaceRows@{numFaceRows}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{numFaceRows}{numFaceRows}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$int$>$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{particls\+::\+V\+T\+K\+Data}}$<$ dim $>$\+::num\+Face\+Rows\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A list of the number of rows of data that need to be appended to the faces polydataset for each particle. 
+
+
+
+Definition at line 149 of file V\+T\+K\+Data.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_af61c7662513773892ed55553d8c9302f}\label{classparticls_1_1_v_t_k_data_af61c7662513773892ed55553d8c9302f}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!numGlyphRows@{numGlyphRows}}
+\index{numGlyphRows@{numGlyphRows}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{numGlyphRows}{numGlyphRows}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$int$>$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{particls\+::\+V\+T\+K\+Data}}$<$ dim $>$\+::num\+Glyph\+Rows\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A list of the number of rows of data that need to be appended to the glyph polydataset for each particle. 
+
+
+
+Definition at line 147 of file V\+T\+K\+Data.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_a51408ddde683a918b064d4d1493e17cf}\label{classparticls_1_1_v_t_k_data_a51408ddde683a918b064d4d1493e17cf}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!particleNumber@{particleNumber}}
+\index{particleNumber@{particleNumber}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{particleNumber}{particleNumber}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+int \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{particls\+::\+V\+T\+K\+Data}}$<$ dim $>$\+::particle\+Number = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Current particle index, starting at zero, incremented after every geometry adds its rows. 
+
+
+
+Definition at line 143 of file V\+T\+K\+Data.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_ae0cc6a18c8356fabff21868b5b20d49e}\label{classparticls_1_1_v_t_k_data_ae0cc6a18c8356fabff21868b5b20d49e}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!pdGlyph@{pdGlyph}}
+\index{pdGlyph@{pdGlyph}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{pdGlyph}{pdGlyph}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+vtk\+Smart\+Pointer$<$vtk\+Poly\+Data$>$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{particls\+::\+V\+T\+K\+Data}}$<$ dim $>$\+::pd\+Glyph\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The polydataset that will be written to glyph file. 
+
+
+
+Definition at line 123 of file V\+T\+K\+Data.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_acc03bd557a7dd802c7060d2f4cfcb4b1}\label{classparticls_1_1_v_t_k_data_acc03bd557a7dd802c7060d2f4cfcb4b1}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!pdPoly@{pdPoly}}
+\index{pdPoly@{pdPoly}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{pdPoly}{pdPoly}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+vtk\+Smart\+Pointer$<$vtk\+Poly\+Data$>$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{particls\+::\+V\+T\+K\+Data}}$<$ dim $>$\+::pd\+Poly\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The polydataset that will be written to face file. 
+
+
+
+Definition at line 121 of file V\+T\+K\+Data.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_aa5a0c1be2ef9ca0385dfeaefff00b4d3}\label{classparticls_1_1_v_t_k_data_aa5a0c1be2ef9ca0385dfeaefff00b4d3}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!Temperature@{Temperature}}
+\index{Temperature@{Temperature}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Temperature}{Temperature}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{particls\+::\+V\+T\+K\+Data}}$<$ dim $>$\+::Temperature\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Temperature data. 
+
+
+
+Definition at line 125 of file V\+T\+K\+Data.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_ae16dbe71f1983f745010d266c6d39a8c}\label{classparticls_1_1_v_t_k_data_ae16dbe71f1983f745010d266c6d39a8c}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!userList@{userList}}
+\index{userList@{userList}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{userList}{userList}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$typename \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{V\+T\+K\+Data}}$<$dim$>$\+::\mbox{\hyperlink{classparticls_1_1_v_t_k_data_ac7dd796c185eec365b310591cf53c827}{Save\+Data}}$>$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{particls\+::\+V\+T\+K\+Data}}$<$ dim $>$\+::user\+List}
+
+
+
+List of user defined options. 
+
+
+
+Definition at line 99 of file V\+T\+K\+Data.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_v_t_k_data_af84677e4ee2db25eef3efdd84deb6f9e}\label{classparticls_1_1_v_t_k_data_af84677e4ee2db25eef3efdd84deb6f9e}} 
+\index{particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}!Velocity@{Velocity}}
+\index{Velocity@{Velocity}!particls::VTKData$<$ dim $>$@{particls::VTKData$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Velocity}{Velocity}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{particls\+::\+V\+T\+K\+Data}}$<$ dim $>$\+::Velocity\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Velocity data. 
+
+
+
+Definition at line 131 of file V\+T\+K\+Data.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_v_t_k_data_8hpp}{V\+T\+K\+Data.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,25 @@
+\hypertarget{class_regular_gridf}{}\doxysection{Regular\+Gridf Class Reference}
+\label{class_regular_gridf}\index{RegularGridf@{RegularGridf}}
+
+
+Defines a regular grid in 2 or 3 dimensions.  
+
+
+
+
+{\ttfamily \#include $<$Regular\+Grid.\+hpp$>$}
+
+
+
+\doxysubsection{Detailed Description}
+Defines a regular grid in 2 or 3 dimensions. 
+
+This class defines a regular grid in 2 or 3 dimensions. Each coordinate direction is divided into Nx, Ny, or Nz segments, whose lengths are given by dx, dy, or dz. This yields a total of Nx$\ast$\+Ny$\ast$\+Nz cells in the grid and (Nx+1)$\ast$(Ny+1)$\ast$(Nz+1) nodes.
+
+For linear indexing, it assumes the x index varies faster than the y index and the y index varies faster than the z index. For example, the linear index of cell (i,j,k) is i + j$\ast$\+Nx + k$\ast$\+Nx$\ast$\+Ny.
+
+@seealso Generic\+Level\+Set 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_regular_grid_8hpp}{Regular\+Grid.\+hpp}}\end{DoxyCompactItemize}

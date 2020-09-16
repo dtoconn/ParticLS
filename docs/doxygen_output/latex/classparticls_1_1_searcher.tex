@@ -1,0 +1,231 @@
+\hypertarget{classparticls_1_1_searcher}{}\doxysection{particls\+::Searcher$<$ dim $>$ Class Template Reference}
+\label{classparticls_1_1_searcher}\index{particls::Searcher$<$ dim $>$@{particls::Searcher$<$ dim $>$}}
+
+
+Defines a searcher for a collection of particles.  
+
+
+
+
+{\ttfamily \#include $<$Searcher.\+hpp$>$}
+
+
+
+Inheritance diagram for particls\+::Searcher$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classparticls_1_1_searcher__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::function$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_searcher}{Searcher}}$<$ dim $>$ $>$Y\+A\+M\+L\+::\+Node const  \&config\+Node)$>$ \mbox{\hyperlink{classparticls_1_1_searcher_ac0e1eda44480184a254cfe122c73a90e}{Searcher\+Constructor}}
+\item 
+typedef std\+::map$<$ std\+::string, \mbox{\hyperlink{classparticls_1_1_searcher_ac0e1eda44480184a254cfe122c73a90e}{Searcher\+Constructor}} $>$ \mbox{\hyperlink{classparticls_1_1_searcher_ab14e727bd41e4a24a3a84e4fcdee2762}{Searcher\+Map}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_searcher_a32d8b917f47e799022568a2fdea6b733}{Searcher}} ()
+\item 
+virtual \mbox{\hyperlink{classparticls_1_1_searcher_a87324f85e1372503b2a1c08f6bed0538}{$\sim$\+Searcher}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_searcher_ae65bbfe253b9f6bcba4bbb3b4d1adf50}{Compute}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&particles)=0
+\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_searcher_a65f94db524dfa437423c7817d9e99e7e}{Update}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&particles)
+\item 
+virtual std\+::unordered\+\_\+map$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ $>$ const  \& \mbox{\hyperlink{classparticls_1_1_searcher_ada531b892182b6db8bb81da9dc3884fc}{Get\+Neighbor\+List}} () const
+\item 
+virtual std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const  \& \mbox{\hyperlink{classparticls_1_1_searcher_a7a347f4beec3de0cfa101fa14efb7ada}{Get\+Neighbors}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_searcher}{Searcher}}$<$ dim $>$ $>$ \mbox{\hyperlink{classparticls_1_1_searcher_a6c56abd1afa9d8b132cf0c22ded95323}{Create}} (Y\+A\+M\+L\+::\+Node const \&config\+Node)
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_searcher_ab14e727bd41e4a24a3a84e4fcdee2762}{Searcher\+Map}} $>$ \mbox{\hyperlink{classparticls_1_1_searcher_a417361a351ea2fd03bc4c362a4747e7a}{Get\+Searcher\+Map}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ $>$ \mbox{\hyperlink{classparticls_1_1_searcher_adb0e73fc478efe0a21a80ef5d93aa567}{neighbors}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classparticls_1_1_searcher_a50581ab8b086f44b8950313832646b4c}{serialize}} (Archive \&ar)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classparticls_1_1_searcher_ab2f44cbb59a08132f4c843e5225bba0e}{cereal\+::access}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+class particls\+::\+Searcher$<$ dim $>$}
+
+Defines a searcher for a collection of particles. 
+
+Definition at line 19 of file Searcher.\+hpp.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classparticls_1_1_searcher_ac0e1eda44480184a254cfe122c73a90e}\label{classparticls_1_1_searcher_ac0e1eda44480184a254cfe122c73a90e}} 
+\index{particls::Searcher$<$ dim $>$@{particls::Searcher$<$ dim $>$}!SearcherConstructor@{SearcherConstructor}}
+\index{SearcherConstructor@{SearcherConstructor}!particls::Searcher$<$ dim $>$@{particls::Searcher$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{SearcherConstructor}{SearcherConstructor}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+typedef std\+::function$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_searcher}{Searcher}}$<$dim$>$ $>$Y\+A\+M\+L\+::\+Node const\& config\+Node)$>$ \mbox{\hyperlink{classparticls_1_1_searcher}{particls\+::\+Searcher}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_searcher_ac0e1eda44480184a254cfe122c73a90e}{Searcher\+Constructor}}}
+
+
+
+Definition at line 59 of file Searcher.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_searcher_ab14e727bd41e4a24a3a84e4fcdee2762}\label{classparticls_1_1_searcher_ab14e727bd41e4a24a3a84e4fcdee2762}} 
+\index{particls::Searcher$<$ dim $>$@{particls::Searcher$<$ dim $>$}!SearcherMap@{SearcherMap}}
+\index{SearcherMap@{SearcherMap}!particls::Searcher$<$ dim $>$@{particls::Searcher$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{SearcherMap}{SearcherMap}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+typedef std\+::map$<$std\+::string, \mbox{\hyperlink{classparticls_1_1_searcher_ac0e1eda44480184a254cfe122c73a90e}{Searcher\+Constructor}}$>$ \mbox{\hyperlink{classparticls_1_1_searcher}{particls\+::\+Searcher}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_searcher_ab14e727bd41e4a24a3a84e4fcdee2762}{Searcher\+Map}}}
+
+
+
+Definition at line 60 of file Searcher.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_searcher_a32d8b917f47e799022568a2fdea6b733}\label{classparticls_1_1_searcher_a32d8b917f47e799022568a2fdea6b733}} 
+\index{particls::Searcher$<$ dim $>$@{particls::Searcher$<$ dim $>$}!Searcher@{Searcher}}
+\index{Searcher@{Searcher}!particls::Searcher$<$ dim $>$@{particls::Searcher$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Searcher()}{Searcher()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_searcher}{particls\+::\+Searcher}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_searcher}{Searcher}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classparticls_1_1_searcher_a87324f85e1372503b2a1c08f6bed0538}\label{classparticls_1_1_searcher_a87324f85e1372503b2a1c08f6bed0538}} 
+\index{particls::Searcher$<$ dim $>$@{particls::Searcher$<$ dim $>$}!````~Searcher@{$\sim$Searcher}}
+\index{````~Searcher@{$\sim$Searcher}!particls::Searcher$<$ dim $>$@{particls::Searcher$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Searcher()}{~Searcher()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual \mbox{\hyperlink{classparticls_1_1_searcher}{particls\+::\+Searcher}}$<$ dim $>$\+::$\sim$\mbox{\hyperlink{classparticls_1_1_searcher}{Searcher}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_searcher_ae65bbfe253b9f6bcba4bbb3b4d1adf50}\label{classparticls_1_1_searcher_ae65bbfe253b9f6bcba4bbb3b4d1adf50}} 
+\index{particls::Searcher$<$ dim $>$@{particls::Searcher$<$ dim $>$}!Compute@{Compute}}
+\index{Compute@{Compute}!particls::Searcher$<$ dim $>$@{particls::Searcher$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Compute()}{Compute()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_searcher}{particls\+::\+Searcher}}$<$ dim $>$\+::Compute (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&}]{particles }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Computes the vector of neighboring particles 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em particles} & The vector of particles to search through \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classparticls_1_1_k_d_tree_a6420cb773b67f549838e2785893b0875}{particls\+::\+K\+D\+Tree$<$ dim $>$}}, and \mbox{\hyperlink{classparticls_1_1_brute_force_searcher_af637ab18c8cc4559a7e16274ce940fd2}{particls\+::\+Brute\+Force\+Searcher$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_searcher_a6c56abd1afa9d8b132cf0c22ded95323}\label{classparticls_1_1_searcher_a6c56abd1afa9d8b132cf0c22ded95323}} 
+\index{particls::Searcher$<$ dim $>$@{particls::Searcher$<$ dim $>$}!Create@{Create}}
+\index{Create@{Create}!particls::Searcher$<$ dim $>$@{particls::Searcher$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+static std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_searcher}{Searcher}}$<$dim$>$ $>$ \mbox{\hyperlink{classparticls_1_1_searcher}{particls\+::\+Searcher}}$<$ dim $>$\+::Create (\begin{DoxyParamCaption}\item[{Y\+A\+M\+L\+::\+Node const \&}]{config\+Node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+A function to create a searcher from options specified in a Y\+A\+M\+L\+::\+Node object. The options\mbox{[}\char`\"{}\+Type\char`\"{}\mbox{]} should contain a string specifying the type of search grid to construct. For example, options\mbox{[}\char`\"{}\+Type\char`\"{}\mbox{]} might be \char`\"{}\+Axis\+Aligned\+Grid\char`\"{}. For more information, look at the documentation for children of this class. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em config\+Node} & The confiuration Y\+A\+ML node \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_searcher_ada531b892182b6db8bb81da9dc3884fc}\label{classparticls_1_1_searcher_ada531b892182b6db8bb81da9dc3884fc}} 
+\index{particls::Searcher$<$ dim $>$@{particls::Searcher$<$ dim $>$}!GetNeighborList@{GetNeighborList}}
+\index{GetNeighborList@{GetNeighborList}!particls::Searcher$<$ dim $>$@{particls::Searcher$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{GetNeighborList()}{GetNeighborList()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual std\+::unordered\+\_\+map$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$dim$>$ $>$, std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$dim$>$ $>$ $>$ $>$ const\& \mbox{\hyperlink{classparticls_1_1_searcher}{particls\+::\+Searcher}}$<$ dim $>$\+::Get\+Neighbor\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Returns The map of each particle and their neighboring particles \mbox{\Hypertarget{classparticls_1_1_searcher_a7a347f4beec3de0cfa101fa14efb7ada}\label{classparticls_1_1_searcher_a7a347f4beec3de0cfa101fa14efb7ada}} 
+\index{particls::Searcher$<$ dim $>$@{particls::Searcher$<$ dim $>$}!GetNeighbors@{GetNeighbors}}
+\index{GetNeighbors@{GetNeighbors}!particls::Searcher$<$ dim $>$@{particls::Searcher$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{GetNeighbors()}{GetNeighbors()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$dim$>$ $>$ $>$ const\& \mbox{\hyperlink{classparticls_1_1_searcher}{particls\+::\+Searcher}}$<$ dim $>$\+::Get\+Neighbors (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Returns The vector of particles neighboring particle i. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em part} & We want the neighbors of this particle. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_searcher_a417361a351ea2fd03bc4c362a4747e7a}\label{classparticls_1_1_searcher_a417361a351ea2fd03bc4c362a4747e7a}} 
+\index{particls::Searcher$<$ dim $>$@{particls::Searcher$<$ dim $>$}!GetSearcherMap@{GetSearcherMap}}
+\index{GetSearcherMap@{GetSearcherMap}!particls::Searcher$<$ dim $>$@{particls::Searcher$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{GetSearcherMap()}{GetSearcherMap()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+static std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_searcher_ab14e727bd41e4a24a3a84e4fcdee2762}{Searcher\+Map}}$>$ \mbox{\hyperlink{classparticls_1_1_searcher}{particls\+::\+Searcher}}$<$ dim $>$\+::Get\+Searcher\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classparticls_1_1_searcher_a50581ab8b086f44b8950313832646b4c}\label{classparticls_1_1_searcher_a50581ab8b086f44b8950313832646b4c}} 
+\index{particls::Searcher$<$ dim $>$@{particls::Searcher$<$ dim $>$}!serialize@{serialize}}
+\index{serialize@{serialize}!particls::Searcher$<$ dim $>$@{particls::Searcher$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+template$<$class Archive $>$ \\
+void \mbox{\hyperlink{classparticls_1_1_searcher}{particls\+::\+Searcher}}$<$ dim $>$\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 74 of file Searcher.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_searcher_a65f94db524dfa437423c7817d9e99e7e}\label{classparticls_1_1_searcher_a65f94db524dfa437423c7817d9e99e7e}} 
+\index{particls::Searcher$<$ dim $>$@{particls::Searcher$<$ dim $>$}!Update@{Update}}
+\index{Update@{Update}!particls::Searcher$<$ dim $>$@{particls::Searcher$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_searcher}{particls\+::\+Searcher}}$<$ dim $>$\+::Update (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&}]{particles }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Updates the neighbors member with new particles 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em particles} & The vector of particles to search through \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_searcher_ab2f44cbb59a08132f4c843e5225bba0e}\label{classparticls_1_1_searcher_ab2f44cbb59a08132f4c843e5225bba0e}} 
+\index{particls::Searcher$<$ dim $>$@{particls::Searcher$<$ dim $>$}!cereal::access@{cereal::access}}
+\index{cereal::access@{cereal::access}!particls::Searcher$<$ dim $>$@{particls::Searcher$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{cereal::access}{cereal::access}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+friend class cereal\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 71 of file Searcher.\+hpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticls_1_1_searcher_adb0e73fc478efe0a21a80ef5d93aa567}\label{classparticls_1_1_searcher_adb0e73fc478efe0a21a80ef5d93aa567}} 
+\index{particls::Searcher$<$ dim $>$@{particls::Searcher$<$ dim $>$}!neighbors@{neighbors}}
+\index{neighbors@{neighbors}!particls::Searcher$<$ dim $>$@{particls::Searcher$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{neighbors}{neighbors}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::unordered\+\_\+map$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$dim$>$ $>$, std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$dim$>$ $>$ $>$ $>$ \mbox{\hyperlink{classparticls_1_1_searcher}{particls\+::\+Searcher}}$<$ dim $>$\+::neighbors\hspace{0.3cm}{\ttfamily [protected]}}
+
+A map of each particle to a vector of it neighboring particles. 
+
+Definition at line 67 of file Searcher.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_searcher_8hpp}{Searcher.\+hpp}}\end{DoxyCompactItemize}

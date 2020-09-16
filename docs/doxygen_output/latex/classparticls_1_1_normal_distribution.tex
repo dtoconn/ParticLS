@@ -1,0 +1,131 @@
+\hypertarget{classparticls_1_1_normal_distribution}{}\doxysection{particls\+::Normal\+Distribution Class Reference}
+\label{classparticls_1_1_normal_distribution}\index{particls::NormalDistribution@{particls::NormalDistribution}}
+
+
+Generates samples that follow a normal distribution.  
+
+
+
+
+{\ttfamily \#include $<$Normal\+Distribution.\+hpp$>$}
+
+
+
+Inheritance diagram for particls\+::Normal\+Distribution\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{classparticls_1_1_normal_distribution__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for particls\+::Normal\+Distribution\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{classparticls_1_1_normal_distribution__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_normal_distribution_a9c22c0753310ade3c0b42068da8af0fa}{Normal\+Distribution}} (double mean\+\_\+in, double std\+\_\+in)
+\begin{DoxyCompactList}\small\item\em Construct the normal distribution given the mean and standard deviation. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classparticls_1_1_normal_distribution_ac8d077047ca0045eb388cb5a840df4c3}{$\sim$\+Normal\+Distribution}} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_normal_distribution_a74edf6c259c633942565e1d7a052dc1c}{Sample}} () override
+\begin{DoxyCompactList}\small\item\em Return a sample from the distribution. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classparticls_1_1_normal_distribution_ab4edaeadcb451aa9aef060603f5f0c27}{mean}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classparticls_1_1_distribution}{Distribution}} mean. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_normal_distribution_addfba695def48dfe1651a562b2b9a8b9}{std}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classparticls_1_1_distribution}{Distribution}} standard deviation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Generates samples that follow a normal distribution. 
+
+Definition at line 9 of file Normal\+Distribution.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_normal_distribution_a9c22c0753310ade3c0b42068da8af0fa}\label{classparticls_1_1_normal_distribution_a9c22c0753310ade3c0b42068da8af0fa}} 
+\index{particls::NormalDistribution@{particls::NormalDistribution}!NormalDistribution@{NormalDistribution}}
+\index{NormalDistribution@{NormalDistribution}!particls::NormalDistribution@{particls::NormalDistribution}}
+\doxysubsubsection{\texorpdfstring{NormalDistribution()}{NormalDistribution()}}
+{\footnotesize\ttfamily particls\+::\+Normal\+Distribution\+::\+Normal\+Distribution (\begin{DoxyParamCaption}\item[{double}]{mean\+\_\+in,  }\item[{double}]{std\+\_\+in }\end{DoxyParamCaption})}
+
+
+
+Construct the normal distribution given the mean and standard deviation. 
+
+\mbox{\Hypertarget{classparticls_1_1_normal_distribution_ac8d077047ca0045eb388cb5a840df4c3}\label{classparticls_1_1_normal_distribution_ac8d077047ca0045eb388cb5a840df4c3}} 
+\index{particls::NormalDistribution@{particls::NormalDistribution}!````~NormalDistribution@{$\sim$NormalDistribution}}
+\index{````~NormalDistribution@{$\sim$NormalDistribution}!particls::NormalDistribution@{particls::NormalDistribution}}
+\doxysubsubsection{\texorpdfstring{$\sim$NormalDistribution()}{~NormalDistribution()}}
+{\footnotesize\ttfamily virtual particls\+::\+Normal\+Distribution\+::$\sim$\+Normal\+Distribution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Default destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_normal_distribution_a74edf6c259c633942565e1d7a052dc1c}\label{classparticls_1_1_normal_distribution_a74edf6c259c633942565e1d7a052dc1c}} 
+\index{particls::NormalDistribution@{particls::NormalDistribution}!Sample@{Sample}}
+\index{Sample@{Sample}!particls::NormalDistribution@{particls::NormalDistribution}}
+\doxysubsubsection{\texorpdfstring{Sample()}{Sample()}}
+{\footnotesize\ttfamily virtual double particls\+::\+Normal\+Distribution\+::\+Sample (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Return a sample from the distribution. 
+
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_scalar_distribution_a74012c23970e37c0ceec93a38590adaa}{particls\+::\+Scalar\+Distribution}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticls_1_1_normal_distribution_ab4edaeadcb451aa9aef060603f5f0c27}\label{classparticls_1_1_normal_distribution_ab4edaeadcb451aa9aef060603f5f0c27}} 
+\index{particls::NormalDistribution@{particls::NormalDistribution}!mean@{mean}}
+\index{mean@{mean}!particls::NormalDistribution@{particls::NormalDistribution}}
+\doxysubsubsection{\texorpdfstring{mean}{mean}}
+{\footnotesize\ttfamily double particls\+::\+Normal\+Distribution\+::mean\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\mbox{\hyperlink{classparticls_1_1_distribution}{Distribution}} mean. 
+
+
+
+Definition at line 22 of file Normal\+Distribution.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_normal_distribution_addfba695def48dfe1651a562b2b9a8b9}\label{classparticls_1_1_normal_distribution_addfba695def48dfe1651a562b2b9a8b9}} 
+\index{particls::NormalDistribution@{particls::NormalDistribution}!std@{std}}
+\index{std@{std}!particls::NormalDistribution@{particls::NormalDistribution}}
+\doxysubsubsection{\texorpdfstring{std}{std}}
+{\footnotesize\ttfamily double particls\+::\+Normal\+Distribution\+::std\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\mbox{\hyperlink{classparticls_1_1_distribution}{Distribution}} standard deviation. 
+
+
+
+Definition at line 25 of file Normal\+Distribution.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_normal_distribution_8hpp}{Normal\+Distribution.\+hpp}}\end{DoxyCompactItemize}

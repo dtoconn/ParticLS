@@ -1,0 +1,915 @@
+\hypertarget{classparticls_1_1_particle}{}\doxysection{particls\+::Particle$<$ dim $>$ Class Template Reference}
+\label{classparticls_1_1_particle}\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+
+
+A particle for a discrete element model.  
+
+
+
+
+{\ttfamily \#include $<$Generic\+Force.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_particle_af0e95e6ec9d6e1751b15144208b1d490}{Particle}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_elastic_state}{Elastic\+State}} $>$ const \&\mbox{\hyperlink{classparticls_1_1_particle_a8e931d9d903503477671ffdc4915b826}{material}}, unsigned int const additional\+\_\+dim=0, bool const \mbox{\hyperlink{classparticls_1_1_particle_ab06791c071d2f41cc39bfb726e2ee495}{ignore\+\_\+forces}}=false)
+\item 
+\mbox{\hyperlink{classparticls_1_1_particle_a42dbbeb5c7d0ef41e6e9711609290349}{Particle}} (unsigned int const additional\+\_\+dim=0, bool const \mbox{\hyperlink{classparticls_1_1_particle_ab06791c071d2f41cc39bfb726e2ee495}{ignore\+\_\+forces}}=false)
+\item 
+virtual \mbox{\hyperlink{classparticls_1_1_particle_abf072816b7c93c3cf062f633e9f851d3}{$\sim$\+Particle}} ()=default
+\begin{DoxyCompactList}\small\item\em Use default destructor. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classparticls_1_1_particle_a5e542c0bcbeb6275f587a13f172e2370}{Add\+Force}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force}{Generic\+Force}}$<$ dim $>$$>$ const \&new\+\_\+force)
+\item 
+virtual bool \mbox{\hyperlink{classparticls_1_1_particle_a02c7dc8fa910811b17c6aaa778ce5d06}{Add\+Force}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force}{Generic\+Force}}$<$ dim $>$$>$ const \&new\+\_\+force, int const groupnum)
+\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_particle_a496ffcd68b3a86fd62fa5ebaca48c9fb}{Sum\+Forces}} (double const time, Eigen\+::\+Ref$<$ typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_particle_a09ae35cd51135cb76ae71c03f3866d88}{Position}} $>$ all\+\_\+forces, Eigen\+::\+Ref$<$ typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Angular\+Velocity $>$ all\+\_\+moments) const
+\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_particle_afab173731c4751d035b79e4680680703}{Compute\+Force}} (double const time, double const failure\+\_\+stress=0)
+\begin{DoxyCompactList}\small\item\em Compute the force/moment acting on this particle (stored in the force objects) \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_particle_a81cd9078276815abf709d886117204ae}{Compute\+Nonnegative\+Forces}} (double const time)
+\begin{DoxyCompactList}\small\item\em Compute the non particles\+::\+Negative\+Contact\+Force force/moment acting on this particle (stored in the force objects) \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_particle_a936b8bf733f81c977e7e715de9b83541}{Compute\+Negative\+Forces}} (double const time)
+\begin{DoxyCompactList}\small\item\em Compute the particles\+::\+Negative\+Contact\+Force force/moment acting on this particle (stored in the force objects) \end{DoxyCompactList}\item 
+virtual Eigen\+::\+Map$<$ const typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Position $>$ \mbox{\hyperlink{classparticls_1_1_particle_a09ae35cd51135cb76ae71c03f3866d88}{Position}} () const
+\item 
+virtual Eigen\+::\+Map$<$ typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Position $>$ \mbox{\hyperlink{classparticls_1_1_particle_a8e68fde9eb6f9d2ca1cbb6bbe49a9b7f}{Position}} ()
+\item 
+virtual Eigen\+::\+Map$<$ const typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Velocity $>$ \mbox{\hyperlink{classparticls_1_1_particle_ac46ce6461f721bd91a03a10c0eef361b}{Velocity}} () const
+\item 
+virtual Eigen\+::\+Map$<$ typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Velocity $>$ \mbox{\hyperlink{classparticls_1_1_particle_abd1b4bddd07a0ecb927238e649335816}{Velocity}} ()
+\item 
+virtual Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_particle_a670fb073f0046501f499cf1d2e60169b}{Acceleration}} () const
+\item 
+virtual Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_particle_a14847a0e2304f4b8027cb717df30a8c8}{Acceleration}} ()
+\item 
+virtual Eigen\+::\+Map$<$ const Eigen\+::\+Vector\+Xd $>$ \mbox{\hyperlink{classparticls_1_1_particle_a0a65a74c9fddf3a4bafe47dc6d1b0cd6}{Other\+States}} () const
+\item 
+virtual Eigen\+::\+Map$<$ Eigen\+::\+Vector\+Xd $>$ \mbox{\hyperlink{classparticls_1_1_particle_a37f847584e49782e08bfc2f1977c9957}{Other\+States}} ()
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_particle_adabcc17b630e45495afeff77d741dc8a}{Mass}} () const =0
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_particle_aab09d4f0cc13b5c63e939b2d559d87ba}{Volume}} () const =0
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_particle_aebba71dfcbff99a79ccf5ea3ff307394}{Modulus}} () const
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_particle_a9db97ad9f457c00a32820eba48c0147f}{Poisson\+Ratio}} () const
+\item 
+virtual Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_particle_a54c7b135098588842267511b627bcd75}{Center\+Of\+Mass}} () const =0
+\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_particle_a56ef3bd68303bb99824d511fdd8f6777}{Compute\+Contact}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&other\+Particle, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structparticls_1_1_contact_summary}{Contact\+Summary}}$<$ dim $>$ $>$ $>$ \&summary) const =0
+\begin{DoxyCompactList}\small\item\em Compute information about the contact between two particles. \end{DoxyCompactList}\item 
+virtual Eigen\+::\+Matrix$<$ double, 2, dim $>$ \mbox{\hyperlink{classparticls_1_1_particle_a2e8433a1eaf3e7e135f9707cf05ca728}{Bounds}} () const =0
+\item 
+void \mbox{\hyperlink{classparticls_1_1_particle_a7b6258a14ed5ffcdc87da3821c2cb3e1}{Set\+Ignore\+Forces}} (bool const new\+\_\+ignore\+\_\+forces)
+\begin{DoxyCompactList}\small\item\em Reset whether or not to ignore outside forces. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classparticls_1_1_particle_a2b70aafed120ddf41e2f5c0979066a89}{Ignore\+Forces}} () const
+\begin{DoxyCompactList}\small\item\em Get whether or not to ignore outside forces. \end{DoxyCompactList}\item 
+bool \& \mbox{\hyperlink{classparticls_1_1_particle_aeeb93a3c303a2697b6945f5e7103b189}{Ignore\+Forces}} ()
+\begin{DoxyCompactList}\small\item\em Get whether or not to ignore outside forces. \end{DoxyCompactList}\item 
+std\+::pair$<$ std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}}$<$ dim $>$ $>$ $>$, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}}$<$ dim $>$ $>$ $>$ $>$ \mbox{\hyperlink{classparticls_1_1_particle_a15fa90eea83cea9770751635cc0f7042}{Update\+Neighbors}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&neighbors, Y\+A\+M\+L\+::\+Node const \&contact\+\_\+options)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_elastic_state}{Elastic\+State}} $>$ \mbox{\hyperlink{classparticls_1_1_particle_a50ac3aa0a6b3002f4346cf558aa73366}{Material\+Properties}} () const
+\begin{DoxyCompactList}\small\item\em Get the material properties. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_elastic_state}{Elastic\+State}} $>$ \& \mbox{\hyperlink{classparticls_1_1_particle_a701d70900b6ed47b8341a530dac074d5}{Material\+Properties}} ()
+\item 
+\mbox{\hyperlink{classparticls_1_1_generic_force}{Generic\+Force}}$<$ dim $>$\+::Force\+List \mbox{\hyperlink{classparticls_1_1_particle_a2fde093fa268c0aca6af3c59c7f6d6db}{Generic\+Forces}} () const
+\begin{DoxyCompactList}\small\item\em Get the generic forces. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}}$<$ dim $>$ $>$ $>$ \mbox{\hyperlink{classparticls_1_1_particle_a19ede6003ae7cd1d9e16bf0a48969610}{Contact\+Forces}} () const
+\begin{DoxyCompactList}\small\item\em Get the contact forces. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ double, dim, dim $>$ \mbox{\hyperlink{classparticls_1_1_particle_a4c80240a0ad71676e627353948573a05}{Unnormalized\+Virial\+Stress\+Tensor}} (double const time) const
+\begin{DoxyCompactList}\small\item\em Compute the stress tensor acting on this particle. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ double, dim, dim $>$ \mbox{\hyperlink{classparticls_1_1_particle_af0cea19849f5a38679d69850466a243c}{Symmetric\+Virial\+Stress\+Tensor}} (double const time, bool const non\+\_\+bonded=true) const
+\begin{DoxyCompactList}\small\item\em Compute the symmetric stress tensor acting on this particle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_particle_a4c4279d4aee01fea21c271074f49c95a}{Compute\+Force\+Parameters}} (double const time)
+\begin{DoxyCompactList}\small\item\em Compute time-\/dependent parameters required by the forces acting on this particle. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classparticls_1_1_particle_aea1bc80c485391d6c4d12fe5ed57e85a}{Group}} () const
+\begin{DoxyCompactList}\small\item\em Get the group number of this particle. \end{DoxyCompactList}\item 
+int \& \mbox{\hyperlink{classparticls_1_1_particle_add8dd166fe0b15e423f563857878866c}{Group}} ()
+\begin{DoxyCompactList}\small\item\em Get the group number of particle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_particle_a4da83409dc36e2e603210ca999bc595b}{Set\+Pair\+Force}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}}$<$ dim $>$ $>$ const \&force)
+\begin{DoxyCompactList}\small\item\em Set the pair force for one of the contact forces. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_particle_a67820911f3efdabca50de541df046788}{Set\+Pair\+Force}} ()
+\begin{DoxyCompactList}\small\item\em Set the pair force for one of the contact forces. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_particle_a0f4da4c0f71171b0cbc81a024cf636c7}{Zero\+Forces\+Moments}} ()
+\begin{DoxyCompactList}\small\item\em Zero out the forces and moments acting on this particle. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}}$<$ dim $>$ $>$ \mbox{\hyperlink{classparticls_1_1_particle_aea1c745facb7fb485b45f9f6da9b7fb9}{Find\+Pair\+Force}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&particle) const
+\begin{DoxyCompactList}\small\item\em Get the pair force associated with a potential neighbor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_particle_ab009a735ff2a1865f0566b49786c50f6}{Append\+V\+TK}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{V\+T\+K\+Data}}$<$ dim $>$$>$ const \&V\+T\+K\+Data\+Object) const
+\begin{DoxyCompactList}\small\item\em Append the geometry/data to a vtk object. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}} $>$ \mbox{\hyperlink{classparticls_1_1_particle_a0dd960cb261e82f760410bbaf1eca65c}{Get\+Force\+Parameter}} (std\+::string const \&force\+Name) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_particle_a18d3b5ba1faf996df2c2d59780009edf}{Fill\+R\+H\+S\+Impl}} (double const time, Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$ rhs) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_elastic_state}{Elastic\+State}} $>$ \mbox{\hyperlink{classparticls_1_1_particle_a8e931d9d903503477671ffdc4915b826}{material}}
+\begin{DoxyCompactList}\small\item\em A \mbox{\hyperlink{classparticls_1_1_state_object}{State\+Object}} holding material properties like the Young\textquotesingle{}s Modulus and Poisson Ratio. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classparticls_1_1_generic_force}{Generic\+Force}}$<$ dim $>$\+::Force\+List \mbox{\hyperlink{classparticls_1_1_particle_ad6cf655c58978261462ffb77a3b1043b}{generic\+\_\+forces}}
+\begin{DoxyCompactList}\small\item\em A list of forces acting on the particle. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}}$<$ dim $>$ $>$ $>$ \mbox{\hyperlink{classparticls_1_1_particle_acce68b3dfd4d0cea8e522b3f78a1813f}{pair\+\_\+forces}}
+\item 
+bool \mbox{\hyperlink{classparticls_1_1_particle_ab06791c071d2f41cc39bfb726e2ee495}{ignore\+\_\+forces}} = false
+\begin{DoxyCompactList}\small\item\em True\+: no outside forces can act on this particle, False\+: outside forces are allowed to act on this particle. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classparticls_1_1_particle_a0c6eb80d6b5e2e9eeda9242dfe2caedb}{group}} = 0
+\begin{DoxyCompactList}\small\item\em Each particle can be associated with a group (defaults to 0) \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_particle_a625a5185c5a21fecf7a54235c5f4fffb}{acceleration}}
+\begin{DoxyCompactList}\small\item\em The particle acceleration (used to store previous acceleration for time stepping) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}}$<$ dim $>$ $>$ \mbox{\hyperlink{classparticls_1_1_particle_aef3b4f1c25c8a5a19977df3a4cda818c}{Update\+Neighbor}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&neighbor, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&neighbors, Y\+A\+M\+L\+::\+Node const \&contact\+\_\+options, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}}$<$ dim $>$ $>$ $>$ \&new\+\_\+pair\+\_\+forces)
+\item 
+bool \mbox{\hyperlink{classparticls_1_1_particle_a82d0633f12960aabf9beb78d6796b0a3}{Add\+Contact\+Force}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}}$<$ dim $>$ $>$ const \&cforce)
+\begin{DoxyCompactList}\small\item\em Add a contact force to this particle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_particle_a248628b2a8558df48d0a84e6cbddfb11}{Compute\+Failure}} (double const time, Eigen\+::\+Matrix$<$ double, dim, dim $>$ stress, double const failure\+\_\+stress)
+\item 
+bool \mbox{\hyperlink{classparticls_1_1_particle_a81664b0496ebeecdf4c64f11dba499de}{Neighbor\+Exists}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&neighbor, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}}$<$ dim $>$ $>$ $>$ \&new\+\_\+pair\+\_\+forces)
+\item 
+bool \mbox{\hyperlink{classparticls_1_1_particle_ae8d9aa1299b6945137959548e6ae2849}{Break\+Bond}} (double const time, Eigen\+::\+Matrix$<$ double, dim, 1 $>$ max\+\_\+principal\+\_\+vector)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classparticls_1_1_particle_ac2fd9299cd431bcd782b6b8a16add6e1}{serialize}} (Archive \&ar)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}} $>$ $>$ \mbox{\hyperlink{classparticls_1_1_particle_a2de8d322f6d90042c6d347e5045575e8}{force\+Para}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classparticls_1_1_particle_ab2f44cbb59a08132f4c843e5225bba0e}{cereal\+::access}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+class particls\+::\+Particle$<$ dim $>$}
+
+A particle for a discrete element model. 
+
+Defines the particle\textquotesingle{}s position, velocity, angle of rotation (2D)/quaternion (3d), and angular velocity. Also includes any other state variables associated with the particle (e.\+g., temperature) 
+
+Definition at line 17 of file Generic\+Force.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_particle_af0e95e6ec9d6e1751b15144208b1d490}\label{classparticls_1_1_particle_af0e95e6ec9d6e1751b15144208b1d490}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!Particle@{Particle}}
+\index{Particle@{Particle}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Particle()}{Particle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_particle}{Particle}} (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_elastic_state}{Elastic\+State}} $>$ const \&}]{material,  }\item[{unsigned int const}]{additional\+\_\+dim = {\ttfamily 0},  }\item[{bool const}]{ignore\+\_\+forces = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em material} & An \mbox{\hyperlink{classparticls_1_1_elastic_state}{Elastic\+State}} object holding the Young\textquotesingle{}s modulus and poisson ratio. \\
+\hline
+\mbox{\texttt{ in}}  & {\em additional\+Dim} & The number of additional dimensions in the state (e.\+g., temperature), defaults to zero \\
+\hline
+\mbox{\texttt{ in}}  & {\em ignore\+\_\+forces} & True\+: no outside forces can act on this particle, False (default)\+: outside forces are allowed to act on this particle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_particle_a42dbbeb5c7d0ef41e6e9711609290349}\label{classparticls_1_1_particle_a42dbbeb5c7d0ef41e6e9711609290349}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!Particle@{Particle}}
+\index{Particle@{Particle}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Particle()}{Particle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_particle}{Particle}} (\begin{DoxyParamCaption}\item[{unsigned int const}]{additional\+\_\+dim = {\ttfamily 0},  }\item[{bool const}]{ignore\+\_\+forces = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em additional\+Dim} & The number of additional dimensions in the state (e.\+g., temperature), defaults to zero \\
+\hline
+\mbox{\texttt{ in}}  & {\em ignore\+\_\+forces} & True\+: no outside forces can act on this particle, False (default)\+: outside forces are allowed to act on this particle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_particle_abf072816b7c93c3cf062f633e9f851d3}\label{classparticls_1_1_particle_abf072816b7c93c3cf062f633e9f851d3}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!````~Particle@{$\sim$Particle}}
+\index{````~Particle@{$\sim$Particle}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Particle()}{~Particle()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::$\sim$\mbox{\hyperlink{classparticls_1_1_particle}{Particle}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Use default destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_particle_a14847a0e2304f4b8027cb717df30a8c8}\label{classparticls_1_1_particle_a14847a0e2304f4b8027cb717df30a8c8}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!Acceleration@{Acceleration}}
+\index{Acceleration@{Acceleration}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Acceleration()}{Acceleration()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual Eigen\+::\+Matrix$<$double,dim,1$>$ \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Acceleration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Access the particle\textquotesingle{}s translational acceleration (non-\/const version) \begin{DoxyReturn}{Returns}
+The particle\textquotesingle{}s translational acceleration 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_particle_a670fb073f0046501f499cf1d2e60169b}\label{classparticls_1_1_particle_a670fb073f0046501f499cf1d2e60169b}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!Acceleration@{Acceleration}}
+\index{Acceleration@{Acceleration}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Acceleration()}{Acceleration()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual Eigen\+::\+Matrix$<$double,dim,1$>$ \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Acceleration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Access the particle\textquotesingle{}s translational acceleration \begin{DoxyReturn}{Returns}
+The particle\textquotesingle{}s translational acceleration 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_particle_a82d0633f12960aabf9beb78d6796b0a3}\label{classparticls_1_1_particle_a82d0633f12960aabf9beb78d6796b0a3}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!AddContactForce@{AddContactForce}}
+\index{AddContactForce@{AddContactForce}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{AddContactForce()}{AddContactForce()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+bool \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Add\+Contact\+Force (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}}$<$ dim $>$ $>$ const \&}]{cforce }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Add a contact force to this particle. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cforce} & The contact force to be added \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True\+: the force was successfully added, False\+: the force was not added (there is probably already a contact force between these two particles) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_particle_a5e542c0bcbeb6275f587a13f172e2370}\label{classparticls_1_1_particle_a5e542c0bcbeb6275f587a13f172e2370}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!AddForce@{AddForce}}
+\index{AddForce@{AddForce}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{AddForce()}{AddForce()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual bool \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Add\+Force (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force}{Generic\+Force}}$<$ dim $>$$>$ const \&}]{new\+\_\+force }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Adds a new force to this particle. If the force is a \mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}}, it is added to the pair\+\_\+forces map. Otherwise, it is added to the generic\+\_\+forces vector. If the new force is a contact force for involving a particle that this particle is already in contact with, then the new force is rejected and this function returns false. Otherwise, the new force is added to the map of contact forces and this function returns true. For non contact forces, this function always returns true. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em new\+\_\+force} & A new force (contact, body, or generic) to add to this particle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating if the new force was succesfully added to the particle. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_particle_a02c7dc8fa910811b17c6aaa778ce5d06}\label{classparticls_1_1_particle_a02c7dc8fa910811b17c6aaa778ce5d06}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!AddForce@{AddForce}}
+\index{AddForce@{AddForce}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{AddForce()}{AddForce()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual bool \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Add\+Force (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force}{Generic\+Force}}$<$ dim $>$$>$ const \&}]{new\+\_\+force,  }\item[{int const}]{groupnum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Adds a new force to this particle but only adds it to particles of a specified group. If the force is a \mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}} then the force is added to the pair\+\_\+forces map regardless of the group number. If the force is a \mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}}, it is added to the pair\+\_\+forces map. Otherwise, it is added to the generic\+\_\+forces vector. If the new force is a contact force involving a particle that this particle is already in contact with, then the new force is rejected and this function returns false. Otherwise, the new force is added to the map of contact forces and this function returns true. For non-\/contact forces, this function always returns true. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em new\+\_\+force} & A new force (contact, body, or generic) to add to this particle \\
+\hline
+\mbox{\texttt{ in}}  & {\em groupnum} & The group to add this force too \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating if the new force was succesfully added to the particle. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_particle_ab009a735ff2a1865f0566b49786c50f6}\label{classparticls_1_1_particle_ab009a735ff2a1865f0566b49786c50f6}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!AppendVTK@{AppendVTK}}
+\index{AppendVTK@{AppendVTK}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{AppendVTK()}{AppendVTK()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Append\+V\+TK (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{V\+T\+K\+Data}}$<$ dim $>$$>$ const \&}]{V\+T\+K\+Data\+Object }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Append the geometry/data to a vtk object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em V\+T\+K\+Data\+Object} & Object from \mbox{\hyperlink{classparticls_1_1_v_t_k_data}{V\+T\+K\+Data}}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_particle_a2e8433a1eaf3e7e135f9707cf05ca728}\label{classparticls_1_1_particle_a2e8433a1eaf3e7e135f9707cf05ca728}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!Bounds@{Bounds}}
+\index{Bounds@{Bounds}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Bounds()}{Bounds()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual Eigen\+::\+Matrix$<$double, 2, dim$>$ \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Bounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Return a bounding box for this geometry. The first row of the output is a lower bound for each coordinate direction and the second row is an upper bound for each coordinate direction. \mbox{\Hypertarget{classparticls_1_1_particle_ae8d9aa1299b6945137959548e6ae2849}\label{classparticls_1_1_particle_ae8d9aa1299b6945137959548e6ae2849}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!BreakBond@{BreakBond}}
+\index{BreakBond@{BreakBond}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{BreakBond()}{BreakBond()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+bool \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Break\+Bond (\begin{DoxyParamCaption}\item[{double const}]{time,  }\item[{Eigen\+::\+Matrix$<$ double, dim, 1 $>$}]{max\+\_\+principal\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Function that loops through contact forces and breaks cohesive beams 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em max\+\_\+principal\+\_\+vector} & The direction of greatest stress \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If a bond was broken or not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_particle_a54c7b135098588842267511b627bcd75}\label{classparticls_1_1_particle_a54c7b135098588842267511b627bcd75}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!CenterOfMass@{CenterOfMass}}
+\index{CenterOfMass@{CenterOfMass}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{CenterOfMass()}{CenterOfMass()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual Eigen\+::\+Matrix$<$double, dim, 1$>$ \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Center\+Of\+Mass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The center of mass of the particle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_particle_a56ef3bd68303bb99824d511fdd8f6777}\label{classparticls_1_1_particle_a56ef3bd68303bb99824d511fdd8f6777}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!ComputeContact@{ComputeContact}}
+\index{ComputeContact@{ComputeContact}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeContact()}{ComputeContact()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Compute\+Contact (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{other\+Particle,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structparticls_1_1_contact_summary}{Contact\+Summary}}$<$ dim $>$ $>$ $>$ \&}]{summary }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Compute information about the contact between two particles. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em other\+Particle} & The other particle that may be in contact (or overlaping) with this particle \\
+\hline
+\mbox{\texttt{ out}}  & {\em summary} & A \mbox{\hyperlink{structparticls_1_1_contact_summary}{Contact\+Summary}} structure containing information about the contact \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_particle_a248628b2a8558df48d0a84e6cbddfb11}\label{classparticls_1_1_particle_a248628b2a8558df48d0a84e6cbddfb11}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!ComputeFailure@{ComputeFailure}}
+\index{ComputeFailure@{ComputeFailure}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeFailure()}{ComputeFailure()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Compute\+Failure (\begin{DoxyParamCaption}\item[{double const}]{time,  }\item[{Eigen\+::\+Matrix$<$ double, dim, dim $>$}]{stress,  }\item[{double const}]{failure\+\_\+stress }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\hyperlink{classparticls_1_1_particle}{Particle}} failure model based on nonlocal stress calculation 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & Current simulation time \\
+\hline
+\mbox{\texttt{ in}}  & {\em stress} & The nonlocal Cauchy stress tensor for the particle \\
+\hline
+\mbox{\texttt{ in}}  & {\em failure\+\_\+stress} & The value of stress that will cause failure \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_particle_afab173731c4751d035b79e4680680703}\label{classparticls_1_1_particle_afab173731c4751d035b79e4680680703}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!ComputeForce@{ComputeForce}}
+\index{ComputeForce@{ComputeForce}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeForce()}{ComputeForce()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Compute\+Force (\begin{DoxyParamCaption}\item[{double const}]{time,  }\item[{double const}]{failure\+\_\+stress = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Compute the force/moment acting on this particle (stored in the force objects) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & The current time \\
+\hline
+\mbox{\texttt{ in}}  & {\em failure\+\_\+stress} & The failure stress for a particle that is cohesively bonded \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_particle_a4c4279d4aee01fea21c271074f49c95a}\label{classparticls_1_1_particle_a4c4279d4aee01fea21c271074f49c95a}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!ComputeForceParameters@{ComputeForceParameters}}
+\index{ComputeForceParameters@{ComputeForceParameters}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeForceParameters()}{ComputeForceParameters()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Compute\+Force\+Parameters (\begin{DoxyParamCaption}\item[{double const}]{time }\end{DoxyParamCaption})}
+
+
+
+Compute time-\/dependent parameters required by the forces acting on this particle. 
+
+Create a map from \mbox{[}force type\mbox{]} to \mbox{[}force parameters\mbox{]} for each force acting on this particle 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & The current time \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_particle_a936b8bf733f81c977e7e715de9b83541}\label{classparticls_1_1_particle_a936b8bf733f81c977e7e715de9b83541}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!ComputeNegativeForces@{ComputeNegativeForces}}
+\index{ComputeNegativeForces@{ComputeNegativeForces}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeNegativeForces()}{ComputeNegativeForces()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Compute\+Negative\+Forces (\begin{DoxyParamCaption}\item[{double const}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Compute the particles\+::\+Negative\+Contact\+Force force/moment acting on this particle (stored in the force objects) 
+
+O\+N\+LY compute the force if the force is a \mbox{\hyperlink{classparticls_1_1_negative_contact_force}{particls\+::\+Negative\+Contact\+Force}}.
+
+The reason for this is because in the case of Open\+MP we need to update all of the other forces before updating the \mbox{\hyperlink{classparticls_1_1_negative_contact_force}{particls\+::\+Negative\+Contact\+Force}}. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & The current time \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_particle_a81cd9078276815abf709d886117204ae}\label{classparticls_1_1_particle_a81cd9078276815abf709d886117204ae}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!ComputeNonnegativeForces@{ComputeNonnegativeForces}}
+\index{ComputeNonnegativeForces@{ComputeNonnegativeForces}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeNonnegativeForces()}{ComputeNonnegativeForces()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Compute\+Nonnegative\+Forces (\begin{DoxyParamCaption}\item[{double const}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Compute the non particles\+::\+Negative\+Contact\+Force force/moment acting on this particle (stored in the force objects) 
+
+If a force is a \mbox{\hyperlink{classparticls_1_1_negative_contact_force}{particls\+::\+Negative\+Contact\+Force}}, skip computing this force.
+
+The reason for this is because in the case of Open\+MP we need to update all of the other forces before updating the \mbox{\hyperlink{classparticls_1_1_negative_contact_force}{particls\+::\+Negative\+Contact\+Force}}. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & The current time \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_particle_a19ede6003ae7cd1d9e16bf0a48969610}\label{classparticls_1_1_particle_a19ede6003ae7cd1d9e16bf0a48969610}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!ContactForces@{ContactForces}}
+\index{ContactForces@{ContactForces}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ContactForces()}{ContactForces()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}}$<$dim$>$ $>$ $>$ \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Contact\+Forces (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the contact forces. 
+
+\mbox{\Hypertarget{classparticls_1_1_particle_a18d3b5ba1faf996df2c2d59780009edf}\label{classparticls_1_1_particle_a18d3b5ba1faf996df2c2d59780009edf}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!FillRHSImpl@{FillRHSImpl}}
+\index{FillRHSImpl@{FillRHSImpl}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{FillRHSImpl()}{FillRHSImpl()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Fill\+R\+H\+S\+Impl (\begin{DoxyParamCaption}\item[{double const}]{time,  }\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & The time when we want the right hand side \\
+\hline
+\mbox{\texttt{ out}}  & {\em rhs} & The right hand side of the evolution equation \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_particle_aea1c745facb7fb485b45f9f6da9b7fb9}\label{classparticls_1_1_particle_aea1c745facb7fb485b45f9f6da9b7fb9}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!FindPairForce@{FindPairForce}}
+\index{FindPairForce@{FindPairForce}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{FindPairForce()}{FindPairForce()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}}$<$dim$>$ $>$ \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Find\+Pair\+Force (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{particle }\end{DoxyParamCaption}) const}
+
+
+
+Get the pair force associated with a potential neighbor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em particle} & The potential neighbor particle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The contact force between this particle and its potential neighbor, nullptr if there is not contact force 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_particle_a2fde093fa268c0aca6af3c59c7f6d6db}\label{classparticls_1_1_particle_a2fde093fa268c0aca6af3c59c7f6d6db}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!GenericForces@{GenericForces}}
+\index{GenericForces@{GenericForces}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{GenericForces()}{GenericForces()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_generic_force}{Generic\+Force}}$<$dim$>$\+::Force\+List \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Generic\+Forces (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the generic forces. 
+
+\mbox{\Hypertarget{classparticls_1_1_particle_a0dd960cb261e82f760410bbaf1eca65c}\label{classparticls_1_1_particle_a0dd960cb261e82f760410bbaf1eca65c}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!GetForceParameter@{GetForceParameter}}
+\index{GetForceParameter@{GetForceParameter}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{GetForceParameter()}{GetForceParameter()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}}$>$ \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Get\+Force\+Parameter (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{force\+Name }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classparticls_1_1_particle_add8dd166fe0b15e423f563857878866c}\label{classparticls_1_1_particle_add8dd166fe0b15e423f563857878866c}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!Group@{Group}}
+\index{Group@{Group}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Group()}{Group()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+int\& \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Group (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the group number of particle. 
+
+\mbox{\Hypertarget{classparticls_1_1_particle_aea1bc80c485391d6c4d12fe5ed57e85a}\label{classparticls_1_1_particle_aea1bc80c485391d6c4d12fe5ed57e85a}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!Group@{Group}}
+\index{Group@{Group}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Group()}{Group()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+int \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Group (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the group number of this particle. 
+
+\mbox{\Hypertarget{classparticls_1_1_particle_aeeb93a3c303a2697b6945f5e7103b189}\label{classparticls_1_1_particle_aeeb93a3c303a2697b6945f5e7103b189}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!IgnoreForces@{IgnoreForces}}
+\index{IgnoreForces@{IgnoreForces}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{IgnoreForces()}{IgnoreForces()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+bool\& \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Ignore\+Forces (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get whether or not to ignore outside forces. 
+
+\mbox{\Hypertarget{classparticls_1_1_particle_a2b70aafed120ddf41e2f5c0979066a89}\label{classparticls_1_1_particle_a2b70aafed120ddf41e2f5c0979066a89}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!IgnoreForces@{IgnoreForces}}
+\index{IgnoreForces@{IgnoreForces}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{IgnoreForces()}{IgnoreForces()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+bool \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Ignore\+Forces (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get whether or not to ignore outside forces. 
+
+\mbox{\Hypertarget{classparticls_1_1_particle_adabcc17b630e45495afeff77d741dc8a}\label{classparticls_1_1_particle_adabcc17b630e45495afeff77d741dc8a}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!Mass@{Mass}}
+\index{Mass@{Mass}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Mass()}{Mass()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Mass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The mass of the particle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_particle_a701d70900b6ed47b8341a530dac074d5}\label{classparticls_1_1_particle_a701d70900b6ed47b8341a530dac074d5}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!MaterialProperties@{MaterialProperties}}
+\index{MaterialProperties@{MaterialProperties}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{MaterialProperties()}{MaterialProperties()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_elastic_state}{Elastic\+State}}$>$\& \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Material\+Properties (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classparticls_1_1_particle_a50ac3aa0a6b3002f4346cf558aa73366}\label{classparticls_1_1_particle_a50ac3aa0a6b3002f4346cf558aa73366}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!MaterialProperties@{MaterialProperties}}
+\index{MaterialProperties@{MaterialProperties}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{MaterialProperties()}{MaterialProperties()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_elastic_state}{Elastic\+State}}$>$ \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Material\+Properties (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the material properties. 
+
+\mbox{\Hypertarget{classparticls_1_1_particle_aebba71dfcbff99a79ccf5ea3ff307394}\label{classparticls_1_1_particle_aebba71dfcbff99a79ccf5ea3ff307394}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!Modulus@{Modulus}}
+\index{Modulus@{Modulus}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Modulus()}{Modulus()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Modulus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The Young\textquotesingle{}s Modulus of the particle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_particle_a81664b0496ebeecdf4c64f11dba499de}\label{classparticls_1_1_particle_a81664b0496ebeecdf4c64f11dba499de}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!NeighborExists@{NeighborExists}}
+\index{NeighborExists@{NeighborExists}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{NeighborExists()}{NeighborExists()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+bool \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Neighbor\+Exists (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{neighbor,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}}$<$ dim $>$ $>$ $>$ \&}]{new\+\_\+pair\+\_\+forces }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classparticls_1_1_particle_a37f847584e49782e08bfc2f1977c9957}\label{classparticls_1_1_particle_a37f847584e49782e08bfc2f1977c9957}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!OtherStates@{OtherStates}}
+\index{OtherStates@{OtherStates}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{OtherStates()}{OtherStates()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual Eigen\+::\+Map$<$Eigen\+::\+Vector\+Xd$>$ \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Other\+States (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Extract the particle\textquotesingle{}s other parameters from the state vector (non-\/const version) \begin{DoxyReturn}{Returns}
+The particle\textquotesingle{}s other parameters 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_particle_a0a65a74c9fddf3a4bafe47dc6d1b0cd6}\label{classparticls_1_1_particle_a0a65a74c9fddf3a4bafe47dc6d1b0cd6}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!OtherStates@{OtherStates}}
+\index{OtherStates@{OtherStates}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{OtherStates()}{OtherStates()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual Eigen\+::\+Map$<$const Eigen\+::\+Vector\+Xd$>$ \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Other\+States (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Extract the particle\textquotesingle{}s other parameters from the state vector \begin{DoxyReturn}{Returns}
+The particle\textquotesingle{}s other parameters 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_particle_a9db97ad9f457c00a32820eba48c0147f}\label{classparticls_1_1_particle_a9db97ad9f457c00a32820eba48c0147f}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!PoissonRatio@{PoissonRatio}}
+\index{PoissonRatio@{PoissonRatio}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{PoissonRatio()}{PoissonRatio()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Poisson\+Ratio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The Poisson Ratio of the particle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_particle_a8e68fde9eb6f9d2ca1cbb6bbe49a9b7f}\label{classparticls_1_1_particle_a8e68fde9eb6f9d2ca1cbb6bbe49a9b7f}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!Position@{Position}}
+\index{Position@{Position}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Position()}{Position()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual Eigen\+::\+Map$<$typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$dim$>$\+::Position$>$ \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Extract the particle\textquotesingle{}s position from the state vector (non-\/const version) \begin{DoxyReturn}{Returns}
+The particle\textquotesingle{}s position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_particle_a09ae35cd51135cb76ae71c03f3866d88}\label{classparticls_1_1_particle_a09ae35cd51135cb76ae71c03f3866d88}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!Position@{Position}}
+\index{Position@{Position}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Position()}{Position()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual Eigen\+::\+Map$<$const typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$dim$>$\+::Position$>$ \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Extract the particle\textquotesingle{}s position from the state vector \begin{DoxyReturn}{Returns}
+The particle\textquotesingle{}s position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_particle_ac2fd9299cd431bcd782b6b8a16add6e1}\label{classparticls_1_1_particle_ac2fd9299cd431bcd782b6b8a16add6e1}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!serialize@{serialize}}
+\index{serialize@{serialize}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+template$<$class Archive $>$ \\
+void \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 359 of file Particle.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_particle_a7b6258a14ed5ffcdc87da3821c2cb3e1}\label{classparticls_1_1_particle_a7b6258a14ed5ffcdc87da3821c2cb3e1}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!SetIgnoreForces@{SetIgnoreForces}}
+\index{SetIgnoreForces@{SetIgnoreForces}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{SetIgnoreForces()}{SetIgnoreForces()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Set\+Ignore\+Forces (\begin{DoxyParamCaption}\item[{bool const}]{new\+\_\+ignore\+\_\+forces }\end{DoxyParamCaption})}
+
+
+
+Reset whether or not to ignore outside forces. 
+
+\mbox{\Hypertarget{classparticls_1_1_particle_a67820911f3efdabca50de541df046788}\label{classparticls_1_1_particle_a67820911f3efdabca50de541df046788}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!SetPairForce@{SetPairForce}}
+\index{SetPairForce@{SetPairForce}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{SetPairForce()}{SetPairForce()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Set\+Pair\+Force (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Set the pair force for one of the contact forces. 
+
+\mbox{\Hypertarget{classparticls_1_1_particle_a4da83409dc36e2e603210ca999bc595b}\label{classparticls_1_1_particle_a4da83409dc36e2e603210ca999bc595b}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!SetPairForce@{SetPairForce}}
+\index{SetPairForce@{SetPairForce}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{SetPairForce()}{SetPairForce()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Set\+Pair\+Force (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}}$<$ dim $>$ $>$ const \&}]{force }\end{DoxyParamCaption})}
+
+
+
+Set the pair force for one of the contact forces. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em part} & We are setting the pair force for this neighbor \\
+\hline
+\mbox{\texttt{ in}}  & {\em force} & This is the pair force \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_particle_a496ffcd68b3a86fd62fa5ebaca48c9fb}\label{classparticls_1_1_particle_a496ffcd68b3a86fd62fa5ebaca48c9fb}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!SumForces@{SumForces}}
+\index{SumForces@{SumForces}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{SumForces()}{SumForces()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Sum\+Forces (\begin{DoxyParamCaption}\item[{double const}]{time,  }\item[{Eigen\+::\+Ref$<$ typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_particle_a09ae35cd51135cb76ae71c03f3866d88}{Position}} $>$}]{all\+\_\+forces,  }\item[{Eigen\+::\+Ref$<$ typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Angular\+Velocity $>$}]{all\+\_\+moments }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Computes the total force acting on this particle by computing the sum of all generic and pairwise forces acting on this particle. In general, the force and moment references should be zeroed before being passed to this function. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & The current time \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em force} & A reference to a vector that will be incremented with the total force. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em moment} & A reference to a vector that will be incremented with the total moment. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_particle_af0cea19849f5a38679d69850466a243c}\label{classparticls_1_1_particle_af0cea19849f5a38679d69850466a243c}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!SymmetricVirialStressTensor@{SymmetricVirialStressTensor}}
+\index{SymmetricVirialStressTensor@{SymmetricVirialStressTensor}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{SymmetricVirialStressTensor()}{SymmetricVirialStressTensor()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, dim, dim$>$ \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Symmetric\+Virial\+Stress\+Tensor (\begin{DoxyParamCaption}\item[{double const}]{time,  }\item[{bool const}]{non\+\_\+bonded = {\ttfamily true} }\end{DoxyParamCaption}) const}
+
+
+
+Compute the symmetric stress tensor acting on this particle. 
+
+Equation 13 in Andre, et al. 2017 (excluding the 1/2 term on the volume) \char`\"{}\+A discrete element thermo-\/mechanical modelling of diffuse damage induced by thermal expansion mismatch of two-\/phase materials\char`\"{} \mbox{\Hypertarget{classparticls_1_1_particle_a4c80240a0ad71676e627353948573a05}\label{classparticls_1_1_particle_a4c80240a0ad71676e627353948573a05}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!UnnormalizedVirialStressTensor@{UnnormalizedVirialStressTensor}}
+\index{UnnormalizedVirialStressTensor@{UnnormalizedVirialStressTensor}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{UnnormalizedVirialStressTensor()}{UnnormalizedVirialStressTensor()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, dim, dim$>$ \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Unnormalized\+Virial\+Stress\+Tensor (\begin{DoxyParamCaption}\item[{double const}]{time }\end{DoxyParamCaption}) const}
+
+
+
+Compute the stress tensor acting on this particle. 
+
+Equation 6 in Guo and Zhao 2016 (excluding the volume term) \char`\"{}3\+D multiscale modeling of strain localization in granular media\char`\"{} \mbox{\Hypertarget{classparticls_1_1_particle_aef3b4f1c25c8a5a19977df3a4cda818c}\label{classparticls_1_1_particle_aef3b4f1c25c8a5a19977df3a4cda818c}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!UpdateNeighbor@{UpdateNeighbor}}
+\index{UpdateNeighbor@{UpdateNeighbor}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{UpdateNeighbor()}{UpdateNeighbor()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}}$<$dim$>$ $>$ \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Update\+Neighbor (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{neighbor,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&}]{neighbors,  }\item[{Y\+A\+M\+L\+::\+Node const \&}]{contact\+\_\+options,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}}$<$ dim $>$ $>$ $>$ \&}]{new\+\_\+pair\+\_\+forces }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em neighbor} & Check to see if this particle is a neighbor \\
+\hline
+\mbox{\texttt{ in}}  & {\em neighbors} & The nearest neighbors of this particle \\
+\hline
+\mbox{\texttt{ in}}  & {\em contact\+\_\+options} & Options for the (potential) new contact force \\
+\hline
+\mbox{\texttt{ out}}  & {\em new\+\_\+pair\+\_\+forces} & If a new force is created, add it to this list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The force that is created, nullptr if no new force is created 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_particle_a15fa90eea83cea9770751635cc0f7042}\label{classparticls_1_1_particle_a15fa90eea83cea9770751635cc0f7042}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!UpdateNeighbors@{UpdateNeighbors}}
+\index{UpdateNeighbors@{UpdateNeighbors}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{UpdateNeighbors()}{UpdateNeighbors()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::pair$<$std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}}$<$dim$>$ $>$ $>$, std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}}$<$dim$>$ $>$ $>$ $>$ \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Update\+Neighbors (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&}]{neighbors,  }\item[{Y\+A\+M\+L\+::\+Node const \&}]{contact\+\_\+options }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em neighbors} & A vector of this particle\textquotesingle{}s neighbors \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+first\+: the forces in that were added to pair\+\_\+forces, second\+: the forces in that were removed from pair\+\_\+forces 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_particle_abd1b4bddd07a0ecb927238e649335816}\label{classparticls_1_1_particle_abd1b4bddd07a0ecb927238e649335816}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!Velocity@{Velocity}}
+\index{Velocity@{Velocity}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Velocity()}{Velocity()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual Eigen\+::\+Map$<$typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$dim$>$\+::Velocity$>$ \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Extract the particle\textquotesingle{}s translational velocity from the state vector (non-\/const version) \begin{DoxyReturn}{Returns}
+The particle\textquotesingle{}s translational velocity 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_particle_ac46ce6461f721bd91a03a10c0eef361b}\label{classparticls_1_1_particle_ac46ce6461f721bd91a03a10c0eef361b}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!Velocity@{Velocity}}
+\index{Velocity@{Velocity}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Velocity()}{Velocity()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual Eigen\+::\+Map$<$const typename \mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$dim$>$\+::Velocity$>$ \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Extract the particle\textquotesingle{}s translational velocity from the state vector \begin{DoxyReturn}{Returns}
+The particle\textquotesingle{}s translational velocity 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_particle_aab09d4f0cc13b5c63e939b2d559d87ba}\label{classparticls_1_1_particle_aab09d4f0cc13b5c63e939b2d559d87ba}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!Volume@{Volume}}
+\index{Volume@{Volume}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Volume()}{Volume()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The volume of the particle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_particle_a0f4da4c0f71171b0cbc81a024cf636c7}\label{classparticls_1_1_particle_a0f4da4c0f71171b0cbc81a024cf636c7}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!ZeroForcesMoments@{ZeroForcesMoments}}
+\index{ZeroForcesMoments@{ZeroForcesMoments}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ZeroForcesMoments()}{ZeroForcesMoments()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::Zero\+Forces\+Moments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Zero out the forces and moments acting on this particle. 
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_particle_ab2f44cbb59a08132f4c843e5225bba0e}\label{classparticls_1_1_particle_ab2f44cbb59a08132f4c843e5225bba0e}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!cereal::access@{cereal::access}}
+\index{cereal::access@{cereal::access}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{cereal::access}{cereal::access}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+friend class cereal\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 356 of file Particle.\+hpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticls_1_1_particle_a625a5185c5a21fecf7a54235c5f4fffb}\label{classparticls_1_1_particle_a625a5185c5a21fecf7a54235c5f4fffb}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!acceleration@{acceleration}}
+\index{acceleration@{acceleration}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{acceleration}{acceleration}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, dim, 1$>$ \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::acceleration\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The particle acceleration (used to store previous acceleration for time stepping) 
+
+
+
+Definition at line 317 of file Particle.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_particle_a2de8d322f6d90042c6d347e5045575e8}\label{classparticls_1_1_particle_a2de8d322f6d90042c6d347e5045575e8}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!forcePara@{forcePara}}
+\index{forcePara@{forcePara}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{forcePara}{forcePara}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::unordered\+\_\+map$<$std\+::string, std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}}$>$ $>$ \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::force\+Para\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 354 of file Particle.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_particle_ad6cf655c58978261462ffb77a3b1043b}\label{classparticls_1_1_particle_ad6cf655c58978261462ffb77a3b1043b}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!generic\_forces@{generic\_forces}}
+\index{generic\_forces@{generic\_forces}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{generic\_forces}{generic\_forces}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_generic_force}{Generic\+Force}}$<$dim$>$\+::Force\+List \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::generic\+\_\+forces\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+A list of forces acting on the particle. 
+
+These are generic forces that do not involve contact with another particle 
+
+Definition at line 302 of file Particle.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_particle_a0c6eb80d6b5e2e9eeda9242dfe2caedb}\label{classparticls_1_1_particle_a0c6eb80d6b5e2e9eeda9242dfe2caedb}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!group@{group}}
+\index{group@{group}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{group}{group}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+int \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::group = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Each particle can be associated with a group (defaults to 0) 
+
+
+
+Definition at line 314 of file Particle.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_particle_ab06791c071d2f41cc39bfb726e2ee495}\label{classparticls_1_1_particle_ab06791c071d2f41cc39bfb726e2ee495}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!ignore\_forces@{ignore\_forces}}
+\index{ignore\_forces@{ignore\_forces}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ignore\_forces}{ignore\_forces}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+bool \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::ignore\+\_\+forces = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+True\+: no outside forces can act on this particle, False\+: outside forces are allowed to act on this particle. 
+
+
+
+Definition at line 311 of file Particle.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_particle_a8e931d9d903503477671ffdc4915b826}\label{classparticls_1_1_particle_a8e931d9d903503477671ffdc4915b826}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!material@{material}}
+\index{material@{material}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{material}{material}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_elastic_state}{Elastic\+State}}$>$ \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::material\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+A \mbox{\hyperlink{classparticls_1_1_state_object}{State\+Object}} holding material properties like the Young\textquotesingle{}s Modulus and Poisson Ratio. 
+
+
+
+Definition at line 296 of file Particle.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_particle_acce68b3dfd4d0cea8e522b3f78a1813f}\label{classparticls_1_1_particle_acce68b3dfd4d0cea8e522b3f78a1813f}} 
+\index{particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}!pair\_forces@{pair\_forces}}
+\index{pair\_forces@{pair\_forces}!particls::Particle$<$ dim $>$@{particls::Particle$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{pair\_forces}{pair\_forces}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_contact_force}{Contact\+Force}}$<$dim$>$ $>$ $>$ \mbox{\hyperlink{classparticls_1_1_particle}{particls\+::\+Particle}}$<$ dim $>$\+::pair\+\_\+forces\hspace{0.3cm}{\ttfamily [protected]}}
+
+A map of contact force functions that could be acting on this particle. The map key is a pointer to the other particle needed to evaluate the contact force. 
+
+Definition at line 308 of file Particle.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_generic_force_8hpp}{Generic\+Force.\+hpp}}\item 
+\mbox{\hyperlink{_particle_8hpp}{Particle.\+hpp}}\end{DoxyCompactItemize}

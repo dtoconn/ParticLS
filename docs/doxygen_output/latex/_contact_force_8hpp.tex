@@ -1,0 +1,64 @@
+\hypertarget{_contact_force_8hpp}{}\doxysection{Contact\+Force.\+hpp File Reference}
+\label{_contact_force_8hpp}\index{ContactForce.hpp@{ContactForce.hpp}}
+{\ttfamily \#include $<$yaml-\/cpp/yaml.\+h$>$}\newline
+{\ttfamily \#include $<$cereal/types/base\+\_\+class.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}Partic\+L\+S/\+Utilities/\+Register\+Class\+Name.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Partic\+L\+S/\+States/\+Particle.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Partic\+L\+S/\+States/\+Contact\+Summary.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Partic\+L\+S/\+Forces/\+Generic\+Force.\+hpp\char`\"{}}\newline
+Include dependency graph for Contact\+Force.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_contact_force_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_contact_force_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force$<$ dim $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceparticls}{particls}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_contact_force_8hpp_a002200d3d60e14713f7215f6b4d14b80}{P\+A\+R\+T\+I\+C\+L\+S\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+C\+O\+N\+T\+A\+C\+T\+\_\+\+F\+O\+R\+CE}}(N\+A\+ME,  D\+IM)~static auto reg \#\#N\+A\+ME \#\#D\+IM = \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$D\+IM$>$\+::Get\+Contact\+Force\+Map()-\/$>$insert(std\+::make\+\_\+pair(\#N\+A\+ME, \mbox{\hyperlink{structparticls_1_1shared__factory}{particls\+::shared\+\_\+factory}}$<$N\+A\+ME$<$D\+IM$>$ $>$()));
+\item 
+\#define \mbox{\hyperlink{_contact_force_8hpp_a5ee6e46df4f90f42b7289876828ef6da}{P\+A\+R\+T\+I\+C\+L\+S\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+F\+I\+X\+E\+D\+\_\+\+D\+I\+M\+E\+N\+S\+I\+O\+N\+\_\+\+C\+O\+N\+T\+A\+C\+T\+\_\+\+F\+O\+R\+CE}}(N\+A\+ME,  D\+IM)~static auto reg \#\#N\+A\+ME \#\#D\+IM = \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$D\+IM$>$\+::Get\+Contact\+Force\+Map()-\/$>$insert(std\+::make\+\_\+pair(\#N\+A\+ME \#D\+IM, \mbox{\hyperlink{structparticls_1_1shared__factory}{particls\+::shared\+\_\+factory}}$<$N\+A\+ME$>$()));
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_contact_force_8hpp_a002200d3d60e14713f7215f6b4d14b80}\label{_contact_force_8hpp_a002200d3d60e14713f7215f6b4d14b80}} 
+\index{ContactForce.hpp@{ContactForce.hpp}!PARTICLS\_REGISTER\_CONTACT\_FORCE@{PARTICLS\_REGISTER\_CONTACT\_FORCE}}
+\index{PARTICLS\_REGISTER\_CONTACT\_FORCE@{PARTICLS\_REGISTER\_CONTACT\_FORCE}!ContactForce.hpp@{ContactForce.hpp}}
+\doxysubsubsection{\texorpdfstring{PARTICLS\_REGISTER\_CONTACT\_FORCE}{PARTICLS\_REGISTER\_CONTACT\_FORCE}}
+{\footnotesize\ttfamily \#define P\+A\+R\+T\+I\+C\+L\+S\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+C\+O\+N\+T\+A\+C\+T\+\_\+\+F\+O\+R\+CE(\begin{DoxyParamCaption}\item[{}]{N\+A\+ME,  }\item[{}]{D\+IM }\end{DoxyParamCaption})~static auto reg \#\#N\+A\+ME \#\#D\+IM = \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$D\+IM$>$\+::Get\+Contact\+Force\+Map()-\/$>$insert(std\+::make\+\_\+pair(\#N\+A\+ME, \mbox{\hyperlink{structparticls_1_1shared__factory}{particls\+::shared\+\_\+factory}}$<$N\+A\+ME$<$D\+IM$>$ $>$()));}
+
+
+
+Definition at line 191 of file Contact\+Force.\+hpp.
+
+\mbox{\Hypertarget{_contact_force_8hpp_a5ee6e46df4f90f42b7289876828ef6da}\label{_contact_force_8hpp_a5ee6e46df4f90f42b7289876828ef6da}} 
+\index{ContactForce.hpp@{ContactForce.hpp}!PARTICLS\_REGISTER\_FIXED\_DIMENSION\_CONTACT\_FORCE@{PARTICLS\_REGISTER\_FIXED\_DIMENSION\_CONTACT\_FORCE}}
+\index{PARTICLS\_REGISTER\_FIXED\_DIMENSION\_CONTACT\_FORCE@{PARTICLS\_REGISTER\_FIXED\_DIMENSION\_CONTACT\_FORCE}!ContactForce.hpp@{ContactForce.hpp}}
+\doxysubsubsection{\texorpdfstring{PARTICLS\_REGISTER\_FIXED\_DIMENSION\_CONTACT\_FORCE}{PARTICLS\_REGISTER\_FIXED\_DIMENSION\_CONTACT\_FORCE}}
+{\footnotesize\ttfamily \#define P\+A\+R\+T\+I\+C\+L\+S\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+F\+I\+X\+E\+D\+\_\+\+D\+I\+M\+E\+N\+S\+I\+O\+N\+\_\+\+C\+O\+N\+T\+A\+C\+T\+\_\+\+F\+O\+R\+CE(\begin{DoxyParamCaption}\item[{}]{N\+A\+ME,  }\item[{}]{D\+IM }\end{DoxyParamCaption})~static auto reg \#\#N\+A\+ME \#\#D\+IM = \mbox{\hyperlink{classparticls_1_1_contact_force}{particls\+::\+Contact\+Force}}$<$D\+IM$>$\+::Get\+Contact\+Force\+Map()-\/$>$insert(std\+::make\+\_\+pair(\#N\+A\+ME \#D\+IM, \mbox{\hyperlink{structparticls_1_1shared__factory}{particls\+::shared\+\_\+factory}}$<$N\+A\+ME$>$()));}
+
+
+
+Definition at line 192 of file Contact\+Force.\+hpp.
+

@@ -1,0 +1,251 @@
+\hypertarget{classparticls_1_1_hertzian_contact}{}\doxysection{particls\+::Hertzian\+Contact$<$ dim $>$ Class Template Reference}
+\label{classparticls_1_1_hertzian_contact}\index{particls::HertzianContact$<$ dim $>$@{particls::HertzianContact$<$ dim $>$}}
+
+
+Hertzian nonlinear elastic contact model.  
+
+
+
+
+{\ttfamily \#include $<$Hertzian\+Contact.\+hpp$>$}
+
+
+
+Inheritance diagram for particls\+::Hertzian\+Contact$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classparticls_1_1_hertzian_contact__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for particls\+::Hertzian\+Contact$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classparticls_1_1_hertzian_contact__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_hertzian_contact_a91be51fd46841836e88148412bab2b86}{Hertzian\+Contact}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part1, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part2, Y\+A\+M\+L\+::\+Node const \&options)
+\item 
+\mbox{\hyperlink{classparticls_1_1_hertzian_contact_a91f62fa977a74c0a684c49b4562aec62}{Hertzian\+Contact}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part1, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part2, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&neighbors, Y\+A\+M\+L\+::\+Node const \&options)
+\item 
+virtual \mbox{\hyperlink{classparticls_1_1_hertzian_contact_acfd8df551cf41d65fa88b572a7f5ebfc}{$\sim$\+Hertzian\+Contact}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_hertzian_contact_a06f1c73cb11609b0bd91cc60f82067dd}{Compute\+Contact\+Force}} (double const time, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}} $>$ const \&parameter=nullptr) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_hertzian_contact_aa5c3e16d9ab8b2f79b35b63911e3e714}{Fill\+R\+H\+S\+Impl}} (double const time, Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$ rhs) override
+\item 
+\mbox{\hyperlink{classparticls_1_1_hertzian_contact_abe0b3e8cfb6b9d0fa346b453fec99116}{Hertzian\+Contact}} ()=default
+\begin{DoxyCompactList}\small\item\em Private default constructor for serialize. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classparticls_1_1_hertzian_contact_ae2b3983ee29ec4da936c17c45a86e8f9}{serialize}} (Archive \&ar)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classparticls_1_1_hertzian_contact_a5565c0f627d04364dbe3c570bfc27883}{k\+\_\+ratio}}
+\begin{DoxyCompactList}\small\item\em The ratio of the normal stiffness to the tangential stiffness. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_hertzian_contact_a540939dbecfc554cc1fbb7784dd4f3ed}{mu}}
+\begin{DoxyCompactList}\small\item\em Friction coefficient. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_hertzian_contact_a1aa8645ffa9744b48641e26a5aef3308}{bn}}
+\begin{DoxyCompactList}\small\item\em Viscous damping coefficient. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classparticls_1_1_hertzian_contact_ab2f44cbb59a08132f4c843e5225bba0e}{cereal\+::access}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+class particls\+::\+Hertzian\+Contact$<$ dim $>$}
+
+Hertzian nonlinear elastic contact model. 
+
+Hertzian contact model for two non-\/adhesive particles. See \href{https://en.wikipedia.org/wiki/Contact_mechanics\#Classical_solutions_for_non-adhesive_elastic_contact}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+Contact\+\_\+mechanics\#\+Classical\+\_\+solutions\+\_\+for\+\_\+non-\/adhesive\+\_\+elastic\+\_\+contact}} for an explanation. 
+
+Definition at line 20 of file Hertzian\+Contact.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_hertzian_contact_a91be51fd46841836e88148412bab2b86}\label{classparticls_1_1_hertzian_contact_a91be51fd46841836e88148412bab2b86}} 
+\index{particls::HertzianContact$<$ dim $>$@{particls::HertzianContact$<$ dim $>$}!HertzianContact@{HertzianContact}}
+\index{HertzianContact@{HertzianContact}!particls::HertzianContact$<$ dim $>$@{particls::HertzianContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{HertzianContact()}{HertzianContact()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_hertzian_contact}{particls\+::\+Hertzian\+Contact}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_hertzian_contact}{Hertzian\+Contact}} (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part1,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part2,  }\item[{Y\+A\+M\+L\+::\+Node const \&}]{options }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em part1} & Home particle in the contact pair \\
+\hline
+\mbox{\texttt{ in}}  & {\em part2} & Neighbor particle in the contact pair \\
+\hline
+\mbox{\texttt{ in}}  & {\em options} & Contact model parameters, e.\+g. friction coefficient \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_hertzian_contact_a91f62fa977a74c0a684c49b4562aec62}\label{classparticls_1_1_hertzian_contact_a91f62fa977a74c0a684c49b4562aec62}} 
+\index{particls::HertzianContact$<$ dim $>$@{particls::HertzianContact$<$ dim $>$}!HertzianContact@{HertzianContact}}
+\index{HertzianContact@{HertzianContact}!particls::HertzianContact$<$ dim $>$@{particls::HertzianContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{HertzianContact()}{HertzianContact()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_hertzian_contact}{particls\+::\+Hertzian\+Contact}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_hertzian_contact}{Hertzian\+Contact}} (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part1,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part2,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&}]{neighbors,  }\item[{Y\+A\+M\+L\+::\+Node const \&}]{options }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em part1} & Home particle in the contact pair \\
+\hline
+\mbox{\texttt{ in}}  & {\em part2} & Neighbor particle in the contact pair \\
+\hline
+\mbox{\texttt{ in}}  & {\em neighbors} & The nearest neighbors of the first particle (part1) \\
+\hline
+\mbox{\texttt{ in}}  & {\em options} & Contact model parameters, e.\+g. friction coefficient \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_hertzian_contact_acfd8df551cf41d65fa88b572a7f5ebfc}\label{classparticls_1_1_hertzian_contact_acfd8df551cf41d65fa88b572a7f5ebfc}} 
+\index{particls::HertzianContact$<$ dim $>$@{particls::HertzianContact$<$ dim $>$}!````~HertzianContact@{$\sim$HertzianContact}}
+\index{````~HertzianContact@{$\sim$HertzianContact}!particls::HertzianContact$<$ dim $>$@{particls::HertzianContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$HertzianContact()}{~HertzianContact()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual \mbox{\hyperlink{classparticls_1_1_hertzian_contact}{particls\+::\+Hertzian\+Contact}}$<$ dim $>$\+::$\sim$\mbox{\hyperlink{classparticls_1_1_hertzian_contact}{Hertzian\+Contact}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classparticls_1_1_hertzian_contact_abe0b3e8cfb6b9d0fa346b453fec99116}\label{classparticls_1_1_hertzian_contact_abe0b3e8cfb6b9d0fa346b453fec99116}} 
+\index{particls::HertzianContact$<$ dim $>$@{particls::HertzianContact$<$ dim $>$}!HertzianContact@{HertzianContact}}
+\index{HertzianContact@{HertzianContact}!particls::HertzianContact$<$ dim $>$@{particls::HertzianContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{HertzianContact()}{HertzianContact()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_hertzian_contact}{particls\+::\+Hertzian\+Contact}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_hertzian_contact}{Hertzian\+Contact}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [default]}}
+
+
+
+Private default constructor for serialize. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_hertzian_contact_a06f1c73cb11609b0bd91cc60f82067dd}\label{classparticls_1_1_hertzian_contact_a06f1c73cb11609b0bd91cc60f82067dd}} 
+\index{particls::HertzianContact$<$ dim $>$@{particls::HertzianContact$<$ dim $>$}!ComputeContactForce@{ComputeContactForce}}
+\index{ComputeContactForce@{ComputeContactForce}!particls::HertzianContact$<$ dim $>$@{particls::HertzianContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeContactForce()}{ComputeContactForce()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_hertzian_contact}{particls\+::\+Hertzian\+Contact}}$<$ dim $>$\+::Compute\+Contact\+Force (\begin{DoxyParamCaption}\item[{double const}]{time,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}} $>$ const \&}]{parameter = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Increments the force and moment vectors. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & The time when we are computing the force \\
+\hline
+\mbox{\texttt{ in}}  & {\em parameter} & Not needed for Hertzian force \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_contact_force_a49937350b2ecdd8897f7d2c91567d7fa}{particls\+::\+Contact\+Force$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_hertzian_contact_aa5c3e16d9ab8b2f79b35b63911e3e714}\label{classparticls_1_1_hertzian_contact_aa5c3e16d9ab8b2f79b35b63911e3e714}} 
+\index{particls::HertzianContact$<$ dim $>$@{particls::HertzianContact$<$ dim $>$}!FillRHSImpl@{FillRHSImpl}}
+\index{FillRHSImpl@{FillRHSImpl}!particls::HertzianContact$<$ dim $>$@{particls::HertzianContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{FillRHSImpl()}{FillRHSImpl()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_hertzian_contact}{particls\+::\+Hertzian\+Contact}}$<$ dim $>$\+::Fill\+R\+H\+S\+Impl (\begin{DoxyParamCaption}\item[{double const}]{time,  }\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+Computes the right hand side of the shear force O\+DE. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & The current simulation time. \\
+\hline
+\mbox{\texttt{ in}}  & {\em rhs} & The right hand side vector. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classparticls_1_1_state_object_a6ad9738629390c509f53a4d41cf67fde}{particls\+::\+State\+Object}}.
+
+\mbox{\Hypertarget{classparticls_1_1_hertzian_contact_ae2b3983ee29ec4da936c17c45a86e8f9}\label{classparticls_1_1_hertzian_contact_ae2b3983ee29ec4da936c17c45a86e8f9}} 
+\index{particls::HertzianContact$<$ dim $>$@{particls::HertzianContact$<$ dim $>$}!serialize@{serialize}}
+\index{serialize@{serialize}!particls::HertzianContact$<$ dim $>$@{particls::HertzianContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+template$<$class Archive $>$ \\
+void \mbox{\hyperlink{classparticls_1_1_hertzian_contact}{particls\+::\+Hertzian\+Contact}}$<$ dim $>$\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 71 of file Hertzian\+Contact.\+hpp.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_hertzian_contact_ab2f44cbb59a08132f4c843e5225bba0e}\label{classparticls_1_1_hertzian_contact_ab2f44cbb59a08132f4c843e5225bba0e}} 
+\index{particls::HertzianContact$<$ dim $>$@{particls::HertzianContact$<$ dim $>$}!cereal::access@{cereal::access}}
+\index{cereal::access@{cereal::access}!particls::HertzianContact$<$ dim $>$@{particls::HertzianContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{cereal::access}{cereal::access}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+friend class cereal\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 65 of file Hertzian\+Contact.\+hpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticls_1_1_hertzian_contact_a1aa8645ffa9744b48641e26a5aef3308}\label{classparticls_1_1_hertzian_contact_a1aa8645ffa9744b48641e26a5aef3308}} 
+\index{particls::HertzianContact$<$ dim $>$@{particls::HertzianContact$<$ dim $>$}!bn@{bn}}
+\index{bn@{bn}!particls::HertzianContact$<$ dim $>$@{particls::HertzianContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{bn}{bn}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_hertzian_contact}{particls\+::\+Hertzian\+Contact}}$<$ dim $>$\+::bn\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Viscous damping coefficient. 
+
+
+
+Definition at line 63 of file Hertzian\+Contact.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_hertzian_contact_a5565c0f627d04364dbe3c570bfc27883}\label{classparticls_1_1_hertzian_contact_a5565c0f627d04364dbe3c570bfc27883}} 
+\index{particls::HertzianContact$<$ dim $>$@{particls::HertzianContact$<$ dim $>$}!k\_ratio@{k\_ratio}}
+\index{k\_ratio@{k\_ratio}!particls::HertzianContact$<$ dim $>$@{particls::HertzianContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{k\_ratio}{k\_ratio}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_hertzian_contact}{particls\+::\+Hertzian\+Contact}}$<$ dim $>$\+::k\+\_\+ratio\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The ratio of the normal stiffness to the tangential stiffness. 
+
+
+
+Definition at line 57 of file Hertzian\+Contact.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_hertzian_contact_a540939dbecfc554cc1fbb7784dd4f3ed}\label{classparticls_1_1_hertzian_contact_a540939dbecfc554cc1fbb7784dd4f3ed}} 
+\index{particls::HertzianContact$<$ dim $>$@{particls::HertzianContact$<$ dim $>$}!mu@{mu}}
+\index{mu@{mu}!particls::HertzianContact$<$ dim $>$@{particls::HertzianContact$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{mu}{mu}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_hertzian_contact}{particls\+::\+Hertzian\+Contact}}$<$ dim $>$\+::mu\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Friction coefficient. 
+
+
+
+Definition at line 60 of file Hertzian\+Contact.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_hertzian_contact_8hpp}{Hertzian\+Contact.\+hpp}}\end{DoxyCompactItemize}

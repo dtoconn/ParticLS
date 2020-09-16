@@ -1,0 +1,165 @@
+\hypertarget{classparticls_1_1_collection_tracker}{}\doxysection{particls\+::Collection\+Tracker$<$ dim $>$ Class Template Reference}
+\label{classparticls_1_1_collection_tracker}\index{particls::CollectionTracker$<$ dim $>$@{particls::CollectionTracker$<$ dim $>$}}
+
+
+{\ttfamily \#include $<$Collection\+Tracker.\+hpp$>$}
+
+
+
+Inheritance diagram for particls\+::Collection\+Tracker$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classparticls_1_1_collection_tracker__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for particls\+::Collection\+Tracker$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classparticls_1_1_collection_tracker__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classparticls_1_1_collection_tracker_afcaf51b9b3e7cc64edb19718b6a6ef44}{Quantity}} \{ \mbox{\hyperlink{classparticls_1_1_collection_tracker_afcaf51b9b3e7cc64edb19718b6a6ef44a904e7653729bcc2973e7c48ca070cb59}{Cauchy\+Stress}}, 
+\mbox{\hyperlink{classparticls_1_1_collection_tracker_afcaf51b9b3e7cc64edb19718b6a6ef44a6318f73f39634028645ce985c63e291c}{Tangent\+Operator}}, 
+\mbox{\hyperlink{classparticls_1_1_collection_tracker_afcaf51b9b3e7cc64edb19718b6a6ef44aa5ab506b0bf255af5b8b1d4ab1cd095e}{Kinetic\+Energy}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_collection_tracker_a14ae1b2182ec5fcf3da67970cb867250}{Collection\+Tracker}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_collection}{Collection}}$<$ dim $>$ $>$ const \&\mbox{\hyperlink{classparticls_1_1_collection_tracker_ab6df7b5c1608cf0cf7c0e010732d688e}{collection}}, \mbox{\hyperlink{classparticls_1_1_collection_tracker_afcaf51b9b3e7cc64edb19718b6a6ef44}{Quantity}} const \&\mbox{\hyperlink{classparticls_1_1_collection_tracker_ab70b6be205fbd7620edeea0c6b647556}{qoi}}=Quantity\+::\+Cauchy\+Stress)
+\item 
+virtual \mbox{\hyperlink{classparticls_1_1_collection_tracker_a5c73b3cafd10406bfe40394484a0cb49}{$\sim$\+Collection\+Tracker}} ()=default
+\item 
+virtual Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classparticls_1_1_collection_tracker_ad4efa4fbe23e5caa0d07c226b203a96b}{Quantity\+Of\+Interest}} (double const time) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_collection}{Collection}}$<$ dim $>$ $>$ \mbox{\hyperlink{classparticls_1_1_collection_tracker_ab6df7b5c1608cf0cf7c0e010732d688e}{collection}}
+\item 
+const \mbox{\hyperlink{classparticls_1_1_collection_tracker_afcaf51b9b3e7cc64edb19718b6a6ef44}{Quantity}} \mbox{\hyperlink{classparticls_1_1_collection_tracker_ab70b6be205fbd7620edeea0c6b647556}{qoi}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+class particls\+::\+Collection\+Tracker$<$ dim $>$}
+
+
+
+Definition at line 10 of file Collection\+Tracker.\+hpp.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classparticls_1_1_collection_tracker_afcaf51b9b3e7cc64edb19718b6a6ef44}\label{classparticls_1_1_collection_tracker_afcaf51b9b3e7cc64edb19718b6a6ef44}} 
+\index{particls::CollectionTracker$<$ dim $>$@{particls::CollectionTracker$<$ dim $>$}!Quantity@{Quantity}}
+\index{Quantity@{Quantity}!particls::CollectionTracker$<$ dim $>$@{particls::CollectionTracker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Quantity}{Quantity}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+enum \mbox{\hyperlink{classparticls_1_1_collection_tracker_afcaf51b9b3e7cc64edb19718b6a6ef44}{particls\+::\+Collection\+Tracker\+::\+Quantity}}}
+
+Enum for specifying which collection quantity of interest we want to track. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CauchyStress@{CauchyStress}!particls::CollectionTracker$<$ dim $>$@{particls::CollectionTracker$<$ dim $>$}}\index{particls::CollectionTracker$<$ dim $>$@{particls::CollectionTracker$<$ dim $>$}!CauchyStress@{CauchyStress}}}\mbox{\Hypertarget{classparticls_1_1_collection_tracker_afcaf51b9b3e7cc64edb19718b6a6ef44a904e7653729bcc2973e7c48ca070cb59}\label{classparticls_1_1_collection_tracker_afcaf51b9b3e7cc64edb19718b6a6ef44a904e7653729bcc2973e7c48ca070cb59}} 
+Cauchy\+Stress&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TangentOperator@{TangentOperator}!particls::CollectionTracker$<$ dim $>$@{particls::CollectionTracker$<$ dim $>$}}\index{particls::CollectionTracker$<$ dim $>$@{particls::CollectionTracker$<$ dim $>$}!TangentOperator@{TangentOperator}}}\mbox{\Hypertarget{classparticls_1_1_collection_tracker_afcaf51b9b3e7cc64edb19718b6a6ef44a6318f73f39634028645ce985c63e291c}\label{classparticls_1_1_collection_tracker_afcaf51b9b3e7cc64edb19718b6a6ef44a6318f73f39634028645ce985c63e291c}} 
+Tangent\+Operator&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KineticEnergy@{KineticEnergy}!particls::CollectionTracker$<$ dim $>$@{particls::CollectionTracker$<$ dim $>$}}\index{particls::CollectionTracker$<$ dim $>$@{particls::CollectionTracker$<$ dim $>$}!KineticEnergy@{KineticEnergy}}}\mbox{\Hypertarget{classparticls_1_1_collection_tracker_afcaf51b9b3e7cc64edb19718b6a6ef44aa5ab506b0bf255af5b8b1d4ab1cd095e}\label{classparticls_1_1_collection_tracker_afcaf51b9b3e7cc64edb19718b6a6ef44aa5ab506b0bf255af5b8b1d4ab1cd095e}} 
+Kinetic\+Energy&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 16 of file Collection\+Tracker.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_collection_tracker_a14ae1b2182ec5fcf3da67970cb867250}\label{classparticls_1_1_collection_tracker_a14ae1b2182ec5fcf3da67970cb867250}} 
+\index{particls::CollectionTracker$<$ dim $>$@{particls::CollectionTracker$<$ dim $>$}!CollectionTracker@{CollectionTracker}}
+\index{CollectionTracker@{CollectionTracker}!particls::CollectionTracker$<$ dim $>$@{particls::CollectionTracker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{CollectionTracker()}{CollectionTracker()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_collection_tracker}{particls\+::\+Collection\+Tracker}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_collection_tracker}{Collection\+Tracker}} (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_collection}{Collection}}$<$ dim $>$ $>$ const \&}]{collection,  }\item[{\mbox{\hyperlink{classparticls_1_1_collection_tracker_afcaf51b9b3e7cc64edb19718b6a6ef44}{Quantity}} const \&}]{qoi = {\ttfamily Quantity\+:\+:CauchyStress} }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{classparticls_1_1_observer}{Observer}} that tracks a collection\textquotesingle{}s state throughout a simulation. The default state is the collection\textquotesingle{}s homogenized Cauchy stress tensor, but it can also return the collection\textquotesingle{}s \textquotesingle{}Kinetic\+Energy\textquotesingle{} or \textquotesingle{}Potential\+Energy\textquotesingle{}. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em collection} & \mbox{\hyperlink{classparticls_1_1_collection}{Collection}} that is tracked. \\
+\hline
+\mbox{\texttt{ in}}  & {\em qoi} & Quantity of interest we want to evaluate. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_collection_tracker_a5c73b3cafd10406bfe40394484a0cb49}\label{classparticls_1_1_collection_tracker_a5c73b3cafd10406bfe40394484a0cb49}} 
+\index{particls::CollectionTracker$<$ dim $>$@{particls::CollectionTracker$<$ dim $>$}!````~CollectionTracker@{$\sim$CollectionTracker}}
+\index{````~CollectionTracker@{$\sim$CollectionTracker}!particls::CollectionTracker$<$ dim $>$@{particls::CollectionTracker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$CollectionTracker()}{~CollectionTracker()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual \mbox{\hyperlink{classparticls_1_1_collection_tracker}{particls\+::\+Collection\+Tracker}}$<$ dim $>$\+::$\sim$\mbox{\hyperlink{classparticls_1_1_collection_tracker}{Collection\+Tracker}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_collection_tracker_ad4efa4fbe23e5caa0d07c226b203a96b}\label{classparticls_1_1_collection_tracker_ad4efa4fbe23e5caa0d07c226b203a96b}} 
+\index{particls::CollectionTracker$<$ dim $>$@{particls::CollectionTracker$<$ dim $>$}!QuantityOfInterest@{QuantityOfInterest}}
+\index{QuantityOfInterest@{QuantityOfInterest}!particls::CollectionTracker$<$ dim $>$@{particls::CollectionTracker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{QuantityOfInterest()}{QuantityOfInterest()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classparticls_1_1_collection_tracker}{particls\+::\+Collection\+Tracker}}$<$ dim $>$\+::Quantity\+Of\+Interest (\begin{DoxyParamCaption}\item[{double const}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+This returns the stress tensor in a row-\/by-\/row flattened vector. The flattening is necessary because the \mbox{\hyperlink{classparticls_1_1_collection_tracker_ad4efa4fbe23e5caa0d07c226b203a96b}{Quantity\+Of\+Interest()}} returned by other observers are Eigen\+::\+Vector\+Xd\textquotesingle{}s. In order to measure the timeseries for multiple observers in one Simulation-\/$>$Run(std\+::vector$<$\+Eigen\+::\+Matrix\+Xd$>$\& observations) instance, all \mbox{\hyperlink{classparticls_1_1_collection_tracker_ad4efa4fbe23e5caa0d07c226b203a96b}{Quantity\+Of\+Interest()}} functions need to return the same data structure. @seealso \mbox{\hyperlink{classparticls_1_1_simulation}{Simulation}} 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & Time at which the homogenized Cauchy stress tensor is evaluated. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The collection\textquotesingle{}s homogenized Cauchy stress tensor at a specific time. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_observer_a5d8df2033058cad52ea402fb9e834c63}{particls\+::\+Observer}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticls_1_1_collection_tracker_ab6df7b5c1608cf0cf7c0e010732d688e}\label{classparticls_1_1_collection_tracker_ab6df7b5c1608cf0cf7c0e010732d688e}} 
+\index{particls::CollectionTracker$<$ dim $>$@{particls::CollectionTracker$<$ dim $>$}!collection@{collection}}
+\index{collection@{collection}!particls::CollectionTracker$<$ dim $>$@{particls::CollectionTracker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{collection}{collection}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_collection}{Collection}}$<$dim$>$ $>$ \mbox{\hyperlink{classparticls_1_1_collection_tracker}{particls\+::\+Collection\+Tracker}}$<$ dim $>$\+::collection\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 42 of file Collection\+Tracker.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_collection_tracker_ab70b6be205fbd7620edeea0c6b647556}\label{classparticls_1_1_collection_tracker_ab70b6be205fbd7620edeea0c6b647556}} 
+\index{particls::CollectionTracker$<$ dim $>$@{particls::CollectionTracker$<$ dim $>$}!qoi@{qoi}}
+\index{qoi@{qoi}!particls::CollectionTracker$<$ dim $>$@{particls::CollectionTracker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{qoi}{qoi}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+const \mbox{\hyperlink{classparticls_1_1_collection_tracker_afcaf51b9b3e7cc64edb19718b6a6ef44}{Quantity}} \mbox{\hyperlink{classparticls_1_1_collection_tracker}{particls\+::\+Collection\+Tracker}}$<$ dim $>$\+::qoi\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 44 of file Collection\+Tracker.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_collection_tracker_8hpp}{Collection\+Tracker.\+hpp}}\end{DoxyCompactItemize}

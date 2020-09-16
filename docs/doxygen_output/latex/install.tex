@@ -1,0 +1,60 @@
+Some stuff
+
+The first thing you need to do is install the required dependencies\+:
+\begin{DoxyItemize}
+\item \href{https://github.com/jbeder/yaml-cpp}{\texttt{ yaml-\/cpp}} We recommend installing yaml-\/cpp from source using cmake.
+\begin{DoxyEnumerate}
+\item 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git clone -\/-\/depth=1 https:\textcolor{comment}{//github.com/jbeder/yaml-\/cpp }}
+\end{DoxyCode}
+
+\item 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd yaml-\/cpp; mkdir build; cd build }
+\end{DoxyCode}
+
+\item @codecmake -\/D\+C\+M\+A\+K\+E\+\_\+\+I\+N\+S\+T\+A\+L\+L\+\_\+\+P\+R\+E\+F\+IX=$<$/\+Some/\+Install/\+Path/$>$ -\/D\+B\+U\+I\+L\+D\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+L\+I\+BS=ON ../ 
+\item 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make -\/j4 install }
+\end{DoxyCode}
+
+\end{DoxyEnumerate}
+\item \href{http://eigen.tuxfamily.org/index.php}{\texttt{ eigen3}} Again, we recommend installing eigen3 from source using cmake.
+\begin{DoxyEnumerate}
+\item 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git clone -\/-\/depth=1 https:\textcolor{comment}{//github.com/eigenteam/eigen-\/git-\/mirror.git }}
+\end{DoxyCode}
+
+\item 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd eigen-\/git-\/mirror; mkdir build; cd build }
+\end{DoxyCode}
+
+\item 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake -\/DCMAKE\_INSTALL\_PREFIX=</Some/Install/Path/> ../ }
+\end{DoxyCode}
+
+\item 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make -\/j4 install }
+\end{DoxyCode}
+
+\end{DoxyEnumerate}
+\end{DoxyItemize}
+
+Compiling Mesh\+LS\+:
+\begin{DoxyItemize}
+\item Run cmake 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake -\/DMESHLS\_YAML\_DIR=\string~/Installations/YAML-\/CPP/lib/cmake/           \(\backslash\)}
+\DoxyCodeLine{      -\/DMESHLS\_EIGEN\_DIR=\string~/Installations/Eigen3/share/eigen3/cmake/   \(\backslash\)}
+\DoxyCodeLine{      -\/DMESHLS\_GTEST\_DIR=\string~/Installations/GTEST                        \(\backslash\)}
+\DoxyCodeLine{      -\/DCMAKE\_INSTALL\_PREFIX=\string~/Installations/MESHLS                   \(\backslash\)}
+\DoxyCodeLine{../}
+\end{DoxyCode}
+ 
+\end{DoxyItemize}

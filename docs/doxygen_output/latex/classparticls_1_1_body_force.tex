@@ -1,0 +1,201 @@
+\hypertarget{classparticls_1_1_body_force}{}\doxysection{particls\+::Body\+Force$<$ dim $>$ Class Template Reference}
+\label{classparticls_1_1_body_force}\index{particls::BodyForce$<$ dim $>$@{particls::BodyForce$<$ dim $>$}}
+
+
+{\ttfamily \#include $<$Body\+Force.\+hpp$>$}
+
+
+
+Inheritance diagram for particls\+::Body\+Force$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classparticls_1_1_body_force__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for particls\+::Body\+Force$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classparticls_1_1_body_force__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::function$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_body_force}{Body\+Force}}$<$ dim $>$ $>$std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const  \&\mbox{\hyperlink{classparticls_1_1_body_force_ad2e61420ecbcd5a1f2f18d92667af2ae}{particle}}, Y\+A\+M\+L\+::\+Node const  \&options)$>$ \mbox{\hyperlink{classparticls_1_1_body_force_a21276bdc6c08adf460db1e2984265e06}{Body\+Force\+Constructor}}
+\item 
+typedef std\+::map$<$ std\+::string, \mbox{\hyperlink{classparticls_1_1_body_force_a21276bdc6c08adf460db1e2984265e06}{Body\+Force\+Constructor}} $>$ \mbox{\hyperlink{classparticls_1_1_body_force_a600e41821f5c7fcd34c75a2e4f638be2}{Body\+Force\+Map}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_body_force_a964195f66e6ee35ec304d699f02ab83b}{Body\+Force}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&\mbox{\hyperlink{classparticls_1_1_body_force_ad2e61420ecbcd5a1f2f18d92667af2ae}{particle}})
+\item 
+virtual \mbox{\hyperlink{classparticls_1_1_body_force_a45ef89d203772354067e0e7c38306b7e}{$\sim$\+Body\+Force}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_body_force}{Body\+Force}}$<$ dim $>$ $>$ \mbox{\hyperlink{classparticls_1_1_body_force_a2176c7787d0dad7523f90a8feeca91fd}{Create}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$$>$ const \&\mbox{\hyperlink{classparticls_1_1_body_force_ad2e61420ecbcd5a1f2f18d92667af2ae}{particle}}, Y\+A\+M\+L\+::\+Node const \&options)
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_body_force_a600e41821f5c7fcd34c75a2e4f638be2}{Body\+Force\+Map}} $>$ \mbox{\hyperlink{classparticls_1_1_body_force_abff9be649448dfeafa555f11292317e1}{Get\+Body\+Force\+Map}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_body_force_a116cafaf212d5ae185915fe4ac44caa5}{Body\+Force}} ()=default
+\begin{DoxyCompactList}\small\item\em Protected default constructor for serialize (needs to be called by children) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ \mbox{\hyperlink{classparticls_1_1_body_force_ad2e61420ecbcd5a1f2f18d92667af2ae}{particle}}
+\begin{DoxyCompactList}\small\item\em The particle on which the force is acting. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classparticls_1_1_body_force_a24283ccec501a9df4a0d7b22c639f8d1}{serialize}} (Archive \&ar)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classparticls_1_1_body_force_ab2f44cbb59a08132f4c843e5225bba0e}{cereal\+::access}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+class particls\+::\+Body\+Force$<$ dim $>$}
+
+
+
+Definition at line 19 of file Body\+Force.\+hpp.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classparticls_1_1_body_force_a21276bdc6c08adf460db1e2984265e06}\label{classparticls_1_1_body_force_a21276bdc6c08adf460db1e2984265e06}} 
+\index{particls::BodyForce$<$ dim $>$@{particls::BodyForce$<$ dim $>$}!BodyForceConstructor@{BodyForceConstructor}}
+\index{BodyForceConstructor@{BodyForceConstructor}!particls::BodyForce$<$ dim $>$@{particls::BodyForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{BodyForceConstructor}{BodyForceConstructor}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+typedef std\+::function$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_body_force}{Body\+Force}}$<$dim$>$ $>$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$dim$>$ $>$ const\& \mbox{\hyperlink{classparticls_1_1_body_force_ad2e61420ecbcd5a1f2f18d92667af2ae}{particle}}, Y\+A\+M\+L\+::\+Node const\& options)$>$ \mbox{\hyperlink{classparticls_1_1_body_force}{particls\+::\+Body\+Force}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_body_force_a21276bdc6c08adf460db1e2984265e06}{Body\+Force\+Constructor}}}
+
+
+
+Definition at line 39 of file Body\+Force.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_body_force_a600e41821f5c7fcd34c75a2e4f638be2}\label{classparticls_1_1_body_force_a600e41821f5c7fcd34c75a2e4f638be2}} 
+\index{particls::BodyForce$<$ dim $>$@{particls::BodyForce$<$ dim $>$}!BodyForceMap@{BodyForceMap}}
+\index{BodyForceMap@{BodyForceMap}!particls::BodyForce$<$ dim $>$@{particls::BodyForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{BodyForceMap}{BodyForceMap}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+typedef std\+::map$<$std\+::string, \mbox{\hyperlink{classparticls_1_1_body_force_a21276bdc6c08adf460db1e2984265e06}{Body\+Force\+Constructor}}$>$ \mbox{\hyperlink{classparticls_1_1_body_force}{particls\+::\+Body\+Force}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_body_force_a600e41821f5c7fcd34c75a2e4f638be2}{Body\+Force\+Map}}}
+
+
+
+Definition at line 40 of file Body\+Force.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_body_force_a964195f66e6ee35ec304d699f02ab83b}\label{classparticls_1_1_body_force_a964195f66e6ee35ec304d699f02ab83b}} 
+\index{particls::BodyForce$<$ dim $>$@{particls::BodyForce$<$ dim $>$}!BodyForce@{BodyForce}}
+\index{BodyForce@{BodyForce}!particls::BodyForce$<$ dim $>$@{particls::BodyForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{BodyForce()}{BodyForce()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_body_force}{particls\+::\+Body\+Force}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_body_force}{Body\+Force}} (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{particle }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em particle} & The particle on which the force is acting \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_body_force_a45ef89d203772354067e0e7c38306b7e}\label{classparticls_1_1_body_force_a45ef89d203772354067e0e7c38306b7e}} 
+\index{particls::BodyForce$<$ dim $>$@{particls::BodyForce$<$ dim $>$}!````~BodyForce@{$\sim$BodyForce}}
+\index{````~BodyForce@{$\sim$BodyForce}!particls::BodyForce$<$ dim $>$@{particls::BodyForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$BodyForce()}{~BodyForce()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual \mbox{\hyperlink{classparticls_1_1_body_force}{particls\+::\+Body\+Force}}$<$ dim $>$\+::$\sim$\mbox{\hyperlink{classparticls_1_1_body_force}{Body\+Force}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classparticls_1_1_body_force_a116cafaf212d5ae185915fe4ac44caa5}\label{classparticls_1_1_body_force_a116cafaf212d5ae185915fe4ac44caa5}} 
+\index{particls::BodyForce$<$ dim $>$@{particls::BodyForce$<$ dim $>$}!BodyForce@{BodyForce}}
+\index{BodyForce@{BodyForce}!particls::BodyForce$<$ dim $>$@{particls::BodyForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{BodyForce()}{BodyForce()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_body_force}{particls\+::\+Body\+Force}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_body_force}{Body\+Force}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [default]}}
+
+
+
+Protected default constructor for serialize (needs to be called by children) 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_body_force_a2176c7787d0dad7523f90a8feeca91fd}\label{classparticls_1_1_body_force_a2176c7787d0dad7523f90a8feeca91fd}} 
+\index{particls::BodyForce$<$ dim $>$@{particls::BodyForce$<$ dim $>$}!Create@{Create}}
+\index{Create@{Create}!particls::BodyForce$<$ dim $>$@{particls::BodyForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+static std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_body_force}{Body\+Force}}$<$dim$>$ $>$ \mbox{\hyperlink{classparticls_1_1_body_force}{particls\+::\+Body\+Force}}$<$ dim $>$\+::Create (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$$>$ const \&}]{particle,  }\item[{Y\+A\+M\+L\+::\+Node const \&}]{options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+A function to create body forces from options specified in a Y\+A\+M\+L\+::\+Node object. The options\mbox{[}\char`\"{}\+Type\char`\"{}\mbox{]} should contain a string specifying the type of body force to construct. For example, options\mbox{[}\char`\"{}\+Type\char`\"{}\mbox{]} might be \char`\"{}\+Gravitational\+Force\char`\"{}. The other entries in the Y\+A\+M\+L\+::\+Node are used to specify options for specific body force types. For more information, look at the documentation for children of this class. \mbox{\Hypertarget{classparticls_1_1_body_force_abff9be649448dfeafa555f11292317e1}\label{classparticls_1_1_body_force_abff9be649448dfeafa555f11292317e1}} 
+\index{particls::BodyForce$<$ dim $>$@{particls::BodyForce$<$ dim $>$}!GetBodyForceMap@{GetBodyForceMap}}
+\index{GetBodyForceMap@{GetBodyForceMap}!particls::BodyForce$<$ dim $>$@{particls::BodyForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{GetBodyForceMap()}{GetBodyForceMap()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+static std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_body_force_a600e41821f5c7fcd34c75a2e4f638be2}{Body\+Force\+Map}}$>$ \mbox{\hyperlink{classparticls_1_1_body_force}{particls\+::\+Body\+Force}}$<$ dim $>$\+::Get\+Body\+Force\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classparticls_1_1_body_force_a24283ccec501a9df4a0d7b22c639f8d1}\label{classparticls_1_1_body_force_a24283ccec501a9df4a0d7b22c639f8d1}} 
+\index{particls::BodyForce$<$ dim $>$@{particls::BodyForce$<$ dim $>$}!serialize@{serialize}}
+\index{serialize@{serialize}!particls::BodyForce$<$ dim $>$@{particls::BodyForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+template$<$class Archive $>$ \\
+void \mbox{\hyperlink{classparticls_1_1_body_force}{particls\+::\+Body\+Force}}$<$ dim $>$\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 56 of file Body\+Force.\+hpp.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_body_force_ab2f44cbb59a08132f4c843e5225bba0e}\label{classparticls_1_1_body_force_ab2f44cbb59a08132f4c843e5225bba0e}} 
+\index{particls::BodyForce$<$ dim $>$@{particls::BodyForce$<$ dim $>$}!cereal::access@{cereal::access}}
+\index{cereal::access@{cereal::access}!particls::BodyForce$<$ dim $>$@{particls::BodyForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{cereal::access}{cereal::access}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+friend class cereal\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 53 of file Body\+Force.\+hpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticls_1_1_body_force_ad2e61420ecbcd5a1f2f18d92667af2ae}\label{classparticls_1_1_body_force_ad2e61420ecbcd5a1f2f18d92667af2ae}} 
+\index{particls::BodyForce$<$ dim $>$@{particls::BodyForce$<$ dim $>$}!particle@{particle}}
+\index{particle@{particle}!particls::BodyForce$<$ dim $>$@{particls::BodyForce$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{particle}{particle}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::weak\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$dim$>$ $>$ \mbox{\hyperlink{classparticls_1_1_body_force}{particls\+::\+Body\+Force}}$<$ dim $>$\+::particle\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The particle on which the force is acting. 
+
+
+
+Definition at line 46 of file Body\+Force.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_body_force_8hpp}{Body\+Force.\+hpp}}\end{DoxyCompactItemize}

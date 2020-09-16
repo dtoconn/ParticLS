@@ -1,0 +1,133 @@
+\hypertarget{structparticls_1_1_state_sizes}{}\doxysection{particls\+::State\+Sizes$<$ dim $>$ Struct Template Reference}
+\label{structparticls_1_1_state_sizes}\index{particls::StateSizes$<$ dim $>$@{particls::StateSizes$<$ dim $>$}}
+
+
+{\ttfamily \#include $<$State\+Sizes.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{structparticls_1_1_state_sizes_acf616641fed237d0c55d1a092053e879ab7089126dbc5fa037979183c3448443c}{dynamics}}
+ \}
+\item 
+enum \{ \mbox{\hyperlink{structparticls_1_1_state_sizes_a6e16e14264de0937b764dbcc2b1c3957a6401e1faf9fb80fd396fe806e8ae847f}{position}}
+ \}
+\begin{DoxyCompactList}\small\item\em $<$-\/ Total number of dynamic variables (6 or 13) \end{DoxyCompactList}\item 
+enum \{ \mbox{\hyperlink{structparticls_1_1_state_sizes_a848ab825b3a1295a1b3973b748df2d54a10a55bbeb8ac4ade6da48039fcb4911c}{velocity}}
+ \}
+\begin{DoxyCompactList}\small\item\em $<$-\/ Size of the position (dim) \end{DoxyCompactList}\item 
+enum \{ \mbox{\hyperlink{structparticls_1_1_state_sizes_a690662cedad55b5766fce3242142d82eab5cfb5c867be1d74699318f3aa574dcf}{orientation}}
+ \}
+\begin{DoxyCompactList}\small\item\em $<$-\/ Size of the velocity (dim) \end{DoxyCompactList}\item 
+enum \{ \mbox{\hyperlink{structparticls_1_1_state_sizes_ac55c60dbb26050cad9b748622eb8b2ebad5bff1898991a4ceacbdd0155b2304e1}{moment}}
+ \}
+\begin{DoxyCompactList}\small\item\em $<$-\/ Size of the orientation (scalar or quaternion) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+struct particls\+::\+State\+Sizes$<$ dim $>$}
+
+
+
+Definition at line 7 of file State\+Sizes.\+hpp.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{structparticls_1_1_state_sizes_acf616641fed237d0c55d1a092053e879}\label{structparticls_1_1_state_sizes_acf616641fed237d0c55d1a092053e879}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+anonymous enum}
+
+The orientation and velocity sizes are not always equal to one. Here we define some enums that are specialized on the template parameter to hold the correct size. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dynamics@{dynamics}!particls::StateSizes$<$ dim $>$@{particls::StateSizes$<$ dim $>$}}\index{particls::StateSizes$<$ dim $>$@{particls::StateSizes$<$ dim $>$}!dynamics@{dynamics}}}\mbox{\Hypertarget{structparticls_1_1_state_sizes_acf616641fed237d0c55d1a092053e879ab7089126dbc5fa037979183c3448443c}\label{structparticls_1_1_state_sizes_acf616641fed237d0c55d1a092053e879ab7089126dbc5fa037979183c3448443c}} 
+dynamics&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 13 of file State\+Sizes.\+hpp.
+
+\mbox{\Hypertarget{structparticls_1_1_state_sizes_a6e16e14264de0937b764dbcc2b1c3957}\label{structparticls_1_1_state_sizes_a6e16e14264de0937b764dbcc2b1c3957}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+anonymous enum}
+
+
+
+$<$-\/ Total number of dynamic variables (6 or 13) 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{position@{position}!particls::StateSizes$<$ dim $>$@{particls::StateSizes$<$ dim $>$}}\index{particls::StateSizes$<$ dim $>$@{particls::StateSizes$<$ dim $>$}!position@{position}}}\mbox{\Hypertarget{structparticls_1_1_state_sizes_a6e16e14264de0937b764dbcc2b1c3957a6401e1faf9fb80fd396fe806e8ae847f}\label{structparticls_1_1_state_sizes_a6e16e14264de0937b764dbcc2b1c3957a6401e1faf9fb80fd396fe806e8ae847f}} 
+position&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 14 of file State\+Sizes.\+hpp.
+
+\mbox{\Hypertarget{structparticls_1_1_state_sizes_a848ab825b3a1295a1b3973b748df2d54}\label{structparticls_1_1_state_sizes_a848ab825b3a1295a1b3973b748df2d54}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+anonymous enum}
+
+
+
+$<$-\/ Size of the position (dim) 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{velocity@{velocity}!particls::StateSizes$<$ dim $>$@{particls::StateSizes$<$ dim $>$}}\index{particls::StateSizes$<$ dim $>$@{particls::StateSizes$<$ dim $>$}!velocity@{velocity}}}\mbox{\Hypertarget{structparticls_1_1_state_sizes_a848ab825b3a1295a1b3973b748df2d54a10a55bbeb8ac4ade6da48039fcb4911c}\label{structparticls_1_1_state_sizes_a848ab825b3a1295a1b3973b748df2d54a10a55bbeb8ac4ade6da48039fcb4911c}} 
+velocity&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 15 of file State\+Sizes.\+hpp.
+
+\mbox{\Hypertarget{structparticls_1_1_state_sizes_a690662cedad55b5766fce3242142d82e}\label{structparticls_1_1_state_sizes_a690662cedad55b5766fce3242142d82e}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+anonymous enum}
+
+
+
+$<$-\/ Size of the velocity (dim) 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{orientation@{orientation}!particls::StateSizes$<$ dim $>$@{particls::StateSizes$<$ dim $>$}}\index{particls::StateSizes$<$ dim $>$@{particls::StateSizes$<$ dim $>$}!orientation@{orientation}}}\mbox{\Hypertarget{structparticls_1_1_state_sizes_a690662cedad55b5766fce3242142d82eab5cfb5c867be1d74699318f3aa574dcf}\label{structparticls_1_1_state_sizes_a690662cedad55b5766fce3242142d82eab5cfb5c867be1d74699318f3aa574dcf}} 
+orientation&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 16 of file State\+Sizes.\+hpp.
+
+\mbox{\Hypertarget{structparticls_1_1_state_sizes_ac55c60dbb26050cad9b748622eb8b2eb}\label{structparticls_1_1_state_sizes_ac55c60dbb26050cad9b748622eb8b2eb}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+anonymous enum}
+
+
+
+$<$-\/ Size of the orientation (scalar or quaternion) 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{moment@{moment}!particls::StateSizes$<$ dim $>$@{particls::StateSizes$<$ dim $>$}}\index{particls::StateSizes$<$ dim $>$@{particls::StateSizes$<$ dim $>$}!moment@{moment}}}\mbox{\Hypertarget{structparticls_1_1_state_sizes_ac55c60dbb26050cad9b748622eb8b2ebad5bff1898991a4ceacbdd0155b2304e1}\label{structparticls_1_1_state_sizes_ac55c60dbb26050cad9b748622eb8b2ebad5bff1898991a4ceacbdd0155b2304e1}} 
+moment&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 17 of file State\+Sizes.\+hpp.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_state_sizes_8hpp}{State\+Sizes.\+hpp}}\end{DoxyCompactItemize}

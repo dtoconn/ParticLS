@@ -1,0 +1,249 @@
+\hypertarget{classparticls_1_1_axis_aligned_grid}{}\doxysection{particls\+::Axis\+Aligned\+Grid$<$ dim $>$ Class Template Reference}
+\label{classparticls_1_1_axis_aligned_grid}\index{particls::AxisAlignedGrid$<$ dim $>$@{particls::AxisAlignedGrid$<$ dim $>$}}
+
+
+An axis-\/aligned search grid for finding particle pairs.  
+
+
+
+
+{\ttfamily \#include $<$Axis\+Aligned\+Grid.\+hpp$>$}
+
+
+
+Inheritance diagram for particls\+::Axis\+Aligned\+Grid$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{classparticls_1_1_axis_aligned_grid__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for particls\+::Axis\+Aligned\+Grid$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{classparticls_1_1_axis_aligned_grid__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_axis_aligned_grid_a0e2166361c35055a8ba7b08348a6cfff}{Axis\+Aligned\+Grid}} (Y\+A\+M\+L\+::\+Node const \&config\+Node)
+\item 
+virtual \mbox{\hyperlink{classparticls_1_1_axis_aligned_grid_a3872f6847d7c34056f95b14d3e22ce3f}{$\sim$\+Axis\+Aligned\+Grid}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_axis_aligned_grid_a97cb43e1c73a27782a2102e8b69ac1e3}{Compute}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$$>$$>$ const \&particles) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classparticls_1_1_axis_aligned_grid_a2b11c168feb8c17c27b088c58e2e466d}{Initialize\+Grid\+Particle\+List}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$$>$$>$ const \&particles)
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classparticls_1_1_axis_aligned_grid_a78a57fb027990e52d6602322b8be0c5b}{Calculate\+Grid\+Hash\+Bounds}} (Eigen\+::\+Matrix$<$ double, 2, dim $>$ const \&bounds)
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classparticls_1_1_axis_aligned_grid_ac14d1ffe6d953f765f594c4dfa047ccb}{Find\+Neighbor\+Cells}} (int const \&hash)
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ \mbox{\hyperlink{classparticls_1_1_axis_aligned_grid_a351d8d5ef99e5d9639dace67448f7b6f}{Find\+Neighbor\+Particles}} (int const \&hash)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_regular_grid}{Regular\+Grid}}$<$ dim $>$ $>$ \mbox{\hyperlink{classparticls_1_1_axis_aligned_grid_afa76f9322f36c967d1a3324f63e051de}{grid}}
+\item 
+Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_axis_aligned_grid_a233e78bb9ba0a85a1caa3b93c0fd8351}{dims}}
+\item 
+Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_axis_aligned_grid_aaaa1358cda9b64d36ccc3c0c22830a65}{origin}}
+\item 
+Eigen\+::\+Matrix$<$ unsigned int, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_axis_aligned_grid_a3d51ed3235b121624db67cded9fa7284}{n\+Cells}}
+\item 
+Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_axis_aligned_grid_afe191b1547699e26df97e66b3cae963e}{cell\+Dims}}
+\item 
+double \mbox{\hyperlink{classparticls_1_1_axis_aligned_grid_ae807e4befe5629d098bf26345b775e8c}{threshold}}
+\item 
+std\+::vector$<$ std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ $>$ \mbox{\hyperlink{classparticls_1_1_axis_aligned_grid_a2ac320833d93b68ba64cc15649413fc2}{grid\+Particle\+List}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+class particls\+::\+Axis\+Aligned\+Grid$<$ dim $>$}
+
+An axis-\/aligned search grid for finding particle pairs. 
+
+Definition at line 10 of file Axis\+Aligned\+Grid.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_axis_aligned_grid_a0e2166361c35055a8ba7b08348a6cfff}\label{classparticls_1_1_axis_aligned_grid_a0e2166361c35055a8ba7b08348a6cfff}} 
+\index{particls::AxisAlignedGrid$<$ dim $>$@{particls::AxisAlignedGrid$<$ dim $>$}!AxisAlignedGrid@{AxisAlignedGrid}}
+\index{AxisAlignedGrid@{AxisAlignedGrid}!particls::AxisAlignedGrid$<$ dim $>$@{particls::AxisAlignedGrid$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{AxisAlignedGrid()}{AxisAlignedGrid()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_axis_aligned_grid}{particls\+::\+Axis\+Aligned\+Grid}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_axis_aligned_grid}{Axis\+Aligned\+Grid}} (\begin{DoxyParamCaption}\item[{Y\+A\+M\+L\+::\+Node const \&}]{config\+Node }\end{DoxyParamCaption})}
+
+Instantiates and configures the \mbox{\hyperlink{classparticls_1_1_axis_aligned_grid}{Axis\+Aligned\+Grid}} searcher object using a Y\+A\+ML Node. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em config\+Node} & The configuration Y\+A\+ML node \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_axis_aligned_grid_a3872f6847d7c34056f95b14d3e22ce3f}\label{classparticls_1_1_axis_aligned_grid_a3872f6847d7c34056f95b14d3e22ce3f}} 
+\index{particls::AxisAlignedGrid$<$ dim $>$@{particls::AxisAlignedGrid$<$ dim $>$}!````~AxisAlignedGrid@{$\sim$AxisAlignedGrid}}
+\index{````~AxisAlignedGrid@{$\sim$AxisAlignedGrid}!particls::AxisAlignedGrid$<$ dim $>$@{particls::AxisAlignedGrid$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$AxisAlignedGrid()}{~AxisAlignedGrid()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual \mbox{\hyperlink{classparticls_1_1_axis_aligned_grid}{particls\+::\+Axis\+Aligned\+Grid}}$<$ dim $>$\+::$\sim$\mbox{\hyperlink{classparticls_1_1_axis_aligned_grid}{Axis\+Aligned\+Grid}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_axis_aligned_grid_a78a57fb027990e52d6602322b8be0c5b}\label{classparticls_1_1_axis_aligned_grid_a78a57fb027990e52d6602322b8be0c5b}} 
+\index{particls::AxisAlignedGrid$<$ dim $>$@{particls::AxisAlignedGrid$<$ dim $>$}!CalculateGridHashBounds@{CalculateGridHashBounds}}
+\index{CalculateGridHashBounds@{CalculateGridHashBounds}!particls::AxisAlignedGrid$<$ dim $>$@{particls::AxisAlignedGrid$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{CalculateGridHashBounds()}{CalculateGridHashBounds()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$int$>$ \mbox{\hyperlink{classparticls_1_1_axis_aligned_grid}{particls\+::\+Axis\+Aligned\+Grid}}$<$ dim $>$\+::Calculate\+Grid\+Hash\+Bounds (\begin{DoxyParamCaption}\item[{Eigen\+::\+Matrix$<$ double, 2, dim $>$ const \&}]{bounds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Returns grid hashes that intersect particle bounding box 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em bbox} & Bounding box of particle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_axis_aligned_grid_a97cb43e1c73a27782a2102e8b69ac1e3}\label{classparticls_1_1_axis_aligned_grid_a97cb43e1c73a27782a2102e8b69ac1e3}} 
+\index{particls::AxisAlignedGrid$<$ dim $>$@{particls::AxisAlignedGrid$<$ dim $>$}!Compute@{Compute}}
+\index{Compute@{Compute}!particls::AxisAlignedGrid$<$ dim $>$@{particls::AxisAlignedGrid$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Compute()}{Compute()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_axis_aligned_grid}{particls\+::\+Axis\+Aligned\+Grid}}$<$ dim $>$\+::Compute (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$$>$$>$ const \&}]{particles }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Computes the vectors of neighboring particles for each particle 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em particles} & The vector of particles to search through \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_axis_aligned_grid_ac14d1ffe6d953f765f594c4dfa047ccb}\label{classparticls_1_1_axis_aligned_grid_ac14d1ffe6d953f765f594c4dfa047ccb}} 
+\index{particls::AxisAlignedGrid$<$ dim $>$@{particls::AxisAlignedGrid$<$ dim $>$}!FindNeighborCells@{FindNeighborCells}}
+\index{FindNeighborCells@{FindNeighborCells}!particls::AxisAlignedGrid$<$ dim $>$@{particls::AxisAlignedGrid$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{FindNeighborCells()}{FindNeighborCells()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$int$>$ \mbox{\hyperlink{classparticls_1_1_axis_aligned_grid}{particls\+::\+Axis\+Aligned\+Grid}}$<$ dim $>$\+::Find\+Neighbor\+Cells (\begin{DoxyParamCaption}\item[{int const \&}]{hash }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Finds indices of grid cells that neighbor a given grid cell 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em hash} & Grid cell index \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_axis_aligned_grid_a351d8d5ef99e5d9639dace67448f7b6f}\label{classparticls_1_1_axis_aligned_grid_a351d8d5ef99e5d9639dace67448f7b6f}} 
+\index{particls::AxisAlignedGrid$<$ dim $>$@{particls::AxisAlignedGrid$<$ dim $>$}!FindNeighborParticles@{FindNeighborParticles}}
+\index{FindNeighborParticles@{FindNeighborParticles}!particls::AxisAlignedGrid$<$ dim $>$@{particls::AxisAlignedGrid$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{FindNeighborParticles()}{FindNeighborParticles()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$dim$>$ $>$ $>$ \mbox{\hyperlink{classparticls_1_1_axis_aligned_grid}{particls\+::\+Axis\+Aligned\+Grid}}$<$ dim $>$\+::Find\+Neighbor\+Particles (\begin{DoxyParamCaption}\item[{int const \&}]{hash }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Finds particles that neighbor a given grid cell 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em hash} & Grid cell index \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_axis_aligned_grid_a2b11c168feb8c17c27b088c58e2e466d}\label{classparticls_1_1_axis_aligned_grid_a2b11c168feb8c17c27b088c58e2e466d}} 
+\index{particls::AxisAlignedGrid$<$ dim $>$@{particls::AxisAlignedGrid$<$ dim $>$}!InitializeGridParticleList@{InitializeGridParticleList}}
+\index{InitializeGridParticleList@{InitializeGridParticleList}!particls::AxisAlignedGrid$<$ dim $>$@{particls::AxisAlignedGrid$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{InitializeGridParticleList()}{InitializeGridParticleList()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_axis_aligned_grid}{particls\+::\+Axis\+Aligned\+Grid}}$<$ dim $>$\+::Initialize\+Grid\+Particle\+List (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$$>$$>$ const \&}]{particles }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Initializes the grid\+Particle\+List member, which is a vector of vectors that contain the particles within each search grid cell. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em particles} & The vector of particles to search through \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticls_1_1_axis_aligned_grid_afe191b1547699e26df97e66b3cae963e}\label{classparticls_1_1_axis_aligned_grid_afe191b1547699e26df97e66b3cae963e}} 
+\index{particls::AxisAlignedGrid$<$ dim $>$@{particls::AxisAlignedGrid$<$ dim $>$}!cellDims@{cellDims}}
+\index{cellDims@{cellDims}!particls::AxisAlignedGrid$<$ dim $>$@{particls::AxisAlignedGrid$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{cellDims}{cellDims}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, dim, 1$>$ \mbox{\hyperlink{classparticls_1_1_axis_aligned_grid}{particls\+::\+Axis\+Aligned\+Grid}}$<$ dim $>$\+::cell\+Dims\hspace{0.3cm}{\ttfamily [protected]}}
+
+Dimensions of one grid cell 
+
+Definition at line 39 of file Axis\+Aligned\+Grid.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_axis_aligned_grid_a233e78bb9ba0a85a1caa3b93c0fd8351}\label{classparticls_1_1_axis_aligned_grid_a233e78bb9ba0a85a1caa3b93c0fd8351}} 
+\index{particls::AxisAlignedGrid$<$ dim $>$@{particls::AxisAlignedGrid$<$ dim $>$}!dims@{dims}}
+\index{dims@{dims}!particls::AxisAlignedGrid$<$ dim $>$@{particls::AxisAlignedGrid$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{dims}{dims}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, dim, 1$>$ \mbox{\hyperlink{classparticls_1_1_axis_aligned_grid}{particls\+::\+Axis\+Aligned\+Grid}}$<$ dim $>$\+::dims\hspace{0.3cm}{\ttfamily [protected]}}
+
+Dimensions of full search grid 
+
+Definition at line 33 of file Axis\+Aligned\+Grid.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_axis_aligned_grid_afa76f9322f36c967d1a3324f63e051de}\label{classparticls_1_1_axis_aligned_grid_afa76f9322f36c967d1a3324f63e051de}} 
+\index{particls::AxisAlignedGrid$<$ dim $>$@{particls::AxisAlignedGrid$<$ dim $>$}!grid@{grid}}
+\index{grid@{grid}!particls::AxisAlignedGrid$<$ dim $>$@{particls::AxisAlignedGrid$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{grid}{grid}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_regular_grid}{Regular\+Grid}}$<$dim$>$ $>$ \mbox{\hyperlink{classparticls_1_1_axis_aligned_grid}{particls\+::\+Axis\+Aligned\+Grid}}$<$ dim $>$\+::grid\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\hyperlink{classparticls_1_1_regular_grid}{Regular\+Grid}} 
+
+Definition at line 31 of file Axis\+Aligned\+Grid.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_axis_aligned_grid_a2ac320833d93b68ba64cc15649413fc2}\label{classparticls_1_1_axis_aligned_grid_a2ac320833d93b68ba64cc15649413fc2}} 
+\index{particls::AxisAlignedGrid$<$ dim $>$@{particls::AxisAlignedGrid$<$ dim $>$}!gridParticleList@{gridParticleList}}
+\index{gridParticleList@{gridParticleList}!particls::AxisAlignedGrid$<$ dim $>$@{particls::AxisAlignedGrid$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{gridParticleList}{gridParticleList}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$dim$>$ $>$ $>$ $>$ \mbox{\hyperlink{classparticls_1_1_axis_aligned_grid}{particls\+::\+Axis\+Aligned\+Grid}}$<$ dim $>$\+::grid\+Particle\+List\hspace{0.3cm}{\ttfamily [protected]}}
+
+Vector of particles in each grid cell 
+
+Definition at line 43 of file Axis\+Aligned\+Grid.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_axis_aligned_grid_a3d51ed3235b121624db67cded9fa7284}\label{classparticls_1_1_axis_aligned_grid_a3d51ed3235b121624db67cded9fa7284}} 
+\index{particls::AxisAlignedGrid$<$ dim $>$@{particls::AxisAlignedGrid$<$ dim $>$}!nCells@{nCells}}
+\index{nCells@{nCells}!particls::AxisAlignedGrid$<$ dim $>$@{particls::AxisAlignedGrid$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{nCells}{nCells}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$unsigned int, dim, 1$>$ \mbox{\hyperlink{classparticls_1_1_axis_aligned_grid}{particls\+::\+Axis\+Aligned\+Grid}}$<$ dim $>$\+::n\+Cells\hspace{0.3cm}{\ttfamily [protected]}}
+
+Number of grid cells in each dimension 
+
+Definition at line 37 of file Axis\+Aligned\+Grid.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_axis_aligned_grid_aaaa1358cda9b64d36ccc3c0c22830a65}\label{classparticls_1_1_axis_aligned_grid_aaaa1358cda9b64d36ccc3c0c22830a65}} 
+\index{particls::AxisAlignedGrid$<$ dim $>$@{particls::AxisAlignedGrid$<$ dim $>$}!origin@{origin}}
+\index{origin@{origin}!particls::AxisAlignedGrid$<$ dim $>$@{particls::AxisAlignedGrid$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{origin}{origin}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+Eigen\+::\+Matrix$<$double, dim, 1$>$ \mbox{\hyperlink{classparticls_1_1_axis_aligned_grid}{particls\+::\+Axis\+Aligned\+Grid}}$<$ dim $>$\+::origin\hspace{0.3cm}{\ttfamily [protected]}}
+
+Search grid origin 
+
+Definition at line 35 of file Axis\+Aligned\+Grid.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_axis_aligned_grid_ae807e4befe5629d098bf26345b775e8c}\label{classparticls_1_1_axis_aligned_grid_ae807e4befe5629d098bf26345b775e8c}} 
+\index{particls::AxisAlignedGrid$<$ dim $>$@{particls::AxisAlignedGrid$<$ dim $>$}!threshold@{threshold}}
+\index{threshold@{threshold}!particls::AxisAlignedGrid$<$ dim $>$@{particls::AxisAlignedGrid$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{threshold}{threshold}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_axis_aligned_grid}{particls\+::\+Axis\+Aligned\+Grid}}$<$ dim $>$\+::threshold\hspace{0.3cm}{\ttfamily [protected]}}
+
+Search threshold 
+
+Definition at line 41 of file Axis\+Aligned\+Grid.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_axis_aligned_grid_8hpp}{Axis\+Aligned\+Grid.\+hpp}}\end{DoxyCompactItemize}

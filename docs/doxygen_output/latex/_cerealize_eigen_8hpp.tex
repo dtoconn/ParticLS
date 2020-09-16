@@ -1,0 +1,32 @@
+\hypertarget{_cerealize_eigen_8hpp}{}\doxysection{Cerealize\+Eigen.\+hpp File Reference}
+\label{_cerealize_eigen_8hpp}\index{CerealizeEigen.hpp@{CerealizeEigen.hpp}}
+{\ttfamily \#include $<$Eigen/\+Core$>$}\newline
+{\ttfamily \#include $<$cereal/cereal.\+hpp$>$}\newline
+Include dependency graph for Cerealize\+Eigen.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{_cerealize_eigen_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_cerealize_eigen_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecereal}{cereal}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive , class \+\_\+\+Scalar , int \+\_\+\+Rows, int \+\_\+\+Cols, int \+\_\+\+Options, int \+\_\+\+Max\+Rows, int \+\_\+\+Max\+Cols$>$ }\\std\+::enable\+\_\+if$<$ traits\+::is\+\_\+output\+\_\+serializable$<$ Binary\+Data$<$ \+\_\+\+Scalar $>$, Archive $>$\+::value, void $>$\+::type \mbox{\hyperlink{namespacecereal_a9b37c7750f57e12b011a47010400ef57}{cereal\+::save}} (Archive \&ar, Eigen\+::\+Matrix$<$ \+\_\+\+Scalar, \+\_\+\+Rows, \+\_\+\+Cols, \+\_\+\+Options, \+\_\+\+Max\+Rows, \+\_\+\+Max\+Cols $>$ const \&m)
+\item 
+{\footnotesize template$<$class Archive , class \+\_\+\+Scalar , int \+\_\+\+Rows, int \+\_\+\+Cols, int \+\_\+\+Options, int \+\_\+\+Max\+Rows, int \+\_\+\+Max\+Cols$>$ }\\std\+::enable\+\_\+if$<$ traits\+::is\+\_\+input\+\_\+serializable$<$ Binary\+Data$<$ \+\_\+\+Scalar $>$, Archive $>$\+::value, void $>$\+::type \mbox{\hyperlink{namespacecereal_ac44d4e9a847c7d07df57e3b7c4023f6e}{cereal\+::load}} (Archive \&ar, Eigen\+::\+Matrix$<$ \+\_\+\+Scalar, \+\_\+\+Rows, \+\_\+\+Cols, \+\_\+\+Options, \+\_\+\+Max\+Rows, \+\_\+\+Max\+Cols $>$ \&m)
+\end{DoxyCompactItemize}

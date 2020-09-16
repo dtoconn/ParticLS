@@ -1,0 +1,127 @@
+\hypertarget{classparticls_1_1_distribution}{}\doxysection{particls\+::Distribution Class Reference}
+\label{classparticls_1_1_distribution}\index{particls::Distribution@{particls::Distribution}}
+
+
+Base class for distributions.  
+
+
+
+
+{\ttfamily \#include $<$Distribution.\+hpp$>$}
+
+
+
+Inheritance diagram for particls\+::Distribution\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classparticls_1_1_distribution__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_distribution_ad8aceabb727f9c4453130526d5b85ae3}{Distribution}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classparticls_1_1_distribution_a99b324106c2c77409457a358f14bbf51}{Distribution}} (unsigned seed)
+\begin{DoxyCompactList}\small\item\em Construct distribution object with a random generator seed. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classparticls_1_1_distribution_ad7db7ae46eff35f5d05d388736786515}{$\sim$\+Distribution}} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static unsigned \mbox{\hyperlink{classparticls_1_1_distribution_adfede4168f1897ac73db964259fa8dd3}{Generate\+Seed}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::mt19937 \mbox{\hyperlink{classparticls_1_1_distribution_a66ba9e44aeb1b08d351d13ba6700fc0b}{rand\+\_\+gen}}
+\begin{DoxyCompactList}\small\item\em Specific random generator seed. \end{DoxyCompactList}\item 
+std\+::normal\+\_\+distribution$<$ double $>$ \mbox{\hyperlink{classparticls_1_1_distribution_a4160139426f8a5c40e7be4f8765095d5}{normal\+\_\+dist}}
+\begin{DoxyCompactList}\small\item\em Standard normal variable used to evaluate samples in child classes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for distributions. 
+
+Definition at line 9 of file Distribution.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_distribution_ad8aceabb727f9c4453130526d5b85ae3}\label{classparticls_1_1_distribution_ad8aceabb727f9c4453130526d5b85ae3}} 
+\index{particls::Distribution@{particls::Distribution}!Distribution@{Distribution}}
+\index{Distribution@{Distribution}!particls::Distribution@{particls::Distribution}}
+\doxysubsubsection{\texorpdfstring{Distribution()}{Distribution()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily particls\+::\+Distribution\+::\+Distribution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+\mbox{\Hypertarget{classparticls_1_1_distribution_a99b324106c2c77409457a358f14bbf51}\label{classparticls_1_1_distribution_a99b324106c2c77409457a358f14bbf51}} 
+\index{particls::Distribution@{particls::Distribution}!Distribution@{Distribution}}
+\index{Distribution@{Distribution}!particls::Distribution@{particls::Distribution}}
+\doxysubsubsection{\texorpdfstring{Distribution()}{Distribution()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily particls\+::\+Distribution\+::\+Distribution (\begin{DoxyParamCaption}\item[{unsigned}]{seed }\end{DoxyParamCaption})}
+
+
+
+Construct distribution object with a random generator seed. 
+
+\mbox{\Hypertarget{classparticls_1_1_distribution_ad7db7ae46eff35f5d05d388736786515}\label{classparticls_1_1_distribution_ad7db7ae46eff35f5d05d388736786515}} 
+\index{particls::Distribution@{particls::Distribution}!````~Distribution@{$\sim$Distribution}}
+\index{````~Distribution@{$\sim$Distribution}!particls::Distribution@{particls::Distribution}}
+\doxysubsubsection{\texorpdfstring{$\sim$Distribution()}{~Distribution()}}
+{\footnotesize\ttfamily virtual particls\+::\+Distribution\+::$\sim$\+Distribution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Default destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_distribution_adfede4168f1897ac73db964259fa8dd3}\label{classparticls_1_1_distribution_adfede4168f1897ac73db964259fa8dd3}} 
+\index{particls::Distribution@{particls::Distribution}!GenerateSeed@{GenerateSeed}}
+\index{GenerateSeed@{GenerateSeed}!particls::Distribution@{particls::Distribution}}
+\doxysubsubsection{\texorpdfstring{GenerateSeed()}{GenerateSeed()}}
+{\footnotesize\ttfamily static unsigned particls\+::\+Distribution\+::\+Generate\+Seed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Generate a uniformly-\/distributed random number to use as seed point for normal\+\_\+dist 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticls_1_1_distribution_a4160139426f8a5c40e7be4f8765095d5}\label{classparticls_1_1_distribution_a4160139426f8a5c40e7be4f8765095d5}} 
+\index{particls::Distribution@{particls::Distribution}!normal\_dist@{normal\_dist}}
+\index{normal\_dist@{normal\_dist}!particls::Distribution@{particls::Distribution}}
+\doxysubsubsection{\texorpdfstring{normal\_dist}{normal\_dist}}
+{\footnotesize\ttfamily std\+::normal\+\_\+distribution$<$double$>$ particls\+::\+Distribution\+::normal\+\_\+dist\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Standard normal variable used to evaluate samples in child classes. 
+
+
+
+Definition at line 31 of file Distribution.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_distribution_a66ba9e44aeb1b08d351d13ba6700fc0b}\label{classparticls_1_1_distribution_a66ba9e44aeb1b08d351d13ba6700fc0b}} 
+\index{particls::Distribution@{particls::Distribution}!rand\_gen@{rand\_gen}}
+\index{rand\_gen@{rand\_gen}!particls::Distribution@{particls::Distribution}}
+\doxysubsubsection{\texorpdfstring{rand\_gen}{rand\_gen}}
+{\footnotesize\ttfamily std\+::mt19937 particls\+::\+Distribution\+::rand\+\_\+gen\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Specific random generator seed. 
+
+
+
+Definition at line 28 of file Distribution.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_distribution_8hpp}{Distribution.\+hpp}}\end{DoxyCompactItemize}

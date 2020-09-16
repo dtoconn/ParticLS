@@ -1,0 +1,219 @@
+\hypertarget{classparticls_1_1_uniform_vector_field}{}\doxysection{particls\+::Uniform\+Vector\+Field$<$ dim $>$ Class Template Reference}
+\label{classparticls_1_1_uniform_vector_field}\index{particls::UniformVectorField$<$ dim $>$@{particls::UniformVectorField$<$ dim $>$}}
+
+
+{\ttfamily \#include $<$Uniform\+Vector\+Field.\+hpp$>$}
+
+
+
+Inheritance diagram for particls\+::Uniform\+Vector\+Field$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classparticls_1_1_uniform_vector_field__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for particls\+::Uniform\+Vector\+Field$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classparticls_1_1_uniform_vector_field__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_uniform_vector_field_ab62938bc4a1a2ecc6a9af1a955e48812}{Uniform\+Vector\+Field}} (std\+::vector$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&uniform\+\_\+vector, std\+::vector$<$ double $>$ const \&\mbox{\hyperlink{classparticls_1_1_uniform_vector_field_ade2c35e0944edec23887193938ea6df6}{data\+\_\+times}}, bool const \&\mbox{\hyperlink{classparticls_1_1_uniform_vector_field_a9624dbfb5574e29af39d87fdc26b7a3f}{interp\+\_\+time}}=false)
+\item 
+\mbox{\hyperlink{classparticls_1_1_uniform_vector_field_ae02bd7904bc71bbd1b30a9189594ff3b}{Uniform\+Vector\+Field}} (Y\+A\+M\+L\+::\+Node const \&node)
+\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_uniform_vector_field_a2b419095517d592d7b253eb133a54c9b}{Compute\+Vector}} (double const \&time, Eigen\+::\+Ref$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$$>$ const \&position) override
+\item 
+virtual \mbox{\hyperlink{classparticls_1_1_uniform_vector_field_ada6beef96e64485b9f41af0719d7752c}{$\sim$\+Uniform\+Vector\+Field}} ()=default
+\begin{DoxyCompactList}\small\item\em Use the default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_uniform_vector_field_aaed020cfbf612db2e8e2fc9f73e7fb7b}{Uniform\+Vector\+Field}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classparticls_1_1_uniform_vector_field_ad624b8d1f6c6230bc1449f61bb7d6cfd}{serialize}} (Archive \&ar)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classparticls_1_1_uniform_vector_field_ade2c35e0944edec23887193938ea6df6}{data\+\_\+times}}
+\begin{DoxyCompactList}\small\item\em Times corresponding to the different columns in field\+\_\+data. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classparticls_1_1_uniform_vector_field_a9624dbfb5574e29af39d87fdc26b7a3f}{interp\+\_\+time}}
+\begin{DoxyCompactList}\small\item\em Boolean determining if we want to linearly interpolate in time. \end{DoxyCompactList}\item 
+std\+::vector$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ \mbox{\hyperlink{classparticls_1_1_uniform_vector_field_a2b76434f125eee32bad4c9bcf119e77e}{field\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em Vectors containing vector components for each time \mbox{[}v\+\_\+x\+\_\+t0, v\+\_\+y\+\_\+t0, (v\+\_\+z\+\_\+t0),...v\+\_\+x\+\_\+tN, v\+\_\+y\+\_\+tN, (v\+\_\+z\+\_\+tN)\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classparticls_1_1_uniform_vector_field_ab2f44cbb59a08132f4c843e5225bba0e}{cereal\+::access}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+class particls\+::\+Uniform\+Vector\+Field$<$ dim $>$}
+
+
+
+Definition at line 13 of file Uniform\+Vector\+Field.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_uniform_vector_field_ab62938bc4a1a2ecc6a9af1a955e48812}\label{classparticls_1_1_uniform_vector_field_ab62938bc4a1a2ecc6a9af1a955e48812}} 
+\index{particls::UniformVectorField$<$ dim $>$@{particls::UniformVectorField$<$ dim $>$}!UniformVectorField@{UniformVectorField}}
+\index{UniformVectorField@{UniformVectorField}!particls::UniformVectorField$<$ dim $>$@{particls::UniformVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{UniformVectorField()}{UniformVectorField()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_uniform_vector_field}{particls\+::\+Uniform\+Vector\+Field}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_uniform_vector_field}{Uniform\+Vector\+Field}} (\begin{DoxyParamCaption}\item[{std\+::vector$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ const \&}]{uniform\+\_\+vector,  }\item[{std\+::vector$<$ double $>$ const \&}]{data\+\_\+times,  }\item[{bool const \&}]{interp\+\_\+time = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Constructor that takes a vector that defines the uniform vector throughout the field, and a vector of interpolation times 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uniform\+\_\+vector} & Vector of uniform field vectors where each index of the outer vector corresponds to each data\+\_\+times \\
+\hline
+\mbox{\texttt{ in}}  & {\em data\+\_\+times} & Times that dictate when the different vectors in field\+\_\+data should be used \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_uniform_vector_field_ae02bd7904bc71bbd1b30a9189594ff3b}\label{classparticls_1_1_uniform_vector_field_ae02bd7904bc71bbd1b30a9189594ff3b}} 
+\index{particls::UniformVectorField$<$ dim $>$@{particls::UniformVectorField$<$ dim $>$}!UniformVectorField@{UniformVectorField}}
+\index{UniformVectorField@{UniformVectorField}!particls::UniformVectorField$<$ dim $>$@{particls::UniformVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{UniformVectorField()}{UniformVectorField()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_uniform_vector_field}{particls\+::\+Uniform\+Vector\+Field}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_uniform_vector_field}{Uniform\+Vector\+Field}} (\begin{DoxyParamCaption}\item[{Y\+A\+M\+L\+::\+Node const \&}]{node }\end{DoxyParamCaption})}
+
+Constructor that takes a yaml node 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em yamlnode} & that contains the following\+: node\mbox{[}\char`\"{}\+Vector\char`\"{}\mbox{]} Vector containing uniform vector for full field node\mbox{[}\char`\"{}\+Interpolation\+Times\char`\"{}\mbox{]} Times that dictate when the different vectors in field\+\_\+data should be used \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_uniform_vector_field_ada6beef96e64485b9f41af0719d7752c}\label{classparticls_1_1_uniform_vector_field_ada6beef96e64485b9f41af0719d7752c}} 
+\index{particls::UniformVectorField$<$ dim $>$@{particls::UniformVectorField$<$ dim $>$}!````~UniformVectorField@{$\sim$UniformVectorField}}
+\index{````~UniformVectorField@{$\sim$UniformVectorField}!particls::UniformVectorField$<$ dim $>$@{particls::UniformVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$UniformVectorField()}{~UniformVectorField()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual \mbox{\hyperlink{classparticls_1_1_uniform_vector_field}{particls\+::\+Uniform\+Vector\+Field}}$<$ dim $>$\+::$\sim$\mbox{\hyperlink{classparticls_1_1_uniform_vector_field}{Uniform\+Vector\+Field}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Use the default destructor. 
+
+\mbox{\Hypertarget{classparticls_1_1_uniform_vector_field_aaed020cfbf612db2e8e2fc9f73e7fb7b}\label{classparticls_1_1_uniform_vector_field_aaed020cfbf612db2e8e2fc9f73e7fb7b}} 
+\index{particls::UniformVectorField$<$ dim $>$@{particls::UniformVectorField$<$ dim $>$}!UniformVectorField@{UniformVectorField}}
+\index{UniformVectorField@{UniformVectorField}!particls::UniformVectorField$<$ dim $>$@{particls::UniformVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{UniformVectorField()}{UniformVectorField()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_uniform_vector_field}{particls\+::\+Uniform\+Vector\+Field}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_uniform_vector_field}{Uniform\+Vector\+Field}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_uniform_vector_field_a2b419095517d592d7b253eb133a54c9b}\label{classparticls_1_1_uniform_vector_field_a2b419095517d592d7b253eb133a54c9b}} 
+\index{particls::UniformVectorField$<$ dim $>$@{particls::UniformVectorField$<$ dim $>$}!ComputeVector@{ComputeVector}}
+\index{ComputeVector@{ComputeVector}!particls::UniformVectorField$<$ dim $>$@{particls::UniformVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeVector()}{ComputeVector()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_uniform_vector_field}{particls\+::\+Uniform\+Vector\+Field}}$<$ dim $>$\+::Compute\+Vector (\begin{DoxyParamCaption}\item[{double const \&}]{time,  }\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$$>$ const \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Compute the interpolated vector at the given position 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & Time at which we want the interpolated vector \\
+\hline
+\mbox{\texttt{ in}}  & {\em position} & Position where we want the interpolated vector \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_generic_vector_field_a20063f7381cef049f9dded081c6089b7}{particls\+::\+Generic\+Vector\+Field$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_uniform_vector_field_ad624b8d1f6c6230bc1449f61bb7d6cfd}\label{classparticls_1_1_uniform_vector_field_ad624b8d1f6c6230bc1449f61bb7d6cfd}} 
+\index{particls::UniformVectorField$<$ dim $>$@{particls::UniformVectorField$<$ dim $>$}!serialize@{serialize}}
+\index{serialize@{serialize}!particls::UniformVectorField$<$ dim $>$@{particls::UniformVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+template$<$class Archive $>$ \\
+void \mbox{\hyperlink{classparticls_1_1_uniform_vector_field}{particls\+::\+Uniform\+Vector\+Field}}$<$ dim $>$\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 60 of file Uniform\+Vector\+Field.\+hpp.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_uniform_vector_field_ab2f44cbb59a08132f4c843e5225bba0e}\label{classparticls_1_1_uniform_vector_field_ab2f44cbb59a08132f4c843e5225bba0e}} 
+\index{particls::UniformVectorField$<$ dim $>$@{particls::UniformVectorField$<$ dim $>$}!cereal::access@{cereal::access}}
+\index{cereal::access@{cereal::access}!particls::UniformVectorField$<$ dim $>$@{particls::UniformVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{cereal::access}{cereal::access}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+friend class cereal\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 57 of file Uniform\+Vector\+Field.\+hpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticls_1_1_uniform_vector_field_ade2c35e0944edec23887193938ea6df6}\label{classparticls_1_1_uniform_vector_field_ade2c35e0944edec23887193938ea6df6}} 
+\index{particls::UniformVectorField$<$ dim $>$@{particls::UniformVectorField$<$ dim $>$}!data\_times@{data\_times}}
+\index{data\_times@{data\_times}!particls::UniformVectorField$<$ dim $>$@{particls::UniformVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{data\_times}{data\_times}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$double$>$ \mbox{\hyperlink{classparticls_1_1_uniform_vector_field}{particls\+::\+Uniform\+Vector\+Field}}$<$ dim $>$\+::data\+\_\+times\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Times corresponding to the different columns in field\+\_\+data. 
+
+
+
+Definition at line 49 of file Uniform\+Vector\+Field.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_uniform_vector_field_a2b76434f125eee32bad4c9bcf119e77e}\label{classparticls_1_1_uniform_vector_field_a2b76434f125eee32bad4c9bcf119e77e}} 
+\index{particls::UniformVectorField$<$ dim $>$@{particls::UniformVectorField$<$ dim $>$}!field\_data@{field\_data}}
+\index{field\_data@{field\_data}!particls::UniformVectorField$<$ dim $>$@{particls::UniformVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{field\_data}{field\_data}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$Eigen\+::\+Matrix$<$double, dim, 1$>$ $>$ \mbox{\hyperlink{classparticls_1_1_uniform_vector_field}{particls\+::\+Uniform\+Vector\+Field}}$<$ dim $>$\+::field\+\_\+data\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Vectors containing vector components for each time \mbox{[}v\+\_\+x\+\_\+t0, v\+\_\+y\+\_\+t0, (v\+\_\+z\+\_\+t0),...v\+\_\+x\+\_\+tN, v\+\_\+y\+\_\+tN, (v\+\_\+z\+\_\+tN)\mbox{]}. 
+
+
+
+Definition at line 55 of file Uniform\+Vector\+Field.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_uniform_vector_field_a9624dbfb5574e29af39d87fdc26b7a3f}\label{classparticls_1_1_uniform_vector_field_a9624dbfb5574e29af39d87fdc26b7a3f}} 
+\index{particls::UniformVectorField$<$ dim $>$@{particls::UniformVectorField$<$ dim $>$}!interp\_time@{interp\_time}}
+\index{interp\_time@{interp\_time}!particls::UniformVectorField$<$ dim $>$@{particls::UniformVectorField$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{interp\_time}{interp\_time}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+bool \mbox{\hyperlink{classparticls_1_1_uniform_vector_field}{particls\+::\+Uniform\+Vector\+Field}}$<$ dim $>$\+::interp\+\_\+time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Boolean determining if we want to linearly interpolate in time. 
+
+
+
+Definition at line 52 of file Uniform\+Vector\+Field.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_uniform_vector_field_8hpp}{Uniform\+Vector\+Field.\+hpp}}\end{DoxyCompactItemize}

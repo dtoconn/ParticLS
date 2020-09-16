@@ -1,0 +1,196 @@
+\hypertarget{classparticls_1_1_hex_packer}{}\doxysection{particls\+::Hex\+Packer$<$ dim $>$ Class Template Reference}
+\label{classparticls_1_1_hex_packer}\index{particls::HexPacker$<$ dim $>$@{particls::HexPacker$<$ dim $>$}}
+
+
+{\ttfamily \#include $<$Hex\+Packer.\+hpp$>$}
+
+
+
+Inheritance diagram for particls\+::Hex\+Packer$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classparticls_1_1_hex_packer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for particls\+::Hex\+Packer$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classparticls_1_1_hex_packer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_hex_packer_a2e309bad25615981b6c4fc79f7444b99}{Hex\+Packer}} (Y\+A\+M\+L\+::\+Node const \&options)
+\item 
+\mbox{\hyperlink{classparticls_1_1_hex_packer_ad95ff52e4a6cb3909e49cde80d63b05a}{Hex\+Packer}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_elastic_state}{Elastic\+State}} $>$ const \&\mbox{\hyperlink{classparticls_1_1_hex_packer_a7b11634c9532234c1040754e9144107a}{material}}, Y\+A\+M\+L\+::\+Node const \&options)
+\item 
+virtual \mbox{\hyperlink{classparticls_1_1_hex_packer_a5e6aef7f18974b8211db3366a903e55f}{$\sim$\+Hex\+Packer}} ()=default
+\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_collection}{Collection}}$<$ dim $>$ $>$ \mbox{\hyperlink{classparticls_1_1_hex_packer_a62dc35d394a7b5e0dacd092935a9a212}{Generate}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const double \mbox{\hyperlink{classparticls_1_1_hex_packer_a010229ad89be1c161d93d2076e5c7393}{radius}}
+\begin{DoxyCompactList}\small\item\em The radius of each hypersphere. \end{DoxyCompactList}\item 
+const double \mbox{\hyperlink{classparticls_1_1_hex_packer_a323c69750d169afe4ddc4b4d0f415f3c}{density}}
+\begin{DoxyCompactList}\small\item\em The density of each hypersphere. \end{DoxyCompactList}\item 
+const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_hex_packer_a0d6ebc9a31cb51515099c3dc6743e10b}{origin}}
+\begin{DoxyCompactList}\small\item\em The bottom left (2D) or bottom left front (3D) corner of the domain. \end{DoxyCompactList}\item 
+const Eigen\+::\+Matrix$<$ double, dim, 1 $>$ \mbox{\hyperlink{classparticls_1_1_hex_packer_ae8575f087fbf67cffb150a050a2b20da}{length}}
+\begin{DoxyCompactList}\small\item\em The length of the domain in each direction. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_elastic_state}{Elastic\+State}} $>$ \mbox{\hyperlink{classparticls_1_1_hex_packer_a7b11634c9532234c1040754e9144107a}{material}} = nullptr
+\begin{DoxyCompactList}\small\item\em The material properies of the created particles (optional) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+class particls\+::\+Hex\+Packer$<$ dim $>$}
+
+
+
+Definition at line 10 of file Hex\+Packer.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_hex_packer_a2e309bad25615981b6c4fc79f7444b99}\label{classparticls_1_1_hex_packer_a2e309bad25615981b6c4fc79f7444b99}} 
+\index{particls::HexPacker$<$ dim $>$@{particls::HexPacker$<$ dim $>$}!HexPacker@{HexPacker}}
+\index{HexPacker@{HexPacker}!particls::HexPacker$<$ dim $>$@{particls::HexPacker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{HexPacker()}{HexPacker()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_hex_packer}{particls\+::\+Hex\+Packer}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_hex_packer}{Hex\+Packer}} (\begin{DoxyParamCaption}\item[{Y\+A\+M\+L\+::\+Node const \&}]{options }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em options} & Options for the hex packer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_hex_packer_ad95ff52e4a6cb3909e49cde80d63b05a}\label{classparticls_1_1_hex_packer_ad95ff52e4a6cb3909e49cde80d63b05a}} 
+\index{particls::HexPacker$<$ dim $>$@{particls::HexPacker$<$ dim $>$}!HexPacker@{HexPacker}}
+\index{HexPacker@{HexPacker}!particls::HexPacker$<$ dim $>$@{particls::HexPacker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{HexPacker()}{HexPacker()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_hex_packer}{particls\+::\+Hex\+Packer}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_hex_packer}{Hex\+Packer}} (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_elastic_state}{Elastic\+State}} $>$ const \&}]{material,  }\item[{Y\+A\+M\+L\+::\+Node const \&}]{options }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em material} & Add material properites to the rigid bodies \\
+\hline
+\mbox{\texttt{ in}}  & {\em options} & Options for the hex packer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_hex_packer_a5e6aef7f18974b8211db3366a903e55f}\label{classparticls_1_1_hex_packer_a5e6aef7f18974b8211db3366a903e55f}} 
+\index{particls::HexPacker$<$ dim $>$@{particls::HexPacker$<$ dim $>$}!````~HexPacker@{$\sim$HexPacker}}
+\index{````~HexPacker@{$\sim$HexPacker}!particls::HexPacker$<$ dim $>$@{particls::HexPacker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$HexPacker()}{~HexPacker()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual \mbox{\hyperlink{classparticls_1_1_hex_packer}{particls\+::\+Hex\+Packer}}$<$ dim $>$\+::$\sim$\mbox{\hyperlink{classparticls_1_1_hex_packer}{Hex\+Packer}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_hex_packer_a62dc35d394a7b5e0dacd092935a9a212}\label{classparticls_1_1_hex_packer_a62dc35d394a7b5e0dacd092935a9a212}} 
+\index{particls::HexPacker$<$ dim $>$@{particls::HexPacker$<$ dim $>$}!Generate@{Generate}}
+\index{Generate@{Generate}!particls::HexPacker$<$ dim $>$@{particls::HexPacker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Generate()}{Generate()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_collection}{Collection}}$<$dim$>$ $>$ \mbox{\hyperlink{classparticls_1_1_hex_packer}{particls\+::\+Hex\+Packer}}$<$ dim $>$\+::Generate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The new collection 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_collection_generator_aa0c1170e482b4765bc7937e9fc73e401}{particls\+::\+Collection\+Generator$<$ dim $>$}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticls_1_1_hex_packer_a323c69750d169afe4ddc4b4d0f415f3c}\label{classparticls_1_1_hex_packer_a323c69750d169afe4ddc4b4d0f415f3c}} 
+\index{particls::HexPacker$<$ dim $>$@{particls::HexPacker$<$ dim $>$}!density@{density}}
+\index{density@{density}!particls::HexPacker$<$ dim $>$@{particls::HexPacker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{density}{density}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+const double \mbox{\hyperlink{classparticls_1_1_hex_packer}{particls\+::\+Hex\+Packer}}$<$ dim $>$\+::density\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The density of each hypersphere. 
+
+
+
+Definition at line 36 of file Hex\+Packer.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_hex_packer_ae8575f087fbf67cffb150a050a2b20da}\label{classparticls_1_1_hex_packer_ae8575f087fbf67cffb150a050a2b20da}} 
+\index{particls::HexPacker$<$ dim $>$@{particls::HexPacker$<$ dim $>$}!length@{length}}
+\index{length@{length}!particls::HexPacker$<$ dim $>$@{particls::HexPacker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{length}{length}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+const Eigen\+::\+Matrix$<$double, dim, 1$>$ \mbox{\hyperlink{classparticls_1_1_hex_packer}{particls\+::\+Hex\+Packer}}$<$ dim $>$\+::length\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The length of the domain in each direction. 
+
+
+
+Definition at line 42 of file Hex\+Packer.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_hex_packer_a7b11634c9532234c1040754e9144107a}\label{classparticls_1_1_hex_packer_a7b11634c9532234c1040754e9144107a}} 
+\index{particls::HexPacker$<$ dim $>$@{particls::HexPacker$<$ dim $>$}!material@{material}}
+\index{material@{material}!particls::HexPacker$<$ dim $>$@{particls::HexPacker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{material}{material}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_elastic_state}{Elastic\+State}}$>$ \mbox{\hyperlink{classparticls_1_1_hex_packer}{particls\+::\+Hex\+Packer}}$<$ dim $>$\+::material = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The material properies of the created particles (optional) 
+
+
+
+Definition at line 45 of file Hex\+Packer.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_hex_packer_a0d6ebc9a31cb51515099c3dc6743e10b}\label{classparticls_1_1_hex_packer_a0d6ebc9a31cb51515099c3dc6743e10b}} 
+\index{particls::HexPacker$<$ dim $>$@{particls::HexPacker$<$ dim $>$}!origin@{origin}}
+\index{origin@{origin}!particls::HexPacker$<$ dim $>$@{particls::HexPacker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{origin}{origin}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+const Eigen\+::\+Matrix$<$double, dim, 1$>$ \mbox{\hyperlink{classparticls_1_1_hex_packer}{particls\+::\+Hex\+Packer}}$<$ dim $>$\+::origin\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The bottom left (2D) or bottom left front (3D) corner of the domain. 
+
+
+
+Definition at line 39 of file Hex\+Packer.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_hex_packer_a010229ad89be1c161d93d2076e5c7393}\label{classparticls_1_1_hex_packer_a010229ad89be1c161d93d2076e5c7393}} 
+\index{particls::HexPacker$<$ dim $>$@{particls::HexPacker$<$ dim $>$}!radius@{radius}}
+\index{radius@{radius}!particls::HexPacker$<$ dim $>$@{particls::HexPacker$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{radius}{radius}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+const double \mbox{\hyperlink{classparticls_1_1_hex_packer}{particls\+::\+Hex\+Packer}}$<$ dim $>$\+::radius\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The radius of each hypersphere. 
+
+
+
+Definition at line 33 of file Hex\+Packer.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_hex_packer_8hpp}{Hex\+Packer.\+hpp}}\end{DoxyCompactItemize}

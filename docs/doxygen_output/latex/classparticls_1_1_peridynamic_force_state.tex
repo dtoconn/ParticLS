@@ -1,0 +1,322 @@
+\hypertarget{classparticls_1_1_peridynamic_force_state}{}\doxysection{particls\+::Peridynamic\+Force\+State$<$ dim $>$ Class Template Reference}
+\label{classparticls_1_1_peridynamic_force_state}\index{particls::PeridynamicForceState$<$ dim $>$@{particls::PeridynamicForceState$<$ dim $>$}}
+
+
+A force state for a peridynamic model.  
+
+
+
+
+{\ttfamily \#include $<$Peridynamic\+Force\+State.\+hpp$>$}
+
+
+
+Inheritance diagram for particls\+::Peridynamic\+Force\+State$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{classparticls_1_1_peridynamic_force_state__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::function$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_peridynamic_force_state}{Peridynamic\+Force\+State}}$<$ dim $>$ $>$std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const  \&part1, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const  \&part2, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const  \&neighbors, Y\+A\+M\+L\+::\+Node const  \&options)$>$ \mbox{\hyperlink{classparticls_1_1_peridynamic_force_state_a8faf6a64253d0c8024162692b4bade9a}{Peridynamic\+Force\+State\+Constructor}}
+\item 
+typedef std\+::map$<$ std\+::string, \mbox{\hyperlink{classparticls_1_1_peridynamic_force_state_a8faf6a64253d0c8024162692b4bade9a}{Peridynamic\+Force\+State\+Constructor}} $>$ \mbox{\hyperlink{classparticls_1_1_peridynamic_force_state_a9dae8b6abc82e9202c975998025db292}{Peridynamic\+Force\+State\+Map}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_peridynamic_force_state_abb49a08d1c9cb9a48003ace9187a53ed}{Peridynamic\+Force\+State}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part1, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part2, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&neighbors, Y\+A\+M\+L\+::\+Node const \&options)
+\item 
+\mbox{\hyperlink{classparticls_1_1_peridynamic_force_state_a90c085cff8431d419d97f3ebb436e2c9}{Peridynamic\+Force\+State}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part1, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part2, Y\+A\+M\+L\+::\+Node const \&options)
+\item 
+virtual \mbox{\hyperlink{classparticls_1_1_peridynamic_force_state_ad6c3ddfc079cdb1ee43743eed3530960}{$\sim$\+Peridynamic\+Force\+State}} ()=default
+\item 
+bool \mbox{\hyperlink{classparticls_1_1_peridynamic_force_state_a8c3c992d4991e4ca389025164362adf4}{Force\+State}} (double const time, Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&x, Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&bond, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}} $>$ const \&parameter, Eigen\+::\+Ref$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ force\+State)
+\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}} $>$ \mbox{\hyperlink{classparticls_1_1_peridynamic_force_state_a34e15b2334de58b9521c4a609a6f560c}{Force\+Parameter}} (double const time) const
+\begin{DoxyCompactList}\small\item\em Compute the parameters for the force state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_peridynamic_force_state}{Peridynamic\+Force\+State}}$<$ dim $>$ $>$ \mbox{\hyperlink{classparticls_1_1_peridynamic_force_state_a63d1287b005fc3a9c565e004e1882d0b}{Create}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part1, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&part2, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&neighbors, Y\+A\+M\+L\+::\+Node const \&options)
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_peridynamic_force_state_a9dae8b6abc82e9202c975998025db292}{Peridynamic\+Force\+State\+Map}} $>$ \mbox{\hyperlink{classparticls_1_1_peridynamic_force_state_ad929d119471fc9b0699ebc85df89beff}{Get\+Peridynamic\+Force\+State\+Map}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classparticls_1_1_peridynamic_force_state_ac31d05a09eb59d9cafb0e9deb37ee6f7}{Force\+State\+Impl}} (double const time, Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&x, Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&bond, double const bond\+Length, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}} $>$ const \&parameter, Eigen\+::\+Ref$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ force\+State)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const double \mbox{\hyperlink{classparticls_1_1_peridynamic_force_state_a3cdde842157c2d088a953fdb34eb04d6}{horizon}}
+\begin{DoxyCompactList}\small\item\em Horizon for the model. \end{DoxyCompactList}\item 
+const double \mbox{\hyperlink{classparticls_1_1_peridynamic_force_state_a7d6a3777943c1abec1706d998233d60a}{initial\+Bond\+Length}}
+\begin{DoxyCompactList}\small\item\em The bond length in the original coordinate. \end{DoxyCompactList}\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ \mbox{\hyperlink{classparticls_1_1_peridynamic_force_state_a2b79d380d5384a408d1a69dd87d0bcfb}{particle1}}
+\begin{DoxyCompactList}\small\item\em The first particle the peridynamic force state is acting between. \end{DoxyCompactList}\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ \mbox{\hyperlink{classparticls_1_1_peridynamic_force_state_aed640705389e98f95343c6aa0c609c58}{particle2}}
+\begin{DoxyCompactList}\small\item\em The second particle the peridynamic force state is acting between. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const double \mbox{\hyperlink{classparticls_1_1_peridynamic_force_state_a4e7f5228cc4efe143de724c520f514e7}{strain\+Tol}}
+\begin{DoxyCompactList}\small\item\em The tolerance on the strain. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+class particls\+::\+Peridynamic\+Force\+State$<$ dim $>$}
+
+A force state for a peridynamic model. 
+
+Note\+: this is a peridynamic force state, which defines the force per volume squared for a peridynamic model. This is N\+OT a \mbox{\hyperlink{classparticls_1_1_state_object}{State\+Object}} because it does not need to be integrated in time. 
+
+Definition at line 20 of file Peridynamic\+Force\+State.\+hpp.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classparticls_1_1_peridynamic_force_state_a8faf6a64253d0c8024162692b4bade9a}\label{classparticls_1_1_peridynamic_force_state_a8faf6a64253d0c8024162692b4bade9a}} 
+\index{particls::PeridynamicForceState$<$ dim $>$@{particls::PeridynamicForceState$<$ dim $>$}!PeridynamicForceStateConstructor@{PeridynamicForceStateConstructor}}
+\index{PeridynamicForceStateConstructor@{PeridynamicForceStateConstructor}!particls::PeridynamicForceState$<$ dim $>$@{particls::PeridynamicForceState$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{PeridynamicForceStateConstructor}{PeridynamicForceStateConstructor}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+typedef std\+::function$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_peridynamic_force_state}{Peridynamic\+Force\+State}}$<$dim$>$ $>$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$dim$>$ $>$ const\& part1, std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$dim$>$ $>$ const\& part2, std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$dim$>$ $>$ $>$ const\& neighbors, Y\+A\+M\+L\+::\+Node const\& options)$>$ \mbox{\hyperlink{classparticls_1_1_peridynamic_force_state}{particls\+::\+Peridynamic\+Force\+State}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_peridynamic_force_state_a8faf6a64253d0c8024162692b4bade9a}{Peridynamic\+Force\+State\+Constructor}}}
+
+
+
+Definition at line 47 of file Peridynamic\+Force\+State.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_peridynamic_force_state_a9dae8b6abc82e9202c975998025db292}\label{classparticls_1_1_peridynamic_force_state_a9dae8b6abc82e9202c975998025db292}} 
+\index{particls::PeridynamicForceState$<$ dim $>$@{particls::PeridynamicForceState$<$ dim $>$}!PeridynamicForceStateMap@{PeridynamicForceStateMap}}
+\index{PeridynamicForceStateMap@{PeridynamicForceStateMap}!particls::PeridynamicForceState$<$ dim $>$@{particls::PeridynamicForceState$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{PeridynamicForceStateMap}{PeridynamicForceStateMap}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+typedef std\+::map$<$std\+::string, \mbox{\hyperlink{classparticls_1_1_peridynamic_force_state_a8faf6a64253d0c8024162692b4bade9a}{Peridynamic\+Force\+State\+Constructor}}$>$ \mbox{\hyperlink{classparticls_1_1_peridynamic_force_state}{particls\+::\+Peridynamic\+Force\+State}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_peridynamic_force_state_a9dae8b6abc82e9202c975998025db292}{Peridynamic\+Force\+State\+Map}}}
+
+
+
+Definition at line 48 of file Peridynamic\+Force\+State.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_peridynamic_force_state_abb49a08d1c9cb9a48003ace9187a53ed}\label{classparticls_1_1_peridynamic_force_state_abb49a08d1c9cb9a48003ace9187a53ed}} 
+\index{particls::PeridynamicForceState$<$ dim $>$@{particls::PeridynamicForceState$<$ dim $>$}!PeridynamicForceState@{PeridynamicForceState}}
+\index{PeridynamicForceState@{PeridynamicForceState}!particls::PeridynamicForceState$<$ dim $>$@{particls::PeridynamicForceState$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{PeridynamicForceState()}{PeridynamicForceState()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_peridynamic_force_state}{particls\+::\+Peridynamic\+Force\+State}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_peridynamic_force_state}{Peridynamic\+Force\+State}} (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part1,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part2,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&}]{neighbors,  }\item[{Y\+A\+M\+L\+::\+Node const \&}]{options }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em part1} & The first particle in the peridynamic force state bond \\
+\hline
+\mbox{\texttt{ in}}  & {\em part2} & The second particle in the peridynamic force state bond \\
+\hline
+\mbox{\texttt{ in}}  & {\em neighbors} & The nearest neighbors of the first particle (part1) \\
+\hline
+\mbox{\texttt{ in}}  & {\em options} & Options for the state object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_peridynamic_force_state_a90c085cff8431d419d97f3ebb436e2c9}\label{classparticls_1_1_peridynamic_force_state_a90c085cff8431d419d97f3ebb436e2c9}} 
+\index{particls::PeridynamicForceState$<$ dim $>$@{particls::PeridynamicForceState$<$ dim $>$}!PeridynamicForceState@{PeridynamicForceState}}
+\index{PeridynamicForceState@{PeridynamicForceState}!particls::PeridynamicForceState$<$ dim $>$@{particls::PeridynamicForceState$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{PeridynamicForceState()}{PeridynamicForceState()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_peridynamic_force_state}{particls\+::\+Peridynamic\+Force\+State}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_peridynamic_force_state}{Peridynamic\+Force\+State}} (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part1,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part2,  }\item[{Y\+A\+M\+L\+::\+Node const \&}]{options }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em part1} & The first particle in the peridynamic force state bond \\
+\hline
+\mbox{\texttt{ in}}  & {\em part2} & The second particle in the peridynamic force state bond \\
+\hline
+\mbox{\texttt{ in}}  & {\em options} & Options for the state object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_peridynamic_force_state_ad6c3ddfc079cdb1ee43743eed3530960}\label{classparticls_1_1_peridynamic_force_state_ad6c3ddfc079cdb1ee43743eed3530960}} 
+\index{particls::PeridynamicForceState$<$ dim $>$@{particls::PeridynamicForceState$<$ dim $>$}!````~PeridynamicForceState@{$\sim$PeridynamicForceState}}
+\index{````~PeridynamicForceState@{$\sim$PeridynamicForceState}!particls::PeridynamicForceState$<$ dim $>$@{particls::PeridynamicForceState$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$PeridynamicForceState()}{~PeridynamicForceState()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual \mbox{\hyperlink{classparticls_1_1_peridynamic_force_state}{particls\+::\+Peridynamic\+Force\+State}}$<$ dim $>$\+::$\sim$\mbox{\hyperlink{classparticls_1_1_peridynamic_force_state}{Peridynamic\+Force\+State}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_peridynamic_force_state_a63d1287b005fc3a9c565e004e1882d0b}\label{classparticls_1_1_peridynamic_force_state_a63d1287b005fc3a9c565e004e1882d0b}} 
+\index{particls::PeridynamicForceState$<$ dim $>$@{particls::PeridynamicForceState$<$ dim $>$}!Create@{Create}}
+\index{Create@{Create}!particls::PeridynamicForceState$<$ dim $>$@{particls::PeridynamicForceState$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+static std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_peridynamic_force_state}{Peridynamic\+Force\+State}}$<$dim$>$ $>$ \mbox{\hyperlink{classparticls_1_1_peridynamic_force_state}{particls\+::\+Peridynamic\+Force\+State}}$<$ dim $>$\+::Create (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part1,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ const \&}]{part2,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$ dim $>$ $>$ $>$ const \&}]{neighbors,  }\item[{Y\+A\+M\+L\+::\+Node const \&}]{options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+A function to create peridynamic forces from options specified in a Y\+A\+M\+L\+::\+Node object. The options\mbox{[}\char`\"{}\+Type\char`\"{}\mbox{]} should contain a string specifying the type of body force to construct. The other entries in the Y\+A\+M\+L\+::\+Node are used to specify options for specific peridynamic force types. \mbox{\Hypertarget{classparticls_1_1_peridynamic_force_state_a34e15b2334de58b9521c4a609a6f560c}\label{classparticls_1_1_peridynamic_force_state_a34e15b2334de58b9521c4a609a6f560c}} 
+\index{particls::PeridynamicForceState$<$ dim $>$@{particls::PeridynamicForceState$<$ dim $>$}!ForceParameter@{ForceParameter}}
+\index{ForceParameter@{ForceParameter}!particls::PeridynamicForceState$<$ dim $>$@{particls::PeridynamicForceState$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ForceParameter()}{ForceParameter()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}}$>$ \mbox{\hyperlink{classparticls_1_1_peridynamic_force_state}{particls\+::\+Peridynamic\+Force\+State}}$<$ dim $>$\+::Force\+Parameter (\begin{DoxyParamCaption}\item[{double const}]{time }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Compute the parameters for the force state. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & The current time \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classparticls_1_1_linear_peridynamic_solid_a6a0dfaf1d590e3b3791f97c082e5277b}{particls\+::\+Linear\+Peridynamic\+Solid$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_peridynamic_force_state_a8c3c992d4991e4ca389025164362adf4}\label{classparticls_1_1_peridynamic_force_state_a8c3c992d4991e4ca389025164362adf4}} 
+\index{particls::PeridynamicForceState$<$ dim $>$@{particls::PeridynamicForceState$<$ dim $>$}!ForceState@{ForceState}}
+\index{ForceState@{ForceState}!particls::PeridynamicForceState$<$ dim $>$@{particls::PeridynamicForceState$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ForceState()}{ForceState()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+bool \mbox{\hyperlink{classparticls_1_1_peridynamic_force_state}{particls\+::\+Peridynamic\+Force\+State}}$<$ dim $>$\+::Force\+State (\begin{DoxyParamCaption}\item[{double const}]{time,  }\item[{Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&}]{x,  }\item[{Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&}]{bond,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}} $>$ const \&}]{parameter,  }\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$}]{force\+State }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & The time when we are evaluating the force state \\
+\hline
+\mbox{\texttt{ in}}  & {\em x} & The spatial location where we are evaluating the force state \\
+\hline
+\mbox{\texttt{ in}}  & {\em bond} & The bond between the location $x$ and another point $x^{\prime}$ in space ( $\xi = x^{\prime} - x$) \\
+\hline
+\mbox{\texttt{ in}}  & {\em parameter} & Time-\/dependent parameters shared accross all forces of this type acting on a particle. These parameters have been percomputed for this time step \\
+\hline
+\mbox{\texttt{ out}}  & {\em force\+State} & The force state \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True\+: the bond is intact, false\+: the bond is broken 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classparticls_1_1_peridynamic_force_state_ac31d05a09eb59d9cafb0e9deb37ee6f7}\label{classparticls_1_1_peridynamic_force_state_ac31d05a09eb59d9cafb0e9deb37ee6f7}} 
+\index{particls::PeridynamicForceState$<$ dim $>$@{particls::PeridynamicForceState$<$ dim $>$}!ForceStateImpl@{ForceStateImpl}}
+\index{ForceStateImpl@{ForceStateImpl}!particls::PeridynamicForceState$<$ dim $>$@{particls::PeridynamicForceState$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ForceStateImpl()}{ForceStateImpl()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual bool \mbox{\hyperlink{classparticls_1_1_peridynamic_force_state}{particls\+::\+Peridynamic\+Force\+State}}$<$ dim $>$\+::Force\+State\+Impl (\begin{DoxyParamCaption}\item[{double const}]{time,  }\item[{Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&}]{x,  }\item[{Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&}]{bond,  }\item[{double const}]{bond\+Length,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_generic_force_parameter}{Generic\+Force\+Parameter}} $>$ const \&}]{parameter,  }\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$}]{force\+State }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & The time when we are evaluating the force state \\
+\hline
+\mbox{\texttt{ in}}  & {\em x} & The spatial location where we are evaluating the force state \\
+\hline
+\mbox{\texttt{ in}}  & {\em bond} & The bond between the location $x$ and another point $x^{\prime}$ in space ( $\xi = x^{\prime} - x$) \\
+\hline
+\mbox{\texttt{ in}}  & {\em bond\+Length} & The length of the bond (equal to bond.\+norm() but has been pre computed so we pass it here) \\
+\hline
+\mbox{\texttt{ in}}  & {\em parameter} & Time-\/dependent parameters shared accross all forces of this type acting on a particle. This parameters have been percomputed for this time step \\
+\hline
+\mbox{\texttt{ out}}  & {\em force\+State} & The force state \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True\+: the bond is intact, false\+: the bond is broken 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classparticls_1_1_ordinary_force_state_a5e9c16db9cfdf603af731918d76ab72f}{particls\+::\+Ordinary\+Force\+State$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_peridynamic_force_state_ad929d119471fc9b0699ebc85df89beff}\label{classparticls_1_1_peridynamic_force_state_ad929d119471fc9b0699ebc85df89beff}} 
+\index{particls::PeridynamicForceState$<$ dim $>$@{particls::PeridynamicForceState$<$ dim $>$}!GetPeridynamicForceStateMap@{GetPeridynamicForceStateMap}}
+\index{GetPeridynamicForceStateMap@{GetPeridynamicForceStateMap}!particls::PeridynamicForceState$<$ dim $>$@{particls::PeridynamicForceState$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{GetPeridynamicForceStateMap()}{GetPeridynamicForceStateMap()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+static std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_peridynamic_force_state_a9dae8b6abc82e9202c975998025db292}{Peridynamic\+Force\+State\+Map}}$>$ \mbox{\hyperlink{classparticls_1_1_peridynamic_force_state}{particls\+::\+Peridynamic\+Force\+State}}$<$ dim $>$\+::Get\+Peridynamic\+Force\+State\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticls_1_1_peridynamic_force_state_a3cdde842157c2d088a953fdb34eb04d6}\label{classparticls_1_1_peridynamic_force_state_a3cdde842157c2d088a953fdb34eb04d6}} 
+\index{particls::PeridynamicForceState$<$ dim $>$@{particls::PeridynamicForceState$<$ dim $>$}!horizon@{horizon}}
+\index{horizon@{horizon}!particls::PeridynamicForceState$<$ dim $>$@{particls::PeridynamicForceState$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{horizon}{horizon}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+const double \mbox{\hyperlink{classparticls_1_1_peridynamic_force_state}{particls\+::\+Peridynamic\+Force\+State}}$<$ dim $>$\+::horizon\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Horizon for the model. 
+
+
+
+Definition at line 81 of file Peridynamic\+Force\+State.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_peridynamic_force_state_a7d6a3777943c1abec1706d998233d60a}\label{classparticls_1_1_peridynamic_force_state_a7d6a3777943c1abec1706d998233d60a}} 
+\index{particls::PeridynamicForceState$<$ dim $>$@{particls::PeridynamicForceState$<$ dim $>$}!initialBondLength@{initialBondLength}}
+\index{initialBondLength@{initialBondLength}!particls::PeridynamicForceState$<$ dim $>$@{particls::PeridynamicForceState$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{initialBondLength}{initialBondLength}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+const double \mbox{\hyperlink{classparticls_1_1_peridynamic_force_state}{particls\+::\+Peridynamic\+Force\+State}}$<$ dim $>$\+::initial\+Bond\+Length\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The bond length in the original coordinate. 
+
+
+
+Definition at line 84 of file Peridynamic\+Force\+State.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_peridynamic_force_state_a2b79d380d5384a408d1a69dd87d0bcfb}\label{classparticls_1_1_peridynamic_force_state_a2b79d380d5384a408d1a69dd87d0bcfb}} 
+\index{particls::PeridynamicForceState$<$ dim $>$@{particls::PeridynamicForceState$<$ dim $>$}!particle1@{particle1}}
+\index{particle1@{particle1}!particls::PeridynamicForceState$<$ dim $>$@{particls::PeridynamicForceState$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{particle1}{particle1}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::weak\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$dim$>$ $>$ \mbox{\hyperlink{classparticls_1_1_peridynamic_force_state}{particls\+::\+Peridynamic\+Force\+State}}$<$ dim $>$\+::particle1\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The first particle the peridynamic force state is acting between. 
+
+
+
+Definition at line 87 of file Peridynamic\+Force\+State.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_peridynamic_force_state_aed640705389e98f95343c6aa0c609c58}\label{classparticls_1_1_peridynamic_force_state_aed640705389e98f95343c6aa0c609c58}} 
+\index{particls::PeridynamicForceState$<$ dim $>$@{particls::PeridynamicForceState$<$ dim $>$}!particle2@{particle2}}
+\index{particle2@{particle2}!particls::PeridynamicForceState$<$ dim $>$@{particls::PeridynamicForceState$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{particle2}{particle2}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::weak\+\_\+ptr$<$\mbox{\hyperlink{classparticls_1_1_particle}{Particle}}$<$dim$>$ $>$ \mbox{\hyperlink{classparticls_1_1_peridynamic_force_state}{particls\+::\+Peridynamic\+Force\+State}}$<$ dim $>$\+::particle2\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The second particle the peridynamic force state is acting between. 
+
+
+
+Definition at line 90 of file Peridynamic\+Force\+State.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_peridynamic_force_state_a4e7f5228cc4efe143de724c520f514e7}\label{classparticls_1_1_peridynamic_force_state_a4e7f5228cc4efe143de724c520f514e7}} 
+\index{particls::PeridynamicForceState$<$ dim $>$@{particls::PeridynamicForceState$<$ dim $>$}!strainTol@{strainTol}}
+\index{strainTol@{strainTol}!particls::PeridynamicForceState$<$ dim $>$@{particls::PeridynamicForceState$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{strainTol}{strainTol}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+const double \mbox{\hyperlink{classparticls_1_1_peridynamic_force_state}{particls\+::\+Peridynamic\+Force\+State}}$<$ dim $>$\+::strain\+Tol\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The tolerance on the strain. 
+
+Defaults to infinity (never breaks) 
+
+Definition at line 98 of file Peridynamic\+Force\+State.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_peridynamic_force_state_8hpp}{Peridynamic\+Force\+State.\+hpp}}\end{DoxyCompactItemize}

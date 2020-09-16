@@ -1,0 +1,34 @@
+\hypertarget{namespacecereal}{}\doxysection{cereal Namespace Reference}
+\label{namespacecereal}\index{cereal@{cereal}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive , class \+\_\+\+Scalar , int \+\_\+\+Rows, int \+\_\+\+Cols, int \+\_\+\+Options, int \+\_\+\+Max\+Rows, int \+\_\+\+Max\+Cols$>$ }\\std\+::enable\+\_\+if$<$ traits\+::is\+\_\+output\+\_\+serializable$<$ Binary\+Data$<$ \+\_\+\+Scalar $>$, Archive $>$\+::value, void $>$\+::type \mbox{\hyperlink{namespacecereal_a9b37c7750f57e12b011a47010400ef57}{save}} (Archive \&ar, Eigen\+::\+Matrix$<$ \+\_\+\+Scalar, \+\_\+\+Rows, \+\_\+\+Cols, \+\_\+\+Options, \+\_\+\+Max\+Rows, \+\_\+\+Max\+Cols $>$ const \&m)
+\item 
+{\footnotesize template$<$class Archive , class \+\_\+\+Scalar , int \+\_\+\+Rows, int \+\_\+\+Cols, int \+\_\+\+Options, int \+\_\+\+Max\+Rows, int \+\_\+\+Max\+Cols$>$ }\\std\+::enable\+\_\+if$<$ traits\+::is\+\_\+input\+\_\+serializable$<$ Binary\+Data$<$ \+\_\+\+Scalar $>$, Archive $>$\+::value, void $>$\+::type \mbox{\hyperlink{namespacecereal_ac44d4e9a847c7d07df57e3b7c4023f6e}{load}} (Archive \&ar, Eigen\+::\+Matrix$<$ \+\_\+\+Scalar, \+\_\+\+Rows, \+\_\+\+Cols, \+\_\+\+Options, \+\_\+\+Max\+Rows, \+\_\+\+Max\+Cols $>$ \&m)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacecereal_ac44d4e9a847c7d07df57e3b7c4023f6e}\label{namespacecereal_ac44d4e9a847c7d07df57e3b7c4023f6e}} 
+\index{cereal@{cereal}!load@{load}}
+\index{load@{load}!cereal@{cereal}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily template$<$class Archive , class \+\_\+\+Scalar , int \+\_\+\+Rows, int \+\_\+\+Cols, int \+\_\+\+Options, int \+\_\+\+Max\+Rows, int \+\_\+\+Max\+Cols$>$ \\
+std\+::enable\+\_\+if$<$traits\+::is\+\_\+input\+\_\+serializable$<$Binary\+Data$<$\+\_\+\+Scalar$>$, Archive$>$\+::value, void$>$\+::type cereal\+::load (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{Eigen\+::\+Matrix$<$ \+\_\+\+Scalar, \+\_\+\+Rows, \+\_\+\+Cols, \+\_\+\+Options, \+\_\+\+Max\+Rows, \+\_\+\+Max\+Cols $>$ \&}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Deserializes an Eigen matrix, including Eigen\+::\+Vector\+Xd 
+
+Definition at line 30 of file Cerealize\+Eigen.\+hpp.
+
+\mbox{\Hypertarget{namespacecereal_a9b37c7750f57e12b011a47010400ef57}\label{namespacecereal_a9b37c7750f57e12b011a47010400ef57}} 
+\index{cereal@{cereal}!save@{save}}
+\index{save@{save}!cereal@{cereal}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily template$<$class Archive , class \+\_\+\+Scalar , int \+\_\+\+Rows, int \+\_\+\+Cols, int \+\_\+\+Options, int \+\_\+\+Max\+Rows, int \+\_\+\+Max\+Cols$>$ \\
+std\+::enable\+\_\+if$<$traits\+::is\+\_\+output\+\_\+serializable$<$Binary\+Data$<$\+\_\+\+Scalar$>$, Archive$>$\+::value, void$>$\+::type cereal\+::save (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{Eigen\+::\+Matrix$<$ \+\_\+\+Scalar, \+\_\+\+Rows, \+\_\+\+Cols, \+\_\+\+Options, \+\_\+\+Max\+Rows, \+\_\+\+Max\+Cols $>$ const \&}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Serializes an Eigen matrix, including Eigen\+::\+Vector\+Xd 
+
+Definition at line 15 of file Cerealize\+Eigen.\+hpp.
+

@@ -1,0 +1,332 @@
+\hypertarget{classparticls_1_1_centered_difference}{}\doxysection{particls\+::Centered\+Difference$<$ dim $>$ Class Template Reference}
+\label{classparticls_1_1_centered_difference}\index{particls::CenteredDifference$<$ dim $>$@{particls::CenteredDifference$<$ dim $>$}}
+
+
+{\ttfamily \#include $<$Centered\+Difference.\+hpp$>$}
+
+
+
+Inheritance diagram for particls\+::Centered\+Difference$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{classparticls_1_1_centered_difference__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for particls\+::Centered\+Difference$<$ dim $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{classparticls_1_1_centered_difference__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticls_1_1_centered_difference_aadab3878218171e1c0a84119c924c49c}{Centered\+Difference}} (Y\+A\+M\+L\+::\+Node const \&options)
+\item 
+virtual \mbox{\hyperlink{classparticls_1_1_centered_difference_aaad110b8e8824f8ac1fb3be344b3ed5b}{$\sim$\+Centered\+Difference}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classparticls_1_1_centered_difference_a9aa22f3243f78ebc349e1b407b80b38d}{Evolve\+In\+Time}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_collection}{Collection}}$<$ dim $>$ $>$ const \&collection, double const begin, double const end) const override
+\item 
+virtual double \mbox{\hyperlink{classparticls_1_1_centered_difference_a2f998a3172234711d4d2704b8be7a171}{Timestep\+Size}} () const override
+\begin{DoxyCompactList}\small\item\em Get the timestep size. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classparticls_1_1_centered_difference_af5b97a5302c9b5f8e54fe46caf8f81fe}{Initialize}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_collection}{Collection}}$<$ dim $>$ $>$ const \&collection, std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \&rhs) const
+\begin{DoxyCompactList}\small\item\em Initialize the timestepper. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_centered_difference_a31ba3911a348be845b0899a2670af174}{Calculate\+R\+HS}} (double const time, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_collection}{Collection}}$<$ dim $>$ $>$ const \&collection, std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \&rhs) const
+\begin{DoxyCompactList}\small\item\em Calculate the R\+HS in the collection (particles and state objects) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_centered_difference_a7aff91c8ffe659934994082583118a13}{Update\+Objects}} (const double time, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_collection}{Collection}}$<$ dim $>$ $>$ const \&collection, std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \&rhs) const
+\begin{DoxyCompactList}\small\item\em Update the states in the collection (particles and state objects) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_centered_difference_ac1504fbfdfa7cccf264e834836cac6e4}{Update\+State\+Object}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_state_object}{State\+Object}} $>$ const \&obj, Eigen\+::\+Vector\+Xd const \&rhs) const
+\begin{DoxyCompactList}\small\item\em Update a (non-\/rigid body) state object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_centered_difference_a8166353d1f73023cbcad93da530a337e}{Update\+Rigid\+Body\+Object}} (const double time, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_rigid_body}{Rigid\+Body}}$<$ dim $>$ $>$ const \&body, Eigen\+::\+Vector\+Xd const \&rhs) const
+\begin{DoxyCompactList}\small\item\em Update the state of a rigid body (positions and orientations) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_centered_difference_a30586d690e5c8d5c3abc42c9e75c9f51}{Update\+Position}} (const double time, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_rigid_body}{Rigid\+Body}}$<$ dim $>$ $>$ const \&body, Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&force) const
+\begin{DoxyCompactList}\small\item\em Update the velocites and positions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticls_1_1_centered_difference_aad3d46908b96435263c02050fbee0241}{Update\+Orientation}} (const double time, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_rigid_body}{Rigid\+Body}}$<$ dim $>$ $>$ const \&body, Eigen\+::\+Matrix$<$ double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$ dim $>$\+::moment, 1 $>$ const \&torque) const
+\begin{DoxyCompactList}\small\item\em Update the angular velocity and orientation of the particle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classparticls_1_1_centered_difference_a5fc92c00a3a37dff1c165a29987f78d2}{Centered\+Difference}} ()
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classparticls_1_1_centered_difference_a45e2f1219cd3a390a87e1aedab2e98bb}{serialize}} (Archive \&ar)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classparticls_1_1_centered_difference_a975b30e6900d6f8250bdc73fb4541a46}{dt}}
+\begin{DoxyCompactList}\small\item\em The timestep size. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classparticls_1_1_centered_difference_ae45463ed47e22c4480295f35d0b1f6f4}{psi}}
+\begin{DoxyCompactList}\small\item\em Global damping parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classparticls_1_1_centered_difference_ab2f44cbb59a08132f4c843e5225bba0e}{cereal\+::access}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+class particls\+::\+Centered\+Difference$<$ dim $>$}
+
+
+
+Definition at line 12 of file Centered\+Difference.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticls_1_1_centered_difference_aadab3878218171e1c0a84119c924c49c}\label{classparticls_1_1_centered_difference_aadab3878218171e1c0a84119c924c49c}} 
+\index{particls::CenteredDifference$<$ dim $>$@{particls::CenteredDifference$<$ dim $>$}!CenteredDifference@{CenteredDifference}}
+\index{CenteredDifference@{CenteredDifference}!particls::CenteredDifference$<$ dim $>$@{particls::CenteredDifference$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{CenteredDifference()}{CenteredDifference()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_centered_difference}{particls\+::\+Centered\+Difference}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_centered_difference}{Centered\+Difference}} (\begin{DoxyParamCaption}\item[{Y\+A\+M\+L\+::\+Node const \&}]{options }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em options} & Options for the timestepper \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_centered_difference_aaad110b8e8824f8ac1fb3be344b3ed5b}\label{classparticls_1_1_centered_difference_aaad110b8e8824f8ac1fb3be344b3ed5b}} 
+\index{particls::CenteredDifference$<$ dim $>$@{particls::CenteredDifference$<$ dim $>$}!````~CenteredDifference@{$\sim$CenteredDifference}}
+\index{````~CenteredDifference@{$\sim$CenteredDifference}!particls::CenteredDifference$<$ dim $>$@{particls::CenteredDifference$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$CenteredDifference()}{~CenteredDifference()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual \mbox{\hyperlink{classparticls_1_1_centered_difference}{particls\+::\+Centered\+Difference}}$<$ dim $>$\+::$\sim$\mbox{\hyperlink{classparticls_1_1_centered_difference}{Centered\+Difference}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classparticls_1_1_centered_difference_a5fc92c00a3a37dff1c165a29987f78d2}\label{classparticls_1_1_centered_difference_a5fc92c00a3a37dff1c165a29987f78d2}} 
+\index{particls::CenteredDifference$<$ dim $>$@{particls::CenteredDifference$<$ dim $>$}!CenteredDifference@{CenteredDifference}}
+\index{CenteredDifference@{CenteredDifference}!particls::CenteredDifference$<$ dim $>$@{particls::CenteredDifference$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{CenteredDifference()}{CenteredDifference()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{classparticls_1_1_centered_difference}{particls\+::\+Centered\+Difference}}$<$ dim $>$\+::\mbox{\hyperlink{classparticls_1_1_centered_difference}{Centered\+Difference}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 86 of file Centered\+Difference.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_centered_difference_a31ba3911a348be845b0899a2670af174}\label{classparticls_1_1_centered_difference_a31ba3911a348be845b0899a2670af174}} 
+\index{particls::CenteredDifference$<$ dim $>$@{particls::CenteredDifference$<$ dim $>$}!CalculateRHS@{CalculateRHS}}
+\index{CalculateRHS@{CalculateRHS}!particls::CenteredDifference$<$ dim $>$@{particls::CenteredDifference$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{CalculateRHS()}{CalculateRHS()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_centered_difference}{particls\+::\+Centered\+Difference}}$<$ dim $>$\+::Calculate\+R\+HS (\begin{DoxyParamCaption}\item[{double const}]{time,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_collection}{Collection}}$<$ dim $>$ $>$ const \&}]{collection,  }\item[{std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Calculate the R\+HS in the collection (particles and state objects) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & The current time \\
+\hline
+\mbox{\texttt{ in}}  & {\em obj} & The object that we are updating \\
+\hline
+\mbox{\texttt{ in}}  & {\em rhs} & The right hand side for the state object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_centered_difference_a9aa22f3243f78ebc349e1b407b80b38d}\label{classparticls_1_1_centered_difference_a9aa22f3243f78ebc349e1b407b80b38d}} 
+\index{particls::CenteredDifference$<$ dim $>$@{particls::CenteredDifference$<$ dim $>$}!EvolveInTime@{EvolveInTime}}
+\index{EvolveInTime@{EvolveInTime}!particls::CenteredDifference$<$ dim $>$@{particls::CenteredDifference$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{EvolveInTime()}{EvolveInTime()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual void \mbox{\hyperlink{classparticls_1_1_centered_difference}{particls\+::\+Centered\+Difference}}$<$ dim $>$\+::Evolve\+In\+Time (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_collection}{Collection}}$<$ dim $>$ $>$ const \&}]{collection,  }\item[{double const}]{begin,  }\item[{double const}]{end }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em collection} & The collection that is to be evolved from its current state to its end state \\
+\hline
+\mbox{\texttt{ in}}  & {\em start} & The start time \\
+\hline
+\mbox{\texttt{ in}}  & {\em end} & The end time \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_time_integrator_a87eae08ba9d618381e9e95b0fb2a9d3a}{particls\+::\+Time\+Integrator$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_centered_difference_af5b97a5302c9b5f8e54fe46caf8f81fe}\label{classparticls_1_1_centered_difference_af5b97a5302c9b5f8e54fe46caf8f81fe}} 
+\index{particls::CenteredDifference$<$ dim $>$@{particls::CenteredDifference$<$ dim $>$}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!particls::CenteredDifference$<$ dim $>$@{particls::CenteredDifference$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_centered_difference}{particls\+::\+Centered\+Difference}}$<$ dim $>$\+::Initialize (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_collection}{Collection}}$<$ dim $>$ $>$ const \&}]{collection,  }\item[{std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Initialize the timestepper. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em collection} & The collection that is to be evolved from its current state to its end state \\
+\hline
+\mbox{\texttt{ out}}  & {\em rhs} & The right hand side for each object in the collection (resized, not computed) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_centered_difference_a45e2f1219cd3a390a87e1aedab2e98bb}\label{classparticls_1_1_centered_difference_a45e2f1219cd3a390a87e1aedab2e98bb}} 
+\index{particls::CenteredDifference$<$ dim $>$@{particls::CenteredDifference$<$ dim $>$}!serialize@{serialize}}
+\index{serialize@{serialize}!particls::CenteredDifference$<$ dim $>$@{particls::CenteredDifference$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+template$<$class Archive $>$ \\
+void \mbox{\hyperlink{classparticls_1_1_centered_difference}{particls\+::\+Centered\+Difference}}$<$ dim $>$\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 89 of file Centered\+Difference.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_centered_difference_a2f998a3172234711d4d2704b8be7a171}\label{classparticls_1_1_centered_difference_a2f998a3172234711d4d2704b8be7a171}} 
+\index{particls::CenteredDifference$<$ dim $>$@{particls::CenteredDifference$<$ dim $>$}!TimestepSize@{TimestepSize}}
+\index{TimestepSize@{TimestepSize}!particls::CenteredDifference$<$ dim $>$@{particls::CenteredDifference$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{TimestepSize()}{TimestepSize()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+virtual double \mbox{\hyperlink{classparticls_1_1_centered_difference}{particls\+::\+Centered\+Difference}}$<$ dim $>$\+::Timestep\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the timestep size. 
+
+
+
+Implements \mbox{\hyperlink{classparticls_1_1_time_integrator_ad529b13b291f1f97d663fe920a3fb4e5}{particls\+::\+Time\+Integrator$<$ dim $>$}}.
+
+\mbox{\Hypertarget{classparticls_1_1_centered_difference_a7aff91c8ffe659934994082583118a13}\label{classparticls_1_1_centered_difference_a7aff91c8ffe659934994082583118a13}} 
+\index{particls::CenteredDifference$<$ dim $>$@{particls::CenteredDifference$<$ dim $>$}!UpdateObjects@{UpdateObjects}}
+\index{UpdateObjects@{UpdateObjects}!particls::CenteredDifference$<$ dim $>$@{particls::CenteredDifference$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{UpdateObjects()}{UpdateObjects()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_centered_difference}{particls\+::\+Centered\+Difference}}$<$ dim $>$\+::Update\+Objects (\begin{DoxyParamCaption}\item[{const double}]{time,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_collection}{Collection}}$<$ dim $>$ $>$ const \&}]{collection,  }\item[{std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Update the states in the collection (particles and state objects) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em time} & The current time \\
+\hline
+\mbox{\texttt{ in}}  & {\em obj} & The object that we are updating \\
+\hline
+\mbox{\texttt{ in}}  & {\em rhs} & The right hand side for the state object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_centered_difference_aad3d46908b96435263c02050fbee0241}\label{classparticls_1_1_centered_difference_aad3d46908b96435263c02050fbee0241}} 
+\index{particls::CenteredDifference$<$ dim $>$@{particls::CenteredDifference$<$ dim $>$}!UpdateOrientation@{UpdateOrientation}}
+\index{UpdateOrientation@{UpdateOrientation}!particls::CenteredDifference$<$ dim $>$@{particls::CenteredDifference$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{UpdateOrientation()}{UpdateOrientation()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_centered_difference}{particls\+::\+Centered\+Difference}}$<$ dim $>$\+::Update\+Orientation (\begin{DoxyParamCaption}\item[{const double}]{time,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_rigid_body}{Rigid\+Body}}$<$ dim $>$ $>$ const \&}]{body,  }\item[{Eigen\+::\+Matrix$<$ double, \mbox{\hyperlink{structparticls_1_1_state_sizes}{State\+Sizes}}$<$ dim $>$\+::moment, 1 $>$ const \&}]{torque }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Update the angular velocity and orientation of the particle. 
+
+\mbox{\Hypertarget{classparticls_1_1_centered_difference_a30586d690e5c8d5c3abc42c9e75c9f51}\label{classparticls_1_1_centered_difference_a30586d690e5c8d5c3abc42c9e75c9f51}} 
+\index{particls::CenteredDifference$<$ dim $>$@{particls::CenteredDifference$<$ dim $>$}!UpdatePosition@{UpdatePosition}}
+\index{UpdatePosition@{UpdatePosition}!particls::CenteredDifference$<$ dim $>$@{particls::CenteredDifference$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{UpdatePosition()}{UpdatePosition()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_centered_difference}{particls\+::\+Centered\+Difference}}$<$ dim $>$\+::Update\+Position (\begin{DoxyParamCaption}\item[{const double}]{time,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_rigid_body}{Rigid\+Body}}$<$ dim $>$ $>$ const \&}]{body,  }\item[{Eigen\+::\+Matrix$<$ double, dim, 1 $>$ const \&}]{force }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Update the velocites and positions. 
+
+\mbox{\Hypertarget{classparticls_1_1_centered_difference_a8166353d1f73023cbcad93da530a337e}\label{classparticls_1_1_centered_difference_a8166353d1f73023cbcad93da530a337e}} 
+\index{particls::CenteredDifference$<$ dim $>$@{particls::CenteredDifference$<$ dim $>$}!UpdateRigidBodyObject@{UpdateRigidBodyObject}}
+\index{UpdateRigidBodyObject@{UpdateRigidBodyObject}!particls::CenteredDifference$<$ dim $>$@{particls::CenteredDifference$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{UpdateRigidBodyObject()}{UpdateRigidBodyObject()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_centered_difference}{particls\+::\+Centered\+Difference}}$<$ dim $>$\+::Update\+Rigid\+Body\+Object (\begin{DoxyParamCaption}\item[{const double}]{time,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_rigid_body}{Rigid\+Body}}$<$ dim $>$ $>$ const \&}]{body,  }\item[{Eigen\+::\+Vector\+Xd const \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Update the state of a rigid body (positions and orientations) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em body} & The rigid body we are trying to compute \\
+\hline
+\mbox{\texttt{ in}}  & {\em rhs} & The right hand side for this body \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classparticls_1_1_centered_difference_ac1504fbfdfa7cccf264e834836cac6e4}\label{classparticls_1_1_centered_difference_ac1504fbfdfa7cccf264e834836cac6e4}} 
+\index{particls::CenteredDifference$<$ dim $>$@{particls::CenteredDifference$<$ dim $>$}!UpdateStateObject@{UpdateStateObject}}
+\index{UpdateStateObject@{UpdateStateObject}!particls::CenteredDifference$<$ dim $>$@{particls::CenteredDifference$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{UpdateStateObject()}{UpdateStateObject()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{classparticls_1_1_centered_difference}{particls\+::\+Centered\+Difference}}$<$ dim $>$\+::Update\+State\+Object (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classparticls_1_1_state_object}{State\+Object}} $>$ const \&}]{obj,  }\item[{Eigen\+::\+Vector\+Xd const \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Update a (non-\/rigid body) state object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em obj} & The object that we are updating \\
+\hline
+\mbox{\texttt{ in}}  & {\em rhs} & The right hand side for the state object \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classparticls_1_1_centered_difference_ab2f44cbb59a08132f4c843e5225bba0e}\label{classparticls_1_1_centered_difference_ab2f44cbb59a08132f4c843e5225bba0e}} 
+\index{particls::CenteredDifference$<$ dim $>$@{particls::CenteredDifference$<$ dim $>$}!cereal::access@{cereal::access}}
+\index{cereal::access@{cereal::access}!particls::CenteredDifference$<$ dim $>$@{particls::CenteredDifference$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{cereal::access}{cereal::access}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+friend class cereal\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 84 of file Centered\+Difference.\+hpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticls_1_1_centered_difference_a975b30e6900d6f8250bdc73fb4541a46}\label{classparticls_1_1_centered_difference_a975b30e6900d6f8250bdc73fb4541a46}} 
+\index{particls::CenteredDifference$<$ dim $>$@{particls::CenteredDifference$<$ dim $>$}!dt@{dt}}
+\index{dt@{dt}!particls::CenteredDifference$<$ dim $>$@{particls::CenteredDifference$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{dt}{dt}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_centered_difference}{particls\+::\+Centered\+Difference}}$<$ dim $>$\+::dt\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The timestep size. 
+
+
+
+Definition at line 79 of file Centered\+Difference.\+hpp.
+
+\mbox{\Hypertarget{classparticls_1_1_centered_difference_ae45463ed47e22c4480295f35d0b1f6f4}\label{classparticls_1_1_centered_difference_ae45463ed47e22c4480295f35d0b1f6f4}} 
+\index{particls::CenteredDifference$<$ dim $>$@{particls::CenteredDifference$<$ dim $>$}!psi@{psi}}
+\index{psi@{psi}!particls::CenteredDifference$<$ dim $>$@{particls::CenteredDifference$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{psi}{psi}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{classparticls_1_1_centered_difference}{particls\+::\+Centered\+Difference}}$<$ dim $>$\+::psi\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Global damping parameter. 
+
+
+
+Definition at line 82 of file Centered\+Difference.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_centered_difference_8hpp}{Centered\+Difference.\+hpp}}\end{DoxyCompactItemize}

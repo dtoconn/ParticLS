@@ -1,0 +1,233 @@
+\hypertarget{structparticls_1_1_contact_summary}{}\doxysection{particls\+::Contact\+Summary$<$ dim $>$ Struct Template Reference}
+\label{structparticls_1_1_contact_summary}\index{particls::ContactSummary$<$ dim $>$@{particls::ContactSummary$<$ dim $>$}}
+
+
+{\ttfamily \#include $<$Contact\+Summary.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structparticls_1_1_contact_summary_aa491800e702dc257769e4e3da1fb170d}{Contact\+Summary}} ()
+\begin{DoxyCompactList}\small\item\em Default contact summary constructor---just set everything to invalid values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structparticls_1_1_contact_summary_a789a63d11a005d45d6ed6744351884d3}{Update\+Contact\+Summary}} (\mbox{\hyperlink{classparticls_1_1_rigid_body}{Rigid\+Body}}$<$ dim $>$ const \&home\+Particle, \mbox{\hyperlink{classparticls_1_1_rigid_body}{Rigid\+Body}}$<$ dim $>$ const \&other\+Particle)
+\begin{DoxyCompactList}\small\item\em Update contact summary. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structparticls_1_1_contact_summary_ada8e40968300fee652728cc990fee93a}{Set\+Invalid}} ()
+\begin{DoxyCompactList}\small\item\em Set the contact summary to invalid values (no contact) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structparticls_1_1_contact_summary_a8b5d591be7fa6ef5bf5a076230685b47}{Overlap\+Volume}} (\mbox{\hyperlink{classparticls_1_1_rigid_body}{Rigid\+Body}}$<$ dim $>$ const \&home\+Particle, \mbox{\hyperlink{classparticls_1_1_rigid_body}{Rigid\+Body}}$<$ dim $>$ const \&other\+Particle)
+\begin{DoxyCompactList}\small\item\em The overlap volume (area in two dimensions) for two overlapping particles. \end{DoxyCompactList}\item 
+std\+::vector$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ \mbox{\hyperlink{structparticls_1_1_contact_summary_a8a6fe7357d4a40b475604909bef7d31b}{Overlap\+Polyhedron}} (\mbox{\hyperlink{classparticls_1_1_rigid_body}{Rigid\+Body}}$<$ dim $>$ const \&rb\+\_\+1, \mbox{\hyperlink{classparticls_1_1_rigid_body}{Rigid\+Body}}$<$ dim $>$ const \&rb\+\_\+2)
+\item 
+double \mbox{\hyperlink{structparticls_1_1_contact_summary_aaac779d01879b501175f1058267063e4}{Polyhedron\+Volume}} (std\+::vector$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$ pts)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{structparticls_1_1_contact_summary_a4151f4fa2b4c3db34c147a18c9afc263}{distance}}
+\begin{DoxyCompactList}\small\item\em The maximum penetration distance between two rigid bodies. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Position \mbox{\hyperlink{structparticls_1_1_contact_summary_a70c4c05bf24b0eb034e7acb31c31b7f2}{point1}} = Eigen\+::\+Matrix$<$double, dim, 1$>$\+::Constant(dim, 1, std\+::numeric\+\_\+limits$<$double$>$\+::quiet\+\_\+\+NaN())
+\begin{DoxyCompactList}\small\item\em The points where contact occurs. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Position \mbox{\hyperlink{structparticls_1_1_contact_summary_a901482abe5a2a93e0a841ca2ddd38556}{point2}} = Eigen\+::\+Matrix$<$double, dim, 1$>$\+::Constant(dim, 1, std\+::numeric\+\_\+limits$<$double$>$\+::quiet\+\_\+\+NaN())
+\item 
+\mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Position \mbox{\hyperlink{structparticls_1_1_contact_summary_aae57e36b008ccd2be9c2705b0b01f932}{mid\+\_\+point}}
+\begin{DoxyCompactList}\small\item\em The midpoint between the contact points on each particle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Position \mbox{\hyperlink{structparticls_1_1_contact_summary_a68bc7074ef54086b72519edf6a63e42c}{normal}}
+\begin{DoxyCompactList}\small\item\em A vector normal to the contact. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Velocity \mbox{\hyperlink{structparticls_1_1_contact_summary_a967f1cd0868bc0f49cece09c3504fdee}{rel\+\_\+vel}}
+\begin{DoxyCompactList}\small\item\em The relative velcity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$ dim $>$\+::Velocity \mbox{\hyperlink{structparticls_1_1_contact_summary_affd2394fff8064e02175b2d0a3b6bfd9}{rel\+\_\+vel\+\_\+tangent}}
+\begin{DoxyCompactList}\small\item\em A relative velocity vector tangential to the contact, as defined in equation (14) of Kawamoto2016. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int dim$>$\newline
+struct particls\+::\+Contact\+Summary$<$ dim $>$}
+
+A structure to store basic information about a particle-\/particle contact. In general, the contact\+\_\+point and contact\+\_\+normal may not be computed if no overlap occurs (e.\+g., the penetration\+\_\+distance is not positive). 
+
+Definition at line 19 of file Contact\+Summary.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structparticls_1_1_contact_summary_aa491800e702dc257769e4e3da1fb170d}\label{structparticls_1_1_contact_summary_aa491800e702dc257769e4e3da1fb170d}} 
+\index{particls::ContactSummary$<$ dim $>$@{particls::ContactSummary$<$ dim $>$}!ContactSummary@{ContactSummary}}
+\index{ContactSummary@{ContactSummary}!particls::ContactSummary$<$ dim $>$@{particls::ContactSummary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{ContactSummary()}{ContactSummary()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{structparticls_1_1_contact_summary}{particls\+::\+Contact\+Summary}}$<$ dim $>$\+::\mbox{\hyperlink{structparticls_1_1_contact_summary}{Contact\+Summary}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default contact summary constructor---just set everything to invalid values. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structparticls_1_1_contact_summary_a8a6fe7357d4a40b475604909bef7d31b}\label{structparticls_1_1_contact_summary_a8a6fe7357d4a40b475604909bef7d31b}} 
+\index{particls::ContactSummary$<$ dim $>$@{particls::ContactSummary$<$ dim $>$}!OverlapPolyhedron@{OverlapPolyhedron}}
+\index{OverlapPolyhedron@{OverlapPolyhedron}!particls::ContactSummary$<$ dim $>$@{particls::ContactSummary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{OverlapPolyhedron()}{OverlapPolyhedron()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+std\+::vector$<$Eigen\+::\+Matrix$<$double, dim, 1$>$ $>$ \mbox{\hyperlink{structparticls_1_1_contact_summary}{particls\+::\+Contact\+Summary}}$<$ dim $>$\+::Overlap\+Polyhedron (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classparticls_1_1_rigid_body}{Rigid\+Body}}$<$ dim $>$ const \&}]{rb\+\_\+1,  }\item[{\mbox{\hyperlink{classparticls_1_1_rigid_body}{Rigid\+Body}}$<$ dim $>$ const \&}]{rb\+\_\+2 }\end{DoxyParamCaption})}
+
+An algorithm to calculate the overlap polyhedron between to overlapping convex polyhedra. Returns the overlap polyhedron vertices 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em rb\+\_\+1} & Home particle in the contact pair \\
+\hline
+\mbox{\texttt{ in}}  & {\em rb\+\_\+2} & Neighbor particle in the contact pair \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structparticls_1_1_contact_summary_a8b5d591be7fa6ef5bf5a076230685b47}\label{structparticls_1_1_contact_summary_a8b5d591be7fa6ef5bf5a076230685b47}} 
+\index{particls::ContactSummary$<$ dim $>$@{particls::ContactSummary$<$ dim $>$}!OverlapVolume@{OverlapVolume}}
+\index{OverlapVolume@{OverlapVolume}!particls::ContactSummary$<$ dim $>$@{particls::ContactSummary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{OverlapVolume()}{OverlapVolume()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{structparticls_1_1_contact_summary}{particls\+::\+Contact\+Summary}}$<$ dim $>$\+::Overlap\+Volume (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classparticls_1_1_rigid_body}{Rigid\+Body}}$<$ dim $>$ const \&}]{home\+Particle,  }\item[{\mbox{\hyperlink{classparticls_1_1_rigid_body}{Rigid\+Body}}$<$ dim $>$ const \&}]{other\+Particle }\end{DoxyParamCaption})}
+
+
+
+The overlap volume (area in two dimensions) for two overlapping particles. 
+
+\mbox{\Hypertarget{structparticls_1_1_contact_summary_aaac779d01879b501175f1058267063e4}\label{structparticls_1_1_contact_summary_aaac779d01879b501175f1058267063e4}} 
+\index{particls::ContactSummary$<$ dim $>$@{particls::ContactSummary$<$ dim $>$}!PolyhedronVolume@{PolyhedronVolume}}
+\index{PolyhedronVolume@{PolyhedronVolume}!particls::ContactSummary$<$ dim $>$@{particls::ContactSummary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{PolyhedronVolume()}{PolyhedronVolume()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{structparticls_1_1_contact_summary}{particls\+::\+Contact\+Summary}}$<$ dim $>$\+::Polyhedron\+Volume (\begin{DoxyParamCaption}\item[{std\+::vector$<$ Eigen\+::\+Matrix$<$ double, dim, 1 $>$ $>$}]{pts }\end{DoxyParamCaption})}
+
+An algorithm to calculate the polyhedron volume Returns the volume (area in 2D) 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em pts} & Polyhedron vertices \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structparticls_1_1_contact_summary_ada8e40968300fee652728cc990fee93a}\label{structparticls_1_1_contact_summary_ada8e40968300fee652728cc990fee93a}} 
+\index{particls::ContactSummary$<$ dim $>$@{particls::ContactSummary$<$ dim $>$}!SetInvalid@{SetInvalid}}
+\index{SetInvalid@{SetInvalid}!particls::ContactSummary$<$ dim $>$@{particls::ContactSummary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{SetInvalid()}{SetInvalid()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{structparticls_1_1_contact_summary}{particls\+::\+Contact\+Summary}}$<$ dim $>$\+::Set\+Invalid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Set the contact summary to invalid values (no contact) 
+
+\mbox{\Hypertarget{structparticls_1_1_contact_summary_a789a63d11a005d45d6ed6744351884d3}\label{structparticls_1_1_contact_summary_a789a63d11a005d45d6ed6744351884d3}} 
+\index{particls::ContactSummary$<$ dim $>$@{particls::ContactSummary$<$ dim $>$}!UpdateContactSummary@{UpdateContactSummary}}
+\index{UpdateContactSummary@{UpdateContactSummary}!particls::ContactSummary$<$ dim $>$@{particls::ContactSummary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{UpdateContactSummary()}{UpdateContactSummary()}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+void \mbox{\hyperlink{structparticls_1_1_contact_summary}{particls\+::\+Contact\+Summary}}$<$ dim $>$\+::Update\+Contact\+Summary (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classparticls_1_1_rigid_body}{Rigid\+Body}}$<$ dim $>$ const \&}]{home\+Particle,  }\item[{\mbox{\hyperlink{classparticls_1_1_rigid_body}{Rigid\+Body}}$<$ dim $>$ const \&}]{other\+Particle }\end{DoxyParamCaption})}
+
+
+
+Update contact summary. 
+
+Given that the contact points have already been filled in, compute the rest of the contanct summary 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structparticls_1_1_contact_summary_a4151f4fa2b4c3db34c147a18c9afc263}\label{structparticls_1_1_contact_summary_a4151f4fa2b4c3db34c147a18c9afc263}} 
+\index{particls::ContactSummary$<$ dim $>$@{particls::ContactSummary$<$ dim $>$}!distance@{distance}}
+\index{distance@{distance}!particls::ContactSummary$<$ dim $>$@{particls::ContactSummary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{distance}{distance}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+double \mbox{\hyperlink{structparticls_1_1_contact_summary}{particls\+::\+Contact\+Summary}}$<$ dim $>$\+::distance}
+
+
+
+The maximum penetration distance between two rigid bodies. 
+
+
+
+Definition at line 56 of file Contact\+Summary.\+hpp.
+
+\mbox{\Hypertarget{structparticls_1_1_contact_summary_aae57e36b008ccd2be9c2705b0b01f932}\label{structparticls_1_1_contact_summary_aae57e36b008ccd2be9c2705b0b01f932}} 
+\index{particls::ContactSummary$<$ dim $>$@{particls::ContactSummary$<$ dim $>$}!mid\_point@{mid\_point}}
+\index{mid\_point@{mid\_point}!particls::ContactSummary$<$ dim $>$@{particls::ContactSummary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{mid\_point}{mid\_point}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$dim$>$\+::Position \mbox{\hyperlink{structparticls_1_1_contact_summary}{particls\+::\+Contact\+Summary}}$<$ dim $>$\+::mid\+\_\+point}
+
+
+
+The midpoint between the contact points on each particle. 
+
+
+
+Definition at line 63 of file Contact\+Summary.\+hpp.
+
+\mbox{\Hypertarget{structparticls_1_1_contact_summary_a68bc7074ef54086b72519edf6a63e42c}\label{structparticls_1_1_contact_summary_a68bc7074ef54086b72519edf6a63e42c}} 
+\index{particls::ContactSummary$<$ dim $>$@{particls::ContactSummary$<$ dim $>$}!normal@{normal}}
+\index{normal@{normal}!particls::ContactSummary$<$ dim $>$@{particls::ContactSummary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{normal}{normal}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$dim$>$\+::Position \mbox{\hyperlink{structparticls_1_1_contact_summary}{particls\+::\+Contact\+Summary}}$<$ dim $>$\+::normal}
+
+
+
+A vector normal to the contact. 
+
+
+
+Definition at line 66 of file Contact\+Summary.\+hpp.
+
+\mbox{\Hypertarget{structparticls_1_1_contact_summary_a70c4c05bf24b0eb034e7acb31c31b7f2}\label{structparticls_1_1_contact_summary_a70c4c05bf24b0eb034e7acb31c31b7f2}} 
+\index{particls::ContactSummary$<$ dim $>$@{particls::ContactSummary$<$ dim $>$}!point1@{point1}}
+\index{point1@{point1}!particls::ContactSummary$<$ dim $>$@{particls::ContactSummary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{point1}{point1}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$dim$>$\+::Position \mbox{\hyperlink{structparticls_1_1_contact_summary}{particls\+::\+Contact\+Summary}}$<$ dim $>$\+::point1 = Eigen\+::\+Matrix$<$double, dim, 1$>$\+::Constant(dim, 1, std\+::numeric\+\_\+limits$<$double$>$\+::quiet\+\_\+\+NaN())}
+
+
+
+The points where contact occurs. 
+
+
+
+Definition at line 59 of file Contact\+Summary.\+hpp.
+
+\mbox{\Hypertarget{structparticls_1_1_contact_summary_a901482abe5a2a93e0a841ca2ddd38556}\label{structparticls_1_1_contact_summary_a901482abe5a2a93e0a841ca2ddd38556}} 
+\index{particls::ContactSummary$<$ dim $>$@{particls::ContactSummary$<$ dim $>$}!point2@{point2}}
+\index{point2@{point2}!particls::ContactSummary$<$ dim $>$@{particls::ContactSummary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{point2}{point2}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$dim$>$\+::Position \mbox{\hyperlink{structparticls_1_1_contact_summary}{particls\+::\+Contact\+Summary}}$<$ dim $>$\+::point2 = Eigen\+::\+Matrix$<$double, dim, 1$>$\+::Constant(dim, 1, std\+::numeric\+\_\+limits$<$double$>$\+::quiet\+\_\+\+NaN())}
+
+
+
+Definition at line 60 of file Contact\+Summary.\+hpp.
+
+\mbox{\Hypertarget{structparticls_1_1_contact_summary_a967f1cd0868bc0f49cece09c3504fdee}\label{structparticls_1_1_contact_summary_a967f1cd0868bc0f49cece09c3504fdee}} 
+\index{particls::ContactSummary$<$ dim $>$@{particls::ContactSummary$<$ dim $>$}!rel\_vel@{rel\_vel}}
+\index{rel\_vel@{rel\_vel}!particls::ContactSummary$<$ dim $>$@{particls::ContactSummary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{rel\_vel}{rel\_vel}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$dim$>$\+::Velocity \mbox{\hyperlink{structparticls_1_1_contact_summary}{particls\+::\+Contact\+Summary}}$<$ dim $>$\+::rel\+\_\+vel}
+
+
+
+The relative velcity. 
+
+
+
+Definition at line 69 of file Contact\+Summary.\+hpp.
+
+\mbox{\Hypertarget{structparticls_1_1_contact_summary_affd2394fff8064e02175b2d0a3b6bfd9}\label{structparticls_1_1_contact_summary_affd2394fff8064e02175b2d0a3b6bfd9}} 
+\index{particls::ContactSummary$<$ dim $>$@{particls::ContactSummary$<$ dim $>$}!rel\_vel\_tangent@{rel\_vel\_tangent}}
+\index{rel\_vel\_tangent@{rel\_vel\_tangent}!particls::ContactSummary$<$ dim $>$@{particls::ContactSummary$<$ dim $>$}}
+\doxysubsubsection{\texorpdfstring{rel\_vel\_tangent}{rel\_vel\_tangent}}
+{\footnotesize\ttfamily template$<$unsigned int dim$>$ \\
+\mbox{\hyperlink{structparticls_1_1_state_types}{State\+Types}}$<$dim$>$\+::Velocity \mbox{\hyperlink{structparticls_1_1_contact_summary}{particls\+::\+Contact\+Summary}}$<$ dim $>$\+::rel\+\_\+vel\+\_\+tangent}
+
+
+
+A relative velocity vector tangential to the contact, as defined in equation (14) of Kawamoto2016. 
+
+
+
+Definition at line 72 of file Contact\+Summary.\+hpp.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_contact_summary_8hpp}{Contact\+Summary.\+hpp}}\end{DoxyCompactItemize}
